@@ -16,7 +16,7 @@ Dirigido a todas aquellas personas que deseen adquirir un nuevo artículo o acce
 
 ## Autores
 * **[Facundo Francou]()**
-* **[Gonzalo Flores]()**
+* **[Gonzalo Flores](https://github.com/gonza68)**
 * **[Manuel Castillo]()**
 * **[Miguel García](https://github.com/MiguelGarcia23)**: Tengo 18 años, soy de Venezuela, estudiante de Programación Web Full Stack en Digital House. Fanático de los deportes, la programación, los videojuegos y todo el ámbito informático. 
 
