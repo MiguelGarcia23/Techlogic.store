@@ -15,7 +15,7 @@ Dirigido a todas aquellas personas que deseen adquirir un nuevo artículo o acce
 * [Walden Cases](https://waldencases.com/): De los referentes es la página que usamos más como base, ya que tiene una temática y un diseño muy similar al que queríamos implementar en nuestro sitio web. Además, usamos algunas de sus funcionalidades para darle el dinamismo que buscábamos a nuestra página.
 
 ## Autores
-* **[Facundo Francou]()**
+* **[Facundo Francou](https://github.com/facufrancou)**
 * **[Gonzalo Flores](https://github.com/gonza68)**
 * **[Manuel Castillo]()**
 * **[Miguel García](https://github.com/MiguelGarcia23)**: Tengo 18 años, soy de Venezuela, estudiante de Programación Web Full Stack en Digital House. Fanático de los deportes, la programación, los videojuegos y todo el ámbito informático. 
