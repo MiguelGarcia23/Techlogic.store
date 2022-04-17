@@ -17,7 +17,7 @@ Dirigido a todas aquellas personas que deseen adquirir un nuevo artículo o acce
 ## Autores
 * **[Facundo Francou](https://github.com/facufrancou)**
 * **[Gonzalo Flores](https://github.com/gonza68)**
-* **[Manuel Castillo]()**
+* **[Manuel Castillo](https://github.com/manu-castillo)**
 * **[Miguel García](https://github.com/MiguelGarcia23)**: Tengo 18 años, soy de Venezuela, estudiante de Programación Web Full Stack en Digital House. Fanático de los deportes, la programación, los videojuegos y todo el ámbito informático. 
 
 ## Tablero de Trello y Wireframes
