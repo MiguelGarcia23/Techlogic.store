@@ -16,7 +16,7 @@ Dirigido a todas aquellas personas que deseen adquirir un nuevo artículo o acce
 
 ## Autores
 * **[Facundo Francou](https://github.com/facufrancou)**: Tengo 31 años y soy de Argentina. Alumno del curso de Programación Web Full Stack en Digital House. Me gusta la tecnología, los videojuegos y la naturaleza. 
-* **[Gonzalo Flores](https://github.com/gonza68)**
+* **[Gonzalo Flores](https://github.com/gonza68)**: Tengo 18 años, soy de argentina. Alumno del curso de Programación Web Full Stack en Digital House. Me gusta mucho la musica, el futbol, los videosjuegos y los gatos.
 * **[Manuel Castillo](https://github.com/manu-castillo)**
 * **[Miguel García](https://github.com/MiguelGarcia23)**: Tengo 18 años, soy de Venezuela, estudiante de Programación Web Full Stack en Digital House. Fanático de los deportes, la programación, los videojuegos y todo el ámbito informático. 
 
