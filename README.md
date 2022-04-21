@@ -1,11 +1,11 @@
-# grupo_1_nombre
+# grupo_1_techlogic.store
 Proyecto Final DigitalHouse
 
 ## Temática y descripción del sitio
-Proyecto de E-commerce dirigido a la compra de artículos y accesorios electrónicos, merchandising y contenido exclusivo relacionado a diseños ***Marvel***.
+Proyecto de E-commerce dirigido a la compra de dispositivos, artículos y accesorios electrónicos, merchandising y contenido exclusivo de nuestra marca ***Techlogic.store***.
 
 ## Público objetivo
-Dirigido a todas aquellas personas que deseen adquirir un nuevo artículo o accesorio para su dispositivo electrónico. Particularmente se apunta al público jóven fanáticos de las producciones ***Marvel***
+Dirigido a todas aquellas personas que deseen adquirir un nuevo dispositivo, artículo o accesorio para su dispositivo electrónico. Particularmente con los diseños modernos de nuestra marca ***Techlogic.store***, se apunta al público jóven amantes de las tecnologías.
 
 ## Páginas referentes del proyecto
 * [Best Buy](https://www.bestbuy.com/): Es una de las e-commerce de ventas de artículos y accesorios electrónicos más grande de los Estados Unidos. Nos gustó la funcionalidad del sitio y lo práctico que resulta hacer una compra.
@@ -16,7 +16,7 @@ Dirigido a todas aquellas personas que deseen adquirir un nuevo artículo o acce
 
 ## Autores
 * **[Facundo Francou](https://github.com/facufrancou)**: Tengo 31 años y soy de Argentina. Alumno del curso de Programación Web Full Stack en Digital House. Me gusta la tecnología, los videojuegos y la naturaleza. 
-* **[Gonzalo Flores](https://github.com/gonza68)**: Tengo 18 años, soy de argentina. Alumno del curso de Programación Web Full Stack en Digital House. Me gusta mucho la musica, el futbol, los videosjuegos y los gatos.
+* **[Gonzalo Flores](https://github.com/gonza68)**: Tengo 18 años, soy de Argentina. Alumno del curso de Programación Web Full Stack en Digital House. Me gusta mucho la musica, el futbol, los videosjuegos y los gatos.
 * **[Manuel Castillo](https://github.com/manu-castillo)**
 * **[Miguel García](https://github.com/MiguelGarcia23)**: Tengo 18 años, soy de Venezuela, estudiante de Programación Web Full Stack en Digital House. Fanático de los deportes, la programación, los videojuegos y todo el ámbito informático. 
 
