@@ -17,7 +17,7 @@ Dirigido a todas aquellas personas que deseen adquirir un nuevo dispositivo, art
 ## Autores
 * **[Facundo Francou](https://github.com/facufrancou)**: Tengo 31 años y soy de Argentina. Alumno del curso de Programación Web Full Stack en Digital House. Me gusta la tecnología, los videojuegos y la naturaleza. 
 * **[Gonzalo Flores](https://github.com/gonza68)**: Tengo 18 años, soy de Argentina. Alumno del curso de Programación Web Full Stack en Digital House. Me gusta mucho la musica, el futbol, los videosjuegos y los gatos.
-* **[Manuel Castillo](https://github.com/manu-castillo)**: Tengo 27 años, me gusta mucho al tecnología, y quiero desarrollarme en programación web. Como hobbies tengo los deportes, y fotografía.
+* **[Manuel Castillo](https://github.com/manu-castillo)**: Tengo 27 años, soy de Venezuela pero tengo 4 años viviendo en Argentina, me gusta mucho al tecnología, y quiero desarrollarme en programación web. Como hobbies tengo los deportes, y fotografía.
 * **[Miguel García](https://github.com/MiguelGarcia23)**: Tengo 18 años, soy de Venezuela, estudiante de Programación Web Full Stack en Digital House. Fanático de los deportes, la programación, los videojuegos y todo el ámbito informático. 
 
 ## Tablero de Trello y Wireframes
