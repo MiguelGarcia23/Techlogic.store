@@ -1,1 +1,152 @@
 @import url(styles.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--negro);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* ----------------------  HEADER  ---------------------- */
+.main-header {
+    background-color: var(--negro);
+    width: 100vw;
+    padding: 1.5rem;
+    border-bottom: 2px solid var(--gris);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+/* BARRA DE NAVEGACIÓN IZQUIERDA */
+.left-navbar {
+    display: none;
+}
+
+/* ÍCONO DE BURGER MENU */
+.burger-menu {
+    width: 100%;
+    font-size: 1.5rem;
+    color: var(--blanco);
+}
+
+/* LOGO */
+.logo {
+    width: 100%;
+}
+
+.logo a img {
+    display: block;
+    margin: auto;
+    width: 6.875rem;
+}
+
+/* BARRA DE NAVEGACIÓN DERECHA */
+.right-navbar {
+    width: 100%;
+}
+
+.right-navbar ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* DIV DE LOS ICONOS DE LA BARRA DE NAVEGACIÓN DERECHA */
+.icono-right-navbar {
+    padding: 0 0.4375rem;
+}
+
+/* DIV DEL PRIMER ÍCONO DE LA BARRA DE NAVEGACIÓN DERECHA */
+.icono-right-navbar:first-child {
+    padding-left: 0;
+}
+
+/* DIV DEL ÚLTIMO ÍCONO DE LA BARRA DE NAVEGACIÓN DERECHA */
+.icono-right-navbar:last-child {
+    padding-right: 0;
+}
+
+/* ÍCONOS DE LA BARRA DE NAVEGACIÓN DERECHA */
+.icono-right-navbar i {
+    font-size: 1rem;
+    color: var(--blanco);
+}
+
+    /* ÍCONO DEL CARRITO YA QUE ES EL ÚNICO QUE SERÁ UN ENLACE*/
+.icono-right-navbar a i {
+    font-size: 1rem;
+    color: var(--blanco);
+}
+
+/* MENÚ QUE SE DESPLIEGA DEL ÍCONO DE USUARIO EN LA BARRA DE NAVEGACIÓN DERECHA */
+.profile-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--blanco);
+    top: 100%;
+    right: 0;
+    width: 40%;
+    max-width: 17.5rem;
+    padding: 2rem 1rem 1.5rem 1rem;
+    border-top: 3px solid var(--celeste);
+}
+
+/* IMAGEN DEL MENÚ DESPLEGABLE DEL ÍCONO DE USUARIO */
+.image-profile-menu {
+    display: block;
+    width: 3.75rem;
+    height: 3.75rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+.image-profile-menu img {
+    width: auto;
+    height: 100%;
+    margin-left: -35%;
+}
+
+/* INFORMACIÓN DEL MENÚ DESPLEGABLE DEL ÍCONO DE USUARIO */
+.info-profile-menu {
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    padding-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-profile-menu p {
+    opacity: 0.7;
+    text-align: center;
+}
+
+/* ENLACE DEL MENÚ DESPLEGABLE DEL ÍCONO DE USUARIO */
+.link-profile-menu {
+    position: relative;
+}
+
+.link-profile-menu a {
+    text-decoration: none;
+    font-size: 0.75rem;
+    color: var(--celeste);
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+}
+
+.search-bar {
+    display: none;
+}
+
+.slide-menu {
+    display: none;
+}
+
+img {
+    width: 80px;
+}

@@ -12,9 +12,8 @@
     --blanco: #FFFFFF;
     --negro: #000000;
 }
+
 body{
-    font-family: 'Roboto', sans-serif
-}
-main{
+    font-family: 'Roboto', sans-serif;
     background-color: var(--negro);
 }
