@@ -1,16 +1,15 @@
 {
-  "dependencies": {
-    "express": "^4.17.3",
-    "nodemon": "^2.0.15"
-  },
   "name": "techlogic.store",
   "version": "1.0.0",
+  "description": "",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
 }
