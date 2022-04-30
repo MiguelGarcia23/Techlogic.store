@@ -5,10 +5,283 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Techlogic.store</title>
-        <link rel="shortcut icon" href="/img/logo-mercado-liebre.svg">
+        <!-- Ícono en la pestaña arriba -->
+        <link rel="shortcut icon" href="/img/logo.svg">
+        <!-- Link a Google Fonts para la fuente -->
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- Link a Font Awesome para los íconos -->
+        <script src="https://kit.fontawesome.com/df86f883d1.js" crossorigin="anonymous"></script>
+        <!-- Link a mi CSS -->
+        <link rel="stylesheet" href="/css/index.css">
     </head>
     <body>
-        
+
+        <!-- HEADER -->
+        <header class="main-header">
+
+            <!-- SLIDE MENÚ DE LA VERSIÓN MOBILE -->
+            <div class="slide-menu">
+
+                <!-- ÍCONO DE LA X -->
+                <div class="icono-x">
+                    <i class="fa-solid fa-x"></i>
+                </div>
+
+                <!-- LOGO -->
+                <img src="img/logo.svg" alt="Logo de Techlogic.store">
+
+                <!-- BARRA DE NAVEGACIÓN DEL SLIDE MENU DE LA VERSIÓN MOBILE -->
+                <nav class="navbar-slide-menu">
+
+                    <ul>
+
+                        <!-- OPCIÓN PRODUCTOS -->
+                        <li>
+                            <a href="#">Productos</a>
+                            <i class="fa-solid fa-plus"></i>
+                            <i class="fa-solid fa-minus"></i>
+    
+                            <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN PRODUCTOS -->
+                            <div class="second-navbar-slide-menu">
+                                <ul>
+                                    <li><a href="#">Smartphones</a></li>
+                                    <li><a href="#">Tablets</a></li>
+                                    <li><a href="#">Laptops y Desktops</a></li>
+                                    <li><a href="#">Consolas y Gaming</a></li>
+                                    <li><a href="#">Redes</a></li>
+                                    <li>
+                                        <a href="#">Accesorios</a>
+                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-minus"></i>
+                                        
+                                        <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN ACCESORIOS DE PRODUCTOS -->
+                                        <div class="third-navbar-slide-menu">
+                                            <ul>
+                                                <li><a href="#">Fundas</a></li>
+                                                <li><a href="#">Teclados</a></li>
+                                                <li><a href="#">Mouse</a></li>
+                                                <li><a href="#">Altavoces</a></li>
+                                                <li><a href="#">Audífonos</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+    
+                        <!-- OPCIÓN DESCUBRE -->
+                        <li>
+                            <a href="#">Descubre</a>
+                            <i class="fa-solid fa-plus"></i>
+                            <i class="fa-solid fa-minus"></i>
+    
+                            <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN DESCUBRE -->
+                            <div class="second-navbar-slide-menu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Colecciones</a>
+                                        <i class="fa-solid fa-plus"></i>
+                                        <i class="fa-solid fa-minus"></i>
+    
+                                        <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN COLECCIONES DE DESCUBRE -->
+                                        <div class="third-navbar-slide-menu">
+                                            <ul>
+                                                <li><a href="#">Modern</a></li>
+                                                <li><a href="#">Classic</a></li>
+                                                <li><a href="#">Powerfull</a></li>
+                                                <li><a href="#">Black & White</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="#">Best Sellers</a></li>
+                                    <li><a href="#">Ofertas</a></li>
+                                </ul>
+                            </div>
+                        </li>
+    
+                        <!-- OPCIÓN CONTACTO -->
+                        <li>
+                            <a href="#">Contacto</a>
+                            <i class="fa-solid fa-plus"></i>
+                            <i class="fa-solid fa-minus"></i>
+    
+                            <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN CONTACTO -->
+                            <div class="second-navbar-slide-menu">
+                                <ul>
+                                    <li><a href="#">Acerca de Techlogic.store</a></li>
+                                    <li><a href="#">Métodos de Pago</a></li>
+                                    <li><a href="#">Preguntas frecuentes</a></li>
+                                    <li><a href="#">Soporte al Cliente</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+
+                <!-- PERFIL DEL USUARIO EN EL SLIDE-MENU DE LA VERSIÓN MOBILE -->
+                <div class="profile-slide-menu">
+
+                    <!-- PERFIL DEL USUARIO SI NO HA INICIADO SESIÓN -->
+                    <div class="profile-slide-menu-empty">
+                        <a href="#">Iniciar Sesión</a>
+                        <a href="#">Regístrate</a>
+                    </div>
+
+                    <!-- PERFIL DEL USUARIO SI YA INICIÓ SESIÓN -->
+                    <div class="profile-slide-menu-full">
+                        <img src="/" alt="Foto de perfil del usuario">
+                        <p>Nombre de Usuario</p>
+                    </div>
+
+                </div>
+
+                <!-- REDES SOCIALES EN EL SLIDE-MENU DE LA VERSIÓN MOBILE -->
+                <div class="social-media-slide-menu">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+
+            </div>
+
+            <!-- BARRA DE NAVEGACIÓN DE LA IZQUIERDA -->
+            <nav class="left-navbar">
+                
+                <ul>
+
+                    <!-- OPCIÓN PRODUCTOS -->
+                    <li>
+                        <a href="#">Productos</a>
+
+                        <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN PRODUCTOS -->
+                        <div class="second-navbar">
+                            <ul>
+                                <li><a href="#">Smartphones</a></li>
+                                <li><a href="#">Tablets</a></li>
+                                <li><a href="#">Laptops y Desktops</a></li>
+                                <li><a href="#">Consolas y Gaming</a></li>
+                                <li><a href="#">Redes</a></li>
+                                <li>
+                                    <a href="#">Accesorios</a>
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    
+                                    <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN ACCESORIOS DE PRODUCTOS -->
+                                    <div class="third-navbar">
+                                        <ul>
+                                            <li><a href="#">Fundas</a></li>
+                                            <li><a href="#">Teclados</a></li>
+                                            <li><a href="#">Mouse</a></li>
+                                            <li><a href="#">Altavoces</a></li>
+                                            <li><a href="#">Audífonos</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- OPCIÓN DESCUBRE -->
+                    <li>
+                        <a href="#">Descubre</a>
+
+                        <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN DESCUBRE -->
+                        <div class="second-navbar">
+                            <ul>
+                                <li>
+                                    <a href="#">Colecciones</a>
+                                    <i class="fa-solid fa-angle-right"></i>
+
+                                    <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN COLECCIONES DE DESCUBRE -->
+                                    <div class="third-navbar">
+                                        <ul>
+                                            <li><a href="#">Modern</a></li>
+                                            <li><a href="#">Classic</a></li>
+                                            <li><a href="#">Powerfull</a></li>
+                                            <li><a href="#">Black & White</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="#">Best Sellers</a></li>
+                                <li><a href="#">Ofertas</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- OPCIÓN CONTACTO -->
+                    <li>
+                        <a href="#">Contacto</a>
+
+                        <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN CONTACTO -->
+                        <div class="second-navbar">
+                            <ul>
+                                <li><a href="#">Acerca de Techlogic.store</a></li>
+                                <li><a href="#">Métodos de Pago</a></li>
+                                <li><a href="#">Preguntas frecuentes</a></li>
+                                <li><a href="#">Soporte al Cliente</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- BURGER MENÚ DE LA VERSIÓN MOBILE -->
+            <div class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- LOGO -->
+            <a href="/"><img src="img/logo.svg" alt="Logo Techlogic.store"></a>
+
+            <!-- BARRA DE NAVEGACIÓN DE LA DERECHA -->
+            <nav class="right-navbar">
+
+                <ul>
+                    <!-- ÍCONO DE LUPA -->
+                    <li>
+                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    </li>
+
+                    <!-- ÍCONO DE USUARIO -->
+                    <li>
+                        <a href="#">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
+
+                        <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO -->
+                        <div class="profile-menu">
+                            <img src="" alt="Foto de perfil del usuario">
+                            <p>Nombre de Usuario</p>
+                            <p>Dirección del Usuario</p>
+                            <a href="#">Ajustes del usuario...</a>
+                        </div>
+                    </li>
+
+                    <!-- ÍCONO DE CARRITO -->
+                    <li>
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <!-- BARRA DE BÚSQUEDA -->
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <p>Buscar...</p>
+                <i class="fa-solid fa-x"></i>
+            </div>
+
+        </header>
+
+        <!-- MAIN -->
+        <main></main>
+
+        <!-- FOOTER -->
+        <footer></footer>
     </body>
 </html>
