@@ -8,3 +8,9 @@
 :root{
     /* -------------PALETA DE COLORES-------------- */
 }
+body{
+    font-family: 'Roboto'
+}
+main{
+    background-color: black;
+}
