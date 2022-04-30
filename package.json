@@ -3,7 +3,7 @@
     "express": "^4.17.3",
     "nodemon": "^2.0.15"
   },
-  "name": "dh-heros",
+  "name": "techlogic.store",
   "version": "1.0.0",
   "main": "app.js",
   "devDependencies": {},

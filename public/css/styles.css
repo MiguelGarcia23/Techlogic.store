@@ -1,0 +1,10 @@
+/* ----------------------IMPORTANDO HOJAS DE ESTILO---------------------- */
+@import url(loginRegister.css);
+@import url(productCart.css);
+@import url(productDetail.css);
+@import url(index.css);
+
+/* ----------------------ROOT DE COLORES---------------------- */
+:root{
+    /* -------------PALETA DE COLORES-------------- */
+}
