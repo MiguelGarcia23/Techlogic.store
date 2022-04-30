@@ -6,11 +6,15 @@
 
 /* ----------------------ROOT DE COLORES---------------------- */
 :root{
-    /* -------------PALETA DE COLORES-------------- */
+    --azul-marino: #03254E;
+    --gris: #494949;
+    --celeste: #43E9F1;
+    --blanco: #FFFFFF;
+    --negro: #000000;
 }
 body{
-    font-family: 'Roboto'
+    font-family: 'Roboto', sans-serif
 }
 main{
-    background-color: black;
+    background-color: var(--negro);
 }
