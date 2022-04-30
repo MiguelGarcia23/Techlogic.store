@@ -1,1 +1,36 @@
 @import url(styles.css);
+
+main{
+ background-color: black;  
+ font-family: 'Roboto'
+}
+
+.list-product{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.articles{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+
+.article-detail{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    color: blanchedalmond;
+    padding: 10px;
+}
+.img-article{
+    width: 100px;
+    
+}
