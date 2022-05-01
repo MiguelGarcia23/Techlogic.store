@@ -139,8 +139,36 @@ body {
     right: 0;
 }
 
+/* BARRA DE BÚSQUEDA */
 .search-bar {
     display: none;
+    justify-content: space-between;
+    position: absolute;
+    width: 100vw;
+    background-color: var(--blanco);
+    opacity: 0.8;
+    top: 100%;
+    left: 0;
+    align-items: center;
+    border-top: 3px solid var(--celeste);
+    padding: 1rem 1.5rem;
+}
+
+/* ÍCONOS DE LA BARRA DE BÚSQUEDA */
+.search-bar i {
+    color: var(--gris);
+}
+
+/* PRIMER ÍCONO DE LA BARRA DE BÚSQUEDA */
+.search-bar i:first-child {
+    margin-right: 1rem;
+}
+
+/* TEXTO DE LA BARRA DE BÚSQUEDA */
+.search-bar p {
+    color: var(--gris);
+    flex: 1 0 0;
+    font-size: 1.125rem;
 }
 
 .slide-menu {
