@@ -181,6 +181,7 @@
     border: 3px solid var(--blanco);
     width: 70vw;
     max-width: 350px;
+    padding: 20px;
 }
 
 img {
