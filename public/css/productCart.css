@@ -17,7 +17,7 @@
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     padding: 10px;
     border: solid 2px rgb(255, 255, 255);
@@ -30,8 +30,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: left;
+    /* justify-content: space-around; */
     color: rgb(255, 255, 255);
     padding: 10px;
     border-right-width: 200px;
@@ -62,7 +61,7 @@
 .foot-product {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 
 }
 .cat-product, .description-product{

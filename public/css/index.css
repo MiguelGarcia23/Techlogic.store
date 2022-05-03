@@ -1,15 +1,15 @@
 @import url(styles.css);
 
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} */
 
-body {
+/* body {
     background-color: var(--negro);
     font-family: 'Roboto', sans-serif;
-}
+} */
 
 /* ----------------------  HEADER  ---------------------- */
 .main-header {
