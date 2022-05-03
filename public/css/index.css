@@ -171,8 +171,16 @@ body {
     font-size: 1.125rem;
 }
 
+/* SLIDE MENÚ DE LA VERSIÓN MOBILE */
 .slide-menu {
-    display: none;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--negro);
+    border: 3px solid var(--blanco);
+    width: 70vw;
+    max-width: 350px;
 }
 
 img {
