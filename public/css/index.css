@@ -180,9 +180,76 @@
     background-color: var(--negro);
     border: 3px solid var(--blanco);
     width: 70vw;
-    max-width: 350px;
-    padding: 20px;
+    max-width: 21.875rem;
+    padding: 1.25rem;
 }
+
+/* ÍCONO X DEL SLIDE MENÚ */
+.icono-x {
+    display: block;
+    color: var(--blanco);
+    opacity: 0.8;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+}
+
+/* LOGO DEL SLIDE MENÚ */
+.logo-slide-menu {
+    display: block;
+    margin: auto;
+    width: 6.25rem;
+    margin-bottom: 2rem;
+}
+
+/* BARRA DE NAVEGACIÓN DEL SLIDE MENÚ DE LA VERSIÓN MOBILE */
+
+
+/* LI DE LA NAVBAR DEL SLIDE MENÚ */
+.options-navbar-slide-menu {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* TODOS LOS ENLACES DENTRO DE LAS OPCIONES DE LA NAVBAR DEL SLIDE-MENU  */
+.options-navbar-slide-menu a{
+    text-decoration: none;
+    color: var(--blanco);
+    text-transform: uppercase;
+}
+
+/* TODOS LOS ÍCONOS DENTRO DE LAS OPCIONES DE LA NAVBAR DEL SLIDE-MENU */
+.options-navbar-slide-menu i {
+    color: var(--blanco);
+}
+
+/* TODOS LOS ÍCONOS DE "-" EN LA NAVBAR DEL SLIDE-MENU */
+.icono-menos-slide-menu {
+    display: none;
+}
+
+/* OPCIONES PRINCIPALES DE LA NAVBAR DEL SLIDE-MENU */
+.option-navbar-with-icon {
+    display: flex;
+    flex-wrap: none;
+    justify-content: space-between;
+}
+
+/* MENUS DESPLEGABLES DE LAS OPCIONES PRINCIPALES DE LA NAVBAR DEL SLIDE-MENU */
+.second-navbar-slide-menu {
+    margin: 1.5rem 0 0 1rem
+}
+
+/* TODOS LOS LI DE LA SEGUNDA NAVBAR DEL SLIDE-MENU */
+.second-navbar-slide-menu ul li {
+    margin-bottom: 1rem;
+}
+
+/* TODOS LOS ENLACES DENTRO DE LOS LI DE LA SEGUNDA NAVBAR DEL SLIDE-MENU */
+.second-navbar-slide-menu ul li a {
+    text-transform: none;
+    opacity: 0.85;
+}
+
 
 img {
     width: 80px;
