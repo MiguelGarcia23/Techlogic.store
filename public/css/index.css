@@ -182,6 +182,7 @@
     width: 70vw;
     max-width: 21.875rem;
     padding: 1.25rem;
+    min-height: 87vh;
 }
 
 /* ÍCONO X DEL SLIDE MENÚ */
@@ -236,7 +237,8 @@
 
 /* MENUS DESPLEGABLES DE LAS OPCIONES PRINCIPALES DE LA NAVBAR DEL SLIDE-MENU */
 .second-navbar-slide-menu {
-    margin: 1.5rem 0 0 1rem
+    margin: 1.5rem 0 0 1rem;
+    display: none;
 }
 
 /* TODOS LOS LI DE LA SEGUNDA NAVBAR DEL SLIDE-MENU */
