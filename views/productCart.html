@@ -19,51 +19,65 @@
   </head>
   <body>
     <!-- HEADER -->
+    <header class="cart-header">
+       <!-- BURGER MENÚ DE LA VERSIÓN MOBILE -->
+      <div class="burger-menu">
+        <i class="fas fa-bars"></i>
+      </div>
 
-    <main>
+      <!-- LOGO -->
+      <div class="logo">
+        <a href="#"><img src="img/logo.svg" alt="Logo Techlogic.store" /></a>
+      </div>
+      <nav class="right-navbar">
+        <ul>
+          <!-- ÍCONO DE LUPA -->
+          <li class="icono-right-navbar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
+
+          <!-- ÍCONO DE USUARIO -->
+          <li class="icono-right-navbar">
+            <i class="fa-solid fa-user"></i>
+
+            <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO -->
+            <!-- <div class="profile-menu">
+              <div class="image-profile-menu">
+                <img
+                  src="img/foto-de-perfil.jpg"
+                  alt="Foto de perfil del usuario"
+                />
+              </div>
+              <div class="info-profile-menu">
+                <p>Username</p>
+                <p>Dirección</p>
+              </div>
+              <div class="link-profile-menu">
+                <a href="#">Ver perfil...</a>
+              </div>
+            </div>
+          </li> -->
+
+          <!-- ÍCONO DE CARRITO -->
+          <li class="icono-right-navbar">
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- BARRA DE BÚSQUEDA -->
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <p>Buscar...</p>
+        <i class="fa-solid fa-x"></i>
+      </div>
+    </header>
+
+    <main class="main-cart">
       <section class="list-product">
         <div class="my-cart">
           <h3><i class="fa-solid fa-cart-shopping cart"></i> Mi Carrito</h3>
         </div>
-        <!--         <article class="articles">
-          <div class="article-detail">
-            <img
-              class="img-article"
-              src="/img/mouse-logi.jpg"
-              alt="Mouse Logitech"
-            />
-
-            <div class="foot-product">
-              <p class="title-product">Mouse Logitech G603</p>
-              <p class="cat-product">Categoria de producto</p>
-              <p class="description-product">
-                Mouse Logitech G603 GAMING LigthSpeed
-              </p>
-            </div>
-            <div class="add-item">
-              <p>Precio</p>
-              <p class="cantidad">1</p>
-            </div>
-          </div>
-        </article>
-        <article class="articles">
-          <div class="">
-            <img class="img-article" src="/img/iphone13.jpg" alt="Iphone 13" />
-          </div>
-          <div>
-            <div class="article-detail">
-              <div class="foot-product">
-                <p class="title-product">Iphone 13</p>
-                <p class="cat-product">Categoria de producto</p>
-                <p class="description-product">Descripcion de producto</p>
-              </div>
-              <div class="add-item">
-                <p>Precio</p>
-                <p class="cantidad">1</p>
-              </div>
-            </div>
-          </div>
-        </article> -->
         <article class="articles">
           <div class="item-cart">
             <img class="img-article" src="/img/iphone13.jpg" alt="Iphone 13" />
@@ -116,16 +130,6 @@
             </div>
           </div>
         </article>
-        <!-- <article class="articles">
-                <div class="">
-                    <img src="" alt="">
-                </div>
-                <div class="article-detail">
-                    <p class="title-product">Titulo de producto</p>
-                    <p class="cat-product">Categoria de producto</p>
-                    <p class="description-product">Descripcion de producto</p>
-                </div>
-            </article> -->
       </section>
     </main>
     <footer>

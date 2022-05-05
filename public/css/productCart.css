@@ -4,7 +4,21 @@
  background-color: black;  
  font-family: 'Roboto'
 } */
+.cart-header{ 
+    background-color: var(--negro);
+    width: 100%;
+    padding: 1.5rem;
+    border-bottom: 2px solid var(--gris);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+.main-cart{
+    width: 100%;
+    padding: 100px 0;
 
+}
 .list-product{
     display: flex;
     flex-wrap: wrap;
