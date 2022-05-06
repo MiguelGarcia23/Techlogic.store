@@ -238,7 +238,7 @@
 /* MENUS DESPLEGABLES DE LAS OPCIONES PRINCIPALES DE LA NAVBAR DEL SLIDE-MENU */
 .second-navbar-slide-menu {
     margin: 1.5rem 0 0 1rem;
-    display: none;
+    display: block;
 }
 
 /* TODOS LOS LI DE LA SEGUNDA NAVBAR DEL SLIDE-MENU */
@@ -252,7 +252,96 @@
     opacity: 0.85;
 }
 
+/* MENÚS DESPLEGABLES DE LAS OPCIONES SECUNDARIAS DE LA NAVBAR DEL SLIDE-MENU */
+.third-navbar-slide-menu {
+    margin: 1.5rem 0 0 1rem;
+}
 
-img {
-    width: 80px;
+/* TODOS LOS LI DE LA TERCERA NAVBAR DEL SLIDE-MENU */
+.third-navbar-slide-menu ul li {
+    margin-bottom: 1rem;
+}
+
+/* TODOS LOS ENLACES DENTRO DE LOS LI DE LA TERCERA NAVBAR DEL SLIDE-MENU */
+.third-navbar-slide-menu ul li a {
+    text-transform: none;
+    opacity: 0.65;
+}
+
+/* FOOTER DEL SLIDE-MENU */
+.footer-slide-menu {
+    position: absolute;
+    bottom: 2%;
+    color: white;
+    width: 100%;
+}
+
+/* DIV DEL PERFIL DEL USUARIO */
+.profile-slide-menu {
+    margin-bottom: 1rem;
+}
+
+/* DIV DEL PERFIL DEL USUARIO EN EL SLIDE-MENU SI NO HA INICIADO SESIÓN */
+.profile-slide-menu-empty {
+    display: block;
+}
+
+/* ENLACES DEL PERFIL DEL USUARIO EN SLIDE-MENU SI NO HA INICIADO SESIÓN */
+.profile-slide-menu-empty a{
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--blanco);
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+/* DIV DEL PERFIL DEL USUARIO DEL SLIDE-MENU SI YA INICIÓ SESIÓN */
+.profile-slide-menu-full {
+    display: none;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* DIV DE LA IMAGEN DEL PERFIL DEL USUARIO DEL SLIDE-MENU SI YA INICIÓ SESIÓN */
+.img-slider-menu {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    overflow: hidden;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    margin-right: 1rem;
+}
+
+/* IMAGEN DEL PERFIL DEL USUARIO DEL SLIDE-MENU SI YA INICIÓ SESIÓN */
+.img-slider-menu img {
+    width: auto;
+    height: 100%;
+    margin-left: -32%;
+}
+
+/* NOMBRE DE USUARIO DEL PERFIL DEL USUARIO DEL SLIDE-MENU SI YA INICIÓ SESIÓN */
+.profile-slide-menu-full p {
+    font-size: 1rem;
+    color: var(--blanco);
+    opacity: 0.8;
+}
+
+/* REDES SOCIALES EN EL SLIDE-MENU */
+.social-media-slide-menu {
+    width: 85%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ÍCONOS DE LAS REDES SOCIALES EN EL SLIDE-MENU */
+.social-media-slide-menu i {
+    font-size: 1rem;
+    color: var(--blanco);
 }
