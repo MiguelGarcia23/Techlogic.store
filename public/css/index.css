@@ -477,6 +477,192 @@
     color: var(--blanco);
 }
 
+/* ----------------------  FOOTER  ---------------------- */
+.main-footer {
+    background-color: var(--azul-marino);
+    padding: 2rem 1.5rem 1rem 1.5rem;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* SECCIONES DEL FOOTER */
+.sections-footer {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+/* BARRA DE BÚSQUEDA DEL FOOTER */
+.search-bar-footer {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 10.25rem;
+    position: relative;
+}
+
+/* INPUT DE LA BARRA DE BÚSQUEDA DEL FOOTER */
+.search-bar-footer input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 0.25rem 0;
+    background-color: var(--blanco);
+}
+
+/* DIV QUE CONTIENE EL LABEL Y EL ÍCONO DE LA BARRA DE BÚSQUEDA DEL FOOTER */
+.inside-search-bar-footer {
+    position: absolute;
+    width: 90%;
+    top: 12%;
+    left: 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LABEL DE LA BARRA DE BÚSQUEDA DEL FOOTER */
+.inside-search-bar-footer label {
+    font-size: 0.9375rem;
+    color: var(--gris);
+    padding: 0;
+    margin: 0;
+}
+
+/* ÍCONO DE BÚSQUEDA DE LA BARRA DE BÚSQUEDA DEL FOOTER */
+.inside-search-bar-footer a i {
+    font-size: 1rem;
+    color: var(--gris);
+}
+
+/* REDES SOCIALES DEL FOOTER */
+.social-media-footer {
+    width: 40%;
+    max-width: 9.875rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ÍCONOS DE REDES SOCIALES DEL FOOTER */
+.social-media-footer i {
+    background-color: var(--celeste);
+    width: 1.375rem;
+    height: 1.375rem;
+    text-align: center;
+    padding-top: 0.1875rem;
+    color: var(--azul-marino);
+    border-radius: 50%;
+}
+
+/* ENLACES DE TÍTULOS DE LAS SECCIONES PRODUCTOS Y CONTACTO EN EL FOOTER */
+.title-sections-footer {
+    display: block;
+    text-decoration: none;
+    color: var(--celeste);
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+/* ENLACES NORMALES DE LAS SECCIONES PRODUCTOS Y CONTACTO EN EL FOOTER */
+.enlaces-sections-footer {
+    display: block;
+    text-decoration: none;
+    color: var(--blanco);
+    opacity: 0.9;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* SECCIÓN DEL LOGO E INFO DEL FOOTER */
+.logo-info-footer {
+    width: 80%;
+    max-width: 22rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+}
+
+/* LOGO DEL FOOTER */
+.logo-footer {
+    width: 50%;
+    margin-right: 0.5rem;
+}
+
+.logo-footer img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    background-color: white;
+    max-width: 9.125rem;
+}
+
+/* INFO DE LA EMPRESA DEL FOOTER */
+.info-company-footer {
+    width: 50%;
+    margin-left: 0.5rem;
+}
+
+.info-company-footer p {
+    font-size: 0.875rem;
+    color: var(--blanco);
+    opacity: 0.9rem;
+    text-align: center;
+    margin-bottom: 0.375rem;
+}
+
+.info-company-footer p:last-child {
+    margin-bottom: 0;
+}
+
+/* COPYRIGHT DEL FOOTER */
+.copyright {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    padding-top: 0.75rem;
+}
+
+.copyright p {
+    width: 50%;
+    font-size: 0.75rem;
+    color: var(--blanco);
+    opacity: 0.7;
+}
+
+/* INFO AL LADO DEL COPYRIGHT */
+.info-copyright {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.info-copyright p {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--blanco);
+    opacity: 0.7;
+    padding: 0;
+    margin-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.info-copyright p:first-child {
+    padding-left: 0;
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 1050px) {
     /* BARRA DE NAVEGACIÓN IZQUIERDA */
@@ -487,5 +673,28 @@
     /* ÍCONO DE BURGER MENU */
     .burger-menu {
         display: none;
+    }
+
+    /* SECCIONES DEL FOOTER */
+    .sections-footer {
+        width: 24%
+    }
+
+    /* SECCIÓN DEL LOGO E INFO DEL FOOTER */
+    .logo-info-footer {
+        flex-direction: column;
+    }
+
+    /* LOGO DEL FOOTER */
+    .logo-footer {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    /* INFO DE LA EMPRESA DEL FOOTER */
+    .info-company-footer {
+        width: 100%;
+        margin-left: 0;
     }
 }
