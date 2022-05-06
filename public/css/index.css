@@ -15,7 +15,7 @@
 .main-header {
     background-color: var(--negro);
     width: 100vw;
-    padding: 1.5rem;
+    padding: 2rem;
     border-bottom: 2px solid var(--gris);
     display: flex;
     justify-content: space-between;
@@ -25,11 +25,126 @@
 
 /* BARRA DE NAVEGACIÓN IZQUIERDA */
 .left-navbar {
+    width: 100%;
     display: none;
+}
+
+.left-navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+/* TODOS LOS ENLACES DENTRO DE LAS OPCIONES PRINCIPALESDE LA NAVBAR IZQUIERDA  */
+.options-left-navbar a{
+    text-decoration: none;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/* MENÚ DESPLEGABLE DE LAS OPCIONES PRINCIPALES DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.second-left-navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: var(--negro);
+    border-top: 3px solid var(--celeste);
+    padding: 2rem 1rem 0.5rem 1rem;
+    width: 18%;
+    max-width: 15rem;
+}
+
+/* .prueba-left-navbar {
+    display: none;
+} */
+
+/* UL DENTRO DEL MENÚ SECUNDARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.second-left-navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+/* LI U OPCIONES DEL MENÚ SECUNDARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.second-options-left-navbar{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+/* ENLACES DENTRO DE LAS OPCIONES DEL MENÚ SECUNDARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.second-options-left-navbar a{
+    text-decoration: none;
+    text-transform: none;
+    color: var(--blanco);
+    font-size: 1rem;
+}
+
+/* OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
+.option-left-navbar-with-icon {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* TODOS LOS ENLACES DENTRO DE LAS OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
+.option-left-navbar-with-icon a {
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+/* TODOS LOS ÍCONOS DENTRO DE LAS OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
+.option-left-navbar-with-icon i {
+    font-size: 1rem;
+    color: var(--blanco);
+}
+
+/* NAVBAR SECUNDARIAS DE LA NAVBAR IZQUIERDA QUE DESPLIEGAN UN MENÚ TERCIARIO */
+.second-options-left-navbar-with-third-navbar {
+    position: relative;
+}
+
+/* MENÚ DESPLEGABLE DE LAS OPCIONES SECUNDARIAS DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.third-left-navbar {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 108%;
+    background-color: var(--negro);
+    border-top: 3px solid var(--celeste);
+    padding: 2rem 1rem 0.5rem 1rem;
+    width: 100%;
+    max-width: 12.5rem;
+}
+
+/* UL DENTRO DEL MENÚ TERCIARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.third-left-navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+/* LI U OPCIONES DEL MENÚ TERCIARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.third-options-left-navbar{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+/* ENLACES DENTRO DE LAS OPCIONES DEL MENÚ TERCIARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.third-options-left-navbar a{
+    text-decoration: none;
+    text-transform: none;
+    color: var(--blanco);
+    font-size: 1rem;
 }
 
 /* ÍCONO DE BURGER MENU */
 .burger-menu {
+    display: block;
     width: 100%;
     font-size: 1.5rem;
     color: var(--blanco);
@@ -142,38 +257,54 @@
 /* BARRA DE BÚSQUEDA */
 .search-bar {
     display: none;
-    justify-content: space-between;
     position: absolute;
     width: 100vw;
     background-color: var(--blanco);
     opacity: 0.8;
     top: 100%;
     left: 0;
-    align-items: center;
     border-top: 3px solid var(--celeste);
-    padding: 1rem 1.5rem;
+    padding: 0 1.5rem;
 }
 
-/* ÍCONOS DE LA BARRA DE BÚSQUEDA */
-.search-bar i {
+/* INPUT SEARCH DE LA BARRA DE BÚSQUEDA */
+.search-bar input {
+    width: 90%;
+    padding: 1.5rem 0;
+    margin: 0 3rem;
+    border: none;
+}
+
+/* DIV QUE CONTIENE A LOS ELEMENTOS QUE SE ENCUENTREN SOBRE LA BARRA DE BÚSQUEDA */
+.inside-search-bar-header {
+    width: 92%;
+    position: absolute;
+    top: 35%;
+    left: 3%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* ÍCONOS EN LA BARRA DE BÚSQUEDA */
+.inside-search-bar-header i {
     color: var(--gris);
+    font-size: 1.25rem;
 }
 
-/* PRIMER ÍCONO DE LA BARRA DE BÚSQUEDA */
-.search-bar i:first-child {
-    margin-right: 1rem;
-}
-
-/* TEXTO DE LA BARRA DE BÚSQUEDA */
-.search-bar p {
+/* LABEL EN LA BARRA DE BÚSQUEDA */
+.inside-search-bar-header label {
     color: var(--gris);
+    font: 1.25rem;
+    text-transform: uppercase;
     flex: 1 0 0;
-    font-size: 1.125rem;
+    margin-left: 1.5rem;
 }
 
 /* SLIDE MENÚ DE LA VERSIÓN MOBILE */
 .slide-menu {
-    display: block;
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -182,7 +313,7 @@
     width: 70vw;
     max-width: 21.875rem;
     padding: 1.25rem;
-    min-height: 87vh;
+    min-height: 88vh;
 }
 
 /* ÍCONO X DEL SLIDE MENÚ */
@@ -228,7 +359,7 @@
     display: none;
 }
 
-/* OPCIONES PRINCIPALES DE LA NAVBAR DEL SLIDE-MENU */
+/* TODAS LAS OPCIONES QUE TENGAN ÍCONOS AL LADO DE LA NAVBAR DEL SLIDE-MENU */
 .option-navbar-with-icon {
     display: flex;
     flex-wrap: none;
@@ -238,7 +369,7 @@
 /* MENUS DESPLEGABLES DE LAS OPCIONES PRINCIPALES DE LA NAVBAR DEL SLIDE-MENU */
 .second-navbar-slide-menu {
     margin: 1.5rem 0 0 1rem;
-    display: block;
+    display: none;
 }
 
 /* TODOS LOS LI DE LA SEGUNDA NAVBAR DEL SLIDE-MENU */
@@ -344,4 +475,17 @@
 .social-media-slide-menu i {
     font-size: 1rem;
     color: var(--blanco);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 1050px) {
+    /* BARRA DE NAVEGACIÓN IZQUIERDA */
+    .left-navbar {
+        display: block;
+    }
+
+    /* ÍCONO DE BURGER MENU */
+    .burger-menu {
+        display: none;
+    }
 }

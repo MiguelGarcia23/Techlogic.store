@@ -25,29 +25,31 @@
                 <ul>
 
                     <!-- OPCIÓN PRODUCTOS -->
-                    <li>
+                    <li class="options-left-navbar">
                         <a href="#">Productos</a>
 
                         <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN PRODUCTOS -->
-                        <div class="second-navbar">
+                        <div class="second-left-navbar">
                             <ul>
-                                <li><a href="#">Smartphones</a></li>
-                                <li><a href="#">Tablets</a></li>
-                                <li><a href="#">Laptops y Desktops</a></li>
-                                <li><a href="#">Consolas y Gaming</a></li>
-                                <li><a href="#">Redes</a></li>
-                                <li>
-                                    <a href="#">Accesorios</a>
-                                    <i class="fa-solid fa-angle-right"></i>
+                                <li class="second-options-left-navbar"><a href="#">Smartphones</a></li>
+                                <li class="second-options-left-navbar"><a href="#">Tablets</a></li>
+                                <li class="second-options-left-navbar"><a href="#">Laptops y Desktops</a></li>
+                                <li class="second-options-left-navbar"><a href="#">Consolas y Gaming</a></li>
+                                <li class="second-options-left-navbar"><a href="#">Redes</a></li>
+                                <li class="second-options-left-navbar second-options-left-navbar-with-third-navbar">
+                                    <div class="option-left-navbar-with-icon">
+                                        <a href="#">Accesorios</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </div>
                                     
                                     <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN ACCESORIOS DE PRODUCTOS -->
-                                    <div class="third-navbar">
+                                    <div class="third-left-navbar">
                                         <ul>
-                                            <li><a href="#">Fundas</a></li>
-                                            <li><a href="#">Teclados</a></li>
-                                            <li><a href="#">Mouse</a></li>
-                                            <li><a href="#">Altavoces</a></li>
-                                            <li><a href="#">Audífonos</a></li>
+                                            <li class="third-options-left-navbar"><a href="#">Fundas</a></li>
+                                            <li class="third-options-left-navbar"><a href="#">Teclados</a></li>
+                                            <li class="third-options-left-navbar"><a href="#">Mouse</a></li>
+                                            <li class="third-options-left-navbar"><a href="#">Altavoces</a></li>
+                                            <li class="third-options-left-navbar"><a href="#">Audífonos</a></li>
                                         </ul>
                                     </div>
                                 </li>
@@ -56,43 +58,45 @@
                     </li>
 
                     <!-- OPCIÓN DESCUBRE -->
-                    <li>
+                    <li class="options-left-navbar">
                         <a href="#">Descubre</a>
 
                         <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN DESCUBRE -->
-                        <div class="second-navbar">
+                        <div class="second-left-navbar">
                             <ul>
-                                <li>
-                                    <a href="#">Colecciones</a>
-                                    <i class="fa-solid fa-angle-right"></i>
+                                <li class="second-options-left-navbar second-options-left-navbar-with-third-navbar">
+                                    <div class="option-left-navbar-with-icon">
+                                        <a href="#">Colecciones</a>
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </div>
 
                                     <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN COLECCIONES DE DESCUBRE -->
-                                    <div class="third-navbar">
+                                    <div class="third-left-navbar">
                                         <ul>
-                                            <li><a href="#">Modern</a></li>
-                                            <li><a href="#">Classic</a></li>
-                                            <li><a href="#">Powerfull</a></li>
-                                            <li><a href="#">Black & White</a></li>
+                                            <li class="third-options-left-navbar"><a href="#">Modern</a></li>
+                                            <li class="third-options-left-navbar"><a href="#">Classic</a></li>
+                                            <li class="third-options-left-navbar"><a href="#">Powerfull</a></li>
+                                            <li class="third-options-left-navbar"><a href="#">Black & White</a></li>
                                         </ul>
                                     </div>
                                 </li>
-                                <li><a href="#">Best Sellers</a></li>
-                                <li><a href="#">Ofertas</a></li>
+                                <li class="second-options-left-navbar"><a href="#">Best Sellers</a></li>
+                                <li class="second-options-left-navbar"><a href="#">Ofertas</a></li>
                             </ul>
                         </div>
                     </li>
 
                     <!-- OPCIÓN CONTACTO -->
-                    <li>
+                    <li class="options-left-navbar">
                         <a href="#">Contacto</a>
 
                         <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN CONTACTO -->
-                        <div class="second-navbar">
+                        <div class="second-left-navbar">
                             <ul>
-                                <li><a href="#">Acerca de Techlogic.store</a></li>
-                                <li><a href="#">Métodos de Pago</a></li>
-                                <li><a href="#">Preguntas frecuentes</a></li>
-                                <li><a href="#">Soporte al Cliente</a></li>
+                                <li class="second-options-left-navbar"><a href="#">Acerca de Techlogic.store</a></li>
+                                <li class="second-options-left-navbar"><a href="#">Métodos de Pago</a></li>
+                                <li class="second-options-left-navbar"><a href="#">Preguntas frecuentes</a></li>
+                                <li class="second-options-left-navbar"><a href="#">Soporte al Cliente</a></li>
                             </ul>
                         </div>
                     </li>
@@ -141,7 +145,7 @@
 
                     <!-- ÍCONO DE CARRITO -->
                     <li class="icono-right-navbar">
-                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
                 </ul>
 
@@ -149,9 +153,18 @@
 
             <!-- BARRA DE BÚSQUEDA -->
             <div class="search-bar">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <!-- <i class="fa-solid fa-magnifying-glass"></i>
                 <p>Buscar...</p>
-                <i class="fa-solid fa-x"></i>
+                <i class="fa-solid fa-x"></i> -->
+
+                <form action="/" method="POST">
+                    <input type="search" name="search-header" id="search-header">
+                    <div class="inside-search-bar-header">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <label for="search-header"> Buscar... </label>
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                </form>
             </div>
 
             <!-- SLIDE MENÚ DE LA VERSIÓN MOBILE -->
