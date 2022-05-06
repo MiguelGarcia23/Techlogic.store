@@ -480,8 +480,8 @@
 /* ----------------------  FOOTER  ---------------------- */
 .main-footer {
     background-color: var(--azul-marino);
-    padding: 2rem 1.5rem 1rem 1.5rem;
-    display: none;
+    padding: 2.5rem 1.5rem 1rem 1.5rem;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
