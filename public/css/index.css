@@ -15,21 +15,138 @@
 .main-header {
     background-color: var(--negro);
     width: 100vw;
-    padding: 1.5rem;
+    padding: 2rem;
     border-bottom: 2px solid var(--gris);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
+    z-index: 99;
 }
 
 /* BARRA DE NAVEGACIÓN IZQUIERDA */
 .left-navbar {
+    width: 100%;
     display: none;
+}
+
+.left-navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+/* TODOS LOS ENLACES DENTRO DE LAS OPCIONES PRINCIPALESDE LA NAVBAR IZQUIERDA  */
+.options-left-navbar a{
+    text-decoration: none;
+    color: var(--blanco);
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+/* MENÚ DESPLEGABLE DE LAS OPCIONES PRINCIPALES DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.second-left-navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: var(--negro);
+    border-top: 3px solid var(--celeste);
+    padding: 2rem 1rem 0.5rem 1rem;
+    width: 18%;
+    max-width: 15rem;
+}
+
+/* .prueba-left-navbar {
+    display: none;
+} */
+
+/* UL DENTRO DEL MENÚ SECUNDARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.second-left-navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+/* LI U OPCIONES DEL MENÚ SECUNDARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.second-options-left-navbar{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+/* ENLACES DENTRO DE LAS OPCIONES DEL MENÚ SECUNDARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.second-options-left-navbar a{
+    text-decoration: none;
+    text-transform: none;
+    color: var(--blanco);
+    font-size: 1rem;
+}
+
+/* OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
+.option-left-navbar-with-icon {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* TODOS LOS ENLACES DENTRO DE LAS OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
+.option-left-navbar-with-icon a {
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+/* TODOS LOS ÍCONOS DENTRO DE LAS OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
+.option-left-navbar-with-icon i {
+    font-size: 1rem;
+    color: var(--blanco);
+}
+
+/* NAVBAR SECUNDARIAS DE LA NAVBAR IZQUIERDA QUE DESPLIEGAN UN MENÚ TERCIARIO */
+.second-options-left-navbar-with-third-navbar {
+    position: relative;
+}
+
+/* MENÚ DESPLEGABLE DE LAS OPCIONES SECUNDARIAS DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.third-left-navbar {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 108%;
+    background-color: var(--negro);
+    border-top: 3px solid var(--celeste);
+    padding: 2rem 1rem 0.5rem 1rem;
+    width: 100%;
+    max-width: 12.5rem;
+}
+
+/* UL DENTRO DEL MENÚ TERCIARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.third-left-navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+/* LI U OPCIONES DEL MENÚ TERCIARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.third-options-left-navbar{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+/* ENLACES DENTRO DE LAS OPCIONES DEL MENÚ TERCIARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
+.third-options-left-navbar a{
+    text-decoration: none;
+    text-transform: none;
+    color: var(--blanco);
+    font-size: 1rem;
 }
 
 /* ÍCONO DE BURGER MENU */
 .burger-menu {
+    display: block;
     width: 100%;
     font-size: 1.5rem;
     color: var(--blanco);
@@ -142,38 +259,54 @@
 /* BARRA DE BÚSQUEDA */
 .search-bar {
     display: none;
-    justify-content: space-between;
     position: absolute;
     width: 100vw;
     background-color: var(--blanco);
     opacity: 0.8;
     top: 100%;
     left: 0;
-    align-items: center;
     border-top: 3px solid var(--celeste);
-    padding: 1rem 1.5rem;
+    padding: 0 1.5rem;
 }
 
-/* ÍCONOS DE LA BARRA DE BÚSQUEDA */
-.search-bar i {
+/* INPUT SEARCH DE LA BARRA DE BÚSQUEDA */
+.search-bar input {
+    width: 90%;
+    padding: 1.5rem 0;
+    margin: 0 3rem;
+    border: none;
+}
+
+/* DIV QUE CONTIENE A LOS ELEMENTOS QUE SE ENCUENTREN SOBRE LA BARRA DE BÚSQUEDA */
+.inside-search-bar-header {
+    width: 92%;
+    position: absolute;
+    top: 35%;
+    left: 3%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* ÍCONOS EN LA BARRA DE BÚSQUEDA */
+.inside-search-bar-header i {
     color: var(--gris);
+    font-size: 1.25rem;
 }
 
-/* PRIMER ÍCONO DE LA BARRA DE BÚSQUEDA */
-.search-bar i:first-child {
-    margin-right: 1rem;
-}
-
-/* TEXTO DE LA BARRA DE BÚSQUEDA */
-.search-bar p {
+/* LABEL EN LA BARRA DE BÚSQUEDA */
+.inside-search-bar-header label {
     color: var(--gris);
+    font: 1.25rem;
+    text-transform: uppercase;
     flex: 1 0 0;
-    font-size: 1.125rem;
+    margin-left: 1.5rem;
 }
 
 /* SLIDE MENÚ DE LA VERSIÓN MOBILE */
 .slide-menu {
-    display: block;
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
@@ -182,6 +315,7 @@
     width: 70vw;
     max-width: 21.875rem;
     padding: 1.25rem;
+    min-height: 88vh;
 }
 
 /* ÍCONO X DEL SLIDE MENÚ */
@@ -227,7 +361,7 @@
     display: none;
 }
 
-/* OPCIONES PRINCIPALES DE LA NAVBAR DEL SLIDE-MENU */
+/* TODAS LAS OPCIONES QUE TENGAN ÍCONOS AL LADO DE LA NAVBAR DEL SLIDE-MENU */
 .option-navbar-with-icon {
     display: flex;
     flex-wrap: none;
@@ -236,7 +370,8 @@
 
 /* MENUS DESPLEGABLES DE LAS OPCIONES PRINCIPALES DE LA NAVBAR DEL SLIDE-MENU */
 .second-navbar-slide-menu {
-    margin: 1.5rem 0 0 1rem
+    margin: 1.5rem 0 0 1rem;
+    display: none;
 }
 
 /* TODOS LOS LI DE LA SEGUNDA NAVBAR DEL SLIDE-MENU */
@@ -250,7 +385,497 @@
     opacity: 0.85;
 }
 
+/* MENÚS DESPLEGABLES DE LAS OPCIONES SECUNDARIAS DE LA NAVBAR DEL SLIDE-MENU */
+.third-navbar-slide-menu {
+    margin: 1.5rem 0 0 1rem;
+}
 
-img {
-    width: 80px;
+/* TODOS LOS LI DE LA TERCERA NAVBAR DEL SLIDE-MENU */
+.third-navbar-slide-menu ul li {
+    margin-bottom: 1rem;
+}
+
+/* TODOS LOS ENLACES DENTRO DE LOS LI DE LA TERCERA NAVBAR DEL SLIDE-MENU */
+.third-navbar-slide-menu ul li a {
+    text-transform: none;
+    opacity: 0.65;
+}
+
+/* FOOTER DEL SLIDE-MENU */
+.footer-slide-menu {
+    position: absolute;
+    bottom: 2%;
+    color: white;
+    width: 100%;
+}
+
+/* DIV DEL PERFIL DEL USUARIO */
+.profile-slide-menu {
+    margin-bottom: 1rem;
+}
+
+/* DIV DEL PERFIL DEL USUARIO EN EL SLIDE-MENU SI NO HA INICIADO SESIÓN */
+.profile-slide-menu-empty {
+    display: block;
+}
+
+/* ENLACES DEL PERFIL DEL USUARIO EN SLIDE-MENU SI NO HA INICIADO SESIÓN */
+.profile-slide-menu-empty a{
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--blanco);
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+/* DIV DEL PERFIL DEL USUARIO DEL SLIDE-MENU SI YA INICIÓ SESIÓN */
+.profile-slide-menu-full {
+    display: none;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* DIV DE LA IMAGEN DEL PERFIL DEL USUARIO DEL SLIDE-MENU SI YA INICIÓ SESIÓN */
+.img-slider-menu {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    overflow: hidden;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+    margin-right: 1rem;
+}
+
+/* IMAGEN DEL PERFIL DEL USUARIO DEL SLIDE-MENU SI YA INICIÓ SESIÓN */
+.img-slider-menu img {
+    width: auto;
+    height: 100%;
+    margin-left: -32%;
+}
+
+/* NOMBRE DE USUARIO DEL PERFIL DEL USUARIO DEL SLIDE-MENU SI YA INICIÓ SESIÓN */
+.profile-slide-menu-full p {
+    font-size: 1rem;
+    color: var(--blanco);
+    opacity: 0.8;
+}
+
+/* REDES SOCIALES EN EL SLIDE-MENU */
+.social-media-slide-menu {
+    width: 85%;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ÍCONOS DE LAS REDES SOCIALES EN EL SLIDE-MENU */
+.social-media-slide-menu i {
+    font-size: 1rem;
+    color: var(--blanco);
+}
+
+/* ----------------------  BANNER PRINCIPAL  ---------------------- */
+.main-banner {
+    background-image: url(/img/prueba.png);
+    width: 100vw;
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 6.3125rem;
+    position: relative;
+}
+
+/* FLECHAS DEL BANNER PRINCIPAL */
+.flechas-main-banner {
+    position: absolute;
+    top: 47%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.flechas-main-banner i {
+    color: var(--blanco);
+    background-color: var(--gris);
+    opacity: 0.7;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+}
+
+/* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
+.circles-main-banner {
+    position: absolute;
+    top: 90%;
+    width: 25%;
+    max-width: 7.875rem;
+    left: 38%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.circle-main-banner {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--blanco);
+}
+
+.circle-main-banner:first-child {
+    opacity: 0.5;
+}
+
+/* ----------------------  MAIN  ---------------------- */
+.main {
+    padding: 1.5rem 0rem 1.5rem 2rem;
+}
+
+/* SECCIÓN BEST SELLERS */
+.best-sellers-section {
+    background-color: var(--gris);
+    padding: 2rem 0;
+}
+
+/* SUBTÍTULO SECCIÓN BEST SELLERS */
+.subtitle-best-sellers-section {
+    font-size: 1.125rem;
+    color: var(--blanco);
+    opacity: 0.7;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+/* TÍTULO SECCIÓN BEST SELLERS */
+.title-best-sellers-section {
+    color: var(--blanco);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 1.75rem;
+}
+
+/* PRODUCTOS DE LA SECCIÓN BEST SELLERS */
+.products-best-sellers {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    /* justify-content: space-between; */
+    align-items: center;
+    overflow: hidden;
+}
+
+/* CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+.product-best-seller {
+    width: 80%;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    /* border: 2px dashed red; */
+}
+
+.product-best-seller:first-child {
+    margin-left: 27%;
+}
+
+/* IMAGEN DE CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+.product-best-seller img {
+    width: 40vw;
+    margin-bottom: 0.875rem;
+}
+
+/* NOMBRE DE CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+.name-product-best-sellers-section {
+    font-size: 1.25rem;
+    color: var(--blanco);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* PRECIO DE CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+.price-product-best-sellers-section {
+    font-size: 1rem;
+    color: var(--celeste);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ENLACE DE LA SECCIÓN BEST SELLERS */
+.link-seccion-best-sellers a {
+    display: block;
+    width: 30%;
+    max-width: 8rem;
+    padding: 1rem;
+    background-color: var(--azul-marino);
+    margin: 0 auto;
+    text-decoration: none;
+    color: var(--blanco);
+    text-align: center;
+}
+
+/* ----------------------  FOOTER  ---------------------- */
+.main-footer {
+    background-color: var(--azul-marino);
+    padding: 2.5rem 1.5rem 1rem 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* SECCIONES DEL FOOTER */
+.sections-footer {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+/* BARRA DE BÚSQUEDA DEL FOOTER */
+.search-bar-footer {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 10.25rem;
+    position: relative;
+}
+
+/* INPUT DE LA BARRA DE BÚSQUEDA DEL FOOTER */
+.search-bar-footer input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 0.25rem 0;
+    background-color: var(--blanco);
+}
+
+/* DIV QUE CONTIENE EL LABEL Y EL ÍCONO DE LA BARRA DE BÚSQUEDA DEL FOOTER */
+.inside-search-bar-footer {
+    position: absolute;
+    width: 90%;
+    top: 12%;
+    left: 5%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LABEL DE LA BARRA DE BÚSQUEDA DEL FOOTER */
+.inside-search-bar-footer label {
+    font-size: 0.9375rem;
+    color: var(--gris);
+    padding: 0;
+    margin: 0;
+}
+
+/* ÍCONO DE BÚSQUEDA DE LA BARRA DE BÚSQUEDA DEL FOOTER */
+.inside-search-bar-footer a i {
+    font-size: 1rem;
+    color: var(--gris);
+}
+
+/* REDES SOCIALES DEL FOOTER */
+.social-media-footer {
+    width: 40%;
+    max-width: 9.875rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ÍCONOS DE REDES SOCIALES DEL FOOTER */
+.social-media-footer i {
+    background-color: var(--celeste);
+    width: 1.375rem;
+    height: 1.375rem;
+    text-align: center;
+    padding-top: 0.1875rem;
+    color: var(--azul-marino);
+    border-radius: 50%;
+}
+
+/* ENLACES DE TÍTULOS DE LAS SECCIONES PRODUCTOS Y CONTACTO EN EL FOOTER */
+.title-sections-footer {
+    display: block;
+    text-decoration: none;
+    color: var(--celeste);
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+/* ENLACES NORMALES DE LAS SECCIONES PRODUCTOS Y CONTACTO EN EL FOOTER */
+.enlaces-sections-footer {
+    display: block;
+    text-decoration: none;
+    color: var(--blanco);
+    opacity: 0.9;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* SECCIÓN DEL LOGO E INFO DEL FOOTER */
+.logo-info-footer {
+    width: 80%;
+    max-width: 22rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+}
+
+/* LOGO DEL FOOTER */
+.logo-footer {
+    width: 50%;
+    margin-right: 0.5rem;
+}
+
+.logo-footer img {
+    display: block;
+    margin: auto;
+    width: 100%;
+    background-color: white;
+    max-width: 9.125rem;
+}
+
+/* INFO DE LA EMPRESA DEL FOOTER */
+.info-company-footer {
+    width: 50%;
+    margin-left: 0.5rem;
+}
+
+.info-company-footer p {
+    font-size: 0.875rem;
+    color: var(--blanco);
+    opacity: 0.9rem;
+    text-align: center;
+    margin-bottom: 0.375rem;
+}
+
+.info-company-footer p:last-child {
+    margin-bottom: 0;
+}
+
+/* COPYRIGHT DEL FOOTER */
+.copyright {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    padding-top: 0.75rem;
+}
+
+.copyright p {
+    width: 50%;
+    font-size: 0.75rem;
+    color: var(--blanco);
+    opacity: 0.7;
+}
+
+/* INFO AL LADO DEL COPYRIGHT */
+.info-copyright {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.info-copyright p {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--blanco);
+    opacity: 0.7;
+    padding: 0;
+    margin-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.info-copyright p:first-child {
+    padding-left: 0;
+}
+
+/* MEDIA QUERIES */
+
+/* MEDIA QUERIES TABLETS */
+@media (min-width: 768px) {
+
+    /* ----------------------  HEADER  ---------------------- */
+    .main-header {
+        background-color: transparent;
+    }
+
+    /* ----------------------  BANNER PRINCIPAL  ---------------------- */
+    .main-banner {
+        height: 75vh;
+        margin-top: 0;
+    }
+
+    /* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
+    .circles-main-banner {
+        left: 43%;
+    }
+}
+
+/* MEDIA QUERIES DESKTOPS */
+@media (min-width: 1050px) {
+
+    /* ----------------------  HEADER  ---------------------- */
+
+    /* BARRA DE NAVEGACIÓN IZQUIERDA */
+    .left-navbar {
+        display: block;
+    }
+
+    /* ÍCONO DE BURGER MENU */
+    .burger-menu {
+        display: none;
+    }
+
+    /* ----------------------  BANNER PRINCIPAL  ---------------------- */
+    .main-banner {
+        height: 100vh;
+        margin-top: 0;
+    }
+
+    /* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
+    .circles-main-banner {
+        left: 45%;
+    }
+
+    /* ----------------------  FOOTER  ---------------------- */
+
+    /* SECCIONES DEL FOOTER */
+    .sections-footer {
+        width: 24%
+    }
+
+    /* SECCIÓN DEL LOGO E INFO DEL FOOTER */
+    .logo-info-footer {
+        flex-direction: column;
+    }
+
+    /* LOGO DEL FOOTER */
+    .logo-footer {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    /* INFO DE LA EMPRESA DEL FOOTER */
+    .info-company-footer {
+        width: 100%;
+        margin-left: 0;
+    }
+
 }
