@@ -21,6 +21,8 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
+    z-index: 99;
 }
 
 /* BARRA DE NAVEGACIÓN IZQUIERDA */
@@ -477,6 +479,146 @@
     color: var(--blanco);
 }
 
+/* ----------------------  BANNER PRINCIPAL  ---------------------- */
+.main-banner {
+    background-image: url(/img/prueba.png);
+    width: 100vw;
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 6.3125rem;
+    position: relative;
+}
+
+/* FLECHAS DEL BANNER PRINCIPAL */
+.flechas-main-banner {
+    position: absolute;
+    top: 47%;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.flechas-main-banner i {
+    color: var(--blanco);
+    background-color: var(--gris);
+    opacity: 0.7;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+}
+
+/* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
+.circles-main-banner {
+    position: absolute;
+    top: 90%;
+    width: 25%;
+    max-width: 7.875rem;
+    left: 38%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.circle-main-banner {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--blanco);
+}
+
+.circle-main-banner:first-child {
+    opacity: 0.5;
+}
+
+/* ----------------------  MAIN  ---------------------- */
+.main {
+    padding: 1.5rem 0rem 1.5rem 2rem;
+}
+
+/* SECCIÓN BEST SELLERS */
+.best-sellers-section {
+    background-color: var(--gris);
+    padding: 2rem 0;
+}
+
+/* SUBTÍTULO SECCIÓN BEST SELLERS */
+.subtitle-best-sellers-section {
+    font-size: 1.125rem;
+    color: var(--blanco);
+    opacity: 0.7;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+/* TÍTULO SECCIÓN BEST SELLERS */
+.title-best-sellers-section {
+    color: var(--blanco);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 1.75rem;
+}
+
+/* PRODUCTOS DE LA SECCIÓN BEST SELLERS */
+.products-best-sellers {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    /* justify-content: space-between; */
+    align-items: center;
+    overflow: hidden;
+}
+
+/* CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+.product-best-seller {
+    width: 80%;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    /* border: 2px dashed red; */
+}
+
+.product-best-seller:first-child {
+    margin-left: 27%;
+}
+
+/* IMAGEN DE CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+.product-best-seller img {
+    width: 40vw;
+    margin-bottom: 0.875rem;
+}
+
+/* NOMBRE DE CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+.name-product-best-sellers-section {
+    font-size: 1.25rem;
+    color: var(--blanco);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* PRECIO DE CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+.price-product-best-sellers-section {
+    font-size: 1rem;
+    color: var(--celeste);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ENLACE DE LA SECCIÓN BEST SELLERS */
+.link-seccion-best-sellers a {
+    display: block;
+    width: 30%;
+    max-width: 8rem;
+    padding: 1rem;
+    background-color: var(--azul-marino);
+    margin: 0 auto;
+    text-decoration: none;
+    color: var(--blanco);
+    text-align: center;
+}
+
 /* ----------------------  FOOTER  ---------------------- */
 .main-footer {
     background-color: var(--azul-marino);
@@ -664,7 +806,32 @@
 }
 
 /* MEDIA QUERIES */
+
+/* MEDIA QUERIES TABLETS */
+@media (min-width: 768px) {
+
+    /* ----------------------  HEADER  ---------------------- */
+    .main-header {
+        background-color: transparent;
+    }
+
+    /* ----------------------  BANNER PRINCIPAL  ---------------------- */
+    .main-banner {
+        height: 75vh;
+        margin-top: 0;
+    }
+
+    /* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
+    .circles-main-banner {
+        left: 43%;
+    }
+}
+
+/* MEDIA QUERIES DESKTOPS */
 @media (min-width: 1050px) {
+
+    /* ----------------------  HEADER  ---------------------- */
+
     /* BARRA DE NAVEGACIÓN IZQUIERDA */
     .left-navbar {
         display: block;
@@ -674,6 +841,19 @@
     .burger-menu {
         display: none;
     }
+
+    /* ----------------------  BANNER PRINCIPAL  ---------------------- */
+    .main-banner {
+        height: 100vh;
+        margin-top: 0;
+    }
+
+    /* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
+    .circles-main-banner {
+        left: 45%;
+    }
+
+    /* ----------------------  FOOTER  ---------------------- */
 
     /* SECCIONES DEL FOOTER */
     .sections-footer {
@@ -697,4 +877,5 @@
         width: 100%;
         margin-left: 0;
     }
+
 }
