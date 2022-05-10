@@ -533,9 +533,9 @@
 }
 
 /* ----------------------  MAIN  ---------------------- */
-.main {
+/* .main {
     padding: 1.5rem 0rem 1.5rem 2rem;
-}
+} */
 
 /* SECCIÓN BEST SELLERS */
 .best-sellers-section {
@@ -570,18 +570,18 @@
     /* justify-content: space-between; */
     align-items: center;
     overflow: hidden;
+    margin-bottom: 2rem;
 }
 
 /* CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
 .product-best-seller {
     width: 80%;
     margin-left: 2rem;
-    margin-bottom: 2rem;
     /* border: 2px dashed red; */
 }
 
 .product-best-seller:first-child {
-    margin-left: 27%;
+    margin-left: 30%;
 }
 
 /* IMAGEN DE CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
@@ -616,6 +616,180 @@
     margin: 0 auto;
     text-decoration: none;
     color: var(--blanco);
+    text-align: center;
+}
+
+/* SECCIÓN CONÓCENOS */
+.know-us-section {
+    background-image: url(/img/bg-knowus-index.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 4rem 0;
+}
+
+/* CUADRO DE INFORMACIÓN DENTRO DE LA SECCIÓN CONÓCENOS */
+.info-know-us-section {
+    background-color: var(--negro);
+    box-shadow: 10px 5px 5px var(--negro);
+    width: 70%;
+    max-width: 17rem;
+    margin: auto;
+    padding: 1.5rem 1rem;
+}
+
+/* TÍTULO SECCIÓN CONÓCENOS */
+.title-know-us-section {
+    font-size: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* DESCRIPCIÓN SECCIÓN CONÓCENOS */
+.description-know-us-section {
+    font-size: 1rem;
+    color: var(--blanco);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ENLACE SECCIÓN CONÓCENOS */
+.link-know-us-section {
+    text-decoration: none;
+    display: block;
+    width: 50%;
+    padding: 0.5rem 0;
+    background-color: var(--azul-marino);
+    font-size: 1rem;
+    color: var(--blanco);
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* SECCIÓN COLECCIONES */
+.collections-section {
+    background-color: var(--gris);
+    padding: 2rem 0;
+}
+
+/* SUBTÍTULO SECCIÓN COLECCIONES */
+.subtitle-collections-section {
+    font-size: 1.125rem;
+    color: var(--blanco);
+    opacity: 0.7;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+/* TÍTULO SECCIÓN COLECCIONES */
+.title-collections-section {
+    color: var(--blanco);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 1.75rem;
+}
+
+/* COLECCIONES DE LA SECCIÓN COLECCIONES */
+.collections {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+/* CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
+.collection {
+    margin-left: 2rem;
+    background-color: var(--negro);
+    padding: 1.5rem 1rem;
+    box-shadow: 10px 5px 5px var(--negro);
+    margin-bottom: 0.5rem;
+}
+
+.collection:first-child {
+    margin-left: 11%;
+}
+
+/* TÍTULO DE CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
+.title-collection-collections-section {
+    font-size: 1.25rem;
+    color: var(--blanco);
+    margin-bottom: 0.75rem;
+}
+
+/* SUBTÍTULO DE CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
+.subtitle-collection-collections-section {
+    font-size: 0.75rem;
+    color: var(--blanco);
+    opacity: 0.7;
+    text-overflow: clip;
+    white-space: nowrap;
+    margin-bottom: 2rem;
+}
+
+/* ENLACE DE CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
+.link-collection-collections-section {
+    display: block;
+    text-decoration: none;
+    color: var(--celeste);
+    font-size: 1rem;
+}
+
+/* ENLACE DE LA SECCIÓN COLECCIONES */
+.link-seccion-collections a{
+    display: block;
+    width: 30%;
+    max-width: 8rem;
+    padding: 1rem;
+    background-color: var(--azul-marino);
+    margin: 0 auto;
+    text-decoration: none;
+    color: var(--blanco);
+    text-align: center;
+}
+
+/* SECCIÓN INFO TECHLOGIC.STORE */
+.info-company-section {
+    background-image: url(/img/bg-info-section-index.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* CUADROS DE INFO DE LA SECCIÓN INFO COMPANY */
+.info-squart-info-section {
+    width: 10.875rem;
+    background-color: var(--azul-marino);
+    box-shadow: 10px 5px 5px var(--negro);
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+}
+
+/* TÍTULO CUADROS DE INFO DE LA SECCIÓN INFO COMPANY */
+.title-info-company-section {
+    color: var(--blanco);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+/* P DE LOS CUADROS DE INFO DE LA SECCIÓN INFO COMPANY */
+.p-info-company-section {
+    color: var(--blanco);
+    font-size: 1rem;
     text-align: center;
 }
 
