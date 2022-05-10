@@ -1,3 +1,60 @@
 @import url(styles.css);
 
+/* ---------------------CAJA DE REGISTER--------------------- */
+.register-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75vw;
+    position: absolute;
+    /* top: 7%; */
+    left: 12%;
+    background-color: white;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+/* ---------------------TEXTO "REGISTRARSE"--------------------- */
+.register-text{
+    margin: 30px;
+}
 
+/* ---------------------IMAGEN DE PERFIL--------------------- */
+.user-profile-picture{
+    margin-bottom:15px;
+    width: 45vw;
+    border: 1px solid red;  /* es solo para visualizarla mejor */
+}
+
+/* ---------------------FORMULARIO DE REGISTRO--------------------- */
+.register-form{
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------------------INPUTS DEL FORMULARIO--------------------- */
+.register-form-item{
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+/* ---------------------TERMINOS Y CONDICIONES--------------------- */
+.terms-conditions{
+    margin-bottom: 25px;
+    margin-top: 15px;
+}
+/* ---------------------BOTON DE "REGISTRARSE"--------------------- */
+
+.register-button{
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.register-button-input{
+    padding: 20px;
+    background-color: var(--celeste);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+}
