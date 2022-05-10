@@ -1,14 +1,23 @@
 @import url(styles.css);
 
+/* ---------------------FONDO DE GIF PARA EL BODY--------------------- */
+
+/* .body-register{
+    background-image: url(https://image.jimcdn.com/app/cms/image/transf/none/path/s224fc11c65cbc592/image/if98254786d31b25d/version/1500231290/image.gif);
+    } */
+
 /* ---------------------CAJA DE REGISTER--------------------- */
 .register-box{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 75vw;
-    position: absolute;
-    /* top: 7%; */
-    left: 12%;
+    /* position: absolute;
+    top: 10%;
+    left: 12%; */
+    margin: auto;
+    margin-top: 20vw;
+    margin-bottom: 20vw;
     background-color: white;
     border-radius: 10px;
     flex-wrap: wrap;
@@ -21,8 +30,8 @@
 /* ---------------------IMAGEN DE PERFIL--------------------- */
 .user-profile-picture{
     margin-bottom:15px;
-    width: 45vw;
-    border: 1px solid red;  /* es solo para visualizarla mejor */
+    width: 25vw;
+    /* border: 1px solid red;  /* es solo para visualizarla mejor */ 
 }
 
 /* ---------------------FORMULARIO DE REGISTRO--------------------- */
@@ -58,3 +67,16 @@
     border-radius: 15px;
     font-weight: bold;
 }
+
+/* MEDIA QUERIES TABLETS */
+@media (min-width: 768px) {
+
+}
+
+/* MEDIA QUERIES DESKTOPS */
+@media (min-width: 1050px){
+
+}
+
+
+
