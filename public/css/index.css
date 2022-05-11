@@ -481,8 +481,8 @@
 
 /* ----------------------  BANNER PRINCIPAL  ---------------------- */
 .main-banner {
-    background-image: url(/img/prueba.png);
-    width: 100vw;
+    background-image: url(/img/banner-1.png);
+    /* width: 100vw; */
     height: 50vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -540,7 +540,7 @@
 /* SECCIÓN BEST SELLERS */
 .best-sellers-section {
     background-color: var(--gris);
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 
 /* SUBTÍTULO SECCIÓN BEST SELLERS */
@@ -559,7 +559,7 @@
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 3px;
-    margin-bottom: 1.75rem;
+    margin-bottom: 2.5rem;
 }
 
 /* PRODUCTOS DE LA SECCIÓN BEST SELLERS */
@@ -570,7 +570,7 @@
     /* justify-content: space-between; */
     align-items: center;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 /* CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
@@ -672,7 +672,7 @@
 /* SECCIÓN COLECCIONES */
 .collections-section {
     background-color: var(--gris);
-    padding: 2rem 0;
+    padding: 3rem 0;
 }
 
 /* SUBTÍTULO SECCIÓN COLECCIONES */
@@ -691,7 +691,7 @@
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 3px;
-    margin-bottom: 1.75rem;
+    margin-bottom: 2.5rem;
 }
 
 /* COLECCIONES DE LA SECCIÓN COLECCIONES */
@@ -700,13 +700,12 @@
     flex-wrap: nowrap;
     align-items: center;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 /* CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
 .collection {
     margin-left: 2rem;
-    background-color: var(--negro);
     padding: 1.5rem 1rem;
     box-shadow: 10px 5px 5px var(--negro);
     margin-bottom: 0.5rem;
@@ -719,25 +718,21 @@
 /* TÍTULO DE CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
 .title-collection-collections-section {
     font-size: 1.25rem;
-    color: var(--blanco);
     margin-bottom: 0.75rem;
 }
 
 /* SUBTÍTULO DE CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
 .subtitle-collection-collections-section {
     font-size: 0.75rem;
-    color: var(--blanco);
     opacity: 0.7;
     text-overflow: clip;
     white-space: nowrap;
     margin-bottom: 2rem;
 }
-
 /* ENLACE DE CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
 .link-collection-collections-section {
     display: block;
     text-decoration: none;
-    color: var(--celeste);
     font-size: 1rem;
 }
 
@@ -752,6 +747,46 @@
     text-decoration: none;
     color: var(--blanco);
     text-align: center;
+}
+
+/* COLECCIÓN MODERN DE LA SECCIÓN COLECCIONES */
+.modern-collection {
+    background: linear-gradient(to bottom right, #BEBEBE, rgb(101, 100, 100));
+    color: #223544;
+}
+
+.modern-collection a {
+    color: rgb(244, 244, 6);
+}
+
+/* COLECCIÓN CLASSIC DE LA SECCIÓN COLECCIONES */
+.classic-collection {
+    background: linear-gradient(to bottom right, #322214, #4C443C);
+    color: #F5F1ED;
+}
+
+.classic-collection a {
+    color: #93A3B1;
+}
+
+/* COLECCIÓN COLORFUL DE LA SECCIÓN COLECCIONES */
+.colorful-collection {
+    background: linear-gradient(to bottom right, var(--celeste), #ea37a3);
+    color: var(--blanco);
+}
+
+.colorful-collection a {
+    color: #ADFF2F;
+}
+
+/* COLECCIÓN BLACK & WHITE DE LA SECCIÓN COLECCIONES */
+.black-white-collection {
+    background: linear-gradient(to bottom right, var(--blanco), var(--negro));
+    color: var(--negro);
+}
+
+.black-white-collection a {
+    color: var(--negro);
 }
 
 /* SECCIÓN INFO TECHLOGIC.STORE */
@@ -1014,6 +1049,11 @@
     /* PRIMER COLECCIÓN DE LA SECCIÓN COLECCIONES */
     .collection:first-child {
         margin-left: 8%;
+    }
+
+    /* SECCIÓN INFO TECHLOGIC.STORE */
+    .info-company-section {
+        padding-right: 4rem;
     }
 
 }
