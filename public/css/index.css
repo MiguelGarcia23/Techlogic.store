@@ -587,6 +587,7 @@
 /* IMAGEN DE CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
 .product-best-seller img {
     width: 40vw;
+    max-width: 12.5rem;
     margin-bottom: 0.875rem;
 }
 
@@ -759,7 +760,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 2rem;
+    padding: 4rem 2rem;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -774,6 +775,10 @@
     box-shadow: 10px 5px 5px var(--negro);
     margin-bottom: 2rem;
     padding: 2rem 1rem;
+}
+
+.info-squart-info-section:last-child {
+    margin-bottom: 0;
 }
 
 /* TÍTULO CUADROS DE INFO DE LA SECCIÓN INFO COMPANY */
@@ -999,6 +1004,18 @@
     .circles-main-banner {
         left: 43%;
     }
+
+    /* ----------------------  MAIN  ---------------------- */
+    /* PRIMER PRODUCTO DE LA SECCIÓN BEST SELLERS */
+    .product-best-seller:first-child {
+        margin-left: 8%;
+    }
+
+    /* PRIMER COLECCIÓN DE LA SECCIÓN COLECCIONES */
+    .collection:first-child {
+        margin-left: 8%;
+    }
+
 }
 
 /* MEDIA QUERIES DESKTOPS */
@@ -1025,6 +1042,22 @@
     /* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
     .circles-main-banner {
         left: 45%;
+    }
+
+    /* ----------------------  MAIN  ---------------------- */
+    /* PRIMER PRODUCTO DE LA SECCIÓN BEST SELLERS */
+    .product-best-seller:first-child {
+        margin-left: 8%;
+    }
+
+    /* CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+    .product-best-seller {
+        margin-left: 2.5rem;
+    }
+
+    /* PRIMER COLECCIÓN DE LA SECCIÓN COLECCIONES */
+    .collection:first-child {
+        margin-left: 2%;
     }
 
     /* ----------------------  FOOTER  ---------------------- */
