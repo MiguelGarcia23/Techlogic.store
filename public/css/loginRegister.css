@@ -1,4 +1,5 @@
 @import url(styles.css);
+@import url(index.css);
 
 /* ---------------------FONDO DE GIF PARA EL BODY--------------------- */
 
@@ -6,21 +7,27 @@
     background-image: url(https://image.jimcdn.com/app/cms/image/transf/none/path/s224fc11c65cbc592/image/if98254786d31b25d/version/1500231290/image.gif);
     } */
 
+/* .main-register{
+    margin: auto;
+    margin-bottom: 33vw;
+    margin-top: 30vw;
+}
+ */
 /* ---------------------CAJA DE REGISTER--------------------- */
 .register-box{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 75vw;
-    /* position: absolute;
-    top: 10%;
-    left: 12%; */
+    width: 70vw;
+    /* position: relative;
+    top: 30vw; */  
     margin: auto;
-    margin-top: 20vw;
-    margin-bottom: 20vw;
+    margin-bottom: 33vw;
+    margin-top: 30vw;
     background-color: white;
     border-radius: 10px;
     flex-wrap: wrap;
+    z-index: 1;
 }
 /* ---------------------TEXTO "REGISTRARSE"--------------------- */
 .register-text{
@@ -70,12 +77,37 @@
 
 /* MEDIA QUERIES TABLETS */
 @media (min-width: 768px) {
+    .user-profile-picture{
+        width: 23vw;
+}
+    .register-box{
+        width: 60vw;
+        margin-bottom: 20vw;
+    }
+    .register-box{
+        top: 15vw;
+    }
+    
 
 }
-
 /* MEDIA QUERIES DESKTOPS */
 @media (min-width: 1050px){
-
+    .user-profile-picture{
+        width:19vw ;
+    }
+    .register-box{
+        top: 15vw;
+        width: 40vw;
+    }
+}
+/* MEDIA QUERIES DESKTOPS++ */
+@media (min-width:1200px ){
+    .register-box{
+        top: 10vw;
+    }
+    .user-profile-picture{
+        width: 13vw;
+    }
 }
 
 
