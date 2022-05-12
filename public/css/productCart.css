@@ -20,7 +20,9 @@ ul {
 }
 .main-cart {
   width: 100%;
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 .icon-cant {
   color: var(--blanco);
@@ -154,6 +156,12 @@ ul {
   margin: auto;
   /*  text-align: justify; */
 }
+.li-close-cart p{
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 25px;
+ /*  text-shadow: 0px 0px 8px black */
+}
 .left {
   text-align: left;
 }
@@ -161,9 +169,10 @@ ul {
   text-align: right;
 }
 .title-close {
-  text-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2); ;
+  text-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
   font-size: 18px;
   margin: auto;
+  margin-top: 15px;
   text-align: center;
 }
 .close-cart {

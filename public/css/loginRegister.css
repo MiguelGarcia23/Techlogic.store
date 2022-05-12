@@ -5,110 +5,109 @@
 
 /* .body-register{
     background-image: url(https://image.jimcdn.com/app/cms/image/transf/none/path/s224fc11c65cbc592/image/if98254786d31b25d/version/1500231290/image.gif);
-    } */
+    } */ /* HAY QUE HACERLO MAS LENTO EL GIF */
 
 /* .main-register{
     margin: auto;
-    margin-bottom: 33vw;
-    margin-top: 30vw;
+    margin-top: 120px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
  */
 /* ---------------------CAJA DE REGISTER--------------------- */
-.register-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 70vw;
-    /* position: relative;
-    top: 30vw; */  
-    margin: auto;
-    margin-bottom: 33vw;
-    margin-top: 30vw;
-    background-color: white;
-    border-radius: 10px;
-    flex-wrap: wrap;
-    z-index: 1;
+.register-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
+  /* position: relative;
+    top: 30vw; */
+  margin: auto;
+  margin-bottom: 25vw;
+  margin-top: 30vw;
+  background-color: white;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  z-index: 1;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 /* ---------------------TEXTO "REGISTRARSE"--------------------- */
-.register-text{
-    margin: 30px;
+.register-text {
+  margin: 30px;
 }
 
 /* ---------------------IMAGEN DE PERFIL--------------------- */
-.user-profile-picture{
-    margin-bottom:15px;
-    width: 25vw;
-    /* border: 1px solid red;  /* es solo para visualizarla mejor */ 
+.user-profile-picture {
+  margin-bottom: 15px;
+  width: 25vw;
+  /* border: 1px solid red;  /* es solo para visualizarla mejor */
 }
 
 /* ---------------------FORMULARIO DE REGISTRO--------------------- */
-.register-form{
-    display: flex;
-    flex-direction: column;
+.register-form {
+  display: flex;
+  flex-direction: column;
 }
 
 /* ---------------------INPUTS DEL FORMULARIO--------------------- */
-.register-form-item{
-    margin-bottom: 15px;
-    border: none;
-    border-bottom: 1px solid gray;
-    padding: 10px;
+.register-form-item {
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 10px;
 }
 /* ---------------------TERMINOS Y CONDICIONES--------------------- */
-.terms-conditions{
-    margin-bottom: 25px;
-    margin-top: 15px;
+.terms-conditions {
+  margin-bottom: 25px;
+  margin-top: 15px;
 }
 /* ---------------------BOTON DE "REGISTRARSE"--------------------- */
 
-.register-button{
-    margin: auto;
-    margin-bottom: 30px;
+.register-button {
+  margin: auto;
+  margin-bottom: 30px;
 }
 
-.register-button-input{
-    padding: 20px;
-    background-color: var(--celeste);
-    color: white;
-    border: none;
-    border-radius: 15px;
-    font-weight: bold;
+.register-button-input {
+  padding: 20px;
+  background-color: var(--celeste);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
 }
 
 /* MEDIA QUERIES TABLETS */
 @media (min-width: 768px) {
-    .user-profile-picture{
-        width: 23vw;
-}
-    .register-box{
-        width: 60vw;
-        margin-bottom: 20vw;
-    }
-    .register-box{
-        top: 15vw;
-    }
-    
-
+  .user-profile-picture {
+    width: 23vw;
+  }
+  .register-box {
+    width: 60vw;
+    margin-bottom: 20vw;
+  }
+  .register-box {
+    top: 15vw;
+    width: 60vw;
+  }
 }
 /* MEDIA QUERIES DESKTOPS */
-@media (min-width: 1050px){
-    .user-profile-picture{
-        width:19vw ;
-    }
-    .register-box{
-        top: 15vw;
-        width: 40vw;
-    }
+@media (min-width: 1050px) {
+  .user-profile-picture {
+    width: 19vw;
+  }
+  .register-box {
+    top: 15vw;
+    width: 45vw;
+    margin-bottom: 10vw;
+    margin-top: 10vw;
+  }
 }
 /* MEDIA QUERIES DESKTOPS++ */
-@media (min-width:1200px ){
-    .register-box{
-        top: 10vw;
-    }
-    .user-profile-picture{
-        width: 13vw;
-    }
+@media (min-width: 1200px) {
+  /* .register-box {
+    
+  } */
+  .user-profile-picture {
+    width: 13vw;
+  }
 }
-
-
-
