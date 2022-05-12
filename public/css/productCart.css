@@ -1,10 +1,7 @@
 @import url(styles.css);
 @import url(index.css);
 
-/* main{
- background-color: black;  
- font-family: 'Roboto'
-} */
+
 ul {
   list-style: none;
 }
@@ -69,11 +66,11 @@ ul {
   justify-content: space-around;
   align-content: stretch;
   align-items: center;
-  border-top: solid 1px rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(255, 255, 255);
   margin: auto;
   margin-top: 10px;
   padding-bottom: 5px;
+  background-color: var(--azul-marino);
+  border-radius: 10px;
   
   
 }
@@ -97,6 +94,8 @@ ul {
 }
 .item-cart:hover{
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.2);
+  border-top: solid 1px rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
   transition: 0.5s;
 }
 
@@ -142,7 +141,7 @@ ul {
   font-size: 14px;
   color: rgb(255, 255, 255);
 }
-
+/* ------------SECCION CIERRE DE CARRITO---------------- */
 .liqu {
   display: flex;
   flex-direction: row;
@@ -179,7 +178,7 @@ ul {
   margin-top: 20px;
 }
 .button-cart {
-  background-color: var(--gris);
+  background-color: var(--azul-marino);
   color: var(--blanco);
   font-size: 16px;
   font-weight: 600;
@@ -194,8 +193,8 @@ ul {
 .button-cart:hover {
   background-color: var(--celeste);
   color: var(--azul-marino);
-  transition: 0.8s;
-  transform: rotate(360deg);
+  transition: 0.5s;
+  /* transform: rotate(360deg); */
   cursor: pointer;
 }
 
@@ -205,6 +204,8 @@ ul {
   justify-content: center;
   margin: auto;
 }
+
+/* --------SECCION TAMBIEN TE PUEDE INRESAR-------- */
 .h3-seccion-plus {
   text-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.2);
   margin-top: 10px;
@@ -220,7 +221,7 @@ ul {
   background-color: var(--blanco);
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2); */
   /* position: relative; */
 }
 .seccion-product-plus:hover{
@@ -234,25 +235,42 @@ ul {
   flex-direction: row;
   align-items: right;
 }
-.product-plus{
-  
-  display: block;
-  align-items: center;
+.product-plus:hover .info-product-plus{
+ /*  color: var(--celeste); */
+  transition: 0.5s;
+  font-size: 14px;
   margin: auto;
+  width: 100%;
+  text-align: center;
+  margin-left: 15px;
+}
+.product-plus:hover .img-product-plus{
+  cursor: pointer;
+  width: 60%;
+  transition: 0.5s;
+  text-align: center;
+}
+.product-plus:hover .description-product-plus{
+  display: block;
 }
 .img-product-plus{
   width: 50%;
   margin-left: 25%;
 }
+
 .info-product-plus{
+  color: var(--azul-marino);
   font-size: 12px;
   text-align: center;
-
 }
+
 .title-product-plus{
   font-weight: 550;
   font-size: 13px;
   text-align: center;
+}
+.description-product-plus{
+  display: none;
 }
 .icon-left-plus{
   position: absolute;
@@ -260,8 +278,6 @@ ul {
   right: 98%;
   font-size: 40px;
   /* background-color: aqua; */
-  
-
 }
 .icon-left-plus:hover{
   cursor: pointer;
