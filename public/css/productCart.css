@@ -193,8 +193,8 @@ ul {
 .button-cart:hover {
   background-color: var(--celeste);
   color: var(--azul-marino);
-  transition: 0.8s;
-  transform: rotate(360deg);
+  transition: 0.5s;
+  /* transform: rotate(360deg); */
   cursor: pointer;
 }
 
