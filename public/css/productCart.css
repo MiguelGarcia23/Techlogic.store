@@ -1,10 +1,7 @@
 @import url(styles.css);
 @import url(index.css);
 
-/* main{
- background-color: black;  
- font-family: 'Roboto'
-} */
+
 ul {
   list-style: none;
 }
@@ -69,8 +66,6 @@ ul {
   justify-content: space-around;
   align-content: stretch;
   align-items: center;
-/*   border-top: solid 1px rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(255, 255, 255); */
   margin: auto;
   margin-top: 10px;
   padding-bottom: 5px;
@@ -99,6 +94,8 @@ ul {
 }
 .item-cart:hover{
   box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.2);
+  border-top: solid 1px rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(255, 255, 255);
   transition: 0.5s;
 }
 
@@ -144,7 +141,7 @@ ul {
   font-size: 14px;
   color: rgb(255, 255, 255);
 }
-
+/* ------------SECCION CIERRE DE CARRITO---------------- */
 .liqu {
   display: flex;
   flex-direction: row;
@@ -207,6 +204,8 @@ ul {
   justify-content: center;
   margin: auto;
 }
+
+/* --------SECCION TAMBIEN TE PUEDE INRESAR-------- */
 .h3-seccion-plus {
   text-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.2);
   margin-top: 10px;
@@ -222,7 +221,7 @@ ul {
   background-color: var(--blanco);
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2); */
   /* position: relative; */
 }
 .seccion-product-plus:hover{
@@ -236,32 +235,42 @@ ul {
   flex-direction: row;
   align-items: right;
 }
-.product-plus{
-  
-  display: block;
-  align-items: center;
+.product-plus:hover .info-product-plus{
+ /*  color: var(--celeste); */
+  transition: 0.5s;
+  font-size: 14px;
   margin: auto;
+  width: 100%;
+  text-align: center;
+  margin-left: 15px;
+}
+.product-plus:hover .img-product-plus{
+  cursor: pointer;
+  width: 60%;
+  transition: 0.5s;
+  text-align: center;
+}
+.product-plus:hover .description-product-plus{
+  display: block;
 }
 .img-product-plus{
-  width: 60%;
+  width: 50%;
   margin-left: 25%;
 }
+
 .info-product-plus{
   color: var(--azul-marino);
   font-size: 12px;
   text-align: center;
-
-
 }
-.info-product-plus:hover{
-  color: var(--celeste);
-  transition: 0.5s;
-  font-size: 14px;
-}
+
 .title-product-plus{
   font-weight: 550;
   font-size: 13px;
   text-align: center;
+}
+.description-product-plus{
+  display: none;
 }
 .icon-left-plus{
   position: absolute;
@@ -269,8 +278,6 @@ ul {
   right: 98%;
   font-size: 40px;
   /* background-color: aqua; */
-  
-
 }
 .icon-left-plus:hover{
   cursor: pointer;
