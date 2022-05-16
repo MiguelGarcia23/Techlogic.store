@@ -128,8 +128,8 @@
                     <li class="icono-right-navbar">
                         <a href="/login"><i class="fa-solid fa-user"></i></a>
 
-                        <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO -->
-                        <div class="profile-menu">
+                        <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO CUANDO YA SE INICIÓ SESIÓN -->
+                        <div class="profile-menu-full">
                             <div class="image-profile-menu">
                                 <img src="img/foto-de-perfil.jpg" alt="Foto de perfil del usuario">
                             </div>
@@ -141,6 +141,12 @@
                                 <a href="#">Ver perfil...</a>
                             </div>
                         </div>
+                        
+                        <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO CUANDO AÚN NO SE HA INICIADO SESIÓN -->
+                        <div class="profile-menu-empty">
+                            <a href="/login">Ir a Iniciar Sesión...</a>
+                        </div>
+                        
                     </li>
 
                     <!-- ÍCONO DE CARRITO -->
@@ -154,11 +160,11 @@
             <!-- BARRA DE BÚSQUEDA -->
             <div class="search-bar">
                 <form action="/" method="POST">
-                    <input type="search" name="search-header" id="search-header">
+                    <input type="search" name="search-header" id="search-header" class="input-search-bar-header">
                     <div class="inside-search-bar-header">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <label for="search-header"> Buscar... </label>
-                        <i class="fa-solid fa-x"></i>
+                        <label for="search-header" class="label-search-bar"> Buscar... </label>
+                        <button class="button-X-search-bar"><i class="fa-solid fa-x"></i></button>
                     </div>
                 </form>
             </div>
@@ -285,8 +291,8 @@
 
                         <!-- PERFIL DEL USUARIO SI NO HA INICIADO SESIÓN -->
                         <div class="profile-slide-menu-empty">
-                            <a href="#">Iniciar Sesión</a>
-                            <a href="#">Regístrate</a>
+                            <a href="/login">Iniciar Sesión</a>
+                            <a href="/register">Regístrate</a>
                         </div>
 
                         <!-- PERFIL DEL USUARIO SI YA INICIÓ SESIÓN -->
@@ -412,9 +418,9 @@
                 </div>
 
                 <!-- ENLACE DE LA SECCIÓN BEST SELLERS -->
-                <div class="link-seccion-best-sellers">
-                    <a href="#"> Ver todos </a>
-                </div>
+                <form action="/" method="POST">
+                    <button class="button-seccion-best-sellers">Ver todos</button>
+                </form>
 
             </section>
 
@@ -426,7 +432,9 @@
                     <h3 class="title-know-us-section"> Conoce Techlogic.store</h3>
                     <p class="description-know-us-section"> Somos una empresa dirigida a la venta de dispositivos, artículos y accesorios electrónicos, 
                     merchandising y contenido tecnológico exclusivo.</p>
-                    <a href="#" class="link-know-us-section"> Leer más </a>
+                    <form action="/" method="POST">
+                        <button class="button-know-us-section"> Leer más </button>
+                    </form>
                 </div>
 
             </section>
@@ -473,9 +481,9 @@
                 </div>
 
                 <!-- ENLACE DE LA SECCIÓN COLECCIONES -->
-                <div class="link-seccion-collections">
-                    <a href="#"> Ver todos </a>
-                </div>
+                <form action="/" method="POST">
+                    <button class="button-seccion-collections"> Ver todos </button>
+                </form>
 
             </section>
 
@@ -519,7 +527,7 @@
                         <input type="search" name="search-footer" id="search-footer">
                         <div class="inside-search-bar-footer">
                             <label for="search-footer">Buscar...</label>
-                            <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            <button class="button-search-bar-footer"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                     </form>
                 </div>

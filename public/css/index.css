@@ -37,12 +37,17 @@
     justify-content: space-evenly;
 }
 
-/* TODOS LOS ENLACES DENTRO DE LAS OPCIONES PRINCIPALESDE LA NAVBAR IZQUIERDA  */
+/* TODOS LOS ENLACES DENTRO DE LAS OPCIONES PRINCIPALES DE LA NAVBAR IZQUIERDA  */
 .options-left-navbar a{
     text-decoration: none;
     color: var(--blanco);
     text-transform: uppercase;
     font-weight: normal;
+    transition: opacity 450ms;
+}
+
+.options-left-navbar a:hover {
+    opacity: 0.6;
 }
 
 /* MENÚ DESPLEGABLE DE LAS OPCIONES PRINCIPALES DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
@@ -81,6 +86,11 @@
     text-transform: none;
     color: var(--blanco);
     font-size: 1rem;
+    transition: opacity 450ms;
+}
+
+.second-options-left-navbar a:hover {
+    opacity: 0.6;
 }
 
 /* OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
@@ -142,6 +152,11 @@
     text-transform: none;
     color: var(--blanco);
     font-size: 1rem;
+    transition: opacity 450ms;
+}
+
+.third-options-left-navbar a:hover{
+    opacity: 0.6;
 }
 
 /* ÍCONO DE BURGER MENU */
@@ -150,6 +165,11 @@
     width: 100%;
     font-size: 1.5rem;
     color: var(--blanco);
+    transition: opacity 450ms;
+}
+
+.burger-menu i:hover {
+    opacity: 0.6;
 }
 
 /* LOGO */
@@ -190,18 +210,24 @@
 
 /* ÍCONOS DE LA BARRA DE NAVEGACIÓN DERECHA */
 .icono-right-navbar i {
+    cursor: pointer;
     font-size: 1rem;
     color: var(--blanco);
+    transition: opacity 450ms;
 }
 
-    /* ÍCONO DEL CARRITO YA QUE ES EL ÚNICO QUE SERÁ UN ENLACE*/
+.icono-right-navbar i:hover {
+    opacity: 0.6;
+}
+
+/* ÍCONO DEL CARRITO YA QUE ES EL ÚNICO QUE SERÁ UN ENLACE*/
 .icono-right-navbar a i {
     font-size: 1rem;
     color: var(--blanco);
 }
 
-/* MENÚ QUE SE DESPLIEGA DEL ÍCONO DE USUARIO EN LA BARRA DE NAVEGACIÓN DERECHA */
-.profile-menu {
+/* MENÚ QUE SE DESPLIEGA DEL ÍCONO DE USUARIO EN LA BARRA DE NAVEGACIÓN DERECHA CUANDO EL USUARIO YA INICIÓ SESIÓN */
+.profile-menu-full {
     display: none;
     position: absolute;
     background-color: var(--blanco);
@@ -254,6 +280,37 @@
     font-weight: bold;
     position: absolute;
     right: 0;
+    transition: opacity 450ms;
+}
+
+.link-profile-menu a:hover {
+    opacity: 0.7;
+}
+
+/* MENÚ QUE SE DESPLIEGA DEL ÍCONO DE USUARIO DE LA BARRA DE NAVEGACIÓN DERECHA CUANDO EL USUARIO NO HA INICIADO SESIÓN */
+.profile-menu-empty {
+    display: none;
+    position: absolute;
+    background-color: var(--blanco);
+    top: 100%;
+    right: 0;
+    width: 40%;
+    max-width: 17.5rem;
+    padding: 2rem 1rem 1.5rem 1rem;
+    border-top: 3px solid var(--celeste);
+}
+
+/* ENLACE DEL MENÚ QUE SE DESPLIEGA DEL ÍCONO DE USUARIO DE LA BARRA DE NAVEGACIÓN DERECHA CUANDO ESTÁ VACÍO*/
+.profile-menu-empty a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--celeste);
+    font-weight: bold;
+    transition: color 450ms;
+}
+
+.profile-menu-empty a:hover {
+    color: var(--azul-marino);
 }
 
 /* BARRA DE BÚSQUEDA */
@@ -272,7 +329,7 @@
 /* INPUT SEARCH DE LA BARRA DE BÚSQUEDA */
 .search-bar input {
     width: 90%;
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem;
     margin: 0 3rem;
     border: none;
 }
@@ -286,7 +343,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 
 /* ÍCONOS EN LA BARRA DE BÚSQUEDA */
@@ -296,12 +353,26 @@
 }
 
 /* LABEL EN LA BARRA DE BÚSQUEDA */
-.inside-search-bar-header label {
+.label-search-bar {
     color: var(--gris);
     font: 1.25rem;
     text-transform: uppercase;
     flex: 1 0 0;
     margin-left: 1.5rem;
+}
+
+/* ELIMINAR EL LABEL EN LA BARRA DE BÚSQUEDA CUANDO TENGA EL FOCO */
+.search-bar:focus-within .label-search-bar {
+    display: none;
+}
+
+/* BOTÓN X DE LA BARRA DE BÚSQUEDA */
+.button-X-search-bar {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* SLIDE MENÚ DE LA VERSIÓN MOBILE */
@@ -325,6 +396,7 @@
     opacity: 0.8;
     font-size: 1.125rem;
     margin-bottom: 1rem;
+    cursor: pointer;
 }
 
 /* LOGO DEL SLIDE MENÚ */
@@ -354,6 +426,7 @@
 /* TODOS LOS ÍCONOS DENTRO DE LAS OPCIONES DE LA NAVBAR DEL SLIDE-MENU */
 .options-navbar-slide-menu i {
     color: var(--blanco);
+    cursor: pointer;
 }
 
 /* TODOS LOS ÍCONOS DE "-" EN LA NAVBAR DEL SLIDE-MENU */
@@ -477,6 +550,12 @@
 .social-media-slide-menu i {
     font-size: 1rem;
     color: var(--blanco);
+    cursor: pointer;
+    transition: opacity 450ms;
+}
+
+.social-media-slide-menu i:hover {
+    opacity: 0.7;
 }
 
 /* ----------------------  BANNER PRINCIPAL  ---------------------- */
@@ -506,7 +585,13 @@
     background-color: var(--gris);
     opacity: 0.7;
     font-size: 1.25rem;
-    padding: 0.5rem;
+    padding: 1rem 0.75rem;
+    cursor: pointer;
+    transition: background-color 600ms;
+}
+
+.flechas-main-banner i:hover {
+    background-color: rgba(101, 100, 100, 0.3);
 }
 
 /* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
@@ -533,9 +618,6 @@
 }
 
 /* ----------------------  MAIN  ---------------------- */
-/* .main {
-    padding: 1.5rem 0rem 1.5rem 2rem;
-} */
 
 /* SECCIÓN BEST SELLERS */
 .best-sellers-section {
@@ -608,16 +690,25 @@
 }
 
 /* ENLACE DE LA SECCIÓN BEST SELLERS */
-.link-seccion-best-sellers a {
+.button-seccion-best-sellers {
     display: block;
     width: 30%;
     max-width: 8rem;
     padding: 1rem;
     background-color: var(--azul-marino);
     margin: 0 auto;
-    text-decoration: none;
+    border: none;
+    font-size: 1rem;
     color: var(--blanco);
     text-align: center;
+    cursor: pointer;
+    transition-property: background-color, color;
+    transition-duration: 2s;
+}
+
+.button-seccion-best-sellers:hover {
+    background-color: var(--celeste);
+    color: var(--azul-marino);
 }
 
 /* SECCIÓN CONÓCENOS */
@@ -657,16 +748,24 @@
 }
 
 /* ENLACE SECCIÓN CONÓCENOS */
-.link-know-us-section {
-    text-decoration: none;
+.button-know-us-section {
     display: block;
     width: 50%;
     padding: 0.5rem 0;
     background-color: var(--azul-marino);
+    margin: 0 auto;
+    border: none;
     font-size: 1rem;
     color: var(--blanco);
     text-align: center;
-    margin: 0 auto;
+    cursor: pointer;
+    transition-property: background-color, color;
+    transition-duration: 2s;
+}
+
+.button-know-us-section:hover {
+    background-color: var(--celeste);
+    color: var(--azul-marino);
 }
 
 /* SECCIÓN COLECCIONES */
@@ -737,16 +836,25 @@
 }
 
 /* ENLACE DE LA SECCIÓN COLECCIONES */
-.link-seccion-collections a{
+.button-seccion-collections {
     display: block;
     width: 30%;
     max-width: 8rem;
     padding: 1rem;
     background-color: var(--azul-marino);
     margin: 0 auto;
-    text-decoration: none;
+    border: none;
+    font-size: 1rem;
     color: var(--blanco);
     text-align: center;
+    cursor: pointer;
+    transition-property: background-color, color;
+    transition-duration: 2s;
+}
+
+.button-seccion-collections:hover {
+    background-color: var(--celeste);
+    color: var(--azul-marino);
 }
 
 /* COLECCIÓN MODERN DE LA SECCIÓN COLECCIONES */
@@ -887,8 +995,15 @@
     margin: 0;
 }
 
+/* BOTÓN DEL ÍCONO DE BÚSQUEDA DE LA BARRA DE BÚSQUEDA DEL FOOTER */
+.button-search-bar-footer {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 /* ÍCONO DE BÚSQUEDA DE LA BARRA DE BÚSQUEDA DEL FOOTER */
-.inside-search-bar-footer a i {
+.button-search-bar-footer i {
     font-size: 1rem;
     color: var(--gris);
 }
@@ -914,6 +1029,12 @@
     padding-top: 0.1875rem;
     color: var(--azul-marino);
     border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 450ms;
+}
+
+.social-media-footer i:hover {
+    opacity: 0.5;
 }
 
 /* ENLACES DE TÍTULOS DE LAS SECCIONES PRODUCTOS Y CONTACTO EN EL FOOTER */
@@ -1025,9 +1146,9 @@
 @media (min-width: 768px) {
 
     /* ----------------------  HEADER  ---------------------- */
-    .main-header {
+    /* .main-header {
         background-color: transparent;
-    }
+    } */
 
     /* ----------------------  BANNER PRINCIPAL  ---------------------- */
     .main-banner {

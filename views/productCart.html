@@ -131,8 +131,8 @@
               <li class="icono-right-navbar">
                   <i class="fa-solid fa-user"></i>
 
-                  <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO -->
-                  <div class="profile-menu">
+                  <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO CUANDO YA SE INICIÓ SESIÓN -->
+                  <div class="profile-menu-full">
                       <div class="image-profile-menu">
                           <img src="img/foto-de-perfil.jpg" alt="Foto de perfil del usuario">
                       </div>
@@ -144,6 +144,12 @@
                           <a href="#">Ver perfil...</a>
                       </div>
                   </div>
+
+                  <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO CUANDO AÚN NO SE HA INICIADO SESIÓN -->
+                  <div class="profile-menu-empty">
+                    <a href="/login">Ir a Iniciar Sesión...</a>
+                  </div>
+
               </li>
 
               <!-- ÍCONO DE CARRITO -->
@@ -157,11 +163,11 @@
       <!-- BARRA DE BÚSQUEDA -->
       <div class="search-bar">
           <form action="/" method="POST">
-              <input type="search" name="search-header" id="search-header">
+              <input type="search" name="search-header" id="search-header" class="input-search-bar-header">
               <div class="inside-search-bar-header">
                   <i class="fa-solid fa-magnifying-glass"></i>
-                  <label for="search-header"> Buscar... </label>
-                  <i class="fa-solid fa-x"></i>
+                  <label for="search-header" class="label-search-bar"> Buscar... </label>
+                  <button class="button-X-search-bar"><i class="fa-solid fa-x"></i></button>
               </div>
           </form>
       </div>
@@ -288,8 +294,8 @@
 
                   <!-- PERFIL DEL USUARIO SI NO HA INICIADO SESIÓN -->
                   <div class="profile-slide-menu-empty">
-                      <a href="#">Iniciar Sesión</a>
-                      <a href="#">Regístrate</a>
+                      <a href="/login">Iniciar Sesión</a>
+                      <a href="/register">Regístrate</a>
                   </div>
 
                   <!-- PERFIL DEL USUARIO SI YA INICIÓ SESIÓN -->
@@ -458,7 +464,9 @@
         </div>
         <!--  <div></div> -->
         <div class="button-cart-div">
-          <button class="button-cart">Comprar</button>
+          <form action="/" method="POST">
+            <button class="button-cart">Comprar</button>
+          </form>
         </div>
         <!--   <div class="button-cart-div">
             <button class="button-cart">Limpiar carrito</button>
@@ -527,7 +535,7 @@
             <input type="search" name="search-footer" id="search-footer" />
             <div class="inside-search-bar-footer">
               <label for="search-footer">Buscar...</label>
-              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+              <button class="button-search-bar-footer"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
           </form>
         </div>
