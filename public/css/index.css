@@ -1045,6 +1045,11 @@
     color: var(--celeste);
     text-align: center;
     margin-bottom: 0.75rem;
+    transition: opacity 450ms;
+}
+
+.title-sections-footer:hover {
+    opacity: 0.7;
 }
 
 /* ENLACES NORMALES DE LAS SECCIONES PRODUCTOS Y CONTACTO EN EL FOOTER */
@@ -1056,6 +1061,11 @@
     text-align: center;
     margin-bottom: 0.5rem;
     font-size: 0.875rem;
+    transition: opacity 450ms;
+}
+
+.enlaces-sections-footer:hover {
+    opacity: 0.7;
 }
 
 /* SECCIÓN DEL LOGO E INFO DEL FOOTER */
