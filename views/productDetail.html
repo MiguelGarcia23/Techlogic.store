@@ -109,7 +109,7 @@
                         <a href="#">Classic</a>
                       </li>
                       <li class="third-options-left-navbar">
-                        <a href="#">Powerfull</a>
+                        <a href="#">Colorful</a>
                       </li>
                       <li class="third-options-left-navbar">
                         <a href="#">Black & White</a>
@@ -172,10 +172,10 @@
 
           <!-- ÍCONO DE USUARIO -->
           <li class="icono-right-navbar">
-            <i class="fa-solid fa-user"></i>
+            <a href="/login"><i class="fa-solid fa-user"></i></a>
 
-            <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO -->
-            <div class="profile-menu">
+            <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO CUANDO YA SE INICIÓ SESIÓN -->
+            <div class="profile-menu-full">
               <div class="image-profile-menu">
                 <img
                   src="img/foto-de-perfil.jpg"
@@ -190,6 +190,11 @@
                 <a href="#">Ver perfil...</a>
               </div>
             </div>
+
+            <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO CUANDO AÚN NO SE HA INICIADO SESIÓN -->
+            <div class="profile-menu-empty">
+              <a href="/login">Ir a Iniciar Sesión...</a>
+            </div>
           </li>
 
           <!-- ÍCONO DE CARRITO -->
@@ -202,18 +207,27 @@
       <!-- BARRA DE BÚSQUEDA -->
       <div class="search-bar">
         <form action="/" method="POST">
-          <input type="search" name="search-header" id="search-header" />
+          <input
+            type="search"
+            name="search-header"
+            id="search-header"
+            class="input-search-bar-header"
+          />
           <div class="inside-search-bar-header">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <label for="search-header"> Buscar... </label>
-            <i class="fa-solid fa-x"></i>
+            <label for="search-header" class="label-search-bar">
+              Buscar...
+            </label>
+            <button class="button-X-search-bar">
+              <i class="fa-solid fa-x"></i>
+            </button>
           </div>
         </form>
       </div>
 
       <!-- SLIDE MENÚ DE LA VERSIÓN MOBILE -->
       <div class="slide-menu">
-        <!-- HEADER DEL SLID-MENU -->
+        <!-- HEADER DEL SLIDE-MENU -->
         <header class="header-slide-menu">
           <!-- ÍCONO DE LA X -->
           <div class="icono-x">
@@ -292,7 +306,7 @@
                       <ul>
                         <li><a href="#">Modern</a></li>
                         <li><a href="#">Classic</a></li>
-                        <li><a href="#">Powerfull</a></li>
+                        <li><a href="#">Colorful</a></li>
                         <li><a href="#">Black & White</a></li>
                       </ul>
                     </div>
@@ -330,8 +344,8 @@
           <div class="profile-slide-menu">
             <!-- PERFIL DEL USUARIO SI NO HA INICIADO SESIÓN -->
             <div class="profile-slide-menu-empty">
-              <a href="#">Iniciar Sesión</a>
-              <a href="#">Regístrate</a>
+              <a href="/login">Iniciar Sesión</a>
+              <a href="/register">Regístrate</a>
             </div>
 
             <!-- PERFIL DEL USUARIO SI YA INICIÓ SESIÓN -->
