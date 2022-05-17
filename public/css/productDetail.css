@@ -177,9 +177,9 @@
 .icon-arrow{
   background-color: #050505;
   color: grey;
-  font-size: 50px;
-  margin-top: 50px;
-  height: 60px;
+  font-size: 30px;
+  margin-top: 80px;
+  height: 40px;
 
 }
 
@@ -195,4 +195,12 @@
 .icons-dots{
   margin-left: 3px;
   margin-right: 3px;
+}
+
+.prd-features i:hover{
+  font-size: 25px;
+}
+
+.icon-arrow:hover{
+  box-shadow: 5px 5px 5px rgb(100, 100, 100);
 }
