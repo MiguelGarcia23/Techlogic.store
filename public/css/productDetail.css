@@ -245,3 +245,34 @@
 /* .icon-arrow:hover{
   box-shadow: 5px 5px 5px rgb(100, 100, 100);
 } */
+
+.icon-numbers{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.icon-numbers i{
+  color: white;
+}
+
+.icon-minus{
+  position: relative;
+  color: rgb(26, 173, 193);
+  bottom: 10px; left: 30px;
+  
+  
+}
+
+.icon-minus i{
+  color: rgb(26, 173, 193);
+}
+
+.icon-plus{
+  position: relative;
+  bottom: 10px; right: 20px;
+}
+
+.icon-plus i{
+  color: rgb(26, 173, 193);
+}
