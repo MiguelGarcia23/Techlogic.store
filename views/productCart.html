@@ -169,6 +169,7 @@
           <li class="icono-right-navbar">
             <i class="fa-solid fa-user"></i>
 
+<<<<<<< HEAD
             <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO -->
             <div class="profile-menu">
               <div class="image-profile-menu">
@@ -186,6 +187,38 @@
               </div>
             </div>
           </li>
+=======
+              <!-- ÍCONO DE USUARIO -->
+              <li class="icono-right-navbar">
+                  <i class="fa-solid fa-user"></i>
+
+                  <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO CUANDO YA SE INICIÓ SESIÓN -->
+                  <div class="profile-menu-full">
+                      <div class="image-profile-menu">
+                          <img src="img/foto-de-perfil.jpg" alt="Foto de perfil del usuario">
+                      </div>
+                      <div class="info-profile-menu">
+                          <p>Username</p>
+                          <p>Dirección</p>
+                      </div>
+                      <div class="link-profile-menu">
+                          <a href="#">Ver perfil...</a>
+                      </div>
+                  </div>
+
+                  <!-- MENÚ QUE SE DESPLIEGA DEL ÍCONO DEL USUARIO CUANDO AÚN NO SE HA INICIADO SESIÓN -->
+                  <div class="profile-menu-empty">
+                    <a href="/login">Ir a Iniciar Sesión...</a>
+                  </div>
+
+              </li>
+
+              <!-- ÍCONO DE CARRITO -->
+              <li class="icono-right-navbar">
+                  <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+              </li>
+          </ul>
+>>>>>>> c33841cc6ed91357d10d74f8aa93a7a788dba681
 
           <!-- ÍCONO DE CARRITO -->
           <li class="icono-right-navbar">
@@ -196,6 +229,7 @@
 
       <!-- BARRA DE BÚSQUEDA -->
       <div class="search-bar">
+<<<<<<< HEAD
         <form action="/" method="POST">
           <input type="search" name="search-header" id="search-header" />
           <div class="inside-search-bar-header">
@@ -204,6 +238,16 @@
             <i class="fa-solid fa-x"></i>
           </div>
         </form>
+=======
+          <form action="/" method="POST">
+              <input type="search" name="search-header" id="search-header" class="input-search-bar-header">
+              <div class="inside-search-bar-header">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                  <label for="search-header" class="label-search-bar"> Buscar... </label>
+                  <button class="button-X-search-bar"><i class="fa-solid fa-x"></i></button>
+              </div>
+          </form>
+>>>>>>> c33841cc6ed91357d10d74f8aa93a7a788dba681
       </div>
 
       <!-- SLIDE MENÚ DE LA VERSIÓN MOBILE -->
@@ -264,12 +308,92 @@
               </div>
             </li>
 
+<<<<<<< HEAD
             <!-- OPCIÓN DESCUBRE -->
             <li class="options-navbar-slide-menu">
               <div class="option-navbar-with-icon">
                 <a href="#">Descubre</a>
                 <i class="fa-solid fa-plus"></i>
                 <i class="fa-solid fa-minus icono-menos-slide-menu"></i>
+=======
+                  <!-- OPCIÓN DESCUBRE -->
+                  <li class="options-navbar-slide-menu">
+                      <div class="option-navbar-with-icon">
+                          <a href="#">Descubre</a>
+                          <i class="fa-solid fa-plus"></i>
+                          <i class="fa-solid fa-minus icono-menos-slide-menu"></i>
+                      </div>
+
+                      <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN DESCUBRE -->
+                      <div class="second-navbar-slide-menu">
+                          <ul>
+                              <li>
+                                  <div class="option-navbar-with-icon">
+                                      <a href="#">Colecciones</a>
+                                      <i class="fa-solid fa-plus"></i>
+                                      <i class="fa-solid fa-minus icono-menos-slide-menu"></i>
+                                  </div>
+
+                                  <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN COLECCIONES DE DESCUBRE -->
+                                  <div class="third-navbar-slide-menu">
+                                      <ul>
+                                          <li><a href="#">Modern</a></li>
+                                          <li><a href="#">Classic</a></li>
+                                          <li><a href="#">Colorful</a></li>
+                                          <li><a href="#">Black & White</a></li>
+                                      </ul>
+                                  </div>
+                              </li>
+                              <li><a href="#">Best Sellers</a></li>
+                              <li><a href="#">Ofertas</a></li>
+                          </ul>
+                      </div>
+                  </li>
+
+                  <!-- OPCIÓN CONTACTO -->
+                  <li class="options-navbar-slide-menu">
+                      <div class="option-navbar-with-icon">
+                          <a href="#">Contacto</a>
+                          <i class="fa-solid fa-plus"></i>
+                          <i class="fa-solid fa-minus icono-menos-slide-menu"></i>
+                      </div>
+
+                      <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN CONTACTO -->
+                      <div class="second-navbar-slide-menu">
+                          <ul>
+                              <li><a href="#">Acerca de Techlogic.store</a></li>
+                              <li><a href="#">Métodos de Pago</a></li>
+                              <li><a href="#">Preguntas frecuentes</a></li>
+                              <li><a href="#">Soporte al Cliente</a></li>
+                          </ul>
+                      </div>
+                  </li>
+
+              </ul>
+
+          </nav>
+
+          <!-- PIE DE PÁGINA DEL SLIDE-MENU -->
+          <footer class="footer-slide-menu">
+
+              <!-- PERFIL DEL USUARIO EN EL SLIDE-MENU DE LA VERSIÓN MOBILE -->
+              <div class="profile-slide-menu">
+
+                  <!-- PERFIL DEL USUARIO SI NO HA INICIADO SESIÓN -->
+                  <div class="profile-slide-menu-empty">
+                      <a href="/login">Iniciar Sesión</a>
+                      <a href="/register">Regístrate</a>
+                  </div>
+
+                  <!-- PERFIL DEL USUARIO SI YA INICIÓ SESIÓN -->
+                  <div class="profile-slide-menu-full">
+                      <div class="img-slider-menu">
+                          <img src="img/foto-de-perfil.jpg" alt="Foto de perfil del usuario">
+                      </div>
+                      <p>Nombre de Usuario</p>
+                  </div>
+
+>>>>>>> c33841cc6ed91357d10d74f8aa93a7a788dba681
               </div>
 
               <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN DESCUBRE -->
@@ -494,7 +618,9 @@
         </div>
         <!--  <div></div> -->
         <div class="button-cart-div">
-          <button class="button-cart">Comprar</button>
+          <form action="/" method="POST">
+            <button class="button-cart">Comprar</button>
+          </form>
         </div>
         <!--   <div class="button-cart-div">
             <button class="button-cart">Limpiar carrito</button>
@@ -563,7 +689,7 @@
             <input type="search" name="search-footer" id="search-footer" />
             <div class="inside-search-bar-footer">
               <label for="search-footer">Buscar...</label>
-              <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+              <button class="button-search-bar-footer"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
           </form>
         </div>
