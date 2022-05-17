@@ -162,9 +162,10 @@
 
 .slider{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   background-color: #E3E4E5;
   height: 200px;
+  position: relative;
 }
 
 .slider-img {
@@ -197,10 +198,22 @@
   margin-right: 3px;
 }
 
-.prd-features i:hover{
+.button-props i:hover{
   font-size: 25px;
 }
 
-.icon-arrow:hover{
-  box-shadow: 5px 5px 5px rgb(100, 100, 100);
+.button-props i {
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+
 }
+
+.button-props{
+  background-color: transparent;
+  border: none;
+}
+
+/* .icon-arrow:hover{
+  box-shadow: 5px 5px 5px rgb(100, 100, 100);
+} */
