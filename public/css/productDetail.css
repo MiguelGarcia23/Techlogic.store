@@ -259,20 +259,28 @@
 .icon-minus{
   position: relative;
   color: rgb(26, 173, 193);
-  bottom: 10px; left: 30px;
+  bottom: 10px; left: 25px;
   
   
 }
 
 .icon-minus i{
-  color: rgb(26, 173, 193);
+  color: var(--blanco);
+  background-color: var(--gris);
+  border-radius: 50%;
+  padding: 1px 2px;
+  font-size: 20px;
 }
 
 .icon-plus{
   position: relative;
-  bottom: 10px; right: 20px;
+  bottom: 10px; right: 17px;
 }
 
 .icon-plus i{
-  color: rgb(26, 173, 193);
+  color: var(--blanco);
+  background-color: var(--gris);
+  border-radius: 50%;
+  padding: 1px 2px;
+  font-size: 20px;
 }
