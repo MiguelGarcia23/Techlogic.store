@@ -11,7 +11,7 @@ const productsController = require ('../controllers/productsController');
 router.get ('/', productsController.index);
 
 /* Configuramos el envío a una sección de productos */
-router.get ('/sectionProducts/:idSection', productsController.section);
+router.get ('/sectionProducts/:nameSection', productsController.section);
 
 /* Configuramos el envío al detalle de un producto */
 /* ESTA ES LA FORMA EN LA QUE IRÁ FINALMENTE PERO DE MOMENTO USEMOS LA OTRA */
@@ -19,7 +19,7 @@ router.get ('/sectionProducts/:idSection', productsController.section);
 router.get ('/productDetail/:idProduct?', productsController.productDetail);
 
 /* Configuramos el envío a las colecciones */
-router.get ('/collections', productsController.collections);
+router.get ('/collections/:nameCollection?', productsController.collections);
 
 /* Configuramos el envío a los best sellers */
 router.get ('/bestSellers', productsController.bestSellers);
