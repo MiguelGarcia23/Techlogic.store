@@ -49,61 +49,16 @@
                 <!-- PRODUCTOS DE LA SECCIÓN BEST SELLERS -->
                 <div class="products-best-sellers">
 
-                    <!-- BEST SELLER 1 -->
-                    <article class="product-best-seller">
-                        <img src="/img/iphone13.png" alt="Imagen iPhone 13">
-                        <h4 class="name-product-best-sellers-section"> iPhone 13 </h4>
-                        <p class="price-product-best-sellers-section"> $234.500,00 </p>
-                    </article>
+                    <!-- RECORRO EL ARRAY DE BEST SELLERS PARA OBTENER CADA BEST SELLER -->
+                    <% for (let bestSeller of bestSellers) { %>
 
-                    <!-- BEST SELLER 2 -->
-                    <article class="product-best-seller">
-                        <img src="/img/mouse-logi.png" alt="Imagen Mouse Logitech">
-                        <h4 class="name-product-best-sellers-section"> Mouse Logitech G603 </h4>
-                        <p class="price-product-best-sellers-section"> $6.435,00 </p>
-                    </article>
+                        <article class="product-best-seller">
+                            <img src="/img/<%= bestSeller.img %>" alt="<%= bestSeller.name %>">
+                            <h4 class="name-product-best-sellers-section"> <%= bestSeller.name %> </h4>
+                            <p class="price-product-best-sellers-section"> <%= bestSeller.price %> </p>
+                        </article>
 
-                    <!-- BEST SELLER 3 -->
-                    <article class="product-best-seller">
-                        <img src="/img/macbook-pro.png" alt="Imagen Macbook Pro">
-                        <h4 class="name-product-best-sellers-section"> Macbook Pro </h4>
-                        <p class="price-product-best-sellers-section"> $320.000,00 </p>
-                    </article>
-
-                    <!-- BEST SELLER 4 -->
-                    <article class="product-best-seller">
-                        <img src="/img/audifonos-beats-pro.png" alt="Imagen Audífonos Beats Pro">
-                        <h4 class="name-product-best-sellers-section"> Audífonos Beats Pro </h4>
-                        <p class="price-product-best-sellers-section"> $48.000,00 </p>
-                    </article>
-
-                    <!-- BEST SELLER 5 -->
-                    <article class="product-best-seller">
-                        <img src="/img/ipad-air.png" alt="Imagen iPad Air">
-                        <h4 class="name-product-best-sellers-section"> iPad Air </h4>
-                        <p class="price-product-best-sellers-section"> $79.230,00 </p>
-                    </article>
-
-                    <!-- BEST SELLER 6 -->
-                    <article class="product-best-seller">
-                        <img src="/img/playstation-5.png" alt="Imagen Playstation 5">
-                        <h4 class="name-product-best-sellers-section"> Playstation 5 </h4>
-                        <p class="price-product-best-sellers-section"> $61.700,00 </p>
-                    </article>
-
-                    <!-- BEST SELLER 7 -->
-                    <article class="product-best-seller">
-                        <img src="/img/teclado-logitech-g213.png" alt="Imagen Teclado Logitech G213">
-                        <h4 class="name-product-best-sellers-section"> Teclado Logitech G213 </h4>
-                        <p class="price-product-best-sellers-section"> $5.800,00 </p>
-                    </article>
-
-                    <!-- BEST SELLER 8 -->
-                    <article class="product-best-seller">
-                        <img src="/img/router-tplink-mr6400.png" alt="Imagen Router TP-Link TL-MR6400">
-                        <h4 class="name-product-best-sellers-section"> Router TP-Link TL-MR6400 </h4>
-                        <p class="price-product-best-sellers-section"> $8.020,00 </p>
-                    </article>
+                    <% } %>
 
                 </div>
 
@@ -140,33 +95,16 @@
                 <!-- PRODUCTOS DE LA SECCIÓN COLECCIONES -->
                 <div class="collections">
 
-                    <!-- COLECCIÓN 1 -->
-                    <article class="modern-collection collection">
-                        <h4 class="title-collection-collections-section title-modern-collection"> Modern </h4>
-                        <p class="subtitle-collection-collections-section subtititle-modern-collection"> Descubre todos los productos de la colección Modern </p>
-                        <a href="/products/collections/:nameCollection?" class="link-collection-collections-section link-modern-collection"> Ver colección > </a>
-                    </article>
+                    <!-- RECORRO EL ARRAY DE COLECCIONES PARA OBTENER CADA COLECCIÓN -->
+                    <% for (let collection of collections) { %>
+                        
+                        <article class="<%= collection.classCollection %> collection">
+                            <h4 class="title-collection-collections-section"> <%= collection.name %> </h4>
+                            <p class="subtitle-collection-collections-section"> Descubre todos los productos de la colección <%= collection.name %> </p>
+                            <a href="/products/collections/<%= collection.name %>" class="link-collection-collections-section"> Ver colección > </a>
+                        </article>
 
-                    <!-- COLECCIÓN 2 -->
-                    <article class="classic-collection collection">
-                        <h4 class="title-collection-collections-section"> Classic </h4>
-                        <p class="subtitle-collection-collections-section"> Descubre todos los productos de la colección Classic </p>
-                        <a href="/products/collections/:nameCollection?" class="link-collection-collections-section"> Ver colección > </a>
-                    </article>
-
-                    <!-- COLECCIÓN 3 -->
-                    <article class="colorful-collection collection">
-                        <h4 class="title-collection-collections-section"> Colorful </h4>
-                        <p class="subtitle-collection-collections-section"> Descubre todos los productos de la colección Colorful </p>
-                        <a href="/products/collections/:nameCollection?" class="link-collection-collections-section"> Ver colección > </a>
-                    </article>
-
-                    <!-- COLECCIÓN 4 -->
-                    <article class="black-white-collection collection">
-                        <h4 class="title-collection-collections-section"> Black & White </h4>
-                        <p class="subtitle-collection-collections-section"> Descubre todos los productos de la colección Black & White </p>
-                        <a href="/products/collections/:nameCollection?" class="link-collection-collections-section"> Ver colección > </a>
-                    </article>
+                    <% } %>
 
                 </div>
 
