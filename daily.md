@@ -10,11 +10,10 @@
 
 - Hoy nos reunimos para revisar las consignas del tercer sprint y así empezar a desarrollarlas.
 
-- Implementacion el modulo EJS
-- Renombrar las vistas actuales para que utilicen las extensión .ejs
-- Modificar los métodos de los controladores para que utilicen el método render()
-- Separar las vistas en carpetas.
-- Separar los componentes repetidos en archivos parciales.
-- Head
-- Header
-- Footer
+** Implementacion el modulo EJS
+** Renombrar las vistas actuales para que utilicen las extensión .ejs
+** Modificar los métodos de los controladores para que utilicen el método render()
+** Separar las vistas en carpetas.
+** Separar los componentes repetidos en archivos parciales. \*** Head
+**_ Header
+_** Footer
