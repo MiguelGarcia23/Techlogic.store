@@ -12,6 +12,7 @@
     position: fixed;
     top: 0;
     z-index: 99;
+    transition: background-color 450ms;
 }
 
 /* BARRA DE NAVEGACIÓN IZQUIERDA */
