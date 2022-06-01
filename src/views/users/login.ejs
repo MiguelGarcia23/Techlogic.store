@@ -3,7 +3,7 @@
     <!-- HEAD -->
     <%- include('../partials/head', {title: 'Iniciar Sesión', stylesheet: 'users/loginRegister.css'}) %>
 
-    <body class="body-register">
+    <body class="body-register-login">
 
         <!-- HEADER -->
         <%- include('../partials/header') %>
@@ -12,13 +12,16 @@
         <main class="main-register-login">
         <!-- ---------------------SECCION REGISTRO--------------------- -->
         <section class="register-login-box">
-            <h3 class="register-login-text">INICIAR SESION</h3>
+            <h3 class="register-login-text">INICIAR SESIÓN</h3>
             <!-- ---------------------IMAGEN DE PERFIL--------------------- -->
-            <img
+            <div class="user-profile-icon">
+                <i class="fas fa-user-circle"></i>
+            </div>
+           <!--  <img
             class="user-profile-picture"
             src="/img/usuario-predeterminado.jpg"
             alt="imagen de perfil"
-            />
+            /> -->
             <!-- ---------------------FORM REGISTRO--------------------- -->
             <form action="/login" method="POST" class="register-login-form">
             <input
@@ -51,7 +54,7 @@
             <div class="button-cart-div">
                 <form action="/" method="POST">
                     <button type="submit" class="button-cart">
-                        Iniciar sesion
+                        Iniciar sesión
                     </button>
                 </form>
             </div>
