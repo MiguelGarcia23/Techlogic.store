@@ -19,5 +19,11 @@
   - Header
   - Footer
 
-- Creacion de las nuevas vistas
+- Creación de las nuevas vistas
   - Formulario de carga y edición de productos
+
+## Reunión del 06/01.
+
+- Hoy nos reunimos para terminar la vista de creación de Página: creación y edición de productos, la cual es requerida para el tercer sprint
+
+  - También agregamos algunos detalles estéticos en las vistas de login y register para que estén acordes al fondo que utilizamos en las demás vistas.

@@ -3,7 +3,7 @@
     <!-- HEAD -->
     <%- include('../partials/head', {title: 'Registrate', stylesheet: 'users/loginRegister.css'}) %>
 
-    <body class="body-register">
+    <body class="body-register-login">
 
     <!-- HEADER -->
     <%- include('../partials/header') %>
@@ -14,11 +14,14 @@
       <section class="register-login-box">
         <h3 class="register-login-text">REGISTRATE</h3>
         <!-- ---------------------IMAGEN DE PERFIL--------------------- -->
-        <img
+        <div class="user-profile-icon">
+                <i class="fas fa-user-circle"></i>
+        </div>
+        <!-- <img
           class="user-profile-picture"
           src="/img/usuario-predeterminado.jpg"
           alt="imagen de perfil"
-        />
+        /> -->
         <!-- ---------------------FORM REGISTRO--------------------- -->
         <form action="/register" method="POST" class="register-login-form">
           <input
