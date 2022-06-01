@@ -2,7 +2,7 @@
 
 /* ----------------------  HEADER  ---------------------- */
 .main-header {
-    background-color: none;
+    background-color: var(--negro);
     width: 100vw;
     padding: 2rem;
     border-bottom: 2px solid var(--gris);
@@ -24,6 +24,9 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 /* TODOS LOS ENLACES DENTRO DE LAS OPCIONES PRINCIPALES DE LA NAVBAR IZQUIERDA  */
@@ -180,6 +183,9 @@
 .right-navbar ul{
     display: flex;
     justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 /* DIV DE LOS ICONOS DE LA BARRA DE NAVEGACIÓN DERECHA */
@@ -553,9 +559,9 @@
 @media (min-width: 768px) {
 
     /* ----------------------  HEADER  ---------------------- */
-    /* .main-header {
+    .main-header {
         background-color: transparent;
-    } */
+    }
 
     /* ----------------------  BANNER PRINCIPAL  ---------------------- */
     .main-banner {
