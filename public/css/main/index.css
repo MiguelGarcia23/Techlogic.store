@@ -4,61 +4,20 @@
 
 /* ----------------------  BANNER PRINCIPAL  ---------------------- */
 .main-banner {
-    background-image: url(/img/banner-1.png);
-    /* width: 100vw; */
-    height: 50vh;
-    background-size: cover;
-    background-repeat: no-repeat;
     margin-top: 6.3125rem;
-    position: relative;
+    height: 50vh;
 }
 
-/* FLECHAS DEL BANNER PRINCIPAL */
-.flechas-main-banner {
-    position: absolute;
-    top: 47%;
-    width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    text-align: center;
+/* CARRUSEL DEL BANNER PRINCIPAL */
+.carousel {
+    width: 100vw;
+    height: 50vh;
 }
 
-.flechas-main-banner i {
-    color: var(--blanco);
-    background-color: var(--gris);
-    opacity: 0.7;
-    font-size: 1.25rem;
-    padding: 1rem 0.75rem;
-    cursor: pointer;
-    transition: background-color 600ms;
-}
-
-.flechas-main-banner i:hover {
-    background-color: rgba(101, 100, 100, 0.3);
-}
-
-/* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
-.circles-main-banner {
-    position: absolute;
-    top: 90%;
-    width: 25%;
-    max-width: 7.875rem;
-    left: 38%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-}
-
-.circle-main-banner {
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: var(--blanco);
-}
-
-.circle-main-banner:first-child {
-    opacity: 0.5;
+/* IMÁGENES DEL CARRUSEL DEL BANNER PRINCIPAL */
+.carousel-inner .carousel-item img {
+    width: 100vw; 
+    height: 50vh;
 }
 
 /* ----------------------  MAIN  ---------------------- */
@@ -398,12 +357,14 @@
     /* ----------------------  BANNER PRINCIPAL  ---------------------- */
     .main-banner {
         height: 75vh;
-        margin-top: 0;
     }
 
-    /* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
-    .circles-main-banner {
-        left: 43%;
+    .carousel {
+        height: 75vh;
+    }
+    
+    .carousel-inner .carousel-item img {
+        height: 75vh;
     }
 
     /* ----------------------  MAIN  ---------------------- */
@@ -433,9 +394,12 @@
         margin-top: 0;
     }
 
-    /* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
-    .circles-main-banner {
-        left: 45%;
+    .carousel {
+        height: 100vh;
+    }
+    
+    .carousel-inner .carousel-item img {
+        height: 100vh;
     }
 
     /* ----------------------  MAIN  ---------------------- */

@@ -29,37 +29,23 @@
 /* INPUT DE LA BARRA DE BÚSQUEDA DEL FOOTER */
 .search-bar-footer input {
     width: 100%;
+    background-color: var(--blanco);
     border: none;
     border-radius: 10px;
     padding: 0.25rem 0;
+    padding-left: 0.5rem;
     background-color: var(--blanco);
-}
-
-/* DIV QUE CONTIENE EL LABEL Y EL ÍCONO DE LA BARRA DE BÚSQUEDA DEL FOOTER */
-.inside-search-bar-footer {
-    position: absolute;
-    width: 90%;
-    top: 12%;
-    left: 5%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* LABEL DE LA BARRA DE BÚSQUEDA DEL FOOTER */
-.inside-search-bar-footer label {
-    font-size: 0.9375rem;
-    color: var(--gris);
-    padding: 0;
-    margin: 0;
+    cursor: text;
 }
 
 /* BOTÓN DEL ÍCONO DE BÚSQUEDA DE LA BARRA DE BÚSQUEDA DEL FOOTER */
 .button-search-bar-footer {
+    cursor: pointer;
     background-color: transparent;
     border: none;
-    cursor: pointer;
+    position: absolute;
+    right: 5%;
+    top: 0.25rem;
 }
 
 /* ÍCONO DE BÚSQUEDA DE LA BARRA DE BÚSQUEDA DEL FOOTER */

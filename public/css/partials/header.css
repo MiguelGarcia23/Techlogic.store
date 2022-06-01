@@ -2,7 +2,7 @@
 
 /* ----------------------  HEADER  ---------------------- */
 .main-header {
-    background-color: var(--negro);
+    background-color: none;
     width: 100vw;
     padding: 2rem;
     border-bottom: 2px solid var(--gris);
