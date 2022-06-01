@@ -1,19 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- HEAD -->
-    <%- include('../partials/head', {title: 'Crear Producto', stylesheet: 'admin/createProduct.css'}) %>
-    
-    <body>
+  <!-- HEAD -->
+  <%- include('../partials/head', {title: 'Crear Producto', stylesheet:
+  'admin/createProduct.css'}) %>
 
-        <!-- HEADER -->
-        <%- include('../partials/header') %>
+  <body>
+    <!-- HEADER -->
+    <%- include('../partials/header') %>
 
-        <!-- MAIN -->
-        <main></main>
+    <!-- MAIN -->
+    <main class="main-create-form">
 
-        <!-- FOOTER -->
-        <%- include('../partials/footer') %>
+      <h2 class="title-create-form">Formulario de Creación</h2>
 
-    </body>
+      <form action="" method="POST" class="creation-form">
+        <div class="normal-input">
+          <label for="productName" class="label-normal-input">Nombre del Producto:</label>
+          <input type="text" id="productName" name="productName" placeholder="Ej: Teléfono iPhone 13">
+        </div>
 
+        <div class="normal-input">
+          <label for="productSection" class="label-normal-input">Sección del Producto:</label>
+          <input type="text" id="productSection" name="productSection" placeholder="Ej: Teléfono">
+        </div>
+
+        <div class="normal-input">
+          <h3>Colección del Producto:</h3>
+          <select name="productCollection">
+            <option value="" disable selected>Elegí una colección:</option>
+            <option value="modern">Modern</option>
+            <option value="classic">Classic</option>
+            <option value="colorful">Colorful</option>
+            <option value="blackAndWhite">Black & White</option>
+          </select>
+        </div>
+
+        <div class="normal-input">
+          <label for="productPrice" class="label-normal-input">Precio del Producto:</label>
+          <input type="text" id="productPrice" name="productPrice" placeholder="Ej: 12500">
+        </div>
+
+        <div class="normal-input">
+          <label for="productDiscount" class="label-normal-input">Descuento del Producto:</label>
+          <input type="text" id="productDiscount" name="productDiscount" placeholder="Ej: 10">
+        </div>
+
+        <div class="normal-input">
+          <label for="productDescription" class="label-normal-input">Descripción del Producto:</label>
+          <textarea name="productDescription" id="productDescription"></textarea>
+        </div>
+
+        <div class="normal-input">
+          <label for="productImage" class="label-normal-input">Imagen del Producto:</label>
+          <input type="file" id="productImage" name="productImage">
+        </div>
+
+        <button type="reset" class="button-cart button-create-form">Borrar</button>
+        <button type="submit" class="button-cart button-create-form">Crear</button>
+
+      </form>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('../partials/footer') %>
+  </body>
 </html>

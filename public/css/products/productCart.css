@@ -206,7 +206,7 @@ ul {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.button-cart {
+/* .button-cart {
   display: block;
   background-color: var(--azul-marino);
   color: var(--blanco);
@@ -226,19 +226,16 @@ ul {
 }
 .button-cart:hover {
   background-color: var(--celeste);
-  color: var(--azul-marino);
+  color: var(--azul-marino); */
   /* transform: rotate(360deg); */
-}
-.button-cart:hover .close-cart{
-  border: solid 1px rgb(255, 255, 255);
-}
+/* }
 
 .button-cart-div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: auto;
-}
+} */
 
 /* --------SECCION TAMBIEN TE PUEDE INRESAR-------- */
 .h3-seccion-plus {

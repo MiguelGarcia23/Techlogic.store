@@ -9,7 +9,22 @@
         <%- include('../partials/header') %>
 
         <!-- MAIN -->
-        <main></main>
+        <main class="main-products">
+            <div class="list-products">
+            <% for(let product of products){ %>
+            <article class="product-article">
+                <img src="/img/<%= product.img %>">    
+                <p><%= product.name %> </p>
+                <p><%= product.price %> </p>
+                <form action="" method="">
+                    <div class="button-cart-div icon-cart-div">
+                        <button class="button-cart icon-cart"><i class="fas fa-cart-plus"></i></button>
+                    </div>
+                </form>
+            </article> 
+            <% } %>
+            </div>
+        </main>
 
         <!-- FOOTER -->
         <%- include('../partials/footer') %>
