@@ -1,0 +1,147 @@
+@import url(../styles.css);
+@import url(../partials/header.css);
+@import url(../partials/footer.css);
+
+/* MAIN DE LAS VISTAS DE CREACIÓN Y EDICIÓN DE PRODUCTOS */
+.main-edit-create-form {
+    margin-top: 6.25rem;
+    background: linear-gradient(to top,#000000, #434343, #000000);
+}
+
+/* TÍTULO DE LA VISTA */
+.title-edit-create-form {
+    min-width: 24rem;
+    width: 90%;
+    padding-top: 2.5rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--blanco);
+    margin: 0 auto;
+    margin-bottom: 2.75rem;
+    border-bottom: solid 2px var(--blanco);
+}
+
+/* DIV QUE CONTIENE CADA INPUT Y ELEMENTO DEL FORM */
+.div-edit-create-form {
+    width: 100%;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+/* LABEL DE LOS INPUTS */
+.label-normal-input {
+    color: var(--blanco);
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* TÍTULO DEL SELECT */
+.title-select-edit-create-form {
+    color: var(--blanco);
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* INPUTS DEL FORMULARIO */
+.normal-input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+/* SELECT DEL FORMULARIO */
+.select-edit-create-form {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+/* TEXTAREA DEL FORMULARIO */
+.textarea-edit-create-form {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    height: 7rem;
+}
+
+/* INPUT PARA CARGAR LA IMAGEN DEL PRODUCTO */
+.image-input {
+    color: var(--blanco);
+}
+
+/* TÍTULO DE LA SECCIÓN QUE MUESTRA LA IMAGEN ACTUAL DEL PRODUCTO A EDITAR */
+.title-current-image-edit-create-form {
+    color: var(--blanco);
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+/* IMAGEN ACTUAL DEL PRODUCTO A EDITAR */
+.current-image-edit-create-form {
+    display: block;
+    width: 10rem;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+}
+
+/* BOTONES DEL FORMULARIO */
+.buttons-edit-create-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    max-width: 35rem;
+}
+
+/* CADA BOTÓN DEL FORMULARIO */
+.button-edit-create-form {
+    width: 100%;
+    margin: 1rem 2rem;
+}
+
+/* MEDIA QUERIES */
+
+/* MEDIA QUERIES TABLETS */
+@media (min-width: 768px) {
+
+    /* TÍTULO DE LA VISTA */
+    .title-edit-create-form {
+        width: 80%;
+    }
+
+    /* DIV QUE CONTIENE CADA INPUT Y ELEMENTO DEL FORM */
+    .div-edit-create-form {
+        width: 80%;
+        padding: 0;
+    }
+
+    /* CADA BOTÓN DEL FORMULARIO */
+    .button-edit-create-form {
+        width: 8rem;
+    }
+
+}
+
+/* MEDIA QUERIES DESKTOP */
+@media (min-width: 1050px) {
+
+    /* TÍTULO DE LA VISTA */
+    .title-edit-create-form {
+        width: 60%;
+    }
+
+    /* DIV QUE CONTIENE CADA INPUT Y ELEMENTO DEL FORM */
+    .div-edit-create-form {
+        width: 60%;
+    }
+
+}

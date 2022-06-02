@@ -206,36 +206,6 @@ ul {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-/* .button-cart {
-  display: block;
-  background-color: var(--azul-marino);
-  color: var(--blanco);
-  font-size: 16px;
-  font-weight: 600;
-  border: none;
-  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
-  margin: auto;
-  margin-top: 40px;
-  margin-bottom: 10px;
-  padding: 15px 25px;
-  border-radius: 10px;
-  text-align: center;
-  cursor: pointer;
-  transition-property: background-color, color;
-  transition-duration: 0.5s;
-}
-.button-cart:hover {
-  background-color: var(--celeste);
-  color: var(--azul-marino); */
-  /* transform: rotate(360deg); */
-/* }
-
-.button-cart-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto;
-} */
 
 /* --------SECCION TAMBIEN TE PUEDE INRESAR-------- */
 .h3-seccion-plus {
