@@ -27,6 +27,7 @@
 .list-products p{
     height: 48px;
     text-align: center;
+    color: white;
 }
 
 .icon-cart{
