@@ -10,19 +10,265 @@
 
         <!-- MAIN -->
         <main class="main-products">
-            <div class="list-products">
-            <% for(let product of products){ %>
-            <article class="product-article">
-                <img src="/img/<%= product.img %>">    
-                <p><%= product.name %> </p>
-                <p><%= product.price %> </p>
-                <form action="" method="">
-                    <div class="button-cart-div icon-cart-div">
-                        <button class="button-cart icon-cart"><i class="fas fa-cart-plus"></i></button>
+
+            <h2 class="title-main-products">Listado de Productos</h2>
+
+            <div class="filter-order-products">
+
+                <div class="filter-button">
+
+                    <a href="#" class="link-filter-button">
+                        <i class="fa-solid fa-sliders icon-filter-button"></i>
+                        Filtrar
+                    </a>
+
+                </div>
+
+                <div class="order-button">
+
+                    <div class="inactive-order-button">
+
+                        <p class="p-inactive-order-button">Ordenar por:</p>
+                        <i class="fa-solid fa-arrow-down-short-wide icon-inactive-order-button"></i>
+
+                        <div class="active-order-button">
+    
+                            <ul class="ul-active-order-button">
+                                <li class="li-active-order-button">Más vendidos</li>
+                                <li class="li-active-order-button">Precio más bajo</li>
+                                <li class="li-active-order-button">Precio más alto</li>
+                                <li class="li-active-order-button">Últimos agregados</li>
+                            </ul>
+    
+                        </div>
+
                     </div>
-                </form>
-            </article> 
-            <% } %>
+
+
+                </div>
+                
+            </div>
+
+            <div class="slide-filter-menu">
+
+                <!-- HEADER DEL SLIDE FILTER MENU -->
+                <header class="header-slide-filter-menu">
+
+                    <!-- ÍCONO DE LA X -->
+                    <div class="icono-x-filter-menu">
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+
+                    <!-- LOGO -->
+                    <div class="div-title-filter">
+                        <i class="fa-solid fa-sliders icon-filter-button-slide-menu"></i>
+                        <h3 class="h3-title-filter">Filtrar</h3>
+                    </div>
+
+                </header>
+
+                <!-- BARRA DE NAVEGACIÓN DEL SLIDE FILTER MENU DE LA VERSIÓN MOBILE -->
+                <nav class="navbar-slide-filter-menu">
+
+                    <form action="" method="POST">
+
+                        <ul>
+
+                            <li class="option-filter-slide-menu">
+
+                                <div class="first-option-filter-slide-menu">
+
+                                    <p class="p-first-option-filter-slide-menu">Sección</p>
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus icono-menos-slide-filter-menu"></i>
+
+                                </div>
+
+                                <div class="second-option-filter-slide-menu">
+
+                                    <div class="div-checkbox-filter-slide-menu">
+
+                                        <input type="checkbox" name="sectionProducts" id="smartphones" class="checkbox-filter-slide-menu">
+                                        <label for="smartphones">Smartphones</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="sectionProducts" id="tablets" class="checkbox-filter-slide-menu">
+                                        <label for="tablets">Tablets</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="sectionProducts" id="laptopsAndDesktops" class="checkbox-filter-slide-menu">
+                                        <label for="laptopsAndDesktops">Laptops y Desktops</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="sectionProducts" id="consolasAndGaming" class="checkbox-filter-slide-menu">
+                                        <label for="consolasAndGaming">Consolas y Gaming</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="sectionProducts" id="redes" class="checkbox-filter-slide-menu">
+                                        <label for="redes">Redes</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="sectionProducts" id="accesorios" class="checkbox-filter-slide-menu">
+                                        <label for="accesorios">Accesorios</label>
+                                    </div>
+                                    
+                                </div>
+
+                            </li>
+
+                            <li class="option-filter-slide-menu">
+
+                                <div class="first-option-filter-slide-menu">
+
+                                    <p class="p-first-option-filter-slide-menu">Colección</p>
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus icono-menos-slide-filter-menu"></i>
+
+                                </div>
+
+                                <div class="second-option-filter-slide-menu">
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="collectionProducts" id="modern" class="checkbox-filter-slide-menu">
+                                        <label for="modern">Modern</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="collectionProducts" id="classic" class="checkbox-filter-slide-menu">
+                                        <label for="classic">Classic</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="collectionProducts" id="colorful" class="checkbox-filter-slide-menu">
+                                        <label for="colorful">Colorful</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="collectionProducts" id="blackWhite" class="checkbox-filter-slide-menu">
+                                        <label for="blackAndWhite">Black & White</label>
+                                    </div>
+
+                                </div>
+
+                            </li>
+                            
+                            <li class="option-filter-slide-menu">
+
+                                <div class="first-option-filter-slide-menu">
+
+                                    <p class="p-first-option-filter-slide-menu">Precio</p>
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus icono-menos-slide-filter-menu"></i>
+
+                                </div>
+
+                                <div class="second-option-filter-slide-menu">
+
+                                    <label for="priceProducts" class="label-input-range-slide-filter-menu">Precio máximo: </label>
+                                    <input type="range" name="priceProducts" id="priceProducts" min="0" max="500000" step="100" value="250000">
+                                    
+                                </div>
+
+                            </li>
+
+
+                            <li class="option-filter-slide-menu">
+
+                                <div class="first-option-filter-slide-menu">
+
+                                    <p class="p-first-option-filter-slide-menu">Marca</p>
+                                    <i class="fa-solid fa-plus"></i>
+                                    <i class="fa-solid fa-minus icono-menos-slide-filter-menu"></i>
+
+                                </div>
+
+                                <div class="second-option-filter-slide-menu">
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="sectionProducts" id="apple" class="checkbox-filter-slide-menu">
+                                        <label for="apple">Apple</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="sectionProducts" id="samsung" class="checkbox-filter-slide-menu">
+                                        <label for="samsung">Samsung</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="sectionProducts" id="sony" class="checkbox-filter-slide-menu">
+                                        <label for="sony">Sony</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="sectionProducts" id="hp" class="checkbox-filter-slide-menu">
+                                        <label for="hp">HP</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="sectionProducts" id="xiaomi" class="checkbox-filter-slide-menu">
+                                        <label for="xiaomi">Xiaomi</label>
+                                    </div>
+
+                                    <div class="div-checkbox-filter-slide-menu">
+                                        
+                                        <input type="checkbox" name="sectionProducts" id="dell" class="checkbox-filter-slide-menu">
+                                        <label for="dell">Dell</label>
+
+                                    </div>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                    </form>
+
+                </nav>
+
+                <!-- PIE DE PÁGINA DEL SLIDE-MENU -->
+                <footer class="footer-slide-filter-menu">
+
+                    <img src="/img/logo.svg" alt="Logo de Techlogic.store">
+
+                </footer>
+
+            </div>
+
+            <div class="list-products">
+
+                <% for(let product of products){ %>
+
+                    <article class="product-article">
+                        <img src="/img/<%= product.img %>" class="imageProduct" alt="<%= product.name %>">    
+                        <p class="productName"><%= product.name %></p>
+                        <p class="productPrice"><%= product.price %></p>
+                        <form action="" method="POST">
+                            <button class="button-cart icon-cart"><i class="fas fa-cart-plus"></i></button>
+                        </form>
+                    </article> 
+
+                <% } %>
+
             </div>
         </main>
 
