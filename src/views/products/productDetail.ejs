@@ -112,52 +112,31 @@
         </div>
       </div>
 
+      <!--------- SECCION OFERTAS | TE PUEDE INTERESAR --------->
       <section class="seccion-product-plus">
-        <h3 class="h3-seccion-plus">Productos similares...</h3>
+        <h3 class="h3-seccion-plus">También te puede interesar...</h3>
         <!-- <div class="icon-left-plus">
           <i class="fa-solid fa-angle-left"></i>
         </div> -->
-        <div class="images-products-plus">
-          <div class="product-plus">
-            <img
-              src="/img/ipad-air.png"
-              alt="Ipad Air"
-              class="img-product-plus"
-            />
-            <div class="info-product-plus">
-              <p class="title-product-plus">Ipad Air</p>
-              <p class="price-product-plus">$ 234.405</p>
-              <p class="description-product-plus">Apple Aipad Air</p>
-            </div>
-          </div>
-          <div class="images-products-plus">
-            <div class="product-plus">
-              <img
-                src="/img/iphone13.png"
-                alt="Ipad Air"
-                class="img-product-plus"
-              />
-              <div class="info-product-plus">
-                <p class="title-product-plus">Iphone 13 PRO</p>
-                <p class="price-product-plus">$ 345.340</p>
-                <p class="description-product-plus">Apple Iphone 13 PRO</p>
+        <div class="products-plus">
+
+          <% for (let similarProduct of similarProducts) { %>
+            <div class="images-products-plus">
+              <div class="product-plus">
+                <img
+                  src="/img/<%= similarProduct.img %>"
+                  alt="<%= similarProduct.name %>"
+                  class="img-product-plus"
+                />
+                <div class="info-product-plus">
+                  <p class="title-product-plus"><%= similarProduct.name %></p>
+                  <p class="price-product-plus"><%= similarProduct.price %></p>
+                  <p class="description-product-plus"><%= similarProduct.name %></p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="images-products-plus">
-            <div class="product-plus">
-              <img
-                src="/img/playstation-5.png"
-                alt="Ipad Air"
-                class="img-product-plus"
-              />
-              <div class="info-product-plus">
-                <p class="title-product-plus">Playstation 5</p>
-                <p class="price-product-plus">$ 650.400</p>
-                <p class="description-product-plus">Sony Playstation 5</p>
-              </div>
-            </div>
-          </div>
+          <% } %>
+          
         </div>
         <!-- <div class="icon-right-plus">
           <i class="fa-solid fa-angle-right"></i>

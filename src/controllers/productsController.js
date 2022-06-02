@@ -48,6 +48,48 @@ const products = [
       img: 'router-tplink-mr6400.png'
     },
   ];
+
+/* Creamos un array que contenga los productos del carrito */
+const cartProducts = [
+  {
+    name: 'Mouse Logitech G603',
+    price: '$6.435,00',
+    img: 'mouse-logi.png'
+  },
+  {
+    name: 'iPhone 13',
+    price: '$234.500,00',
+    img: 'iphone13.png'
+  },
+
+  {
+    name: 'Macbook Pro',
+    price: '$320.000,00',
+    img: 'macbook-pro.png'
+  }
+];
+
+/* Creamos un array que contenga los productos que también le pueden interesar al usuario */
+const similarProducts = [
+  {
+    name: 'Audífonos Beats Pro',
+    price: '$48.000,00',
+    img: 'audifonos-beats-pro.png'
+  },
+
+  {
+    name: 'iPad Air',
+    price: '$79.230,00',
+    img: 'ipad-air.png'
+  },
+
+  {
+    name: 'Playstation 5',
+    price: '$61.700,00',
+    img: 'playstation-5.png'
+  }
+];
+
 /* Configuramos el controlador */
 const productsController = {
 
@@ -60,7 +102,7 @@ const productsController = {
     },
 
     productDetail: (req, res) => {
-        res.render('./products/productDetail')
+        res.render('./products/productDetail', {similarProducts: similarProducts})
     },
 
     collections: (req, res) => {
@@ -76,7 +118,7 @@ const productsController = {
     },
 
     productCart: (req, res) => {
-        res.render('./products/productCart')
+        res.render('./products/productCart', {products: cartProducts, similarProducts: similarProducts})
     }
 }
 

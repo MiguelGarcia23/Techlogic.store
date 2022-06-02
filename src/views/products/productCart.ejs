@@ -12,155 +12,85 @@
     <main class="main-cart">
       <!------- SECCION CARRITO Y CIERRE DE CARRITO ----------->
       <div class="total-cart">
-          <!-------- LISTA DE PRODUCTOS EN EL CARRITO ------>
-          <section class="list-product">
-            <div class="my-cart">
-              <h3><i class="fa-solid fa-cart-shopping cart"></i> Mi Carrito</h3>
-            </div>
-            <article class="articles">
-              <div class="item-cart">
-                <div class="div-img-art">
-                  <img
-                    class="img-article"
-                    src="/img/mouse-logi.png"
-                    alt="Iphone 13"
-                  />
-                  <a href="#" class="eliminar-producto"><p>Eliminar</p></a>
-                </div>
-                <div>
-                  <ul class="product-detail-cart">
-                    <li class="title-product">Mouse Logitech G603</li>
-                    <li>Categoía de Producto</li>
-                    <li>Descripción de producto</li>
-                  </ul>
-                </div>
-                <div>
-                  <ul class="add-item">
-                    <li>$6.435,00</li>
-                    <div class="add-item-icons">
-                      <div>
-                        <a href="#"
-                          ><i class="fa-solid fa-angles-left icon-cant"></i
-                        ></a>
-                      </div>
-                      <li class="cantidad">1</li>
-                      <div>
-                        <a href="#"
-                          ><i class="fa-solid fa-angles-right icon-cant"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </ul>
-                </div>
+        <!-------- LISTA DE PRODUCTOS EN EL CARRITO ------>
+        <section class="list-product">
+          <div class="my-cart">
+            <h3><i class="fa-solid fa-cart-shopping cart"></i> Mi Carrito</h3>
+          </div>
+
+          <% for (let product of products) { %>
+
+          <article class="articles">
+            <div class="item-cart">
+              <div class="div-img-art">
+                <img
+                  class="img-article"
+                  src="/img/<%= product.img %>"
+                  alt="<%= product.name %>"
+                />
+                <a href="#" class="eliminar-producto"><p>Eliminar</p></a>
               </div>
-            </article>
-            <article class="articles">
-              <div class="item-cart">
-                <div class="div-img-art">
-                  <img
-                    class="img-article"
-                    src="/img/mouse-logi.png"
-                    alt="Iphone 13"
-                  />
-                  <a href="#" class="eliminar-producto"><p>Eliminar</p></a>
-                </div>
-                <div>
-                  <ul class="product-detail-cart">
-                    <li class="title-product">Mouse Logitech G603</li>
-                    <li>Categoía de Producto</li>
-                    <li>Descripción de producto</li>
-                  </ul>
-                </div>
-                <div>
-                  <ul class="add-item">
-                    <li>$6.435,00</li>
-                    <div class="add-item-icons">
-                      <div>
-                        <a href="#"
-                          ><i class="fa-solid fa-angles-left icon-cant"></i
-                        ></a>
-                      </div>
-                      <li class="cantidad">1</li>
-                      <div>
-                        <a href="#"
-                          ><i class="fa-solid fa-angles-right icon-cant"></i
-                        ></a>
-                      </div>
-                    </div>
-                  </ul>
-                </div>
+              <div>
+                <ul class="product-detail-cart">
+                  <li class="title-product"><%= product.name %></li>
+                  <li>Sección de Producto</li>
+                  <li>Descripción de producto</li>
+                </ul>
               </div>
-            </article>
-            <article class="articles">
-              <div class="item-cart">
-                <div class="div-img-art">
-                  <img
-                    class="img-article"
-                    src="/img/iphone13.png"
-                    alt="Iphone 13"
-                  />
-                  <a href="#" class="eliminar-producto"><p>Eliminar</p></a>
-                </div>
-                <div>
-                  <ul class="product-detail-cart">
-                    <li class="title-product">Iphone 13</li>
-                    <li>Categoía de Producto</li>
-                    <li>Descripción de producto</li>
-                  </ul>
-                </div>
-                <div>
-                  <ul class="add-item">
-                    <li>$234.500,00</li>
-                    <div class="add-item-icons">
-                      <div>
-                        <a href="#"
-                          ><i class="fa-solid fa-angles-left icon-cant"></i
-                        ></a>
-                      </div>
-                      <li class="cantidad">1</li>
-                      <div>
-                        <a href="#"
-                          ><i class="fa-solid fa-angles-right icon-cant"></i
-                        ></a>
-                      </div>
+              <div>
+                <ul class="add-item">
+                  <li><%= product.price %></li>
+                  <div class="add-item-icons">
+                    <div>
+                      <a href="#"
+                        ><i class="fa-solid fa-angles-left icon-cant"></i
+                      ></a>
                     </div>
-                  </ul>
-                </div>
+                    <li class="cantidad">1</li>
+                    <div>
+                      <a href="#"
+                        ><i class="fa-solid fa-angles-right icon-cant"></i
+                      ></a>
+                    </div>
+                  </div>
+                </ul>
               </div>
-            </article>
-          </section>
-          <!-------------- SECCION CIERRE DE CARRITO ----------------->
-          <section class="close-cart">
-            <div class="title-close">
-              <h3>Total Compra</h3>
             </div>
-            <div class="liqu">
-              <!-- <div class="list-descript"> -->
-              <ul class="ul-close-cart left">
-                <li class="li-close-cart">Subtotal</li>
-                <li class="li-close-cart">Impuesto</li>
-                <li class="li-close-cart"><p>Monto Total</p></li>
-              </ul>
-              <!-- </div> -->
-              <!-- <div class="list-descript"> -->
-              <ul class="ul-close-cart right">
-                <li class="li-close-cart">$ 240.953</li>
-                <li class="li-close-cart">$ 2.500</li>
-                <li class="li-close-cart"><p>$ 243.453</p></li>
-              </ul>
-              <!-- </div> -->
-            </div>
-            <!--  <div></div> -->
-            <div class="button-cart-div">
-              <form action="/" method="POST">
-                <button class="button-cart">Comprar</button>
-              </form>
-            </div>
-            <!--   <div class="button-cart-div">
+          </article>
+          <% } %>
+        </section>
+
+        <!-------------- SECCION CIERRE DE CARRITO ----------------->
+        <section class="close-cart">
+          <div class="title-close">
+            <h3>Total Compra</h3>
+          </div>
+          <div class="liqu">
+            <!-- <div class="list-descript"> -->
+            <ul class="ul-close-cart left">
+              <li class="li-close-cart">Subtotal</li>
+              <li class="li-close-cart">Impuesto</li>
+              <li class="li-close-cart"><p>Monto Total</p></li>
+            </ul>
+            <!-- </div> -->
+            <!-- <div class="list-descript"> -->
+            <ul class="ul-close-cart right">
+              <li class="li-close-cart">$ 240.953</li>
+              <li class="li-close-cart">$ 2.500</li>
+              <li class="li-close-cart"><p>$ 243.453</p></li>
+            </ul>
+            <!-- </div> -->
+          </div>
+          <!--  <div></div> -->
+          <div class="button-cart-div">
+            <form action="/" method="POST">
+              <button class="button-cart">Comprar</button>
+            </form>
+          </div>
+          <!--   <div class="button-cart-div">
             <button class="button-cart">Limpiar carrito</button>
           </div> -->
-          </section>
-        
+        </section>
       </div>
       <!--------- SECCION OFERTAS | TE PUEDE INTERESAR --------->
       <section class="seccion-product-plus">
@@ -168,47 +98,25 @@
         <!-- <div class="icon-left-plus">
           <i class="fa-solid fa-angle-left"></i>
         </div> -->
-        <div class="images-products-plus">
-          <div class="product-plus">
-            <img
-              src="/img/ipad-air.png"
-              alt="Ipad Air"
-              class="img-product-plus"
-            />
-            <div class="info-product-plus">
-              <p class="title-product-plus">Ipad Air</p>
-              <p class="price-product-plus">$ 234.405</p>
-              <p class="description-product-plus">Apple Aipad Air</p>
-            </div>
-          </div>
-          <div class="images-products-plus">
-            <div class="product-plus">
-              <img
-                src="/img/iphone13.png"
-                alt="Ipad Air"
-                class="img-product-plus"
-              />
-              <div class="info-product-plus">
-                <p class="title-product-plus">Iphone 13 PRO</p>
-                <p class="price-product-plus">$ 345.340</p>
-                <p class="description-product-plus">Apple Iphone 13 PRO</p>
+        <div class="products-plus">
+          
+          <% for (let similarProduct of similarProducts) { %>
+            <div class="images-products-plus">
+              <div class="product-plus">
+                <img
+                  src="/img/<%= similarProduct.img %>"
+                  alt="<%= similarProduct.name %>"
+                  class="img-product-plus"
+                />
+                <div class="info-product-plus">
+                  <p class="title-product-plus"><%= similarProduct.name %></p>
+                  <p class="price-product-plus"><%= similarProduct.price %></p>
+                  <p class="description-product-plus"><%= similarProduct.name %></p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="images-products-plus">
-            <div class="product-plus">
-              <img
-                src="/img/playstation-5.png"
-                alt="Ipad Air"
-                class="img-product-plus"
-              />
-              <div class="info-product-plus">
-                <p class="title-product-plus">Playstation 5</p>
-                <p class="price-product-plus">$ 650.400</p>
-                <p class="description-product-plus">Sony Playstation 5</p>
-              </div>
-            </div>
-          </div>
+          <% } %>
+          
         </div>
         <!-- <div class="icon-right-plus">
           <i class="fa-solid fa-angle-right"></i>

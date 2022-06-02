@@ -230,12 +230,14 @@ ul {
   transition: 0.5s;
   /* opacity: 1; */
 }
-.images-products-plus{
+
+.products-plus {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   align-items: right;
 }
+
 .product-plus:hover .info-product-plus{
  /*  color: var(--celeste); */
   transition: 0.5s;
