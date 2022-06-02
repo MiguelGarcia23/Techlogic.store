@@ -33,7 +33,7 @@
   margin: auto;
   margin-bottom: 25vw;
   margin-top: 30vw;
-  background-color: white;
+  background: linear-gradient(to top, var(--negro), var(--azul-marino));
   border-radius: 10px;
   flex-wrap: wrap;
   z-index: 1;
@@ -41,7 +41,10 @@
 }
 /* ---------------------TEXTO "REGISTRARSE"--------------------- */
 .register-login-text {
+  color: var(--blanco);
   margin: 30px;
+  margin-top: 50px;
+  margin-bottom: 10px;
 }
 
 /* ---------------------IMAGEN DE PERFIL--------------------- */
@@ -53,7 +56,7 @@
 
 .user-profile-icon{
   font-size: 180px;
-  color:#03254E ;
+  color:var(--blanco) ;
 }
 /* ---------------------FORMULARIO DE REGISTRO--------------------- */
 .register-login-form {
@@ -67,11 +70,23 @@
   border: none;
   border-bottom: 1px solid gray;
   padding: 10px;
+  border-radius: 3px;
 }
 /* ---------------------TERMINOS Y CONDICIONES--------------------- */
 .terms-conditions{
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   margin-top: 15px;
+  color: var(--blanco);
+}
+
+.terms-conditions a {
+  color: var(--celeste);
+  font-weight: 600;
+  transition: opacity 450ms;
+}
+
+.terms-conditions a:hover {
+  opacity: 0.8;
 }
 
 /* ---------------------LINK A REGISTRARSE Y OLVIDE MI CONTRASEÑA"--------------------- */
@@ -81,14 +96,24 @@
 }
 
 .links-register-password p {
-  opacity: 0.7;
   margin-left: 0.75rem;
   margin-top:20px ;
   padding-right: 0.75rem;
+  color: var(--blanco);
 
 }
 
-/* ---------------------BOTON DE "REGISTRARSE"--------------------- */
+.links-register-password p a {
+  color: var(--celeste);
+  font-weight: 600;
+  transition: opacity 450ms;
+}
+
+.links-register-password p a:hover {
+  opacity: 0.8;
+}
+
+/* ---------------------BOTON DE "REGISTRARSE" E "INICIAR SESIÓN" --------------------- */
 
 /* .register-button-input {
   padding: 20px;
@@ -99,13 +124,19 @@
   font-weight: bold;
 } */
 
+.button-login-register {
+  margin-bottom: 30px;
+}
+
 /* ---------------------RECORDAR USUARIO--------------------- */
 
 .user-save{
   margin-bottom: 25px;
   margin-top: 15px;
   margin: auto;
-  margin-top:10px ;
+  margin-top: 10px;
+  color: var(--blanco);
+  font-size: 1rem;
 }
 
 /* ---------------------MEDIA QUERIES TABLET--------------------- */
