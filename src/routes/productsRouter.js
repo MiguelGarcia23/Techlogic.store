@@ -14,9 +14,7 @@ router.get ('/', productsController.index);
 router.get ('/sectionProducts/:nameSection', productsController.section);
 
 /* Configuramos el envío al detalle de un producto */
-/* ESTA ES LA FORMA EN LA QUE IRÁ FINALMENTE PERO DE MOMENTO USEMOS LA OTRA */
-/* router.get ('/sectionProducts/:idSection/productDetail/:idProduct', productsController.productDetail); */
-router.get ('/productDetail/:idProduct?', productsController.productDetail);
+router.get ('/productDetail/:id', productsController.productDetail);
 
 /* Configuramos el envío a las colecciones */
 router.get ('/collections/:nameCollection?', productsController.collections);

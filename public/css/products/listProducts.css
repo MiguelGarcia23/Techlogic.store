@@ -233,6 +233,10 @@
     align-items: center;
 }
 
+.list-products a {
+    text-decoration: none;
+}
+
 .product-article{
     width: 46%;
     margin-bottom: 3.5rem;

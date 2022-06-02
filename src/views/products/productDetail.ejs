@@ -17,7 +17,9 @@
               <i class="fa-solid fa-chevron-left"></i>
             </div> -->
 
-            <div class="slider-img"><i class="fa-solid fa-image"></i></div>
+            <div class="slider-img">
+              <img src="/img/<%= product.img %>" alt="<%= product.name %>" class="img-slide-menu">
+            </div>
 
             <!-- <div class="icon-arrow">
               <i class="fa-solid fa-chevron-right"></i>
@@ -49,9 +51,9 @@
 
         <div class="cnt-product-detail">
           <div>
-            <div class="prd-name-general"><p>Colección Classic</p></div>
-            <div class="prd-name"><p>Funda iPhone 10</p></div>
-            <div class="prd-price"><p>$2.100</p></div>
+            <div class="prd-name-general"><p>Colección <%= product.collection %></p></div>
+            <div class="prd-name"><p><%= product.name %></p></div>
+            <div class="prd-price"><p><%= product.price %></p></div>
 
             <div class="prd-stars">
               <div>

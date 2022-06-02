@@ -58,6 +58,11 @@
     margin-bottom: 2.5rem;
 }
 
+/* ENLACE QUE RECUBRE CADA BEST SELLER */
+.products-best-sellers a {
+    text-decoration: none;
+}
+
 /* CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
 .product-best-seller {
     width: 80%;

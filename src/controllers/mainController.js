@@ -1,51 +1,67 @@
 /* Creamos un array que contenga los productos que se mostrarán en la sección best sellers */
 const bestSellers = [
   {
+    id: 1,
     name: 'iPhone 13',
     price: '$234.500,00',
-    img: 'iphone13.png'
+    img: 'iphone13.png',
+    collection: 'Modern'
   },
 
   {
+    id: 2,
     name: 'Mouse Logitech G603',
     price: '$6.435,00',
-    img: 'mouse-logi.png'
+    img: 'mouse-logi.png',
+    collection: 'Classic'
   },
 
   {
+    id: 3,
     name: 'Macbook Pro',
     price: '$320.000,00',
-    img: 'macbook-pro.png'
+    img: 'macbook-pro.png',
+    collection: 'Modern'
   },
 
   {
+    id: 4,
     name: 'Audífonos Beats Pro',
     price: '$48.000,00',
-    img: 'audifonos-beats-pro.png'
+    img: 'audifonos-beats-pro.png',
+    collection: 'Modern'
   },
 
   {
+    id: 5,
     name: 'iPad Air',
     price: '$79.230,00',
-    img: 'ipad-air.png'
+    img: 'ipad-air.png',
+    collection: 'Modern'
   },
 
   {
+    id: 6,
     name: 'Playstation 5',
     price: '$61.700,00',
-    img: 'playstation-5.png'
+    img: 'playstation-5.png',
+    collection: 'Modern'
   },
 
   {
+    id: 7,
     name: 'Teclado Logitech G213',
     price: '$5.800,00',
-    img: 'teclado-logitech-g213.png'
+    img: 'teclado-logitech-g213.png',
+    collection: 'Colorful'
   },
 
   {
+    id: 8,
     name: 'Router TP-Link TL-MR6400',
     price: '$8.020,00',
-    img: 'router-tplink-mr6400.png'
+    img: 'router-tplink-mr6400.png',
+    collection: 'Classic'
   },
 ];
 

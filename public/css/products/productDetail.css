@@ -25,6 +25,23 @@
 
   }
 
+  .slider{
+    display: flex;
+    justify-content: center;
+    background-color: var(--blanco);
+    height: 50vh;
+  }
+  
+  .slider-img {
+    color: var(--gris);
+    font-size: 100px;
+    margin-top: 20px;
+  }
+
+  .img-slide-menu {
+    width: 300px;
+  }
+
   .flechas-main-banner {
     position: absolute;
     top: 47%;
@@ -212,21 +229,6 @@
 
 .prd-features:last-child {
   border-bottom: 1px solid var(--blanco);
-}
-
-.slider{
-  display: flex;
-  justify-content: center;
-  background-color: var(--blanco);
-  height: 50vh;
-  position: relative;
-}
-
-.slider-img {
-  color: var(--gris);
-  font-size: 100px;
-  position: absolute;
-  top: 40%;
 }
 
 .icon-arrow{
