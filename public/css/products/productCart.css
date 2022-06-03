@@ -24,13 +24,14 @@ ul {
   position: fixed;
 }
 .my-cart {
-  padding: 15px;
-  margin: 10px;
+  display: block;
   border-radius: 15px;
-  position: absolute;
-  top: -10%;
-  right: 30%;
+  margin: 0 auto;
+  text-align: center;
+  color: var(--blanco);
+  font-size: 1.5rem;
 }
+
 .main-cart {
   width: 100%;
   padding-top: 180px;
