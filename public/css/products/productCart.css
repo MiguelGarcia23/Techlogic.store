@@ -206,6 +206,7 @@ ul {
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+  align-self: flex-start;
 }
 
 /* --------SECCION TAMBIEN TE PUEDE INRESAR-------- */

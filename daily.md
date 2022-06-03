@@ -28,9 +28,9 @@
 
   - También agregamos algunos detalles estéticos en las vistas de login y register para que estén acordes al fondo que utilizamos en las demás vistas.
 
-## Reuniòn del 06/02.
+## Reunión del 06/02.
 
-- Hoy nos reunimos en grupo para ultimar detalles esteticos y funcionales de el proyecto para preparar todo para la entrega del tercer sprint.
+- Hoy nos reunimos en grupo para ultimar detalles estéticos y funcionales del proyecto para preparar todo para la entrega del tercer sprint.
 
-  -Se creo el boton para crear producto.
-  -Se ajusto el boton para añadir producto al carrito.
+  -Se creo el botón para crear producto.
+  -Se ajustó el botón para añadir producto al carrito.

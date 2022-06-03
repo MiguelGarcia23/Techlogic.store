@@ -27,7 +27,7 @@
 
                 </div>
                 <div>
-                    <form action="/admin/create" method="get">
+                    <form action="/admin/create" method="GET">
                         <button class="button-cart button-create">Crear <i class="fas fa-plus"></i></button>
                     </form>
                 </div>
@@ -290,7 +290,7 @@
                             <img src="/img/<%= product.img %>" class="imageProduct" alt="<%= product.name %>">    
                             <p class="productName"><%= product.name %></p>
                             <p class="productPrice"><%= product.price %></p>
-                            <form action="" method="POST">
+                            <form action="/products/productCart" method="GET">
                                 <button class="button-cart button-icon-cart"><p class="add-to-cart">Añadir al carrito </p> <i class="fas fa-cart-plus"></i></button>
                             </form>
                         </a>
