@@ -89,7 +89,7 @@ ul {
   margin: auto;
   margin-top: 10px;
   padding-bottom: 5px;
-  background-color: var(--azul-marino);
+  background: linear-gradient(to top, var(--negro), var(--azul-marino));
   border-radius: 10px;
   
   
