@@ -27,3 +27,10 @@
 - Hoy nos reunimos para terminar la vista de creación de Página: creación y edición de productos, la cual es requerida para el tercer sprint
 
   - También agregamos algunos detalles estéticos en las vistas de login y register para que estén acordes al fondo que utilizamos en las demás vistas.
+
+## Reuniòn del 06/02.
+
+- Hoy nos reunimos en grupo para ultimar detalles esteticos y funcionales de el proyecto para preparar todo para la entrega del tercer sprint.
+
+  -Se creo el boton para crear producto.
+  -Se ajusto el boton para añadir producto al carrito.

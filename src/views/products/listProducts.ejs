@@ -26,7 +26,11 @@
                     </a>
 
                 </div>
-                
+                <div>
+                    <form action="/admin/create" method="get">
+                        <button class="button-cart button-create">Crear <i class="fas fa-plus"></i></button>
+                    </form>
+                </div>
                 <!-- BOTÓN DE ORDENAR POR -->
                 <div class="order-button">
 
@@ -287,7 +291,7 @@
                             <p class="productName"><%= product.name %></p>
                             <p class="productPrice"><%= product.price %></p>
                             <form action="" method="POST">
-                                <button class="button-cart button-icon-cart"><i class="fas fa-cart-plus"></i></button>
+                                <button class="button-cart button-icon-cart"><p class="add-to-cart">Añadir al carrito </p> <i class="fas fa-cart-plus"></i></button>
                             </form>
                         </a>
                         
