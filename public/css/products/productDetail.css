@@ -5,8 +5,6 @@
 
 .boxed {
     display: flex;
-    /* border: 1px solid green ;
-    background-color: antiquewhite; */
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
@@ -183,8 +181,6 @@
   font-size: 25px;
   margin-top: 25px;
   margin-left: 10px;
-  /* padding-left: 10px; */
-  /* padding-right: 0px; */
 
 
 }
@@ -269,10 +265,6 @@
   background-color: transparent;
   border: none;
 }
-
-/* .icon-arrow:hover{
-  box-shadow: 5px 5px 5px rgb(100, 100, 100);
-} */
 
 .icon-numbers{
   display: flex;

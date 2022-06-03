@@ -52,7 +52,6 @@
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    /* justify-content: space-between; */
     align-items: center;
     overflow: hidden;
     margin-bottom: 2.5rem;
@@ -67,7 +66,6 @@
 .product-best-seller {
     width: 80%;
     margin-left: 2rem;
-    /* border: 2px dashed red; */
 }
 
 .product-best-seller:first-child {
@@ -354,11 +352,6 @@
 
 /* MEDIA QUERIES TABLETS */
 @media (min-width: 768px) {
-
-    /* ----------------------  HEADER  ---------------------- */
-    /* .main-header {
-        background-color: transparent;
-    } */
 
     /* ----------------------  BANNER PRINCIPAL  ---------------------- */
     .main-banner {
