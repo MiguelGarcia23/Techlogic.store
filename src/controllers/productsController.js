@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 
-const productsCartFilePath = path.join(__dirname, "../data/productsCart.json");
 const productsFilePath = path.join(__dirname, "../data/products.json");
 
 /* linea para escribir archivo JSON  */
@@ -118,10 +117,8 @@ const similarProducts = [
 /* Configuramos el controlador */
 const productsController = {
   index: (req, res) => {
-    const products = JSON.parse(
-      fs.readFileSync(productsFilePath, "utf-8")
-    );
-    let productInStock = products.filter((product) => product.state == 'stock'); // filtramos los productos que están en stock
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let productInStock = products.filter((product) => product.state == "stock"); // filtramos los productos que están en stock
     res.render("./products/listProducts", { products: productInStock }); // renderizamos la página con los productos
   },
 
@@ -130,9 +127,7 @@ const productsController = {
   },
 
   productDetail: (req, res) => {
-    const products = JSON.parse(
-      fs.readFileSync(productsFilePath, "utf-8")
-    );
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     let detailedProduct = products.find(
       (product) => product.id == req.params.id
     ); // buscamos el producto en el array de productos
@@ -155,75 +150,63 @@ const productsController = {
     res.render("./products/sales");
   },
 
+  /* ELIMINAMOS EL PRODUCTO DE LA LISTA DEL CARRITO Y LO DEVUELVE A LA LISTA DE PRUCTOS */
   deleteProduct: (req, res) => {
-    const productsOnCart = JSON.parse(
-      fs.readFileSync(productsCartFilePath, "utf-8")
-    );
-		let productToEdit = productsOnCart.find(product => req.params.id == product.id);
-		let editedProduct = {
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let productToEdit = products.find((product) => req.params.id == product.id);
+
+    let productDeleted = {
       id: productToEdit.id,
       name: productToEdit.name,
       description: productToEdit.description,
       price: productToEdit.price,
       image: productToEdit.image,
       category: productToEdit.category,
-      state: "deleted"
-		}
+      state: "stock",
+    };
 
-		let indice = productsOnCart.findIndex((product) => product.id == req.params.id);
-		productsOnCart[indice] = editedProduct;
+    let indexRestored = products.findIndex(
+      (product) => product.id == req.params.id
+    );
+    products[indexRestored] = productDeleted;
 
-		fs.writeFileSync(productsCartFilePath, JSON.stringify(productsOnCart, null, " "));
-		res.redirect("/products/productCart");
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+    res.redirect("/products/productCart");
   },
 
+  /* AÑADIMOS EL PRODUCTO A LA LISTA DEL CARRITO */
   addToCart: (req, res) => {
-    const products = JSON.parse(
-      fs.readFileSync(productsFilePath, "utf-8")
-    );
-    const productsOnCart = JSON.parse(
-      fs.readFileSync(productsCartFilePath, "utf-8")
-    );
-    let productToAdd = products.find(product => req.params.id == product.id); // Buscamos el producto en el array de productos
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let productToAdd = products.find((product) => req.params.id == product.id); // Buscamos el producto en el array de productos
 
     /* CAMBIO EL ESTADO DEL PRODUCTO A 'CART' */
     let productAdded = {
-      id: productsOnCart[productsOnCart.length -1].id + 1,
-      name: productToAdd.name,
-      description: productToAdd.description,
-      price: productToAdd.price,
-      image: productToAdd.image,
-      category: productToAdd.category,
-      state: "cart"
-    }
-    /* CAMBIO EL STADO DEL PRODUCTO A 'SOLD' */
-    let productSold = {
       id: productToAdd.id,
       name: productToAdd.name,
       description: productToAdd.description,
       price: productToAdd.price,
       image: productToAdd.image,
       category: productToAdd.category,
-      state: "sold"
-    }
-    /* REEMPLAZO EL PRODUCTO CON ESTADO 'STOCK' POR EL PRODUCTO CON ESTADO 'SOLD'*/
-    let productInStock = products.findIndex((product) => product.id == req.params.id);
-    products[productInStock] = productSold; 
+      state: "cart",
+    };
 
-    productsOnCart.push(productAdded); // PUSH DEL PRODUCTO A CARRITO
+    /* REEMPLAZO EL PRODUCTO*/
+    let productInStock = products.findIndex(
+      (product) => product.id == req.params.id
+    );
+    products[productInStock] = productAdded;
 
-    fs.writeFileSync(productsCartFilePath, JSON.stringify(productsOnCart, null, " ")); // GUARDO EL ARRAY DE PRODUCTOS CON ESTADO 'CART' EN ARCHIVO JSON
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " ")); // GUARDO EL ARRAY DE PRODUCTOS CON ESTADO 'SOLD' EN ARCHIVO JSON
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " ")); // GUARDO EL ARRAY DE PRODUCTOS CON ESTADO 'CART' EN ARCHIVO JSON
     res.redirect("/products/"); // REDIRECCIONO AL LISTADO DE PRODUCTOS
-
-},
+  },
 
   productCart: (req, res) => {
-    const productsOnCart = JSON.parse(
-      fs.readFileSync(productsCartFilePath, "utf-8")
-    );
-    let productToView = productsOnCart.filter(product => product.state == "cart"); // FILTRO LOS PRODUCTOS CON ESTADO 'CART'
-    res.render("./products/productCart", { products: productToView, similarProducts: similarProducts}); // MANDO LOS PRODUCTOS CON ESTADO 'CART' A LA VISTA
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let productToView = products.filter((product) => product.state == "cart"); // FILTRO LOS PRODUCTOS CON ESTADO 'CART'
+    res.render("./products/productCart", {
+      products: productToView,
+      similarProducts: similarProducts,
+    }); // MANDO LOS PRODUCTOS CON ESTADO 'CART' A LA VISTA
   },
 };
 
