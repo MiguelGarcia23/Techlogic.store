@@ -1,0 +1,83 @@
+[
+ {
+  "id": 1,
+  "name": "iPhone 13",
+  "description": "Apple iphone 13",
+  "price": "$234.500,00",
+  "image": "iphone13.png",
+  "category": "Smartphone",
+  "state": "deleted"
+ },
+ {
+  "id": 2,
+  "name": "Mouse Logitech G603",
+  "description": "Apple iphone 13",
+  "price": "$6.435,00",
+  "image": "mouse-logi.png",
+  "category": "Smartphone",
+  "state": "deleted"
+ },
+ {
+  "id": 3,
+  "name": "iPhone 13",
+  "description": "Apple iphone 13",
+  "price": "$234.500,00",
+  "image": "iphone13.png",
+  "category": "Smartphone",
+  "state": "deleted"
+ },
+ {
+  "id": 4,
+  "name": "Mouse Logitech G603",
+  "description": "Apple iphone 13",
+  "price": "$6.435,00",
+  "image": "mouse-logi.png",
+  "category": "Perifericos",
+  "state": "deleted"
+ },
+ {
+  "id": 5,
+  "name": "Macbook Pro",
+  "description": "Apple iphone 13",
+  "price": "$320.000",
+  "image": "macbook-pro.png",
+  "category": "Laptops",
+  "state": "deleted"
+ },
+ {
+  "id": 6,
+  "name": "iPhone 13",
+  "description": "Apple iphone 13",
+  "price": "$234.500,00",
+  "image": "iphone13.png",
+  "category": "Smartphone",
+  "state": "deleted"
+ },
+ {
+  "id": 7,
+  "name": "iPhone 13",
+  "description": "Apple iphone 13",
+  "price": "$234.500,00",
+  "image": "iphone13.png",
+  "category": "Smartphone",
+  "state": "deleted"
+ },
+ {
+  "id": 8,
+  "name": "Mouse Logitech G603",
+  "description": "Apple iphone 13",
+  "price": "$6.435,00",
+  "image": "mouse-logi.png",
+  "category": "Perifericos",
+  "state": "deleted"
+ },
+ {
+  "id": 9,
+  "name": "Macbook Pro",
+  "description": "Apple iphone 13",
+  "price": "$320.000",
+  "image": "macbook-pro.png",
+  "category": "Laptops",
+  "state": "deleted"
+ }
+]

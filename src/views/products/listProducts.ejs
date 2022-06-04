@@ -287,10 +287,10 @@
 
                         <!-- LINK PARA LLEVAR AL DETALLE DEL PRODUCTO -->
                         <a href="/products/productDetail/<%= product.id %>">
-                            <img src="/img/<%= product.img %>" class="imageProduct" alt="<%= product.name %>">    
+                            <img src="/img/<%= product.image %>" class="imageProduct" alt="<%= product.name %>">    
                             <p class="productName"><%= product.name %></p>
                             <p class="productPrice"><%= product.price %></p>
-                            <form action="/products/productCart" method="GET">
+                            <form action="/products/addProduct/<%= product.id %>" method="POST">
                                 <button class="button-cart button-icon-cart"><p class="add-to-cart">Añadir al carrito </p> <i class="fas fa-cart-plus"></i></button>
                             </form>
                         </a>
