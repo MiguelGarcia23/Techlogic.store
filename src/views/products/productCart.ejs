@@ -28,10 +28,13 @@
               <div class="div-img-art">
                 <img
                   class="img-article"
-                  src="/img/<%= product.img %>"
+                  src="/img/<%= product.image %>"
                   alt="<%= product.name %>"
                 />
-                <a href="#" class="eliminar-producto"><p>Eliminar</p></a>
+                <form action="/products/productCart/<%= product.id %>" method="POST" >
+                   <button type="submit" class="eliminar-producto">Eliminar</button>
+                </form>
+                <!-- <a href="#" class="eliminar-producto"><p>Eliminar</p></a> -->
               </div>
               <div>
                 <ul class="product-detail-cart">

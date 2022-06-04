@@ -22,6 +22,12 @@ const contactRouter = require('./routes/contactRouter');
 /* Importamos la ruta de admin */
 const adminRouter = require('./routes/adminRouter');
 
+const methodOverride = require('method-override'); // requerimos el methodOveride
+
+app.use(methodOverride('_method')); //usamos overRide
+app.use(express.urlencoded({ extended: false })); 
+app.use(express.json()); 
+
 /* Configuramos el motor de plantilla */
 app.set ('view engine', 'ejs');
 
