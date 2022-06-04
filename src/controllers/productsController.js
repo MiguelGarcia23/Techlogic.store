@@ -121,7 +121,8 @@ const productsController = {
     const products = JSON.parse(
       fs.readFileSync(productsFilePath, "utf-8")
     );
-    res.render("./products/listProducts", { products: products });
+    let productInStock = products.filter((product) => product.state == 'stock'); // filtramos los productos que están en stock
+    res.render("./products/listProducts", { products: productInStock }); // renderizamos la página con los productos
   },
 
   section: (req, res) => {
@@ -134,7 +135,7 @@ const productsController = {
     );
     let detailedProduct = products.find(
       (product) => product.id == req.params.id
-    );
+    ); // buscamos el producto en el array de productos
 
     res.render("./products/productDetail", {
       similarProducts: similarProducts,
@@ -183,7 +184,9 @@ const productsController = {
     const productsOnCart = JSON.parse(
       fs.readFileSync(productsCartFilePath, "utf-8")
     );
-    let productToAdd = products.find(product => req.params.id == product.id);
+    let productToAdd = products.find(product => req.params.id == product.id); // Buscamos el producto en el array de productos
+
+    /* CAMBIO EL ESTADO DEL PRODUCTO A 'CART' */
     let productAdded = {
       id: productsOnCart[productsOnCart.length -1].id + 1,
       name: productToAdd.name,
@@ -193,9 +196,25 @@ const productsController = {
       category: productToAdd.category,
       state: "cart"
     }
-    productsOnCart.push(productAdded);
-    fs.writeFileSync(productsCartFilePath, JSON.stringify(productsOnCart, null, " "));
-    res.redirect("/products/");
+    /* CAMBIO EL STADO DEL PRODUCTO A 'SOLD' */
+    let productSold = {
+      id: productToAdd.id,
+      name: productToAdd.name,
+      description: productToAdd.description,
+      price: productToAdd.price,
+      image: productToAdd.image,
+      category: productToAdd.category,
+      state: "sold"
+    }
+    /* REEMPLAZO EL PRODUCTO CON ESTADO 'STOCK' POR EL PRODUCTO CON ESTADO 'SOLD'*/
+    let productInStock = products.findIndex((product) => product.id == req.params.id);
+    products[productInStock] = productSold; 
+
+    productsOnCart.push(productAdded); // PUSH DEL PRODUCTO A CARRITO
+
+    fs.writeFileSync(productsCartFilePath, JSON.stringify(productsOnCart, null, " ")); // GUARDO EL ARRAY DE PRODUCTOS CON ESTADO 'CART' EN ARCHIVO JSON
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " ")); // GUARDO EL ARRAY DE PRODUCTOS CON ESTADO 'SOLD' EN ARCHIVO JSON
+    res.redirect("/products/"); // REDIRECCIONO AL LISTADO DE PRODUCTOS
 
 },
 
@@ -203,8 +222,8 @@ const productsController = {
     const productsOnCart = JSON.parse(
       fs.readFileSync(productsCartFilePath, "utf-8")
     );
-    let productToView = productsOnCart.filter(product => product.state == "cart");
-    res.render("./products/productCart", { products: productToView, similarProducts: similarProducts});
+    let productToView = productsOnCart.filter(product => product.state == "cart"); // FILTRO LOS PRODUCTOS CON ESTADO 'CART'
+    res.render("./products/productCart", { products: productToView, similarProducts: similarProducts}); // MANDO LOS PRODUCTOS CON ESTADO 'CART' A LA VISTA
   },
 };
 

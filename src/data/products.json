@@ -1,29 +1,29 @@
 [
-  {
-    "id": 1,
-    "name": "iPhone 13",
-    "description": "Apple iphone 13",
-    "price": "$234.500,00",
-    "image": "iphone13.png",
-    "category": "Smartphone",
-    "state": "active"
-   },
-   {
-    "id": 2,
-    "name": "Mouse Logitech G603",
-    "description": "Apple iphone 13",
-    "price": "$6.435,00",
-    "image": "mouse-logi.png",
-    "category": "Perifericos",
-    "state": "active"
-   },
-   {
-    "id": 3,
-    "name": "Macbook Pro",
-    "description": "Apple iphone 13",
-    "price": "$320.000",
-    "image": "macbook-pro.png",
-    "category": "Laptops",
-    "state": "active"
-   }
+ {
+  "id": 1,
+  "name": "iPhone 13",
+  "description": "Apple iphone 13",
+  "price": "$234.500,00",
+  "image": "iphone13.png",
+  "category": "Smartphone",
+  "state": "stock"
+ },
+ {
+  "id": 2,
+  "name": "Mouse Logitech G603",
+  "description": "Apple iphone 13",
+  "price": "$6.435,00",
+  "image": "mouse-logi.png",
+  "category": "Perifericos",
+  "state": "stock"
+ },
+ {
+  "id": 3,
+  "name": "Macbook Pro",
+  "description": "Apple iphone 13",
+  "price": "$320.000",
+  "image": "macbook-pro.png",
+  "category": "Laptops",
+  "state": "stock"
+ }
 ]
