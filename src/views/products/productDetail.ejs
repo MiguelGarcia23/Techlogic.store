@@ -11,85 +11,82 @@
     <!-- MAIN -->
     <main class="main-productDetail">
       <div class="main-product-detail">
-        <div>
-          <div class="slider">
+        <div class="image-cnt-product-detail">
+            <div class="slider">
 
-            <div class="slider-img">
-              <img src="/img/<%= product.image %>" alt="<%= product.name %>" class="img-slide-menu">
-            </div>
-
-            <div class="flechas-main-banner">
-              <i class="fa-solid fa-angle-left"></i>
-              <i class="fa-solid fa-angle-right"></i>
-            </div>
-          </div>
-          <div class="icons">
-            <div class="icons-dots">
-              <i class="fa-solid fa-circle"></i>
-            </div>
-            <div class="icons-dots">
-              <i class="fa-solid fa-circle"></i>
-            </div>
-            <div class="icons-dots">
-              <i class="fa-solid fa-circle"></i>
-            </div>
-            <div class="icons-dots">
-              <i class="fa-solid fa-circle"></i>
-            </div>
-            <div class="icons-dots">
-              <i class="fa-solid fa-circle"></i>
-            </div>
-          </div>
-        </div>
-
-        <div class="cnt-product-detail">
-          <div>
-            <div class="prd-name-general"><p>Colección <%= product.category %></p></div>
-            <div class="prd-name"><p><%= product.name %></p></div>
-            <div class="prd-price"><p><%= product.price %></p></div>
-
-            <div class="prd-stars">
-              <div>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div>
-                <p class="prd-star-text">5 reseñas</p>
-              </div>
-            </div>
-            <div class="prd-buy-cnt">
-              <div class="prd-buy">
-                <p>COMPRA YA!</p>
+              <div class="slider-img">
+                <img src="/img/<%= product.image %>" alt="<%= product.name %>" class="img-slide-menu">
               </div>
 
-              <div class="icon-numbers">
-                <div class="icon-minus">
-                  <i class="fa-solid fa-minus"></i>
+              <div class="flechas-main-banner">
+                <i class="fa-solid fa-angle-left"></i>
+                <i class="fa-solid fa-angle-right"></i>
+              </div>
+
+              <div class="icons">
+                <div class="icons-dots">
+                  <i class="fa-solid fa-circle"></i>
                 </div>
-
-                <div class="cnt-number">
-                  <p class="text-number">1</p>
+                <div class="icons-dots">
+                  <i class="fa-solid fa-circle"></i>
                 </div>
-                <div class="icon-plus">
-                  <i class="fa-solid fa-plus"></i>
+                <div class="icons-dots">
+                  <i class="fa-solid fa-circle"></i>
+                </div>
+                <div class="icons-dots">
+                  <i class="fa-solid fa-circle"></i>
+                </div>
+                <div class="icons-dots">
+                  <i class="fa-solid fa-circle"></i>
                 </div>
               </div>
             </div>
-            <form action="/products/addProduct/<%= product.id %>" method="POST" class="prd-add-cart">
-              <button>Agregar al carrito<i class="fa-solid fa-cart-arrow-down"></i></button>
-            </form>
-            <!-- <div class="prd-add-cart">
-              <p>Agregar al carrito</p>
-              <i class="fa-solid fa-cart-arrow-down"></i>
-            </div> -->
+
+          <div class="cnt-product-detail">
             <div>
-              <form action="/admin/edit" method="get">
-                  <button class="button-cart button-create">Editar producto</i></button>
+              <div class="prd-name-general"><p>Sección <%= product.category %></p></div>
+              <div class="prd-name"><p><%= product.name %></p></div>
+              <div class="prd-price"><p><%= product.price %></p></div>
+
+              <div class="prd-stars">
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div>
+                  <p class="prd-star-text">5 reseñas</p>
+                </div>
+              </div>
+              <div class="prd-buy-cnt">
+                <div class="prd-buy">
+                  <p>COMPRA YA!</p>
+                </div>
+
+                <div class="icon-numbers">
+                  <div class="icon-minus">
+                    <i class="fa-solid fa-minus"></i>
+                  </div>
+
+                  <div class="cnt-number">
+                    <p class="text-number">1</p>
+                  </div>
+                  <div class="icon-plus">
+                    <i class="fa-solid fa-plus"></i>
+                  </div>
+                </div>
+              </div>
+              <form action="/products/addProduct/<%= product.id %>" method="POST" class="prd-add-cart">
+                <button>Agregar al carrito<i class="fa-solid fa-cart-arrow-down"></i></button>
               </form>
-          </div>
+              <div>
+                <form action="/admin/edit" method="get">
+                    <button class="button-cart button-edit">Editar producto</i></button>
+                </form>
+            </div>
+            </div>
           </div>
         </div>
 

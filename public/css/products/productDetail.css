@@ -16,27 +16,27 @@
   }
 
   .main-product-detail{
-
-    background-color: var(--blanco);
     margin-top: 100px;
-    font-family: 'Roboto', sans-serif;
+  }
 
+  .image-cnt-product-detail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .slider{
+    background-color: var(--blanco);
+    width: 100%;
+    position: relative;
     display: flex;
     justify-content: center;
-    background-color: var(--blanco);
-    height: 50vh;
-  }
-  
-  .slider-img {
-    color: var(--gris);
-    font-size: 100px;
-    margin-top: 20px;
+    align-items: center;
   }
 
   .img-slide-menu {
+    display: block;
+    margin: 0 auto;
     width: 300px;
   }
 
@@ -78,7 +78,7 @@
 
 .prd-name-general{
   color: var(--celeste);
-  font-size: 25px;
+  font-size: 22px;
   margin-top: 30px;
   margin-bottom: 20px;
 
@@ -86,7 +86,7 @@
 
 .prd-name{
   color: var(--blanco);
-  font-size: 32px;
+  font-size: 26px;
   margin-top: 10px;
   margin-bottom: 20px;
 
@@ -95,7 +95,7 @@
 .prd-price{
   color: var(--blanco);
   opacity: 0.9;
-  font-size: 25px;
+  font-size: 30px;
   margin-top: 10px;
   margin-bottom: 20px;
 
@@ -114,18 +114,20 @@
 .prd-buy{
   background-color: var(--celeste);
   color: var(--negro);
-  font-size: 30px;
   margin-top: 10px;
   margin-bottom: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding: 10px;
   border: 3px solid var(--negro);
   border-radius: 8px;
   cursor: pointer;
   transition-property: background-color, color;
   transition: 2s;
+}
+
+.prd-buy p{
+  font-size: 22px;
+  margin: auto;
+  text-align: center;
 }
 
 .prd-buy:hover {
@@ -135,18 +137,14 @@
 
 .prd-add-cart{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: rgba(255, 255, 255, 0.95);
   color: var(--negro);
-  font-size: 27px;
   margin-top: 10px;
   margin-bottom: 32px;
-  justify-content: row;
-  padding: 4px 0;
-  padding-left: 25px;
-  padding-right: 25px;
-  border: 3px solid var(--negro);
+  padding: 8px 25px;
   border-radius: 8px;
-  align-items: center;
   cursor: pointer;
   transition-property: background-color, color;
   transition: 2s;
@@ -157,16 +155,32 @@
   color: var(--blanco);
 }
 
+.prd-add-cart button {
+  border: none;
+  font-size: 24px;
+  background-color: transparent;
+  transition: color 2s;
+}
+
+.prd-add-cart:hover button {
+  color: var(--blanco);
+}
+
+
 .prd-add-cart i{
   color: var(--negro);
-  font-size: 25px;
+  font-size: 24px;
   margin-left: 10px;
   padding-left: 5px;
   transition: color 2s;
 }
 
-.prd-add-cart:hover i {
+.prd-add-cart:hover button i {
   color: var(--blanco);
+}
+
+.button-edit {
+  margin-bottom: 35px;
 }
 
 .prd-star-text{
@@ -193,8 +207,8 @@
 
 .cnt-number{
   border: 3px solid var(--blanco);
-  width: 50px;
-  height: 50px;
+  /* width: 50px;
+  height: 50px; */
   border-radius: 8px;
   margin-left: 18px;
 
@@ -202,9 +216,11 @@
 
 .text-number{
   color: var(--blanco);
-  font-size: 30px;
-  margin-top: 4px;
-  margin-left: 3px;
+  font-size: 26px;
+  /* margin-top: 4px;
+  margin-left: 3px; */
+  margin: auto;
+  padding: 4px 14px;
 
 }
 
@@ -220,7 +236,12 @@
   justify-content: space-between;
   padding-top: 15px;
   padding-bottom: 15px;
+  align-items: center;
 
+}
+
+.prd-features p {
+  margin: auto 0;
 }
 
 .prd-features:last-child {
@@ -239,10 +260,13 @@
 .icons{
   display: flex;
   background-color: var(--blanco);
-  justify-content:center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-
+  justify-content: center;
+  /* padding-top: 10px;
+  padding-bottom: 10px; */
+  /* margin-top: 40px; */
+  position: absolute;
+  bottom: 2px;
+  left: 47%;
 }
 
 .icons-dots{
@@ -305,4 +329,33 @@
   border-radius: 50%;
   padding: 1px 2px;
   font-size: 20px;
+}
+
+/* MEDIA QUERIES */
+
+/* MEDIA QUERIES TABLETS */
+/* @media (min-width: 768px) {
+
+} */
+
+/* MEDIA QUERIES DESKTOPS */
+@media (min-width: 1050px) {
+
+  .main-product-detail{
+    margin-top: 130px;
+  }
+
+  .image-cnt-product-detail {
+    padding: 0 40px;
+    margin-bottom: 30px;
+  }
+
+  .slider {
+    width: 60%;
+  }
+
+  .cnt-product-detail {
+    width: 40%;
+  }
+
 }
