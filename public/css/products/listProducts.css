@@ -277,7 +277,7 @@
 
 /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
 .product-article{
-    width: 46%;
+    width: 100%;
     margin-bottom: 3.5rem;
 }
 
@@ -307,6 +307,7 @@
 /* BÓTON PARA GUARDAR EL PRODUCTO EN EL CARRITO DE COMPRAS */
 .button-icon-cart{
     width: 50%;
+    max-width: 200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-evenly;
@@ -321,7 +322,7 @@
 
 /* MEDIA QUERIES */
 
-/* MEDIA QUERIES TABLETS */
+/* MEDIA QUERIES TELÉFONOS GRANDES Y TABLETS PEQUEÑAS */
 @media (min-width: 768px) {
 
     /* EL TÍTULO DE LA VISTA */
@@ -332,6 +333,16 @@
     /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
     .product-article{
         width: 30%;
+    }
+   
+}
+
+/* MEDIA QUERIES TABLETS */
+@media (min-width: 580PX) {
+
+    /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
+    .product-article{
+        width: 46%;
     }
    
 }
@@ -357,7 +368,6 @@
 
     .button-icon-cart{
         width: 100%;
-        max-width: 227px;
     }
     /* Mostrar texto de añadir  */
     .add-to-cart{
