@@ -4,8 +4,8 @@
   "name": "iPhone 13",
   "description": "Apple iphone 13",
   "price": "$234.500,00",
+  "discount": 10,
   "image": "iphone13.png",
-  "category": "Smartphones",
   "state": "stock"
  },
  {
@@ -13,8 +13,10 @@
   "name": "Mouse Logitech G603",
   "description": "Apple iphone 13",
   "price": "$6.435,00",
+  "discount": 10,
   "image": "mouse-logi.png",
-  "category": "Perifericos",
+  "section": "Perifericos",
+  "colection": "unselct",
   "state": "stock"
  },
  {
@@ -22,8 +24,10 @@
   "name": "Macbook Pro",
   "description": "Apple iphone 13",
   "price": "$320.000",
+  "discount": 10,
   "image": "macbook-pro.png",
-  "category": "Laptops",
+  "section": "Laptops",
+  "colection": "unselct",
   "state": "stock"
  }
 ]

@@ -34,5 +34,6 @@ router.post ('/productCart/:id', productsController.deleteProduct);
 /* Configuramos la ruta de los botones 'Añadir al carrito' de la lista de productos y del detalle */
 router.post ('/addProduct/:id', productsController.addToCart);
 
+
 /* Exportamos la variable router */
 module.exports = router;

@@ -14,7 +14,7 @@ router.get ('/', adminController.index);
 router.get ('/create', adminController.create);
 
 /* Configuramos el envío a la sección de edición de productos de admin */
-router.get ('/edit', adminController.edit);
+router.get ('/edit/:id', adminController.edit);
 
 /* Exportamos la variable router */
 module.exports = router;

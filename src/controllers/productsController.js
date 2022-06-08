@@ -160,8 +160,10 @@ const productsController = {
       name: productToEdit.name,
       description: productToEdit.description,
       price: productToEdit.price,
+      discount: productToEdit.discount,
       image: productToEdit.image,
-      category: productToEdit.category,
+      section: productToEdit.section,
+      colection: productToEdit.collection,
       state: "stock",
     };
 
@@ -185,11 +187,13 @@ const productsController = {
       name: productToAdd.name,
       description: productToAdd.description,
       price: productToAdd.price,
+      discount: productToAdd.discount,
       image: productToAdd.image,
-      category: productToAdd.category,
+      section: productToAdd.section,
+      colection: productToAdd.collection,
       state: "cart",
     };
-
+    
     /* REEMPLAZO EL PRODUCTO*/
     let productInStock = products.findIndex(
       (product) => product.id == req.params.id
@@ -208,6 +212,13 @@ const productsController = {
       similarProducts: similarProducts,
     }); // MANDO LOS PRODUCTOS CON ESTADO 'CART' A LA VISTA
   },
+
+  editProduct: (req, res) => {
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let productToEdit = products.filter((product) => req.params.id == product.id); // Buscamos el producto en el array de productos
+
+    res.render("admin/editProduct", {product: productToEdit});
+  }
 };
 
 /* Exportamos el controlador */
