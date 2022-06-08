@@ -1,6 +1,6 @@
 # RETROSPECTIVA
 
-## RETROSPECTIVA DEL SPRINT 1
+## RETROSPECTIVA DEL SPRINT 2
 
 ### 1. Comenzar a hacer.
 
@@ -27,7 +27,7 @@ De momento, el equipo siente que no debemos implementar algo nuevo a la dinámic
 De momento, no vemos algo en concreto que deberíamos dejar de hacer.
 
 
-## RETROSPECTIVA DEL SPRINT 2
+## RETROSPECTIVA DEL SPRINT 3
 
 ### 1. Comenzar a hacer.
 
