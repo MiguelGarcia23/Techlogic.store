@@ -156,14 +156,7 @@ const productsController = {
     let productToEdit = products.find((product) => req.params.id == product.id);
 
     let productDeleted = {
-      id: productToEdit.id,
-      name: productToEdit.name,
-      description: productToEdit.description,
-      price: productToEdit.price,
-      discount: productToEdit.discount,
-      image: productToEdit.image,
-      section: productToEdit.section,
-      colection: productToEdit.collection,
+      ... productToEdit,
       state: "stock",
     };
 
@@ -183,14 +176,7 @@ const productsController = {
 
     /* CAMBIO EL ESTADO DEL PRODUCTO A 'CART' */
     let productAdded = {
-      id: productToAdd.id,
-      name: productToAdd.name,
-      description: productToAdd.description,
-      price: productToAdd.price,
-      discount: productToAdd.discount,
-      image: productToAdd.image,
-      section: productToAdd.section,
-      colection: productToAdd.collection,
+     ... productToAdd,
       state: "cart",
     };
     
