@@ -28,7 +28,7 @@
               <div class="div-img-art">
                 <img
                   class="img-article"
-                  src="/img/<%= product.image %>"
+                  src="/img/products/<%= product.image %>"
                   alt="<%= product.name %>"
                 />
                 <form action="/products/productCart/<%= product.id %>" method="POST" >
@@ -45,7 +45,7 @@
               </div>
               <div>
                 <ul class="add-item">
-                  <li><%= product.price %></li>
+                  <li>$<%= product.price %></li>
                   <div class="add-item-icons">
                     <div>
                       <a href="#"
@@ -99,7 +99,7 @@
             <div class="images-products-plus">
               <div class="product-plus">
                 <img
-                  src="/img/<%= similarProduct.img %>"
+                  src="/img/products/<%= similarProduct.img %>"
                   alt="<%= similarProduct.name %>"
                   class="img-product-plus"
                 />

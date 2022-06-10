@@ -15,7 +15,7 @@
             <div class="slider">
 
               <div class="slider-img">
-                <img src="/img/<%= product.image %>" alt="<%= product.name %>" class="img-slide-menu">
+                <img src="/img/products/<%= product.image %>" alt="<%= product.name %>" class="img-slide-menu">
               </div>
 
               <div class="flechas-main-banner">
@@ -46,7 +46,7 @@
             <div>
               <div class="prd-name-general"><p>Sección <%= product.category %></p></div>
               <div class="prd-name"><p><%= product.name %></p></div>
-              <div class="prd-price"><p><%= product.price %></p></div>
+              <div class="prd-price"><p>$<%= product.price %></p></div>
 
               <div class="prd-stars">
                 <div>
@@ -121,7 +121,7 @@
             <div class="images-products-plus">
               <div class="product-plus">
                 <img
-                  src="/img/<%= similarProduct.img %>"
+                  src="/img/products/<%= similarProduct.img %>"
                   alt="<%= similarProduct.name %>"
                   class="img-product-plus"
                 />
