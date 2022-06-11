@@ -52,11 +52,18 @@
                     <input type="text" id="price" name="price" class="normal-input" placeholder="Ej: 12500" value="<%= product.price %>">
                 </div>
 
+                <!-- INPUT DEL DESCUENTO DEL PRODUCTO -->
+                <div class="div-edit-create-form">
+                    <label for="discount" class="label-normal-input">Descuento del Producto:</label>
+                    <input type="text" id="discount" name="discount" class="normal-input" placeholder="Ej: 10" value="<%= product.discount %> ">
+                </div>
+                
                 <!-- TEXTAREA DE LA DESCRIPCIÓN DEL PRODUCTO -->        
                 <div class="div-edit-create-form">
                     <label for="description" class="label-normal-input">Descripción del Producto:</label>
                     <textarea name="description" id="description" class="textarea-edit-create-form"><%= product.description %></textarea>
                 </div>
+
 
                 <!-- DIV CON LA IMAGEN ACTUAL DEL PRODUCTO -->
                 <div class="div-edit-create-form">

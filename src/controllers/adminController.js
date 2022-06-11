@@ -39,6 +39,7 @@ const adminController = {
             ...req.body,
             description: req.body.description,
             price: req.body.price,
+            discount: req.body.discount,
             state: 'stock'
         };
 
@@ -86,6 +87,7 @@ const adminController = {
         productToEdit.brand = req.body.brand;
 		productToEdit.description = req.body.description;
 		productToEdit.price = req.body.price;
+		productToEdit.discount = req.body.discount;
 		productToEdit.image = req.file ? req.file.filename : productToEdit.image;
 
 		/* Encontrando el index del producto editado para no tener que reescribir todo el JSON, sólo el producto editado */

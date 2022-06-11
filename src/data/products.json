@@ -7,6 +7,7 @@
   "brand": "Apple",
   "description": "iPhone 13",
   "price": "234.500,00",
+  "discount": 10,
   "image": "iphone13.png",
   "state": "stock"
  },
@@ -18,6 +19,7 @@
   "brand": "Logitech",
   "description": "Mouse Logitech G603",
   "price": "6.435,00",
+  "discount": 10,
   "image": "mouse-logi.png",
   "state": "stock"
  },
@@ -29,6 +31,7 @@
   "brand": "Apple",
   "description": "Macbook Pro",
   "price": "320.000,00",
+  "discount": 10,
   "image": "macbook-pro.png",
   "state": "stock"
  },
@@ -52,6 +55,7 @@
   "brand": "Apple",
   "description": "iPad Air",
   "price": "79.230,00",
+  "discount": 10,
   "image": "ipad-air.png",
   "state": "stock"
  },
@@ -63,6 +67,7 @@
   "brand": "Sony",
   "description": "Playstation 5",
   "price": "61.700,00",
+  "discount": 10,
   "image": "playstation-5.png",
   "state": "stock"
  },
@@ -74,6 +79,7 @@
   "brand": "Logitech",
   "description": "Teclado Logitech G213",
   "price": "5.800,00",
+  "discount": 10,
   "image": "teclado-logitech-g213.png",
   "state": "stock"
  },
@@ -85,6 +91,7 @@
   "brand": "TP-Link",
   "description": "Router TP-Link TL-MR6400",
   "price": "8.020,00",
+  "discount": 10,
   "image": "router-tplink-mr6400.png",
   "state": "stock"
  },
@@ -96,6 +103,7 @@
   "brand": "Samsung",
   "description": "Samsung Galaxy Watch 4",
   "price": "40.999,00",
+  "discount": 10,
   "image": "galaxy-watch4.png",
   "state": "stock"
  },
@@ -107,6 +115,7 @@
   "brand": "EA Sports",
   "description": "FIFA 22",
   "price": "9.400,00",
+  "discount": 10,
   "image": "fifa-22.png",
   "state": "stock"
  },
@@ -118,6 +127,7 @@
   "brand": "Samsung",
   "description": "Samsung Galaxy S22",
   "price": "209.999,00",
+  "discount": 10,
   "image": "samsung-galaxy-s22.png",
   "state": "stock"
  },
@@ -129,6 +139,7 @@
   "brand": "Dell",
   "description": "Dell XPS 15",
   "price": "420.000,00",
+  "discount": 10,
   "image": "dell-xps-15.png",
   "state": "stock"
  },
@@ -140,6 +151,7 @@
   "brand": "Samsung",
   "description": "Samsung Galaxy Tab A8",
   "price": "44.999,00",
+  "discount": 10,
   "image": "samsung-galaxy-tab-a8.png",
   "state": "stock"
  },
@@ -151,6 +163,7 @@
   "brand": "Tenda",
   "description": "Router Tenda AC1200",
   "price": "9.800,00",
+  "discount": 10,
   "image": "router-tenda-ac1200.png",
   "state": "stock"
  },
@@ -162,6 +175,7 @@
   "brand": "Walden",
   "description": "Funda iPhone 13 Walden",
   "price": "7.890,00",
+  "discount": 10,
   "image": "funda-iphone13-walden.png",
   "state": "stock"
  },
@@ -173,6 +187,7 @@
   "brand": "PcCom",
   "description": "PcCom Gold",
   "price": "342.000,00",
+  "discount": 10,
   "image": "pcCom-gold.png",
   "state": "stock"
  },
@@ -184,6 +199,7 @@
   "brand": "Realme",
   "description": "Realme GT",
   "price": "115.355,00",
+  "discount": 10,
   "image": "realme-gt.png",
   "state": "stock"
  },
@@ -195,6 +211,7 @@
   "brand": "Xiaomi",
   "description": "Xiaomi Poco X4 Pro",
   "price": "109.738,00",
+  "discount": 10,
   "image": "xiaomi-poco-x4.png",
   "state": "stock"
  },
@@ -206,6 +223,7 @@
   "brand": "Xiaomi",
   "description": "Xiaomi Mi 11T",
   "price": "99.999,00",
+  "discount": 10,
   "image": "xiaomi-mi-11t.png",
   "state": "stock"
  },
@@ -217,6 +235,7 @@
   "brand": "OnePlus",
   "description": "OnePlus Nord 2",
   "price": "89.800,00",
+  "discount": 10,
   "image": "oneplus-nord2.png",
   "state": "stock"
  },
@@ -228,6 +247,7 @@
   "brand": "Xiaomi",
   "description": "Xiaomi Black Shark 4",
   "price": "225.000,00",
+  "discount": 10,
   "image": "xiaomi-black-shark-4.png",
   "state": "stock"
  },
@@ -239,6 +259,7 @@
   "brand": "Lenovo",
   "description": "Lenovo Tab P11 Pro",
   "price": "99.636,00",
+  "discount": 10,
   "image": "lenovo-tab-p11-pro.png",
   "state": "stock"
  },
@@ -250,6 +271,7 @@
   "brand": "Huawei",
   "description": "Huawei MatePad 10",
   "price": "42.000,00",
+  "discount": 10,
   "image": "huawei-matepad-10.png",
   "state": "stock"
  },
@@ -261,6 +283,7 @@
   "brand": "Acer",
   "description": "Acer Swift 3",
   "price": "136.000,00",
+  "discount": 10,
   "image": "acer-swift-3.png",
   "state": "stock"
  },
@@ -272,6 +295,7 @@
   "brand": "Apple",
   "description": "Apple MacBook Pro 16",
   "price": "270.520,00",
+  "discount": 0,
   "image": "apple-macbook-pro-16.png",
   "state": "stock"
  },
@@ -283,6 +307,7 @@
   "brand": "Razer",
   "description": "Razer Blade 14",
   "price": "558.900,00",
+  "discount": 0,
   "image": "razer-blade-14.png",
   "state": "stock"
  },
@@ -294,6 +319,7 @@
   "brand": "HP",
   "description": "HP Elite Dragonfly",
   "price": "594.000,00",
+  "discount": 0,
   "image": "hp-elite-dragonfly.png",
   "state": "stock"
  },
@@ -305,6 +331,7 @@
   "brand": "Warner Bros",
   "description": "Fortnite",
   "price": "4.600,00",
+  "discount": 0,
   "image": "fortnite.png",
   "state": "stock"
  },
@@ -316,6 +343,7 @@
   "brand": "Imsomniac",
   "description": "Spiderman: Miles Morales",
   "price": "9.999,00",
+  "discount": 0,
   "image": "spiderman.png",
   "state": "stock"
  },
@@ -327,6 +355,7 @@
   "brand": "Activision",
   "description": "Call Of Duty: Modern Warfare",
   "price": "7.459,00",
+  "discount": 0,
   "image": "call-of-duty.png",
   "state": "stock"
  },
@@ -338,6 +367,7 @@
   "brand": "Nintendo",
   "description": "Nintendo Switch",
   "price": "49.999,00",
+  "discount": 0,
   "image": "nintendo-switch.png",
   "state": "stock"
  },
@@ -349,6 +379,7 @@
   "brand": "Linksys",
   "description": "Router Linksys EA8300",
   "price": "33.499,00",
+  "discount": 0,
   "image": "router-linksys-ea8300.png",
   "state": "stock"
  },
@@ -360,6 +391,7 @@
   "brand": "TP-Link",
   "description": "Repetidor TP-Link RE550",
   "price": "18.000,00",
+  "discount": 0,
   "image": "repetidor-tplink-re550.png",
   "state": "stock"
  },
@@ -371,6 +403,7 @@
   "brand": "Asus",
   "description": "Mouse Asus ROG Gladius III",
   "price": "21.270,00",
+  "discount": 0,
   "image": "mouse-asus-rog-gladiusIII.png",
   "state": "stock"
  },
@@ -382,6 +415,7 @@
   "brand": "Razer",
   "description": "Mouse Razer Viper",
   "price": "10.299,00",
+  "discount": 0,
   "image": "mouse-razer-viper.png",
   "state": "stock"
  },
@@ -393,6 +427,7 @@
   "brand": "Razer",
   "description": "Teclado Razer BlackWidow",
   "price": "30.799,00",
+  "discount": 0,
   "image": "teclado-razer-blackwidow.png",
   "state": "stock"
  },
@@ -404,6 +439,7 @@
   "brand": "Asus",
   "description": "Teclado Asus ROG Strix",
   "price": "24.449,00",
+  "discount": 0,
   "image": "teclado-asus-rog-strix.png",
   "state": "stock"
  },
@@ -415,6 +451,7 @@
   "brand": "Corsair",
   "description": "Teclado Corsair K95",
   "price": "33.499,00",
+  "discount": 0,
   "image": "teclado-corsair-k95.png",
   "state": "stock"
  },
@@ -426,6 +463,7 @@
   "brand": "Philips",
   "description": "Parlante Philips EverPlay",
   "price": "8.999,00",
+  "discount": 0,
   "image": "parlante-philips-everplay.png",
   "state": "stock"
  },
@@ -437,6 +475,7 @@
   "brand": "Sony",
   "description": "Parlante Sony SRS-XB13",
   "price": "8.999,00",
+  "discount": 0,
   "image": "parlante-sony-srsxb13.png",
   "state": "stock"
  },
@@ -448,6 +487,7 @@
   "brand": "Marshall",
   "description": "Parlante Marshall Stanmore II",
   "price": "79.999,00",
+  "discount": 0,
   "image": "parlante-marshall-stanmoreII.png",
   "state": "stock"
  },
@@ -459,6 +499,7 @@
   "brand": "Sony",
   "description": "Audífonos Sony WH-CH510",
   "price": "14.900,00",
+  "discount": 0,
   "image": "audifonos-sony-whch510.png",
   "state": "stock"
  },
@@ -470,94 +511,103 @@
   "brand": "Apple",
   "description": "Audífonos Apple AirPods",
   "price": "35.200,00",
+  "discount": 0,
   "image": "audifonos-apple-airpops.png",
   "state": "stock"
  },
  {
-  "id": 43,
+  "id": 44,
   "name": "Audífonos Anker Soundcore Q30",
   "section": "Accesorios",
   "collection": "blackAndWhite",
   "brand": "Anker",
   "description": "Audífonos Anker Soundcore Q30",
   "price": "16.400,00",
+  "discount": 0,
   "image": "audifonos-anker-soundcore-q30.png",
   "state": "stock"
  },
  {
-  "id": 44,
+  "id": 45,
   "name": "Funda Samsung S22 Walden",
   "section": "Accesorios",
   "collection": "classic",
   "brand": "Walden",
   "description": "Funda Samsung S22 Walden",
   "price": "4.860,00",
+  "discount": 0,
   "image": "funda-s22-walden.png",
   "state": "stock"
  },
  {
-  "id": 45,
+  "id": 46,
   "name": "Funda Macbook Walden",
   "section": "Accesorios",
   "collection": "classic",
   "brand": "Walden",
   "description": "Funda Macbook Walden",
   "price": "17.400,00",
+  "discount": 0,
   "image": "funda-macbook-walden.png",
   "state": "stock"
  },
  {
-  "id": 46,
+  "id": 47,
   "name": "Funda Apple Watch Walden",
   "section": "Accesorios",
   "collection": "classic",
   "brand": "Walden",
   "description": "Funda Apple Watch Walden",
   "price": "5.860,00",
+  "discount": 0,
   "image": "funda-apple-watch-walden.png",
   "state": "stock"
  },
  {
-  "id": 47,
+  "id": 48,
   "name": "Funda Airpops Walden",
   "section": "Accesorios",
   "collection": "classic",
   "brand": "Walden",
   "description": "Funda Airpops Walden",
   "price": "6.370,00",
+  "discount": 0,
   "image": "funda-airpops-walden.png",
   "state": "stock"
  },
  {
-  "id": 48,
+  "id": 49,
   "name": "Apple Watch",
   "section": "Accesorios",
   "collection": "blackAndWhite",
   "brand": "Apple",
   "description": "Apple Watch",
   "price": "76.629,00",
+  "discount": 0,
   "image": "apple-watch.png",
   "state": "stock"
  },
  {
-  "id": 49,
+  "id": 50,
   "name": "Asus Vivobook 15",
   "section": "Laptops",
   "collection": "modern",
   "brand": "Asus Vivobook 15",
   "description": "Asus Vivobook 15",
   "price": "130.000,00",
+  "discount": 0,
   "image": "asus-vivobook-15.png",
   "state": "stock"
  },
  {
-  "id": 50,
+  "id": 51,
   "name": "Joystick Playstation 5",
   "section": "Accesorios",
   "collection": "blackAndWhite",
   "brand": "Sony",
   "description": "Joystick Playstation 5",
   "price": "17.199,00",
+  "discount": 0,
   "image": "joystick-ps5.png",
   "state": "stock"
  }
