@@ -8,7 +8,7 @@ const router = express.Router();
 const adminController = require ('../controllers/adminController');
 
 /* Importamos el middleware Multer */
-const multerMiddleware = require('../middlewares/multerMiddleware');
+const multerMiddleware = require('../middlewares/uploadProductImage');
 
 /* Configuramos el envío a la home de admin */
 router.get ('/', adminController.index);
