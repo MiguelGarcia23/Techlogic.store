@@ -27,6 +27,7 @@
 /* ---------------------TEXTO "REGISTRARSE"--------------------- */
 .register-login-text {
   color: var(--blanco);
+  text-align: center;
   margin: 30px;
   margin-top: 50px;
   margin-bottom: 10px;
@@ -47,7 +48,27 @@
   display: flex;
   flex-direction: column;
 }
-
+/* ---------------------CARGA DE IMAGEN DE PERFIL--------------------- */
+.upload-image-user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  border: solid 1px var(--blanco);
+  border-radius: 10px;
+}
+.input-image{
+  display: none;
+}
+.upload-icon{
+  font-size: 30px;
+  color: var(--blanco);
+  margin-left: 200px;
+  margin-bottom: 10px;
+}
+.upload-icon:hover{
+  color: var(--celeste);
+}
 /* ---------------------INPUTS DEL FORMULARIO--------------------- */
 .register-login-form-item {
   margin-bottom: 15px;
@@ -55,6 +76,19 @@
   border-bottom: 1px solid gray;
   padding: 10px;
   border-radius: 3px;
+}
+
+/* ---------- ELECCION DE PERFIL DE USUARIO----------------------- */
+.user-profile-text{
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}
+#profile-user{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 /* ---------------------TERMINOS Y CONDICIONES--------------------- */
 .terms-conditions{

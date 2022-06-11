@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- HEAD -->
-    <%- include('../partials/head', {title: 'Registrate', stylesheet: 'users/loginRegister.css'}) %>
+  <!-- HEAD -->
+  <%- include('../partials/head', {title: 'Registrate', stylesheet:
+  'users/loginRegister.css'}) %>
 
-    <body class="body-register-login">
-
+  <body class="body-register-login">
     <!-- HEADER -->
     <%- include('../partials/header') %>
 
@@ -12,23 +12,22 @@
     <main class="main-register">
       <!-- ---------------------SECCION REGISTRO--------------------- -->
       <section class="register-login-box">
-        <h3 class="register-login-text">REGISTRATE</h3>
-        <!-- ---------------------IMAGEN DE PERFIL--------------------- -->
-        <div class="user-profile-icon">
-                <i class="fas fa-user-circle"></i>
-        </div>
-        <!-- <img
-          class="user-profile-picture"
-          src="/img/usuario-predeterminado.jpg"
-          alt="imagen de perfil"
-        /> -->
         <!-- ---------------------FORM REGISTRO--------------------- -->
         <form action="/register" method="POST" class="register-login-form">
+          <h3 class="register-login-text">REGISTRATE</h3>
+          <!-- ---------------------IMAGEN DE PERFIL--------------------- -->
+          <div class="upload-image-user">
+            <div class="user-profile-icon">
+              <i class="fas fa-user-circle"></i>
+            </div>
+            <label for="image"><i class="fas fa-camera upload-icon"></i></label>
+            <input type="file" name="image" id="image" class="input-image"/>
+          </div>
           <input
             type="text"
             name="name"
             id="name"
-            placeholder="Nombre de Usuario"
+            placeholder="Nombre Completo"
             class="register-login-form-item"
           />
           <input
@@ -45,6 +44,20 @@
             placeholder="Contraseña"
             class="register-login-form-item"
           />
+          <!-- ---------------------PERFIL DE USUARIO--------------------- -->
+          <h2 class="register-login-text user-profile-text">
+            Perfil de usuario
+          </h2>
+          <div class="terms-conditions" id="profile-user">
+            <div>
+              <input type="radio" name="rol" id="rol" value="admin" />
+              <label for="terms-conditions">Administrador</label>
+            </div>
+            <div>
+              <input type="radio" name="rol" id="rol" value="comprador" />
+              <label for="terms-conditions">Comprador</label>
+            </div>
+          </div>
           <!-- ---------------------TERMINOS Y CONDICIONES--------------------- -->
           <div class="terms-conditions">
             <input type="radio" name="terms-conditions" id="terms-conditions" />
@@ -55,9 +68,7 @@
           <!-- ---------------------BOTON PARA ENVIAR--------------------- -->
           <div class="button-cart-div button-login-register">
             <form action="/" method="POST">
-                <button type="submit" class="button-cart">
-                    Registrarse
-                </button>
+              <button type="submit" class="button-cart">Registrarse</button>
             </form>
           </div>
         </form>
@@ -66,6 +77,5 @@
 
     <!-- FOOTER -->
     <%- include('../partials/footer') %>
-
   </body>
 </html>

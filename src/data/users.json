@@ -1,34 +1,34 @@
 [
-  {
-    "id": 1,
-    "name": "Miguel García",
-    "email": "miguelg@techlogic.store.com",
-    "password": "hola123",
-    "image": "foto-de-perfil.jpg",
-    "rol": "admin"
-  },
-  {
-    "id": 2,
-    "name": "Facundo Francou",
-    "email": "facundof@techlogic.store.com",
-    "password": "hola123",
-    "image": "foto-de-perfil.jpg",
-    "rol": "admin"
-  },
-  {
-    "id": 3,
-    "name": "Gonzalo Flores",
-    "email": "gonzalof@techlogic.store.com",
-    "password": "hola123",
-    "image": "foto-de-perfil.jpg",
-    "rol": "admin"
-  },
-  {
-    "id": 4,
-    "name": "Manuel Castillo",
-    "email": "manuc@techlogic.store.com",
-    "password": "hola123",
-    "image": "foto-de-perfil.jpg",
-    "rol": "admin"
-  }
+ {
+  "id": 1,
+  "name": "Miguel García",
+  "email": "miguelg@techlogic.store.com",
+  "password": "hola123",
+  "image": "foto-de-perfil.jpg",
+  "rol": "admin"
+ },
+ {
+  "id": 2,
+  "name": "Facundo Francou",
+  "email": "emaToEdit@techlogic.store.com",
+  "password": "hola123",
+  "image": "foto-de-perfil.jpg",
+  "rol": "admin"
+ },
+ {
+  "id": 3,
+  "name": "Gonzalo Flores",
+  "email": "gonzalof@techlogic.store.com",
+  "password": "hola123",
+  "image": "foto-de-perfil.jpg",
+  "rol": "admin"
+ },
+ {
+  "id": 4,
+  "name": "Manuel Castillo",
+  "email": "manuc@techlogic.store.com",
+  "password": "hola123",
+  "image": "foto-de-perfil.jpg",
+  "rol": "admin"
+ }
 ]

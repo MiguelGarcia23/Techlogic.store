@@ -1,4 +1,8 @@
+const User = require("../models/user");
+
 /* Configuramos el controlador */
+
+
 const usersController = {
 
     login: (req, res) => {
