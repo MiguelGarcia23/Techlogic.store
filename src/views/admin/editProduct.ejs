@@ -15,30 +15,28 @@
             <h2 class="title-edit-create-form">Editando el producto: <%= product.name %>  </h2>
 
             <!-- FORMULARIO DE EDICIÓN -->
-            <form action="/products" method="GET" enctype="multipart/form-data">
+            <form action="/admin/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                 <!-- INPUT DEL NOMBRE DEL PRODUCTO -->
                 <div class="div-edit-create-form">
-                    <label for="productName" class="label-normal-input">Nombre del Producto:</label>
-                    <input type="text" id="productName" name="productName" class="normal-input" placeholder="Ej: Teléfono iPhone 13" value="<%= product.name %>">
+                    <label for="name" class="label-normal-input">Nombre del Producto:</label>
+                    <input type="text" id="name" name="name" class="normal-input" placeholder="Ej: Teléfono iPhone 13" value="<%= product.name %>">
                 </div>
 
                 <!-- INPUT DEL LA SECCIÓN DEL PRODUCTO -->
                 <div class="div-edit-create-form">
-                    <label for="productSection" class="label-normal-input">Sección del Producto:</label>
-                    <input type="text" id="productSection" name="productSection" class="normal-input" placeholder="Ej: Teléfono" value="<%= product.section%>" >
+                    <label for="section" class="label-normal-input">Sección del Producto:</label>
+                    <input type="text" id="section" name="section" class="normal-input" placeholder="Ej: Teléfono" value="<%= product.section%>" >
                 </div>
 
                 <!-- SELECT DE LA COLECCIÓN DEL PRODUCTO -->
                 <div class="div-edit-create-form">
                     <h3 class="title-select-edit-create-form">Colección del Producto:</h3>
-                    <select name="productCollection" class="select-edit-create-form">
-                    <option value="<%= product.colection %>"><%= product.colection %></option>
-                    <!-- <option value="" disable selected>Elegí una colección:</option> -->
-                    <option value="modern">Modern</option>
-                    <option value="classic">Classic</option>
-                    <option value="colorful">Colorful</option>
-                    <option value="blackAndWhite">Black & White</option>
+                    <select name="collection" class="select-edit-create-form">
+                        <option value="modern" <%= product.collection == 'modern' ? 'selected' : null %> >Modern</option>
+                        <option value="classic" <%= product.collection == 'classic' ? 'selected' : null %>>Classic</option>
+                        <option value="colorful" <%= product.collection == 'colorful' ? 'selected' : null %>>Colorful</option>
+                        <option value="blackAndWhite" <%= product.collection == 'blackAndWhite' ? 'selected' : null %>>Black & White</option>
                     </select>
                 </div>
 
@@ -50,14 +48,14 @@
 
                 <!-- INPUT DEL PRECIO DEL PRODUCTO -->
                 <div class="div-edit-create-form">
-                    <label for="productPrice" class="label-normal-input">Precio del Producto:</label>
-                    <input type="text" id="productPrice" name="productPrice" class="normal-input" placeholder="Ej: 12500" value="<%= product.price %>">
+                    <label for="price" class="label-normal-input">Precio del Producto:</label>
+                    <input type="text" id="price" name="price" class="normal-input" placeholder="Ej: 12500" value="<%= product.price %>">
                 </div>
 
                 <!-- TEXTAREA DE LA DESCRIPCIÓN DEL PRODUCTO -->        
                 <div class="div-edit-create-form">
-                    <label for="productDescription" class="label-normal-input">Descripción del Producto:</label>
-                    <textarea name="productDescription" id="productDescription" class="textarea-edit-create-form"><%= product.description %></textarea>
+                    <label for="description" class="label-normal-input">Descripción del Producto:</label>
+                    <textarea name="description" id="description" class="textarea-edit-create-form"><%= product.description %></textarea>
                 </div>
 
                 <!-- DIV CON LA IMAGEN ACTUAL DEL PRODUCTO -->
@@ -68,16 +66,18 @@
 
                 <!-- INPUT DE LA IMAGEN NUEVA DEL PRODUCTO -->
                 <div class="div-edit-create-form">
-                    <label for="productImage" class="label-normal-input">Imagen Nueva del Producto:</label>
-                    <input type="file" id="productImage" name="productImage" class="normal-input image-input">
+                    <label for="image" class="label-normal-input">Imagen Nueva del Producto:</label>
+                    <input type="file" id="image" name="image" class="normal-input image-input">
                 </div>
 
                 <!-- BOTONES PARA BORRAR O EDITAR EL PRODUCTO -->
                 <div class="buttons-edit-create-form">
-                    <!-- <button type="reset" class="button-cart button-edit-create-form">Borrar</button> -->
+                    <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="button-cart button-edit-create-form">Borrar</button>
+                    </form>
                     <button type="submit" class="button-cart button-edit-create-form">Editar</button>
                 </div>
-      
+                
             </form>
       
         </main>
