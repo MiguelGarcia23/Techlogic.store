@@ -26,42 +26,19 @@
   }
 
   .slider{
-    background-color: var(--blanco);
     width: 100%;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .img-slide-menu {
-    display: block;
-    margin: 0 auto;
-    width: 300px;
-  }
-
-  .flechas-main-banner {
-    position: absolute;
-    top: 47%;
+  .carousel {
     width: 100%;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    text-align: center;
-}
-
-  .flechas-main-banner i {
-      color: var(--blanco);
-      background-color: var(--gris);
-      opacity: 0.7;
-      font-size: 1.25rem;
-      padding: 1rem 0.75rem;
-      cursor: pointer;
-      transition: background-color 600ms;
   }
 
-  .flechas-main-banner i:hover {
-      background-color: rgba(101, 100, 100, 0.3);
+  .image-carousel {
+    margin: 0 auto;
+    margin-bottom: 40px;
   }
 
   .cnt-product-detail{
@@ -246,27 +223,6 @@
 
 .prd-features:last-child {
   border-bottom: 1px solid var(--blanco);
-}
-
-.icon-arrow{
-  background-color: var(--negro);
-  color: var(--gris);
-  font-size: 30px;
-  margin-top: 80px;
-  height: 40px;
-
-}
-
-.icons{
-  display: flex;
-  background-color: var(--blanco);
-  justify-content: center;
-  /* padding-top: 10px;
-  padding-bottom: 10px; */
-  /* margin-top: 40px; */
-  position: absolute;
-  bottom: 2px;
-  left: 47%;
 }
 
 .icons-dots{
