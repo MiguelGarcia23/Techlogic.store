@@ -29,7 +29,7 @@ router.get ('/sales', productsController.sales);
 router.get ('/productCart', productsController.productCart);
 
 /* Configuramos la ruta del boton 'eliminar' del carrito */
-router.post ('/productCart/:id', productsController.deleteProduct);
+router.post ('/productCart/:id', productsController.deleteProductToCart);
 
 /* Configuramos la ruta de los botones 'Añadir al carrito' de la lista de productos y del detalle */
 router.post ('/addProduct/:id', productsController.addToCart);
