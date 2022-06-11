@@ -64,7 +64,7 @@ const productsController = {
   },
 
   /* ELIMINAMOS EL PRODUCTO DE LA LISTA DEL CARRITO Y LO DEVUELVE A LA LISTA DE PRUCTOS */
-  deleteProduct: (req, res) => {
+  deleteProductToCart: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     let productToEdit = products.find((product) => req.params.id == product.id);
 
