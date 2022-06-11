@@ -1,3 +1,43 @@
 @import url(../styles.css);
 @import url(../partials/header.css);
 @import url(../partials/footer.css);
+
+.main-about-us {
+    margin-top: 6.3125rem;
+    padding: 2rem 5rem;
+}
+
+.contenedor {
+    margin: 0 auto;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor p {
+    margin: 0;
+    padding: 0;
+    color: var(--blanco);
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.contenedor h2 {
+    margin: 0;
+    padding: 0;
+    color: var(--blanco);
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.contenedor img {
+    width: 200px;
+    margin: auto;
+}
+
+.contenedor video {
+    width: 100%;
+    margin: auto;
+}
