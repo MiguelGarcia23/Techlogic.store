@@ -2,11 +2,11 @@
  {
   "id": 1,
   "name": "iPhone 13",
-  "section": "Smarphones",
+  "section": "Smartphones",
   "collection": "modern",
-  "brand": "Apple",
-  "description": "Apple iPhone 13",
+  "description": "iPhone 13",
   "price": "234.500,00",
+  "brand": "Apple",
   "image": "iphone13.png",
   "state": "stock"
  },

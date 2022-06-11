@@ -17,10 +17,16 @@ router.get ('/', adminController.index);
 router.get ('/create', adminController.create);
 
 /* Configuramos la ruta de envío del formulario de creación de un producto una vez completo */
-router.post ('/create', multerMiddleware.single('image') , adminController.processCreation);
+router.post ('/create', multerMiddleware.single('image') , adminController.store);
 
 /* Configuramos el envío a la sección de edición de productos de admin */
 router.get ('/edit/:id', adminController.edit);
+
+/* Configuramos la ruta de envío del formulario de edición de un producto una vez completo */
+router.put ('/edit/:id', multerMiddleware.single('image') , adminController.update);
+
+/* Configuramos la ruta para eliminar un producto */
+router.delete ('/delete/:id', adminController.delete);
 
 /* Exportamos la variable router */
 module.exports = router;
