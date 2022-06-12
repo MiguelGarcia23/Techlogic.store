@@ -25,8 +25,16 @@
 
                 <!-- INPUT DEL LA SECCIÓN DEL PRODUCTO -->
                 <div class="div-edit-create-form">
-                    <label for="section" class="label-normal-input">Sección del Producto:</label>
-                    <input type="text" id="section" name="section" class="normal-input" placeholder="Ej: Teléfono" value="<%= product.section%>" >
+                    <h3 class="title-select-edit-create-form">Sección del Producto:</h3>
+                    <select name="section" class="select-edit-create-form">
+                    <option value="" disable selected>Elegí una sección:</option>
+                    <option value="Smartphones" <%= product.section == 'Smartphones' ? 'selected' : null %>>Smartphones</option>
+                    <option value="Tablets" <%= product.section == 'Tablets' ? 'selected' : null %>>Tablets</option>
+                    <option value="Laptops" <%= product.section == 'Laptops' ? 'selected' : null %>>Laptops</option>
+                    <option value="Gaming" <%= product.section == 'Gaming' ? 'selected' : null %>>Consolas y Gaming</option>
+                    <option value="Redes" <%= product.section == 'Redes' ? 'selected' : null %>>Redes</option>
+                    <option value="Accesorios" <%= product.section == 'Accesorios' ? 'selected' : null %>>Accesorios</option>
+                    </select>
                 </div>
 
                 <!-- SELECT DE LA COLECCIÓN DEL PRODUCTO -->
@@ -79,14 +87,13 @@
 
                 <!-- BOTONES PARA BORRAR O EDITAR EL PRODUCTO -->
                 <div class="buttons-edit-create-form">
-                    <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="button-cart button-edit-create-form">Borrar</button>
-                    </form>
                     <button type="submit" class="button-cart button-edit-create-form">Editar</button>
-                </div>
-                
             </form>
-      
+                    <form action="/admin/delete/<%= product.id %>?_method=DELETE" method="POST" class="form-delete">
+                        <button type="submit" class="button-cart button-delete">Eliminar</button>
+                    </form>
+                </div>
+     
         </main>
 
         <!-- FOOTER -->

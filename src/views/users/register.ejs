@@ -13,63 +13,93 @@
       <!-- ---------------------SECCION REGISTRO--------------------- -->
       <section class="register-login-box">
         <!-- ---------------------FORM REGISTRO--------------------- -->
-        <form action="/register" method="POST" class="register-login-form">
+        <form action="/users/register" method="POST" enctype="multipart/form-data" class="register-login-form">
           <h3 class="register-login-text">REGISTRATE</h3>
+
+          <% if (locals.errors && errors.image) { %>
+            <span class="text-danger"><%= errors.image %></span> 
+          <% } %>   
           <!-- ---------------------IMAGEN DE PERFIL--------------------- -->
-          <div class="upload-image-user">
+          <div class="upload-image-user <%= locals.errors && errors.image? 'is-invalid' : null %>">
             <div class="user-profile-icon">
-              <i class="fas fa-user-circle"></i>
+              <!-- <i class="fas fa-user-circle"></i> -->
+              <img src="/img/users/<%= locals.oldImage ? oldImage : 'usuario-predeterminado.png' %>" 
+              class='profileImage' 
+              id="profileImage">
             </div>
             <label for="image"><i class="fas fa-camera upload-icon"></i></label>
-            <input type="file" name="image" id="image" class="input-image"/>
+            <input 
+              type="file" 
+              name="image" 
+              id="image" 
+              class="input-image"
+              value="<%= locals.oldImage ? oldImage : null %>"
+              accept="image/*"
+            />
           </div>
+          <% if (locals.errors && errors.name) { %>
+            <span class="text-danger"><%= errors.name.msg %></span> 
+          <% } %>
           <input
             type="text"
             name="name"
             id="name"
             placeholder="Nombre Completo"
-            class="register-login-form-item"
+            class="register-login-form-item <%= locals.errors && errors.name ? 'is-invalid' : null %> <%= locals.oldData && oldData.name ? 'is-valid' : null %>"
+            value="<%= locals.oldData && oldData.name ? oldData.name : null %>"
           />
+          <% if (locals.errors && errors.email) { %>
+            <span class="text-danger"><%= errors.email.msg %></span> 
+          <% } %>
           <input
             type="email"
             name="email"
             id="email"
             placeholder="E-mail"
-            class="register-login-form-item"
+            class="register-login-form-item <%= locals.errors && errors.email ? 'is-invalid' : null %> <%= locals.oldData && oldData.email ? 'is-valid' : null %>"
+            value="<%= locals.oldData && oldData.email ? oldData.email : null %>"
           />
+         
+          <% if (locals.errors && errors.password) { %>
+            <span class="text-danger"><%= errors.password.msg %></span> 
+          <% } %>
           <input
             type="password"
             name="password"
             id="password"
             placeholder="Contraseña"
-            class="register-login-form-item"
+            class="register-login-form-item <%= locals.errors && errors.password ? 'is-invalid' : null %>"
+
           />
+          
           <!-- ---------------------PERFIL DE USUARIO--------------------- -->
           <h2 class="register-login-text user-profile-text">
             Perfil de usuario
           </h2>
+          <% if (locals.errors && errors.rol) { %>
+            <span class="text-danger"><%= errors.rol.msg %></span> 
+          <% } %>
           <div class="terms-conditions" id="profile-user">
             <div>
-              <input type="radio" name="rol" id="rol" value="admin" />
-              <label for="terms-conditions">Administrador</label>
+              <input type="radio" name="rol" id="admin" value="admin"  <%= locals.oldData && oldData.rol == 'admin' ? 'checked' : null %> />
+              <label for="admin">Administrador</label>
             </div>
             <div>
-              <input type="radio" name="rol" id="rol" value="comprador" />
-              <label for="terms-conditions">Comprador</label>
+              <input type="radio" name="rol" id="buyer" value="comprador" <%= locals.oldData && oldData.rol == 'comprador' ? 'checked' : null %> />
+              <label for="buyer">Comprador</label>
             </div>
           </div>
+          
           <!-- ---------------------TERMINOS Y CONDICIONES--------------------- -->
           <div class="terms-conditions">
-            <input type="radio" name="terms-conditions" id="terms-conditions" />
+            <input type="checkbox" name="terms-conditions" id="terms-conditions" />
             <label for="terms-conditions"
               >Aceptar <a href="#">Terminos y condiciones</a></label
             >
           </div>
           <!-- ---------------------BOTON PARA ENVIAR--------------------- -->
           <div class="button-cart-div button-login-register">
-            <form action="/" method="POST">
-              <button type="submit" class="button-cart">Registrarse</button>
-            </form>
+            <button type="submit" class="button-cart">Registrarse</button>
           </div>
         </form>
       </section>
@@ -77,5 +107,7 @@
 
     <!-- FOOTER -->
     <%- include('../partials/footer') %>
+    <script src="/js/previsualizarImage.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>

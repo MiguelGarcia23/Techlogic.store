@@ -62,7 +62,7 @@
  {
   "id": 6,
   "name": "Playstation 5",
-  "section": "Consolas y Gaming",
+  "section": "Gaming",
   "collection": "blackAndWhite",
   "brand": "Sony",
   "description": "Playstation 5",
@@ -72,14 +72,14 @@
   "state": "stock"
  },
  {
-  "id": 7,
+  "id": "7",
   "name": "Teclado Logitech G213",
   "section": "Accesorios",
   "collection": "colorful",
   "brand": "Logitech",
   "description": "Teclado Logitech G213",
   "price": "5.800,00",
-  "discount": 10,
+  "discount": "10 ",
   "image": "teclado-logitech-g213.png",
   "state": "stock"
  },
@@ -110,7 +110,7 @@
  {
   "id": 10,
   "name": "FIFA 22",
-  "section": "Consolas y Gaming",
+  "section": "Gaming",
   "collection": "colorful",
   "brand": "EA Sports",
   "description": "FIFA 22",
@@ -182,7 +182,7 @@
  {
   "id": 16,
   "name": "PcCom Gold",
-  "section": "Consolas y Gaming",
+  "section": "Gaming",
   "collection": "colorful",
   "brand": "PcCom",
   "description": "PcCom Gold",
@@ -326,7 +326,7 @@
  {
   "id": 28,
   "name": "Fortnite",
-  "section": "Consolas y Gaming",
+  "section": "Gaming",
   "collection": "colorful",
   "brand": "Warner Bros",
   "description": "Fortnite",
@@ -338,7 +338,7 @@
  {
   "id": 29,
   "name": "Spiderman: Miles Morales",
-  "section": "Consolas y Gaming",
+  "section": "Gaming",
   "collection": "colorful",
   "brand": "Imsomniac",
   "description": "Spiderman: Miles Morales",
@@ -350,7 +350,7 @@
  {
   "id": 30,
   "name": "Call Of Duty: Modern Warfare",
-  "section": "Consolas y Gaming",
+  "section": "Gaming",
   "collection": "classic",
   "brand": "Activision",
   "description": "Call Of Duty: Modern Warfare",
@@ -362,7 +362,7 @@
  {
   "id": 31,
   "name": "Nintendo Switch",
-  "section": "Consolas y Gaming",
+  "section": "Gaming",
   "collection": "colorful",
   "brand": "Nintendo",
   "description": "Nintendo Switch",
@@ -602,7 +602,7 @@
  {
   "id": 51,
   "name": "Joystick Playstation 5",
-  "section": "Accesorios",
+  "section": "Gaming",
   "collection": "blackAndWhite",
   "brand": "Sony",
   "description": "Joystick Playstation 5",

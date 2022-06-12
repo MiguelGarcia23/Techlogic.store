@@ -39,13 +39,13 @@
               <div>
                 <ul class="product-detail-cart">
                   <li class="title-product"><%= product.name %></li>
-                  <li>Sección de Producto</li>
-                  <li>Descripción de producto</li>
+                  <li>Sección <%= product.section %></li>
+                  <li><%= product.description %></li>
                 </ul>
               </div>
               <div>
                 <ul class="add-item">
-                  <li>$<%= product.price %></li>
+                  <li>$ <%= product.price %></li>
                   <div class="add-item-icons">
                     <div>
                       <a href="#"

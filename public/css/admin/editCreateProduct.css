@@ -102,10 +102,22 @@
     max-width: 35rem;
 }
 
-/* CADA BOTÓN DEL FORMULARIO */
+/* BOTÓN DE EDITAR DEL FORMULARIO */
 .button-edit-create-form {
     width: 100%;
     margin: 1rem 2rem;
+}
+
+/* FORMULARIO DEL BOTÓN DE BORRAR */
+.form-delete {
+    margin: 1rem 2rem;
+    width: 100%;
+}
+
+/* BOTÓN DE BORRAR */
+.button-delete {
+    margin: 0;
+    width: 100%
 }
 
 /* MEDIA QUERIES */
@@ -124,8 +136,13 @@
         padding: 0;
     }
 
-    /* CADA BOTÓN DEL FORMULARIO */
+    /* BOTÓN DE EDITAR DEL FORMULARIO */
     .button-edit-create-form {
+        width: 8rem;
+    }
+
+    /* FORMULARIO DEL BOTÓN DE BORRAR */
+    .form-delete {
         width: 8rem;
     }
 
