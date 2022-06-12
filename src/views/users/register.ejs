@@ -17,7 +17,7 @@
           <h3 class="register-login-text">REGISTRATE</h3>
 
           <% if (locals.errors && errors.image) { %>
-            <span class="text-danger"><%= errors.image %></span> 
+            <span class="text-danger"><%= errors.image.msg %></span> 
           <% } %>   
           <!-- ---------------------IMAGEN DE PERFIL--------------------- -->
           <div class="upload-image-user <%= locals.errors && errors.image? 'is-invalid' : null %>">
