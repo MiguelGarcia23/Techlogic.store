@@ -204,16 +204,16 @@
   "state": "stock"
  },
  {
-  "id": 18,
+  "id": "18",
   "name": "Xiaomi Poco X4 Pro",
   "section": "Smartphones",
   "collection": "colorful",
   "brand": "Xiaomi",
   "description": "Xiaomi Poco X4 Pro",
   "price": "109.738,00",
-  "discount": 10,
+  "discount": "10 ",
   "image": "xiaomi-poco-x4.png",
-  "state": "stock"
+  "state": "bestSeller"
  },
  {
   "id": 19,
@@ -240,14 +240,14 @@
   "state": "stock"
  },
  {
-  "id": 21,
+  "id": "21",
   "name": "Xiaomi Black Shark 4",
   "section": "Smartphones",
   "collection": "blackAndWhite",
   "brand": "Xiaomi",
   "description": "Xiaomi Black Shark 4",
   "price": "225.000,00",
-  "discount": 10,
+  "discount": "10 ",
   "image": "xiaomi-black-shark-4.png",
   "state": "stock"
  },

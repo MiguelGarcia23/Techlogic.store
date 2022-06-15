@@ -47,6 +47,10 @@ ul {
 .product-detail-cart {
   font-size: 12px;
 }
+.product-detail-cart a  	{
+  color: var(--blanco);
+  text-decoration: none;
+}
 
 .list-product {
   display: flex;

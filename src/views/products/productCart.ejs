@@ -26,11 +26,11 @@
           <article class="articles">
             <div class="item-cart">
               <div class="div-img-art">
-                <img
+                <a href="/products/productDetail/<%= product.id %>"><img
                   class="img-article"
                   src="/img/products/<%= product.image %>"
                   alt="<%= product.name %>"
-                />
+                /></a>
                 <form action="/products/productCart/<%= product.id %>" method="POST" >
                    <button type="submit" class="eliminar-producto">Eliminar</button>
                 </form>
@@ -38,7 +38,7 @@
               </div>
               <div>
                 <ul class="product-detail-cart">
-                  <li class="title-product"><%= product.name %></li>
+                  <li class="title-product"><a href="/products/productDetail/<%= product.id %>"><%= product.name %></li></a>
                   <li>Sección <%= product.section %></li>
                   <li><%= product.description %></li>
                 </ul>
