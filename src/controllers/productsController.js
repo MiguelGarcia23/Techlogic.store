@@ -31,9 +31,10 @@ const similarProducts = [
 const productsController = {
   index: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    let productInStock = products.filter((product) => product.state == "stock"); // filtramos los productos que están en stock
+    let productInStock = products.filter((product) => product.state !== "cart" ) // filtramos los productos que están en stock
     res.render("./products/listProducts", { products: productInStock }); // renderizamos la página con los productos
   },
+
 
   section: (req, res) => {
     res.render("./products/sectionProducts");
@@ -106,9 +107,10 @@ const productsController = {
   productCart: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     let productToView = products.filter((product) => product.state == "cart"); // FILTRO LOS PRODUCTOS CON ESTADO 'CART'
+    let productInOfert = products.filter((product) => product.state == "ofert" )
     res.render("./products/productCart", {
       products: productToView,
-      similarProducts: similarProducts,
+      similarProducts: productInOfert,
     }); // MANDO LOS PRODUCTOS CON ESTADO 'CART' A LA VISTA
   },
 

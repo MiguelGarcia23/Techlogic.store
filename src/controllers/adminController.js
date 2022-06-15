@@ -85,6 +85,7 @@ const adminController = {
         productToEdit.section = req.body.section;
         productToEdit.collection = req.body.collection;
         productToEdit.brand = req.body.brand;
+        productToEdit.state = req.body.state;
 		productToEdit.description = req.body.description;
 		productToEdit.price = req.body.price;
 		productToEdit.discount = req.body.discount;

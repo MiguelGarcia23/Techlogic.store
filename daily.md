@@ -3,7 +3,6 @@
 ## Reunión del 05/25.
 
 - Hoy nos reunimos para revisar las sugerencias que fueron hechas de la entrega del segundo sprint.
-
 - Basado en dichas sugerencias, arreglamos el carrito de compras, agregando todos los productos y el “total de compra” dentro de una misma caja y cambiando el fondo, de esta manera se ve mas estético.
 
 ## Reunión del 05/26.
@@ -18,8 +17,8 @@
   - Head
   - Header
   - Footer
-
 - Creación de las nuevas vistas
+
   - Formulario de carga y edición de productos
 
 ## Reunión del 06/01.
@@ -34,3 +33,18 @@
 
   -Se creo el botón para crear producto.
   -Se ajustó el botón para añadir producto al carrito.
+
+
+## Reunión del 06/10.
+
+- Hoy nos reunimos en grupo para adelantar tareas y plasmar ideas en el proyecto que se presentaron durante las reuniones.
+
+  -Se le dio funcionalidad al formulario de creación y modificación de productos.
+  -Se ajustó el botón para añadir producto al carrito.
+  -Se crearon archivos JSON para usuarios y productos.
+  -Se le dio funcionalidad al botón ELIMINAR producto.
+  -Se agregaron validaciones de formulario de REGISTER.
+
+## Reunión del 06/14.
+
+- Hoy nos reunimos en grupo para ultimar detalles de la entrega del cuarto Sprint y programar un reunión para el Miércoles 15/6 preparando los temas a abordar.

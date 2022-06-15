@@ -9,55 +9,55 @@
   "price": "234.500,00",
   "discount": 10,
   "image": "iphone13.png",
-  "state": "stock"
+  "state": "cart"
  },
  {
-  "id": 2,
+  "id": "2",
   "name": "Mouse Logitech G603",
   "section": "Accesorios",
   "collection": "colorful",
   "brand": "Logitech",
   "description": "Mouse Logitech G603",
   "price": "6.435,00",
-  "discount": 10,
+  "discount": "10  ",
   "image": "mouse-logi.png",
-  "state": "stock"
+  "state": "ofert"
  },
  {
-  "id": 3,
+  "id": "3",
   "name": "Macbook Pro",
   "section": "Laptops",
   "collection": "modern",
   "brand": "Apple",
   "description": "Macbook Pro",
   "price": "320.000,00",
-  "discount": 10,
+  "discount": "10 ",
   "image": "macbook-pro.png",
-  "state": "stock"
+  "state": "ofert"
  },
  {
-  "id": 4,
+  "id": "4",
   "name": "Audífonos Beats Pro",
   "section": "Accesorios",
   "collection": "blackAndWhite",
   "brand": "Beats",
   "description": "Audífonos Beats Pro",
   "price": "48.000,00",
-  "discount": 10,
+  "discount": "10 ",
   "image": "audifonos-beats-pro.png",
-  "state": "stock"
+  "state": "cart"
  },
  {
-  "id": 5,
+  "id": "5",
   "name": "iPad Air",
   "section": "Tablets",
   "collection": "modern",
   "brand": "Apple",
   "description": "iPad Air",
   "price": "79.230,00",
-  "discount": 10,
+  "discount": "10 ",
   "image": "ipad-air.png",
-  "state": "stock"
+  "state": "ofert"
  },
  {
   "id": 6,
@@ -81,7 +81,7 @@
   "price": "5.800,00",
   "discount": "10 ",
   "image": "teclado-logitech-g213.png",
-  "state": "stock"
+  "state": "cart"
  },
  {
   "id": 8,

@@ -45,7 +45,7 @@
             name="name"
             id="name"
             placeholder="Nombre Completo"
-            class="register-login-form-item <%= locals.errors && errors.name ? 'is-invalid' : null %> <%= locals.oldData && oldData.name ? 'is-valid' : null %>"
+            class="register-login-form-item <%= locals.errors && errors.name ? 'is-invalid' : null %> "
             value="<%= locals.oldData && oldData.name ? oldData.name : null %>"
           />
           <% if (locals.errors && errors.email) { %>
@@ -56,7 +56,7 @@
             name="email"
             id="email"
             placeholder="E-mail"
-            class="register-login-form-item <%= locals.errors && errors.email ? 'is-invalid' : null %> <%= locals.oldData && oldData.email ? 'is-valid' : null %>"
+            class="register-login-form-item <%= locals.errors && errors.email ? 'is-invalid' : null %> "
             value="<%= locals.oldData && oldData.email ? oldData.email : null %>"
           />
          

@@ -30,32 +30,5 @@
   "password": "hola123",
   "rol": "admin",
   "image": "foto-de-perfil.jpg"
- },
- {
-  "id": 5,
-  "name": "Miguel",
-  "email": "alejandro23vzla@gmail.com",
-  "password": "hola123",
-  "rol": "admin",
-  "terms-conditions": "on",
-  "image": "user-1654998239615.png"
- },
- {
-  "id": 6,
-  "name": "Facundo Emmanuel FRANCOU",
-  "email": "ffrancou@vialidad.gob.ar",
-  "password": "nmvmnv",
-  "rol": "comprador",
-  "terms-conditions": "on",
-  "image": "user-1654998434238.jpg"
- },
- {
-  "id": 7,
-  "name": "Facundo Emmanuel FRANCOU",
-  "email": "francou.facundo@gmail.com",
-  "password": "$2a$10$WYNSvzPW9/nC0KMqcPxRauFvTfQkmVV07o79cltjOqY67y6k3PfDG",
-  "rol": "admin",
-  "terms-conditions": "on",
-  "image": "user-1655007355228.png"
  }
 ]

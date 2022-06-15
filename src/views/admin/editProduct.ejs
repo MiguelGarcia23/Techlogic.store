@@ -48,6 +48,17 @@
                     </select>
                 </div>
 
+                <!-- SELECT DEl ESTADO DEL PRODUCTO -->
+        <div class="div-edit-create-form">
+            <h3 class="title-select-edit-create-form">Seleción de estado del Producto:</h3>
+            <select name="state" class="select-edit-create-form">
+              <option value="" disable selected>Elegí una sección:</option>
+              <option value="bestSeller" <%= product.state == 'bestSeller' ? 'selected' : null %> >Best Seller</option>
+              <option value="ofert" <%= product.state == 'ofert' ? 'selected' : null %> >Oferta</option>
+              <option value="stock" <%= product.state == 'stock' ? 'selected' : null %> >Sin estado</option>
+            </select>
+          </div>
+
                 <!-- INPUT DE LA MARCA DEL PRODUCTO -->        
                 <div class="div-edit-create-form">
                     <label for="brand" class="label-normal-input">Marca del Producto:</label>
