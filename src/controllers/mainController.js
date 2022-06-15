@@ -1,3 +1,8 @@
+const fs = require("fs");
+const path = require("path");
+
+const productsFilePath = path.join(__dirname, "../data/products.json");
+
 /* Creamos un array que contenga los productos que se mostrarán en la sección best sellers */
 const bestSellers = [
   {
@@ -93,7 +98,9 @@ const collections = [
 const mainController = {
 
     index: (req, res) => {
-        res.render('./main/index', {bestSellers: bestSellers, collections: collections})
+      const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+      let productInOfert = products.filter((product) => product.state == "bestSeller" )
+        res.render('./main/index', {bestSellers: productInOfert, collections: collections})
     }
 }
 

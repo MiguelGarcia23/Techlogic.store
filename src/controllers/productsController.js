@@ -42,12 +42,13 @@ const productsController = {
 
   productDetail: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let productInOfert = products.filter((product) => product.state == "ofert" )
     let detailedProduct = products.find(
       (product) => product.id == req.params.id
     ); // buscamos el producto en el array de productos
 
     res.render("./products/productDetail", {
-      similarProducts: similarProducts,
+      similarProducts: productInOfert,
       product: detailedProduct,
     });
   },
