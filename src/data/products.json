@@ -600,15 +600,15 @@
   "state": "stock"
  },
  {
-  "id": 51,
+  "id": "51",
   "name": "Joystick Playstation 5",
   "section": "Gaming",
   "collection": "blackAndWhite",
   "brand": "Sony",
   "description": "Joystick Playstation 5",
   "price": "17.199,00",
-  "discount": 0,
+  "discount": "0 ",
   "image": "joystick-ps5.png",
-  "state": "stock"
+  "state": "ofert"
  }
 ]

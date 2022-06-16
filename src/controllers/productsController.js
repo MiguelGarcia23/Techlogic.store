@@ -3,30 +3,6 @@ const path = require("path");
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
 
-/* linea para escribir archivo JSON  */
-/* fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " ")); */
-
-/* Creamos un array que contenga los productos que también le pueden interesar al usuario */
-const similarProducts = [
-  {
-    name: "Audífonos Beats Pro",
-    price: "$48.000,00",
-    img: "audifonos-beats-pro.png",
-  },
-
-  {
-    name: "iPad Air",
-    price: "$79.230,00",
-    img: "ipad-air.png",
-  },
-
-  {
-    name: "Playstation 5",
-    price: "$61.700,00",
-    img: "playstation-5.png",
-  },
-];
-
 /* Configuramos el controlador */
 const productsController = {
   index: (req, res) => {
