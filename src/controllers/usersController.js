@@ -10,7 +10,44 @@ const usersController = {
     },
 
     processLogin: (req, res) => {
-        res.render('/users/userProfile')
+
+        let userToLogin = User.getByEmail(req.body.email);
+
+        if(userToLogin) {
+
+            /* let passwordIsOkay = bcrypt.compareSync(req.body.password, userToLogin.password); */
+
+            /* if (passwordIsOkay) { */
+            if (req.body.password == userToLogin.password) {
+                delete userToLogin.password;
+
+                req.session.userLogged = userToLogin;
+
+                if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 5})
+				}
+
+                res.redirect('/users/profile');
+            }
+
+            res.render('./users/login', {
+                errors: {
+                    email: {
+                        msg: 'Las credenciales son inválidas'
+                    }
+                }
+            })
+            
+        }
+
+        res.render('./users/login', {
+            errors: {
+                email: {
+                    msg: 'El usuario no está registrado en nuestra base de datos'
+                }
+            }
+        })
+        
     },
     
     register: (req, res) => {

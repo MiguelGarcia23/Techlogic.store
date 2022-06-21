@@ -23,25 +23,28 @@
             alt="imagen de perfil"
             /> -->
             <!-- ---------------------FORM REGISTRO--------------------- -->
-            <form action="/login" method="POST" class="register-login-form">
+            <form action="/users/login" method="POST" class="register-login-form">
+            <% if (locals.errors && errors.email) { %>
+                <span class="text-danger"><%= errors.email.msg %></span> 
+            <% } %>
             <input
                 type="text"
-                name="name"
-                id="name"
-                placeholder="Nombre de Usuario"
-                class="register-login-form-item"
+                name="email"
+                id="email"
+                placeholder="Email"
+                class="register-login-form-item <%= locals.errors && errors.email ? 'is-invalid' : null %>"
             />
             <input
                 type="password"
                 name="password"
                 id="password"
                 placeholder="Contraseña"
-                class="register-login-form-item"
+                class="register-login-form-item <%= locals.errors && errors.email ? 'is-invalid' : null %>"
             />
             <!-- ---------------------RECORDAR USUARIOS--------------------- -->
             <div class="user-save">
-                <input type="radio" name="user-save" id="user-save" />
-                <label for="user save"
+                <input type="radio" name="remember_user" id="remember_user" />
+                <label for="remember_user"
                 >Recordar usuario</label
                 >
             </div>
