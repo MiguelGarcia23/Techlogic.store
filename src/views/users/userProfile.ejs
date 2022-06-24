@@ -9,7 +9,74 @@
         <%- include('../partials/header') %>
 
         <!-- MAIN -->
-        <main></main>
+        <main class="main-profile">
+            <h2 class="title-profile">Perfil del Usuario</h2>
+
+            <section class="profile-section">
+
+                <div class="info-profile-div">
+
+                    <img src="/img/users/usuario-predeterminado.png" alt="Foto de perfil del usuario" class="img-profile">
+                    <h3 class="username-profile">Nombre del Usuario</h3>
+                    <p class="email-profile">Email del Usuario</p>
+                    <p class="rol-profile">Rol</p>
+                    <form action="/login" method="GET" class="form-edit-button-profile">
+                        <button class="edit-button-profile button-cart">Editar usuario</button>
+                    </form>
+
+                </div>
+
+                <div class="purchases-profile">
+
+                    <h3 class="title-purchases-profile">Historial de Compras</h3>
+
+                    <article class="purchase-profile">
+                        <a href="" class="link-purchase-profile">
+                            <div class="left-div-purchase-profile">
+                                <h5 class="title-each-purchase-profile">Compra #1</h5>
+                                <p class="id-purchase-profile">id compra:</p>
+                                <p class="date-purchase-profile">Fecha de compra:</p>
+                            </div>
+
+                            <div class="right-div-purchase-profile">
+                                <p class="total-price-purchase-profile">$200.000</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="purchase-profile">
+                        <a href="" class="link-purchase-profile">
+                            <div class="left-div-purchase-profile">
+                                <h5 class="title-each-purchase-profile">Compra #2</h5>
+                                <p class="id-purchase-profile">id compra:</p>
+                                <p class="date-purchase-profile">Fecha de compra:</p>
+                            </div>
+
+                            <div class="right-div-purchase-profile">
+                                <p class="total-price-purchase-profile">$200.000</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="purchase-profile">
+                        <a href="" class="link-purchase-profile">
+                            <div class="left-div-purchase-profile">
+                                <h5 class="title-each-purchase-profile">Compra #3</h5>
+                                <p class="id-purchase-profile">id compra:</p>
+                                <p class="date-purchase-profile">Fecha de compra:</p>
+                            </div>
+
+                            <div class="right-div-purchase-profile">
+                                <p class="total-price-purchase-profile">$200.000</p>
+                            </div>
+                        </a>
+                    </article>
+                    
+                </div>
+            
+            </section>
+
+        </main>
 
         <!-- FOOTER -->
         <%- include('../partials/footer') %>

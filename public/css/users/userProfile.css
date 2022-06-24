@@ -1,3 +1,147 @@
 @import url(../styles.css);
 @import url(../partials/header.css);
 @import url(../partials/footer.css);
+
+.main-profile {
+    margin-top: 7rem;
+    background: linear-gradient(to top,#000000, #434343, #000000);;
+}
+
+.title-profile {
+    display: block;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--blanco);
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.profile-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-profile-div {
+    width: 100%;
+}
+
+.img-profile {
+    display: block;
+    width: 9.375rem;
+    margin: 0 auto;
+    margin-bottom: 1.75rem;
+}
+
+.username-profile {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--celeste);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.email-profile {
+    font-size: 1rem;
+    color: var(--blanco);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.rol-profile {
+    font-size: 1rem;
+    color: var(--blanco);
+    text-align: center;
+    margin-bottom: 1.75rem;
+}
+
+.form-edit-button-profile {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.edit-button-profile {
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
+
+.purchases-profile {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.title-purchases-profile {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--blanco);
+    margin-bottom: 1.25rem;
+}
+
+.purchase-profile {
+    border-bottom: 1px solid var(--blanco);
+}
+
+.purchase-profile:last-child {
+    margin-bottom: 2rem;
+}
+
+.link-purchase-profile {
+    width: 100%;
+    padding: 1.25rem 0;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.title-each-purchase-profile {
+    font-size: 1.25rem;
+    color: var(--blanco);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.id-purchase-profile {
+    font-size: 1rem;
+    color: var(--blanco);
+    margin-bottom: 0.25rem;
+}
+
+.date-purchase-profile {
+    font-size: 1rem;
+    color: var(--blanco);
+    margin-bottom: 0.25rem;
+}
+
+.total-price-purchase-profile {
+    font-size: 1.25rem;
+    color: var(--celeste);
+    font-weight: 600;
+}
+
+@media (min-width: 1050px) {
+
+    .title-profile {
+        margin-bottom: 3rem;
+    }
+
+    .profile-section {
+        margin-bottom: 3rem;
+    }
+
+    .info-profile-div {
+        width: 40%;
+    }
+
+    .purchases-profile {
+        width: 60%;
+    }
+
+    .title-purchases-profile {
+        text-align: center;
+    }
+}
