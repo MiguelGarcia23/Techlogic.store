@@ -19,6 +19,7 @@ const usersController = {
 
             /* if (passwordIsOkay) { */
             if (req.body.password == userToLogin.password) {
+
                 delete userToLogin.password;
 
                 req.session.userLogged = userToLogin;
@@ -37,7 +38,7 @@ const usersController = {
                     }
                 }
             })
-            
+
         }
 
         res.render('./users/login', {
@@ -92,7 +93,7 @@ const usersController = {
     },
 
     profile: (req, res) => {
-        res.render('./users/userProfile')
+        res.render('./users/userProfile', {user: req.session.userLogged})
     },
 
     purchases: (req, res) => {
