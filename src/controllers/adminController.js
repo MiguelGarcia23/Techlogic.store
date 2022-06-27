@@ -12,16 +12,18 @@ const adminController = {
 
   create: (req, res) => {
     let userLoggedAdmin = req.session.userLogged;
-    
-    if (userLoggedAdmin && userLoggedAdmin.rol == "admin") { // si el usuario está logueado y es admin
-        res.render("./admin/createProduct", { // renderizamos la página de creación de productos
-          product: productToEdit,
-          user: req.session.userLogged,
-        });
-      } else {
-        res.redirect("/users/login"); // si no está logueado, redirigimos al login
-      }
-    },
+
+    if (userLoggedAdmin && userLoggedAdmin.rol == "admin") {
+      // si el usuario está logueado y es admin
+      res.render("./admin/createProduct", {
+        // renderizamos la página de creación de productos
+        product: productToEdit,
+        user: req.session.userLogged,
+      });
+    } else {
+      res.redirect("/users/login"); // si no está logueado, redirigimos al login
+    }
+  },
 
   store: (req, res, next) => {
     /* Leyendo el JSON */
@@ -67,11 +69,14 @@ const adminController = {
   },
 
   edit: (req, res) => {
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    let productToEdit = products.find((product) => req.params.id == product.id);
+
     let userLoggedAdmin = req.session.userLogged;
 
-    if (userLoggedAdmin && userLoggedAdmin.rol == 'admin') { // Si el usuario está logueado y es admin
+    if (userLoggedAdmin && userLoggedAdmin.rol == "admin") {// Si el usuario está logueado y es admin
+
+      const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+      let productToEdit = products.find((product) => req.params.id == product.id );
+
       res.render("admin/editProduct", { // Renderiza la vista de editar producto
         product: productToEdit,
         user: req.session.userLogged,
