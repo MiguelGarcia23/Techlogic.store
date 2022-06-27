@@ -17,7 +17,6 @@ const adminController = {
       // si el usuario está logueado y es admin
       res.render("./admin/createProduct", {
         // renderizamos la página de creación de productos
-        product: productToEdit,
         user: req.session.userLogged,
       });
     } else {
