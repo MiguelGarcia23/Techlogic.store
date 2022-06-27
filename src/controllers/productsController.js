@@ -8,7 +8,7 @@ const productsController = {
   index: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     let productInStock = products.filter((product) => product.state !== "cart" ) // filtramos los productos que están en stock
-    res.render("./products/listProducts", { products: productInStock }); // renderizamos la página con los productos
+    res.render("./products/listProducts", { products: productInStock, user: req.session.userLogged}); // renderizamos la página con los productos
   },
 
 
@@ -26,6 +26,7 @@ const productsController = {
     res.render("./products/productDetail", {
       similarProducts: productInOfert,
       product: detailedProduct,
+      user: req.session.userLogged,
     });
   },
 

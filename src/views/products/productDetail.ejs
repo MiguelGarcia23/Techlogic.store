@@ -68,31 +68,20 @@
                 </div>
               </div>
               <div class="prd-buy-cnt">
-                <!-- <div class="prd-buy">
-                  <p>COMPRA YA!</p>
-                </div>
-
-                <div class="icon-numbers">
-                  <div class="icon-minus">
-                    <i class="fa-solid fa-minus"></i>
-                  </div>
-
-                  <div class="cnt-number">
-                    <p class="text-number">1</p>
-                  </div>
-                  <div class="icon-plus">
-                    <i class="fa-solid fa-plus"></i>
-                  </div>
-                </div> -->
               </div>
               <form action="/products/addProduct/<%= product.id %>" method="POST" class="prd-add-cart">
                 <button>Agregar al carrito<i class="fa-solid fa-cart-arrow-down"></i></button>
               </form>
-              <div>
-                <form action="/admin/edit/<%= product.id %> " method="GET">
-                    <button class="button-cart button-edit">Editar producto</i></button>
-                </form>
-            </div>
+              <!-- Si existe usuario logueado y es admin muestra el boton de EDITAR PRODUCTO -->
+              <% if (user) {%>
+                <% if (user.rol === 'admin') {%>
+                  <div>
+                    <form action="/admin/edit/<%= product.id %> " method="GET">
+                        <button class="button-cart button-edit">Editar producto</i></button>
+                    </form>
+                  </div>
+                <% } %>
+                <% } %>
             </div>
           </div>
         </div>

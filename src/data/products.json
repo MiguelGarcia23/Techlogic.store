@@ -9,7 +9,7 @@
   "price": "234.500,00",
   "discount": 10,
   "image": "iphone13.png",
-  "state": "cart"
+  "state": "stock"
  },
  {
   "id": "2",
@@ -21,7 +21,7 @@
   "price": "6.435,00",
   "discount": "10  ",
   "image": "mouse-logi.png",
-  "state": "ofert"
+  "state": "stock"
  },
  {
   "id": "3",
@@ -45,7 +45,7 @@
   "price": "48.000,00",
   "discount": "10 ",
   "image": "audifonos-beats-pro.png",
-  "state": "cart"
+  "state": "stock"
  },
  {
   "id": "5",
@@ -69,7 +69,7 @@
   "price": "61.700,00",
   "discount": 10,
   "image": "playstation-5.png",
-  "state": "bestSeller"
+  "state": "stock"
  },
  {
   "id": "7",
@@ -81,7 +81,7 @@
   "price": "5.800,00",
   "discount": "10 ",
   "image": "teclado-logitech-g213.png",
-  "state": "cart"
+  "state": "stock"
  },
  {
   "id": 8,

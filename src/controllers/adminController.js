@@ -1,3 +1,4 @@
+const User = require("../model/User");
 const fs = require("fs");
 const path = require("path");
 
@@ -68,7 +69,7 @@ const adminController = {
         const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
         let productToEdit = products.find((product) => req.params.id == product.id);
     
-        res.render("admin/editProduct", {product: productToEdit});
+        res.render("admin/editProduct", {product: productToEdit, user: req.session.userLogged});
     },
 
     update: (req, res) => {
@@ -101,7 +102,7 @@ const adminController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 
 		/* Redirigiendo a la lista de productos luego de enviar el formulario */
-		res.redirect('/products/')
+		res.redirect('/products/', {user: req.session.userLogged})
     },
 
     delete: (req, res) => {

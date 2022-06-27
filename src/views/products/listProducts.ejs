@@ -1,310 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- HEAD -->
-    <%- include('../partials/head', {title: 'Productos', stylesheet: 'products/listProducts.css'}) %>
-    
-    <body>
+  <!-- HEAD -->
+  <%- include('../partials/head', {title: 'Productos', stylesheet:
+  'products/listProducts.css'}) %>
 
-        <!-- HEADER -->
-        <%- include('../partials/header') %>
+  <body>
+    <!-- HEADER -->
+    <%- include('../partials/header') %>
 
-        <!-- MAIN -->
-        <main class="main-products">
+    <!-- MAIN -->
+    <main class="main-products">
+      <!-- TÍTULO DE LA VISTA -->
+      <h2 class="title-main-products">Listado de Productos</h2>
 
-            <!-- TÍTULO DE LA VISTA -->
-            <h2 class="title-main-products">Listado de Productos</h2>
+      <!-- BOTONES DE FILTRAR Y ORDENAR POR -->
+      <div class="filter-order-products">
+        <!-- BOTÓN DE FILTRAR -->
+        <div class="filter-button">
+          <a href="#" class="link-filter-button">
+            <i class="fa-solid fa-sliders icon-filter-button"></i>
+            Filtrar
+          </a>
+        </div>
+        <!-- Si existe un usuario en sision y es admin muestra el boton CREAR+ -->
+        <% if (user) { %> 
+            <% if ((user.rol == "admin")) { %>
+        <div>
+          <form action="/admin/create" method="GET">
+            <button class="button-cart button-create">
+              Crear <i class="fas fa-plus"></i>
+            </button>
+          </form>
+        </div>
+        <% } %> <% } %>
 
-            <!-- BOTONES DE FILTRAR Y ORDENAR POR -->
-            <div class="filter-order-products">
+        <!-- BOTÓN DE ORDENAR POR -->
+        <div class="order-button">
+          <!-- BOTÓN DE ORDENAR POR INACTIVO -->
+          <div class="inactive-order-button">
+            <p class="p-inactive-order-button">Ordenar por:</p>
+            <i
+              class="fa-solid fa-arrow-down-short-wide icon-inactive-order-button"
+            ></i>
 
-                <!-- BOTÓN DE FILTRAR -->
-                <div class="filter-button">
-
-                    <a href="#" class="link-filter-button">
-                        <i class="fa-solid fa-sliders icon-filter-button"></i>
-                        Filtrar
-                    </a>
-
-                </div>
-                <div>
-                    <form action="/admin/create" method="GET">
-                        <button class="button-cart button-create">Crear <i class="fas fa-plus"></i></button>
-                    </form>
-                </div>
-                <!-- BOTÓN DE ORDENAR POR -->
-                <div class="order-button">
-
-                    <!-- BOTÓN DE ORDENAR POR INACTIVO -->
-                    <div class="inactive-order-button">
-
-                        <p class="p-inactive-order-button">Ordenar por:</p>
-                        <i class="fa-solid fa-arrow-down-short-wide icon-inactive-order-button"></i>
-
-                        <!-- MENÚ QUE SE DESPLIEGA AL ACTIVAR EL BOTÓN DE ORDENAR POR -->
-                        <div class="active-order-button">
-    
-                            <ul class="ul-active-order-button">
-                                <li class="li-active-order-button">Más vendidos</li>
-                                <li class="li-active-order-button">Precio más bajo</li>
-                                <li class="li-active-order-button">Precio más alto</li>
-                                <li class="li-active-order-button">Últimos agregados</li>
-                            </ul>
-    
-                        </div>
-
-                    </div>
-
-                </div>
-                
+            <!-- MENÚ QUE SE DESPLIEGA AL ACTIVAR EL BOTÓN DE ORDENAR POR -->
+            <div class="active-order-button">
+              <ul class="ul-active-order-button">
+                <li class="li-active-order-button">Más vendidos</li>
+                <li class="li-active-order-button">Precio más bajo</li>
+                <li class="li-active-order-button">Precio más alto</li>
+                <li class="li-active-order-button">Últimos agregados</li>
+              </ul>
             </div>
-
-            <!-- SLIDER MENU PARA FILTRAR -->
-            <div class="slide-filter-menu">
-
-                <!-- HEADER DEL SLIDE MENU PARA FILTRAR -->
-                <header class="header-slide-filter-menu">
-
-                    <!-- ÍCONO DE LA X DEL SLIDER MENU -->
-                    <div class="icono-x-filter-menu">
-                        <i class="fa-solid fa-x"></i>
-                    </div>
-
-                    <!-- TÍTULO DEL SLIDER MENU -->
-                    <div class="div-title-filter">
-                        <i class="fa-solid fa-sliders icon-filter-button-slide-menu"></i>
-                        <h3 class="h3-title-filter">Filtrar</h3>
-                    </div>
-
-                </header>
-
-                <!-- BARRA DE NAVEGACIÓN DEL SLIDE MENU -->
-                <nav class="navbar-slide-filter-menu">
-
-                    <!-- FORMULARIO PARA EL ENVÍO DE LOS FILTROS DEL USUARIO  -->
-                    <form action="" method="POST">
-
-                        <ul>
-
-                            <!-- OPCIÓN PARA FILTRAR POR SECCIÓN -->
-                            <li class="option-filter-slide-menu">
-
-                                <!-- TÍTULO DE LA OPCIÓN -->
-                                <div class="first-option-filter-slide-menu">
-
-                                    <p class="p-first-option-filter-slide-menu">Sección</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                    <i class="fa-solid fa-minus icono-menos-slide-filter-menu"></i>
-
-                                </div>
-
-                                <!-- OPCIONES PARA FILTRAR -->
-                                <div class="second-option-filter-slide-menu">
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">
-                                        <input type="checkbox" name="sectionProducts" id="smartphones" class="checkbox-filter-slide-menu">
-                                        <label for="smartphones">Smartphones</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="sectionProducts" id="tablets" class="checkbox-filter-slide-menu">
-                                        <label for="tablets">Tablets</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="sectionProducts" id="laptopsAndDesktops" class="checkbox-filter-slide-menu">
-                                        <label for="laptopsAndDesktops">Laptops y Desktops</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="sectionProducts" id="consolasAndGaming" class="checkbox-filter-slide-menu">
-                                        <label for="consolasAndGaming">Consolas y Gaming</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                
-                                        <input type="checkbox" name="sectionProducts" id="redes" class="checkbox-filter-slide-menu">
-                                        <label for="redes">Redes</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="sectionProducts" id="accesorios" class="checkbox-filter-slide-menu">
-                                        <label for="accesorios">Accesorios</label>
-                                    </div>
-                                    
-                                </div>
-
-                            </li>
-
-                            <!-- OPCIÓN PARA FILTRAR POR COLECCIÓN -->
-                            <li class="option-filter-slide-menu">
-
-                                <!-- TÍTULO DE LA OPCIÓN -->
-                                <div class="first-option-filter-slide-menu">
-
-                                    <p class="p-first-option-filter-slide-menu">Colección</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                    <i class="fa-solid fa-minus icono-menos-slide-filter-menu"></i>
-
-                                </div>
-
-                                <!-- OPCIONES PARA FILTRAR -->
-                                <div class="second-option-filter-slide-menu">
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="collectionProducts" id="modern" class="checkbox-filter-slide-menu">
-                                        <label for="modern">Modern</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="collectionProducts" id="classic" class="checkbox-filter-slide-menu">
-                                        <label for="classic">Classic</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="collectionProducts" id="colorful" class="checkbox-filter-slide-menu">
-                                        <label for="colorful">Colorful</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="collectionProducts" id="blackWhite" class="checkbox-filter-slide-menu">
-                                        <label for="blackAndWhite">Black & White</label>
-                                    </div>
-
-                                </div>
-
-                            </li>
-
-                            <!-- OPCIÓN PARA FILTRAR POR PRECIO -->                            
-                            <li class="option-filter-slide-menu">
-
-                                <!-- TÍTULO DE LA OPCIÓN -->
-                                <div class="first-option-filter-slide-menu">
-
-                                    <p class="p-first-option-filter-slide-menu">Precio</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                    <i class="fa-solid fa-minus icono-menos-slide-filter-menu"></i>
-
-                                </div>
-
-                                <!-- OPCIÓN PARA FILTRAR EL PRECIO POR UN RANGO -->
-                                <div class="second-option-filter-slide-menu">
-
-                                    <label for="priceProducts" class="label-input-range-slide-filter-menu">Precio máximo: </label>
-                                    <input type="range" name="priceProducts" id="priceProducts" min="0" max="500000" step="100" value="250000">
-                                    
-                                </div>
-
-                            </li>
-
-                            <!-- OPCIÓN PARA FILTRAR POR MARCA -->
-                            <li class="option-filter-slide-menu">
-
-                                <!-- TÍTULO DE LA OPCIÓN -->
-                                <div class="first-option-filter-slide-menu">
-
-                                    <p class="p-first-option-filter-slide-menu">Marca</p>
-                                    <i class="fa-solid fa-plus"></i>
-                                    <i class="fa-solid fa-minus icono-menos-slide-filter-menu"></i>
-
-                                </div>
-
-                                <!-- OPCIONES PARA FILTRAR -->
-                                <div class="second-option-filter-slide-menu">
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="sectionProducts" id="apple" class="checkbox-filter-slide-menu">
-                                        <label for="apple">Apple</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="sectionProducts" id="samsung" class="checkbox-filter-slide-menu">
-                                        <label for="samsung">Samsung</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="sectionProducts" id="sony" class="checkbox-filter-slide-menu">
-                                        <label for="sony">Sony</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="sectionProducts" id="hp" class="checkbox-filter-slide-menu">
-                                        <label for="hp">HP</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="sectionProducts" id="xiaomi" class="checkbox-filter-slide-menu">
-                                        <label for="xiaomi">Xiaomi</label>
-                                    </div>
-
-                                    <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
-                                    <div class="div-checkbox-filter-slide-menu">                                        
-                                        <input type="checkbox" name="sectionProducts" id="dell" class="checkbox-filter-slide-menu">
-                                        <label for="dell">Dell</label>
-
-                                    </div>
-
-                                </div>
-
-                            </li>
-
-                        </ul>
-
-                    </form>
-
-                </nav>
-
-                <!-- PIE DE PÁGINA DEL SLIDE MENU PARA FILTRAR -->
-                <footer class="footer-slide-filter-menu">
-
-                    <img src="/img/logo.svg" alt="Logo de Techlogic.store">
-
-                </footer>
-
-            </div>
-
-            <!-- LISTADO DE PRODUCTOS -->
-            <div class="list-products">
-
-                <!-- RECORRER EL ARRAY DE PRODUCTOS -->
-                <% for(let product of products){ %>
-
-                    <!-- CADA PRODUCTO DEL LISTADO -->
-                    <article class="product-article">
-
-                        <!-- LINK PARA LLEVAR AL DETALLE DEL PRODUCTO -->
-                        <a href="/products/productDetail/<%= product.id %>">
-                            <img src="/img/products/<%= product.image %>" class="imageProduct" alt="<%= product.name %>">    
-                            <p class="productName"><%= product.name %></p>
-                            <p class="productPrice">$<%= product.price %></p>
-                            <form action="/products/addProduct/<%= product.id %>" method="POST">
-                                <button class="button-cart button-icon-cart"><p class="add-to-cart">Añadir al carrito </p> <i class="fas fa-cart-plus"></i></button>
-                            </form>
-                        </a>
-                        
-                    </article> 
-
-                <% } %>
-
-            </div>
-        </main>
-
-        <!-- FOOTER -->
-        <%- include('../partials/footer') %>
-
-    </body>
-
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDER MENU PARA FILTRAR -->
+      <div class="slide-filter-menu">
+        <!-- HEADER DEL SLIDE MENU PARA FILTRAR -->
+        <header class="header-slide-filter-menu">
+          <!-- ÍCONO DE LA X DEL SLIDER MENU -->
+          <div class="icono-x-filter-menu">
+            <i class="fa-solid fa-x"></i>
+          </div>
+
+          <!-- TÍTULO DEL SLIDER MENU -->
+          <div class="div-title-filter">
+            <i class="fa-solid fa-sliders icon-filter-button-slide-menu"></i>
+            <h3 class="h3-title-filter">Filtrar</h3>
+          </div>
+        </header>
+
+        <!-- BARRA DE NAVEGACIÓN DEL SLIDE MENU -->
+        <nav class="navbar-slide-filter-menu">
+          <!-- FORMULARIO PARA EL ENVÍO DE LOS FILTROS DEL USUARIO  -->
+          <form action="" method="POST">
+            <ul>
+              <!-- OPCIÓN PARA FILTRAR POR SECCIÓN -->
+              <li class="option-filter-slide-menu">
+                <!-- TÍTULO DE LA OPCIÓN -->
+                <div class="first-option-filter-slide-menu">
+                  <p class="p-first-option-filter-slide-menu">Sección</p>
+                  <i class="fa-solid fa-plus"></i>
+                  <i
+                    class="fa-solid fa-minus icono-menos-slide-filter-menu"
+                  ></i>
+                </div>
+
+                <!-- OPCIONES PARA FILTRAR -->
+                <div class="second-option-filter-slide-menu">
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="sectionProducts"
+                      id="smartphones"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="smartphones">Smartphones</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="sectionProducts"
+                      id="tablets"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="tablets">Tablets</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="sectionProducts"
+                      id="laptopsAndDesktops"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="laptopsAndDesktops">Laptops y Desktops</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="sectionProducts"
+                      id="consolasAndGaming"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="consolasAndGaming">Consolas y Gaming</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="sectionProducts"
+                      id="redes"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="redes">Redes</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="sectionProducts"
+                      id="accesorios"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="accesorios">Accesorios</label>
+                  </div>
+                </div>
+              </li>
+
+              <!-- OPCIÓN PARA FILTRAR POR COLECCIÓN -->
+              <li class="option-filter-slide-menu">
+                <!-- TÍTULO DE LA OPCIÓN -->
+                <div class="first-option-filter-slide-menu">
+                  <p class="p-first-option-filter-slide-menu">Colección</p>
+                  <i class="fa-solid fa-plus"></i>
+                  <i
+                    class="fa-solid fa-minus icono-menos-slide-filter-menu"
+                  ></i>
+                </div>
+
+                <!-- OPCIONES PARA FILTRAR -->
+                <div class="second-option-filter-slide-menu">
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="collectionProducts"
+                      id="modern"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="modern">Modern</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="collectionProducts"
+                      id="classic"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="classic">Classic</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="collectionProducts"
+                      id="colorful"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="colorful">Colorful</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="collectionProducts"
+                      id="blackWhite"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="blackAndWhite">Black & White</label>
+                  </div>
+                </div>
+              </li>
+
+              <!-- OPCIÓN PARA FILTRAR POR PRECIO -->
+              <li class="option-filter-slide-menu">
+                <!-- TÍTULO DE LA OPCIÓN -->
+                <div class="first-option-filter-slide-menu">
+                  <p class="p-first-option-filter-slide-menu">Precio</p>
+                  <i class="fa-solid fa-plus"></i>
+                  <i
+                    class="fa-solid fa-minus icono-menos-slide-filter-menu"
+                  ></i>
+                </div>
+
+                <!-- OPCIÓN PARA FILTRAR EL PRECIO POR UN RANGO -->
+                <div class="second-option-filter-slide-menu">
+                  <label
+                    for="priceProducts"
+                    class="label-input-range-slide-filter-menu"
+                    >Precio máximo:
+                  </label>
+                  <input
+                    type="range"
+                    name="priceProducts"
+                    id="priceProducts"
+                    min="0"
+                    max="500000"
+                    step="100"
+                    value="250000"
+                  />
+                </div>
+              </li>
+
+              <!-- OPCIÓN PARA FILTRAR POR MARCA -->
+              <li class="option-filter-slide-menu">
+                <!-- TÍTULO DE LA OPCIÓN -->
+                <div class="first-option-filter-slide-menu">
+                  <p class="p-first-option-filter-slide-menu">Marca</p>
+                  <i class="fa-solid fa-plus"></i>
+                  <i
+                    class="fa-solid fa-minus icono-menos-slide-filter-menu"
+                  ></i>
+                </div>
+
+                <!-- OPCIONES PARA FILTRAR -->
+                <div class="second-option-filter-slide-menu">
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="sectionProducts"
+                      id="apple"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="apple">Apple</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="sectionProducts"
+                      id="samsung"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="samsung">Samsung</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="sectionProducts"
+                      id="sony"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="sony">Sony</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="sectionProducts"
+                      id="hp"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="hp">HP</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="sectionProducts"
+                      id="xiaomi"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="xiaomi">Xiaomi</label>
+                  </div>
+
+                  <!-- CHECKBOX DE LAS OPCIONES PARA FILTRAR -->
+                  <div class="div-checkbox-filter-slide-menu">
+                    <input
+                      type="checkbox"
+                      name="sectionProducts"
+                      id="dell"
+                      class="checkbox-filter-slide-menu"
+                    />
+                    <label for="dell">Dell</label>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </form>
+        </nav>
+
+        <!-- PIE DE PÁGINA DEL SLIDE MENU PARA FILTRAR -->
+        <footer class="footer-slide-filter-menu">
+          <img src="/img/logo.svg" alt="Logo de Techlogic.store" />
+        </footer>
+      </div>
+
+      <!-- LISTADO DE PRODUCTOS -->
+      <div class="list-products">
+        <!-- RECORRER EL ARRAY DE PRODUCTOS -->
+        <% for(let product of products){ %>
+
+        <!-- CADA PRODUCTO DEL LISTADO -->
+        <article class="product-article">
+          <!-- LINK PARA LLEVAR AL DETALLE DEL PRODUCTO -->
+          <a href="/products/productDetail/<%= product.id %>">
+            <img
+              src="/img/products/<%= product.image %>"
+              class="imageProduct"
+              alt="<%= product.name %>"
+            />
+            <p class="productName"><%= product.name %></p>
+            <p class="productPrice">$<%= product.price %></p>
+            <form action="/products/addProduct/<%= product.id %>" method="POST">
+              <button class="button-cart button-icon-cart">
+                <p class="add-to-cart">Añadir al carrito</p>
+                <i class="fas fa-cart-plus"></i>
+              </button>
+            </form>
+          </a>
+        </article>
+
+        <% } %>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('../partials/footer') %>
+  </body>
 </html>
