@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 const path = require("path");
 const fs = require("fs");
 
-const fileUsers = path.join(__dirname, "../data/users.json");
+const fileUsers = path.join(__dirname, "../data/users.json"); // ruta del archivo JSON de usuarios
 
 /* Configuramos el controlador */
 const usersController = {
@@ -13,10 +13,16 @@ const usersController = {
   },
 
   processLogin: (req, res) => {
-    
+
+    /* Se quiere el parseo del archivo de usuarios directamente 
+    en el controller, dado que con el getByEmail de models 
+    modificaba la variable en cuestión y no se podía volver a iniciar
+    sesión una vez cerrada */
+
     const usersFile =  JSON.parse(fs.readFileSync(fileUsers, "utf-8"))
-   
     let userToLogin = usersFile.find((user) => user.email == req.body.email);
+    
+    /* El resto del código sigue sin modificaciones */
     
     if (userToLogin) {
       
@@ -100,10 +106,8 @@ const usersController = {
     res.render("./users/userPurchases");
   },
   logout: (req, res) => {
-
     req.session.destroy();
     res.clearCookie('email');
-   /*  res.clearCookie('connect.sid'); */
     return res.redirect("/");
   }
 };
