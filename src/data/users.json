@@ -16,5 +16,14 @@
   "rol": "comprador",
   "terms-conditions": "on",
   "image": "user-1656300831574.png"
+ },
+ {
+  "id": 3,
+  "name": "gonza",
+  "email": "gonzalotflores01@gmail.com",
+  "password": "$2a$10$62UUszZk9HWytR6HjSV4yeMnOYFwrAAhl2esqes4wgdQD48428/6S",
+  "rol": "admin",
+  "terms-conditions": "on",
+  "image": "user-1656365365678.jpg"
  }
 ]
