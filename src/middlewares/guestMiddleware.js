@@ -3,7 +3,7 @@ function guestMiddleware(req, res, next) {
 		next()	
 
 }	else {
-		res.redirect('./register')
+		res.redirect('./login')
 	}
 }
 
