@@ -13,7 +13,10 @@ const User = {
     return this.fileRead.find((user) => user.id === id); // devuelve el usuario con el id indicado como objeto literal
   },
   getByEmail: function (email) {
-    return this.fileRead.find((user) => user.email == email); // devuelve el usuario con el email indicado como objeto literal
+
+    let allUsers = this.fileRead;
+    let userFind = allUsers.find((user) => user.email == email);
+    return userFind; 
   },
   generateId: function () { // genera un id aleatorio
     if (this.fileRead.length === 0) {

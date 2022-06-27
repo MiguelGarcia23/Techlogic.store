@@ -7,5 +7,14 @@
   "rol": "admin",
   "terms-conditions": "on",
   "image": "user-1656293044866.jpg"
+ },
+ {
+  "id": 2,
+  "name": "Usuario Prueba",
+  "email": "francou.facundo@otro.com",
+  "password": "$2a$10$7eQ.tRuDxt7arWaZImjywOjGnPu9ZHSIK9d7rqCj2pO8P69w3/5.C",
+  "rol": "admin",
+  "terms-conditions": "on",
+  "image": "user-1656300831574.png"
  }
 ]

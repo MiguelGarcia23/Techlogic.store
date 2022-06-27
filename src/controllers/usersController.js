@@ -1,6 +1,10 @@
 const User = require("../model/User");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
+const path = require("path");
+const fs = require("fs");
+
+const fileUsers = path.join(__dirname, "../data/users.json");
 
 /* Configuramos el controlador */
 const usersController = {
@@ -9,15 +13,24 @@ const usersController = {
   },
 
   processLogin: (req, res) => {
-    let userToLogin = User.getByEmail(req.body.email);
+    
+    const usersFile =  JSON.parse(fs.readFileSync(fileUsers, "utf-8"))
+   
+    let userToLogin = usersFile.find((user) => user.email == req.body.email);
+    
     if (userToLogin) {
-      if (bcrypt.compareSync(req.body.password, userToLogin.password)) {
+      
+      let passwordIsOk = bcrypt.compareSync(req.body.password, userToLogin.password);
+      if (passwordIsOk) {
+
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
+        console.log(req.session.userLogged);
 
         if (req.body.remember_user) {
-            res.cookie("email", req.body.email, { maxAge: 1000 * 60 * 60 });
+            res.cookie("email", req.body.email, { maxAge: (1000 * 60) * 60 });
         }
+
         res.redirect("./userProfile");
       } else {
         res.render("./users/login", {
@@ -87,9 +100,11 @@ const usersController = {
     res.render("./users/userPurchases");
   },
   logout: (req, res) => {
-    res.clearCookie('email');
+
     req.session.destroy();
-    res.redirect("/");
+    res.clearCookie('email');
+   /*  res.clearCookie('connect.sid'); */
+    return res.redirect("/");
   }
 };
 
