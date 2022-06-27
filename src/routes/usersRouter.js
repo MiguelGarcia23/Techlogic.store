@@ -29,5 +29,7 @@ router.get ('/userProfile', guestMiddleware, usersController.profile);
 /* Configuramos el envío al historial de compras del usuario */
 router.get ('/profile/purchases', usersController.purchases);
 
+router.get ('/logout',guestMiddleware, usersController.logout);
+
 /* Exportamos la variable router */
 module.exports = router;

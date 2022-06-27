@@ -86,6 +86,11 @@ const usersController = {
   purchases: (req, res) => {
     res.render("./users/userPurchases");
   },
+  logout: (req, res) => {
+    res.clearCookie('email');
+    req.session.destroy();
+    res.redirect("/");
+  }
 };
 
 /* Exportamos el controlador */

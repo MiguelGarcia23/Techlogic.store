@@ -16,12 +16,16 @@
 
                 <div class="info-profile-div">
 
-                    <img src="/img/users/usuario-predeterminado.png" alt="Foto de perfil del usuario" class="img-profile">
-                    <h3 class="username-profile">Nombre del Usuario</h3>
-                    <p class="email-profile">Email del Usuario</p>
-                    <p class="rol-profile">Rol</p>
-                    <form action="/login" method="GET" class="form-edit-button-profile">
-                        <button class="edit-button-profile button-cart">Editar usuario</button>
+                    <img src="/img/users/<%= user.image %> " alt="Foto de perfil del usuario" class="img-profile">
+                    <h3 class="username-profile"><%= user.name %> </h3>
+                    <p class="email-profile"><%= user.email %> </p>
+                    <% if (user.rol == 'admin') { %>
+                    <p class="rol-profile">Administrador</p>
+                    <% } else { %>
+                    <p class="rol-profile">Usuario Estandar</p>
+                    <% } %>
+                    <form action="/users/logout" method="GET" class="form-edit-button-profile">
+                        <button class="edit-button-profile button-cart">Cerrar Sesión</button>
                     </form>
 
                 </div>
