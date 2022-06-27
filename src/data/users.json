@@ -1,34 +1,11 @@
 [
  {
   "id": 1,
-  "name": "Miguel García",
-  "email": "miguelg@techlogic.store.com",
-  "password": "hola123",
+  "name": "Facundo Emmanuel FRANCOU",
+  "email": "francou.facundo@gmail.com",
+  "password": "$2a$10$Hb33X3aJWXfeNIniM8cPy.NulhJUm1Mu8p6SSum4lmxmke4TXcZc.",
   "rol": "admin",
-  "image": "foto-de-perfil.jpg"
- },
- {
-  "id": 2,
-  "name": "Facundo Francou",
-  "email": "emaToEdit@techlogic.store.com",
-  "password": "hola123",
-  "rol": "admin",
-  "image": "foto-de-perfil.jpg"
- },
- {
-  "id": 3,
-  "name": "Gonzalo Flores",
-  "email": "gonzalof@techlogic.store.com",
-  "password": "hola123",
-  "rol": "admin",
-  "image": "foto-de-perfil.jpg"
- },
- {
-  "id": 4,
-  "name": "Manuel Castillo",
-  "email": "manuc@techlogic.store.com",
-  "password": "hola123",
-  "rol": "admin",
-  "image": "foto-de-perfil.jpg"
+  "terms-conditions": "on",
+  "image": "user-1656293044866.jpg"
  }
 ]
