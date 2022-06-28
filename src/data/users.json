@@ -34,5 +34,14 @@
   "rol": "admin",
   "terms-conditions": "on",
   "image": "user-1656367351715.png"
+ },
+ {
+  "id": 5,
+  "name": "Miguel",
+  "email": "alejandro23vzla@gmail.com",
+  "password": "$2a$10$.OlkP1OIh4GazUz0CmICDecM3DHigo4q/XSv9WdcuIzTvPXDWaqrS",
+  "rol": "admin",
+  "terms-conditions": "on",
+  "image": "user-1656370190548.jpg"
  }
 ]
