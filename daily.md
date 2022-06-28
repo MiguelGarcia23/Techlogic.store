@@ -52,7 +52,8 @@
 ## Reunión del 06/27.
 
 - Hoy nos reunimos para terminar de cerrar los detalles del quinto sprint.
-  -Se terminó la creación de la vista del perfil del usuario
-  -Se completó el procesamiento del login
-  -Agregamos usuarios administradores
-  -Tambien se agregó una funcionalidad para que cuando no se es usuario administrador, no se puede ni editar ni agregar productos, esto quedó habilitado solo para admins.
+
+  - Se terminó la creación de la vista del perfil del usuario
+  - Se completó el procesamiento del login
+  - Agregamos usuarios administradores
+  - Tambien se agregó una funcionalidad para que cuando no se es usuario administrador, no se puede ni editar ni agregar productos, esto quedó habilitado solo para admins.
