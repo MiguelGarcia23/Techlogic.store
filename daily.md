@@ -32,18 +32,18 @@
 
 - Hoy nos reunimos en grupo para ultimar detalles estéticos y funcionales del proyecto para preparar todo para la entrega del tercer sprint.
 
-  -Se creo el botón para crear producto.
-  -Se ajustó el botón para añadir producto al carrito.
+  - Se creo el botón para crear producto.
+  - Se ajustó el botón para añadir producto al carrito.
 
 ## Reunión del 06/10.
 
 - Hoy nos reunimos en grupo para adelantar tareas y plasmar ideas en el proyecto que se presentaron durante las reuniones.
 
-  -Se le dio funcionalidad al formulario de creación y modificación de productos.
-  -Se ajustó el botón para añadir producto al carrito.
-  -Se crearon archivos JSON para usuarios y productos.
-  -Se le dio funcionalidad al botón ELIMINAR producto.
-  -Se agregaron validaciones de formulario de REGISTER.
+  - Se le dio funcionalidad al formulario de creación y modificación de productos.
+  - Se ajustó el botón para añadir producto al carrito.
+  - Se crearon archivos JSON para usuarios y productos.
+  - Se le dio funcionalidad al botón ELIMINAR producto.
+  - Se agregaron validaciones de formulario de REGISTER.
 
 ## Reunión del 06/14.
 
