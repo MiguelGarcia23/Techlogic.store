@@ -17,6 +17,7 @@
   - Head
   - Header
   - Footer
+
 - Creación de las nuevas vistas
 
   - Formulario de carga y edición de productos
@@ -34,7 +35,6 @@
   -Se creo el botón para crear producto.
   -Se ajustó el botón para añadir producto al carrito.
 
-
 ## Reunión del 06/10.
 
 - Hoy nos reunimos en grupo para adelantar tareas y plasmar ideas en el proyecto que se presentaron durante las reuniones.
@@ -48,3 +48,11 @@
 ## Reunión del 06/14.
 
 - Hoy nos reunimos en grupo para ultimar detalles de la entrega del cuarto Sprint y programar un reunión para el Miércoles 15/6 preparando los temas a abordar.
+
+## Reunión del 06/27.
+
+- Hoy nos reunimos para terminar de cerrar los detalles del quinto sprint.
+  -Se terminó la creación de la vista del perfil del usuario
+  -Se completó el procesamiento del login
+  -Agregamos usuarios administradores
+  -Tambien se agregó una funcionalidad para que cuando no se es usuario administrador, no se puede ni editar ni agregar productos, esto quedó habilitado solo para admins.
