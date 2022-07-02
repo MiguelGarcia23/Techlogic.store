@@ -105,13 +105,13 @@ body {
 
 /* LOGO DEL FOOTER */
 .img-footer-404-page {
-    width: 80px;
+    width: 60px;
     margin-right: 0.5rem;
 }
 
 /* TEXTO DEL FOOTER */
 .p-footer-404-page {
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     color: var(--blanco);
 }
 
@@ -120,22 +120,36 @@ body {
 /* MEDIA QUERIES TABLETS */
 @media (min-width: 768px) {
 
+    /* DIV DE LA IMAGEN */
     .div-img-404-page {
         display: block;
     }
 
+    /* OOPS! */
     .oops-404-page {
         font-size: 6rem;
         margin-bottom: 1rem;
     }
-    
+
+    /* TEXTO DE PÁGINA NO ENCONTRADA */
     .title-404-page {
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
     }
-    
+
+    /* TEXTO DEL CÓDIGO DEL ERROR */
     .info-error-404-page {
         font-size: 1.125rem;
         margin-bottom: 1rem
+    }
+
+    /* LOGO DEL FOOTER */
+    .img-footer-404-page {
+        width: 80px;
+    }
+
+    /* TEXTO DEL FOOTER */
+    .p-footer-404-page {
+        font-size: 0.875rem;
     }
 }
