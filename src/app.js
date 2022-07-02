@@ -78,6 +78,10 @@ app.use ('/contact', contactRouter);
 /* Envío a la ruta de admin */
 app.use ('/admin', adminRouter);
 
+app.use((req, res, next) => {
+  res.status(404).render('404-page');
+  next()
+})
 /* Levantando el servidor */
 app.listen(process.env.PORT || 3000, () => {
   console.log("Servidor corriendo en http://localhost:3000/");

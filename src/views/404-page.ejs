@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEAD -->
+    <%- include('./partials/head', {title: 'Página no encontrada', stylesheet: '404-page.css'}) %>
+    <body>
+        
+        <!-- MAIN -->
+        <main class="main-404-page">
+
+            <!-- DIV DE LA IMAGEN -->
+            <div class="div-img-404-page">
+                <img src="/img/img-404-page.png" alt="Imagen de 404 error" class="img-404-page">
+            </div>
+
+            <!-- DIV DE LA INFO -->
+            <div class="div-info-404-page">
+
+                <!-- OOPS! -->
+                <p class="oops-404-page">Oops!</p>
+                <!-- TEXTO DE PÁGINA NO ENCONTRADA  -->
+                <h2 class="title-404-page">No hemos encontrado la página que estabas buscando</h2>
+                <!-- TEXTO DEL CÓDIGO DEL ERROR -->
+                <p class="info-error-404-page">Código del error: 404</p>
+                <!-- TEXTO INTRODUCTORIO A LOS LINKS -->
+                <p class="title-links-404-page">Aquí están algunos link que te pueden servir:</p>
+                <!-- LISTA DE LINKS -->
+                <ul class="list-links-404-page">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/products">Listado de productos</a></li>
+                    <li><a href="/products/productCart">Mi carrito</a></li>
+                    <li><a href="/users/login">Login</a></li>
+                    <li><a href="/contact/aboutus">Sobre Nosotros</a></li>
+                </ul>
+
+            </div>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer-404-page">
+
+            <!-- LOGO DEL FOOTER -->
+            <img src="/img/logo.svg" alt="Logo Techlogic.store" class="img-footer-404-page">
+            <!-- TEXTO DEL FOOTER -->
+            <p class="p-footer-404-page">© 2022 Techlogic.store. Todos los derechos reservados.</p>
+
+        </footer>
+
+    </body>
+</html>

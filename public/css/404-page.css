@@ -1,0 +1,141 @@
+@import url(./styles.css);
+
+body {
+    background: linear-gradient(to top,#000000, #434343, #000000);
+}
+
+/* MAIN */
+.main-404-page {
+    width: 90vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DIV DE LA IMAGEN */
+.div-img-404-page {
+    display: none;
+    margin-right: 2rem;
+}
+
+/* IMAGEN */
+.img-404-page {
+    width: 100%;
+    max-width: 370px;
+}
+
+/* DIV DE LA INFO */
+.div-info-404-page {
+    margin-left: 2rem;
+}
+
+/* OOPS! */
+.oops-404-page {
+    font-family: 'Segoe UI';
+    font-size: 5rem;
+    color: var(--blanco);
+    opacity: 0.9;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* TEXTO DE PÁGINA NO ENCONTRADA */
+.title-404-page {
+    font-size: 1.25rem;
+    color: var(--blanco);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* TEXTO DEL CÓDIGO DEL ERROR */
+.info-error-404-page {
+    font-size: 1rem;
+    color: var(--blanco);
+    opacity: 0.9;
+    font-size: bold;
+    margin-bottom: 1rem
+}
+
+/* TEXTO INTRODUCTORIO A LOS LINKS */
+.title-links-404-page {
+    font-size: 1rem;
+    color: var(--blanco);
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+/* UL DE LA LISTA DE LINKS */
+.list-links-404-page {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* LI DE LA LISTA DE LINKS */
+.list-links-404-page li {
+    margin-bottom: 0.25rem
+}
+
+/* ENLACES DE LOS LI DE LA LISTA DE LINK */
+.list-links-404-page li a {
+    font-size: 1rem;
+    color: var(--celeste);
+    text-decoration: none;
+    transition: color 2s;
+}
+
+.list-links-404-page li a:hover {
+    color: var(--celeste);
+    opacity: 0.5;
+}
+
+/* FOOTER */
+.footer-404-page {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+}
+
+/* LOGO DEL FOOTER */
+.img-footer-404-page {
+    width: 80px;
+    margin-right: 0.5rem;
+}
+
+/* TEXTO DEL FOOTER */
+.p-footer-404-page {
+    font-size: 0.875rem;
+    color: var(--blanco);
+}
+
+/* MEDIA QUERIES */
+
+/* MEDIA QUERIES TABLETS */
+@media (min-width: 768px) {
+
+    .div-img-404-page {
+        display: block;
+    }
+
+    .oops-404-page {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .title-404-page {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .info-error-404-page {
+        font-size: 1.125rem;
+        margin-bottom: 1rem
+    }
+}
