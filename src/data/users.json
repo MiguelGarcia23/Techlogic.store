@@ -37,11 +37,11 @@
  },
  {
   "id": 5,
-  "name": "Miguel",
+  "name": "Miguel García",
   "email": "alejandro23vzla@gmail.com",
-  "password": "$2a$10$.OlkP1OIh4GazUz0CmICDecM3DHigo4q/XSv9WdcuIzTvPXDWaqrS",
+  "password": "$2a$10$mBbSBUS1wHwBNJVWEa2LZO.S4l.UmQGCnWR5ZATjZ8sc/8Dzf0r/W",
   "rol": "admin",
   "terms-conditions": "on",
-  "image": "user-1656370190548.jpg"
+  "image": "user-1656791182086.jpg"
  }
 ]

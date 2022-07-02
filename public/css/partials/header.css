@@ -226,20 +226,25 @@
 .profile-menu-full {
     display: none;
     position: absolute;
-    background-color: var(--blanco);
+    background-color: var(--negro);
     top: 100%;
-    right: 0;
+    right: 15px;
     width: 40%;
     max-width: 17.5rem;
     padding: 2rem 1rem 1.5rem 1rem;
     border-top: 3px solid var(--celeste);
 }
 
+/* MOSTRAR EL MENU CUANDO SE PASA EL MOUSE POR ENCIMA DEL ÍCONO DE USUARIO */
+.li-user-icon:hover .profile-menu-header{
+    display: block;
+}
+
 /* IMAGEN DEL MENÚ DESPLEGABLE DEL ÍCONO DE USUARIO */
 .image-profile-menu {
     display: block;
-    width: 3.75rem;
-    height: 3.75rem;
+    width: 4.5rem;
+    height: 4.5rem;
     overflow: hidden;
     border-radius: 50%;
     margin: auto;
@@ -254,14 +259,22 @@
 
 /* INFORMACIÓN DEL MENÚ DESPLEGABLE DEL ÍCONO DE USUARIO */
 .info-profile-menu {
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-    padding-top: 0.5rem;
-    margin-bottom: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .info-profile-menu p {
+    font-size: 0.875rem;
+    color: var(--blanco);
     opacity: 0.7;
     text-align: center;
+}
+
+.info-profile-menu p:first-child {
+    opacity: 1;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
 }
 
 /* ENLACE DEL MENÚ DESPLEGABLE DEL ÍCONO DE USUARIO */
@@ -271,7 +284,7 @@
 
 .link-profile-menu a {
     text-decoration: none;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     color: var(--celeste);
     font-weight: bold;
     position: absolute;
