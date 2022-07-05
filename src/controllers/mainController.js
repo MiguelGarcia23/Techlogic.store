@@ -11,7 +11,7 @@ const mainController = {
       const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
       const collections = JSON.parse(fs.readFileSync(collectionsFilePath, "utf-8"))
 
-      let productInOfert = products.filter((product) => product.state == "bestSeller" )
+      let productInOfert = products.filter((product) => product.state == "bestSeller" && product.deleted == false)
       res.render('./main/index', {bestSellers: productInOfert, collections: collections})
     }
 }

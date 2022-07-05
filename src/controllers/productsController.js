@@ -7,7 +7,7 @@ const productsFilePath = path.join(__dirname, "../data/products.json");
 const productsController = {
   index: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    let productInStock = products.filter((product) => product.state !== "cart" ) // filtramos los productos que están en stock
+    let productInStock = products.filter((product) => product.state !== "cart" && product.deleted == false) // filtramos los productos que están en stock
     res.render("./products/listProducts", { products: productInStock, user: req.session.userLogged}); // renderizamos la página con los productos
   },
 
@@ -18,7 +18,7 @@ const productsController = {
 
   productDetail: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-    let productInOfert = products.filter((product) => product.state == "ofert" )
+    let productInOfert = products.filter((product) => product.state == "ofert" && product.deleted == false)
     let detailedProduct = products.find(
       (product) => product.id == req.params.id
     ); // buscamos el producto en el array de productos
@@ -85,7 +85,7 @@ const productsController = {
   productCart: (req, res) => {
     const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
     let productToView = products.filter((product) => product.state == "cart"); // FILTRO LOS PRODUCTOS CON ESTADO 'CART'
-    let productInOfert = products.filter((product) => product.state == "ofert" )
+    let productInOfert = products.filter((product) => product.state == "ofert" && product.deleted == false)
     res.render("./products/productCart", {
       products: productToView,
       similarProducts: productInOfert,

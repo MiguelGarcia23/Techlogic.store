@@ -123,19 +123,25 @@ const adminController = {
     /* Leyendo el JSON y convirtiéndolo en un array */
     let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-    /* Estableciendo una nueva variable con el listado de productos después de eliminar el seleccionado por el usuario */
-    let finalProducts = products.filter(
-      (product) => product.id != req.params.id
+    /* Encontrando el producto seleccionado por el usuario */
+    let productToDelete = products.find((product) => product.id == req.params.id);
+
+    /* Eliminando el producto cambiando la propiedad deleted a true */
+    productToDelete.deleted = true;
+
+    /* Encontrando el index del producto eliminado para no tener que reescribir todo el JSON, sólo el producto eliminado */
+    let indexProductEdited = products.findIndex(
+      (product) => product.id == req.params.id
     );
 
-    /* Cambiando el listado de productos viejo por el nuevo listado luego de eliminar el producto seleccionado */
-    products = finalProducts;
+    /* Cambiando el valor de la propiedad deleted */
+    products[indexProductEdited] = productToDelete;
 
-    /* Convirtiendo el array a un JSON y reescribiendo el JSON con los productos que quedaron */
+    /* Convirtiendo el array a un JSON y reescribiendo el JSON con el cambio en el producto eliminado */
     fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
 
     /* Redirigiendo a la lista de productos luego de enviar el formulario */
-    res.redirect("/products/");
+    res.redirect("/products");
   },
 };
 
