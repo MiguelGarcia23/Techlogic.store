@@ -76,12 +76,12 @@
               <% if (user) {%>
                 <% if (user.rol === 'admin') {%>
                   <div>
-                    <form action="/admin/edit/<%= product.id %> " method="GET">
+                    <form action="/products/edit/<%= product.id %> " method="GET">
                         <button class="button-cart button-edit">Editar producto</i></button>
                     </form>
                   </div>
                 <% } %>
-                <% } %>
+              <% } %>
             </div>
           </div>
         </div>
