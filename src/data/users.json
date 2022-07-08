@@ -26,15 +26,7 @@
   "terms-conditions": "on",
   "image": "user-1656365365678.jpg"
  },
- {
-  "id": 4,
-  "name": "Manuel Castillo",
-  "email": "manuelcastillo94@gmail.com",
-  "password": "$2a$10$.Zr5XWOT6qS87IXnRnQ.uuVj17lSPrsTIyzJfE5mADrXoBzQAbzpi",
-  "rol": "admin",
-  "terms-conditions": "on",
-  "image": "user-1656367351715.png"
- },
+ 
  {
   "id": 5,
   "name": "Miguel García",
