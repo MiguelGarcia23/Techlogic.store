@@ -60,9 +60,6 @@ const usersRouter = require('./routes/usersRouter');
 /* Importamos la ruta de contacto */
 const contactRouter = require('./routes/contactRouter');
 
-/* Importamos la ruta de admin */
-const adminRouter = require('./routes/adminRouter');
-
 /* Envío a la ruta princiapal */
 app.use ('/', mainRouter);
 
@@ -75,13 +72,12 @@ app.use ('/users', usersRouter);
 /* Envío a la ruta de contacto */
 app.use ('/contact', contactRouter);
 
-/* Envío a la ruta de admin */
-app.use ('/admin', adminRouter);
-
+/* Error 404 */
 app.use((req, res, next) => {
   res.status(404).render('404-page');
   next()
 })
+
 /* Levantando el servidor */
 app.listen(process.env.PORT || 3000, () => {
   console.log("Servidor corriendo en http://localhost:3000/");
