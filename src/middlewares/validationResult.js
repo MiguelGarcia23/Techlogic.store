@@ -3,6 +3,7 @@ const { body } = require('express-validator');
 
 let validations = [ // Validación de registro
 	body('name').notEmpty().withMessage('Tienes que escribir un nombre'), // Validación de nombre 
+	body('lastName').notEmpty().withMessage('Tienes que escribir un apellido'), // Validación de nombre 
 	body('email') // Validación de email 
 		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail() // Validación de email (no vacío) y si hay error, no seguir con las validaciones de la siguiente función
 		.isEmail().withMessage('Debes escribir un formato de correo válido'), // Validación de email válido (isEmail)

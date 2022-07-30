@@ -3,6 +3,9 @@ const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const path = require("path");
 const fs = require("fs");
+const db = require('../database/models');
+const Op = db.Sequelize.Op
+
 
 const fileUsers = path.join(__dirname, "../data/users.json"); // ruta del archivo JSON de usuarios
 
@@ -63,39 +66,45 @@ const usersController = {
   },
 
   processRegister: (req, res) => {
-    let errors = validationResult(req);
 
-    if (!errors.isEmpty()) {
-      res.render("users/register", {
-        errors: errors.mapped(),
-        oldData: req.body,
-        oldImage: req.file ? req.file.filename : false,
+      let errors = validationResult(req);
+
+      if (!errors.isEmpty()) {
+        res.render("users/register", {
+          errors: errors.mapped(),
+          oldData: req.body,
+          oldImage: req.file ? req.file.filename : false,
+        });
+      }
+
+      let promiseUserInDB = db.Users.findOne({ 
+        where: {
+          email: req.body.email
+        }
       });
-    }
-
-    let userInDB = User.getByEmail(req.body.email);
-
-    if (userInDB) {
-      res.render("users/register", {
-        errors: {
-          email: {
-            msg: "Este email ya está registrado",
-          },
-        },
-        oldData: req.body,
+  
+      let promiseNewUser = db.Users.create({
+        ...req.body,
+        password: bcrypt.hashSync(req.body.password, 10),
+        image: req.file.filename,
+        rolId: req.body.rol,
       });
-    }
-
-    let newUser = {
-      ...req.body,
-      password: bcrypt.hashSync(req.body.password, 10),
-      image: req.file.filename,
-      rol: req.body.rol,
-    };
-
-    let userCreated = User.create(newUser);
-
-    res.redirect("/users/login");
+  
+      Promise.all([promiseUserInDB, promiseNewUser])
+        .then(([userInDB, newUser]) => {
+          if(userInDB) {
+            res.render("users/register", {
+              errors: {
+                email: {
+                  msg: "Este email ya está registrado",
+                },
+              },
+              oldData: req.body,
+            });
+          } else {
+            res.redirect('/users/login')
+          }
+      })
   },
 
   profile: (req, res) => {

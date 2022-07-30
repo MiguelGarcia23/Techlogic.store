@@ -117,112 +117,96 @@ const productsController = {
   },
 
   create: (req, res) => {
-    let userLoggedAdmin = req.session.userLogged;
 
-    if (userLoggedAdmin && userLoggedAdmin.rol == "admin") {
-      // si el usuario está logueado y es admin
-      res.render("./admin/createProduct", {
-        // renderizamos la página de creación de productos
-        user: req.session.userLogged,
-      });
-    } else {
-      res.redirect("/users/login"); // si no está logueado, redirigimos al login
-    }
+    let promiseSections = db.Sections.findAll();
+    let promiseCollections = db.Collections.findAll();
+    let promiseBrands = db.Brands.findAll();
+
+    Promise.all([promiseSections, promiseCollections, promiseBrands])
+      .then(([sections, collections, brands]) => {
+        res.render("./admin/createProduct", {
+          sections,
+          collections,
+          brands,
+          user: req.session.userLogged,
+        });
+      })
+      .catch(e => {
+        res.send(e)
+      })
   },
 
   store: (req, res, next) => {
-    /* Leyendo el JSON */
-    const productsFile = fs.readFileSync(productsFilePath, "utf-8");
-
-    /* Estableciendo una variable que será el array de todos los productos los productos */
-    let products;
-
-    /* Preguntar si hay algun producto. Si no lo hay, que cree un array que los almacene, si sí hay productos, que transforme el JSON a un array */
-    if (products == "") {
-      products = [];
-    } else {
-      products = JSON.parse(productsFile);
-    }
-
-    /* Configurando la información del nuevo producto con lo que llenó la persona en el formulario */
-    let newProduct = {
-      id: products[products.length - 1].id + 1,
-      ...req.body,
-      description: req.body.description,
-      price: req.body.price,
-      discount: req.body.discount,
-      state: "stock",
-    };
-
+    
     /* Preguntado si el usuario subió una imagen. Si no lo hizo, aparece un error  */
     if (!req.file) {
       const error = new Error("Por favor seleccione un archivo");
       error.httpStatusCode = 400;
       return next(error);
-    } else {
-      newProduct.image = req.file.filename;
     }
 
-    /* Agregando el nuevo producto al array de productos */
-    products.push(newProduct);
+    db.Products.create({
+      ...req.body,
+      image: req.file.filename,
+      sectionId: req.body.section,
+      collectionId: req.body.collection,
+      brandId: req.body.brand,
+      inCart: false,
+      deleted: false
+    })
+      .then(() => {
+        res.redirect("/products");
+      })
+      .catch(e => {
+        res.send(e)
+      })
 
-    /* Convirtiendo el array a un JSON y reescribiendo el JSON con los nuevos productos */
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-
-    /* Redirigiendo a la lista de productos luego de enviar el formulario */
-    res.redirect("/products/");
   },
 
   edit: (req, res) => {
 
-    let userLoggedAdmin = req.session.userLogged;
+    let promiseProductToEdit = db.Products.findByPk(req.params.id);
+    let promiseSections = db.Sections.findAll();
+    let promiseCollections = db.Collections.findAll();
+    let promiseBrands = db.Brands.findAll();
 
-    if (userLoggedAdmin && userLoggedAdmin.rol == "admin") {// Si el usuario está logueado y es admin
-
-      const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-      let productToEdit = products.find((product) => req.params.id == product.id );
-
-      res.render("admin/editProduct", { // Renderiza la vista de editar producto
-        product: productToEdit,
-        user: req.session.userLogged,
-      });
-    } else {
-      res.redirect("/users/login"); // Si no, redirige a la página de login
-    }
+    Promise.all([promiseProductToEdit, promiseSections, promiseCollections, promiseBrands])
+      .then(([product, sections, collections, brands]) => {
+        res.render("./admin/editProduct", {
+          product,
+          sections,
+          collections,
+          brands,
+          user: req.session.userLogged,
+        });
+      })
+      .catch(e => {
+        res.send(e)
+      })
   },
 
   update: (req, res) => {
-    /* Leyendo el JSON y convirtiéndolo en un array */
-    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
 
-    /* Encontrando el producto seleccionado por el usuario */
-    let productToEdit = products.find((product) => product.id == req.params.id);
-
-    /* Configurando la nueva info del producto luego de los cambios del usuario */
-    productToEdit.id = req.params.id;
-    productToEdit.name = req.body.name;
-    productToEdit.section = req.body.section;
-    productToEdit.collection = req.body.collection;
-    productToEdit.brand = req.body.brand;
-    productToEdit.state = req.body.state;
-    productToEdit.description = req.body.description;
-    productToEdit.price = req.body.price;
-    productToEdit.discount = req.body.discount;
-    productToEdit.image = req.file ? req.file.filename : productToEdit.image;
-
-    /* Encontrando el index del producto editado para no tener que reescribir todo el JSON, sólo el producto editado */
-    let indexProductEdited = products.findIndex(
-      (product) => product.id == req.params.id
-    );
-
-    /* Cambiando la info del producto anterior por la nueva agregada por el usuario */
-    products[indexProductEdited] = productToEdit;
-
-    /* Convirtiendo el array a un JSON y reescribiendo el JSON con los nuevos productos */
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-
-    /* Redirigiendo a la lista de productos luego de enviar el formulario */
-    res.redirect("/products/", { user: req.session.userLogged });
+    db.Products.update({
+      id: req.params.id,
+      ...req.body,
+      image: req.file.filename,
+      sectionId: req.body.section,
+      collectionId: req.body.collection,
+      brandId: req.body.brand,
+      inCart: false,
+      deleted: false
+    },{
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(() => {
+        res.redirect("/products");
+      })
+      .catch(e => {
+        res.send(e)
+      })
   },
 
   delete: (req, res) => {

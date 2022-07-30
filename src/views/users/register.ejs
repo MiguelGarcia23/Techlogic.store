@@ -44,9 +44,20 @@
             type="text"
             name="name"
             id="name"
-            placeholder="Nombre Completo"
+            placeholder="Nombre"
             class="register-login-form-item <%= locals.errors && errors.name ? 'is-invalid' : null %> "
             value="<%= locals.oldData && oldData.name ? oldData.name : null %>"
+          />
+          <% if (locals.errors && errors.lastName) { %>
+            <span class="text-danger"><%= errors.lastName.msg %></span> 
+          <% } %>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Apellido"
+            class="register-login-form-item <%= locals.errors && errors.lastName ? 'is-invalid' : null %> "
+            value="<%= locals.oldData && oldData.lastName ? oldData.lastName : null %>"
           />
           <% if (locals.errors && errors.email) { %>
             <span class="text-danger"><%= errors.email.msg %></span> 
@@ -81,11 +92,11 @@
           <% } %>
           <div class="terms-conditions" id="profile-user">
             <div>
-              <input type="radio" name="rol" id="admin" value="admin"  <%= locals.oldData && oldData.rol == 'admin' ? 'checked' : null %> />
+              <input type="radio" name="rol" id="admin" value="1"  <%= locals.oldData && oldData.rol == 'admin' ? 'checked' : null %> />
               <label for="admin">Administrador</label>
             </div>
             <div>
-              <input type="radio" name="rol" id="buyer" value="comprador" <%= locals.oldData && oldData.rol == 'comprador' ? 'checked' : null %> />
+              <input type="radio" name="rol" id="buyer" value="2" <%= locals.oldData && oldData.rol == 'comprador' ? 'checked' : null %> />
               <label for="buyer">Comprador</label>
             </div>
           </div>
