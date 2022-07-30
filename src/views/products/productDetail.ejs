@@ -51,7 +51,7 @@
 
           <div class="cnt-product-detail">
             <div>
-              <div class="prd-name-general"><p>Sección <%= product.section %></p></div>
+              <div class="prd-name-general"><p>Sección <%= product.sections.sectionName %></p></div>
               <div class="prd-name"><p><%= product.name %></p></div>
               <div class="prd-price"><p>$<%= product.price %></p></div>
 
@@ -123,7 +123,7 @@
                 />
                 <div class="info-product-plus">
                   <p class="title-product-plus"><%= similarProduct.name %></p>
-                  <p class="price-product-plus"><%= similarProduct.price %></p>
+                  <p class="price-product-plus">$<%= similarProduct.price %></p>
                   <p class="description-product-plus"><%= similarProduct.name %></p>
                 </div> 
               </div>

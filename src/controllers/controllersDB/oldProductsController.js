@@ -1,48 +1,33 @@
 const fs = require("fs");
 const path = require("path");
-const db = require('../database/models');
-const Op = db.Sequelize.Op
 
 const productsFilePath = path.join(__dirname, "../data/products.json");
 
 /* Configuramos el controlador */
 const productsController = {
   index: (req, res) => {
-
-    db.Products.findAll()
-      .then(products => {
-        res.render("./products/listProducts", { products, user: req.session.userLogged})
-      })
-      .catch(e => {
-        res.send(e)
-      })
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let productInStock = products.filter((product) => product.state !== "cart" && product.deleted == false) // filtramos los productos que están en stock
+    res.render("./products/listProducts", { products: productInStock, user: req.session.userLogged}); // renderizamos la página con los productos
   },
+
 
   section: (req, res) => {
     res.render("./products/sectionProducts");
   },
 
   productDetail: (req, res) => {
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let productInOfert = products.filter((product) => product.state == "ofert" && product.deleted == false)
+    let detailedProduct = products.find(
+      (product) => product.id == req.params.id
+    ); // buscamos el producto en el array de productos
 
-    let promiseProducts = db.Products.findByPk(req.params.id, {include:[{association: 'sections'}]});
-    let promiseSales = db.Products.findAll({
-      where: {
-        discount: {[Op.gt]: 0}
-      },
-      limit: 3
+    res.render("./products/productDetail", {
+      similarProducts: productInOfert,
+      product: detailedProduct,
+      user: req.session.userLogged,
     });
-
-    Promise.all([promiseProducts, promiseSales])
-      .then(([product, sales]) => {
-        res.render("./products/productDetail", {
-          product: product,
-          similarProducts: sales,
-          user: req.session.userLogged,
-        })
-      })
-      .catch(e => {
-        res.send(e)
-      })
   },
 
   collections: (req, res) => {
@@ -59,61 +44,52 @@ const productsController = {
 
   /* ELIMINAMOS EL PRODUCTO DE LA LISTA DEL CARRITO Y LO DEVUELVE A LA LISTA DE PRUCTOS */
   deleteProductToCart: (req, res) => {
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let productToEdit = products.find((product) => req.params.id == product.id);
 
-    db.Products.update({
-      inCart: false,
-    }, {
-      where: { id: req.params.id }
-    })
-      .then(() => {
-        res.redirect('/products/productCart')
-      })
-      .catch(e => {
-        res.send(e)
-      })
+    let productDeleted = {
+      ... productToEdit,
+      state: "stock",
+    };
+
+    let indexRestored = products.findIndex(
+      (product) => product.id == req.params.id
+    );
+    products[indexRestored] = productDeleted;
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
+    res.redirect("/products/productCart");
   },
 
   /* AÑADIMOS EL PRODUCTO A LA LISTA DEL CARRITO */
   addToCart: (req, res) => {
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let productToAdd = products.find((product) => req.params.id == product.id); // Buscamos el producto en el array de productos
 
-    db.Products.update({
-      inCart: true,
-    }, {
-      where: { id: req.params.id }
-    })
-      .then(() => {
-        res.redirect('/products/productCart')
-      })
-      .catch(e => {
-        res.send(e)
-      })
+    /* CAMBIO EL ESTADO DEL PRODUCTO A 'CART' */
+    let productAdded = {
+     ... productToAdd,
+      state: "cart",
+    };
+    
+    /* REEMPLAZO EL PRODUCTO*/
+    let productInStock = products.findIndex(
+      (product) => product.id == req.params.id
+    );
+    products[productInStock] = productAdded;
+
+    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " ")); // GUARDO EL ARRAY DE PRODUCTOS CON ESTADO 'CART' EN ARCHIVO JSON
+    res.redirect("/products/"); // REDIRECCIONO AL LISTADO DE PRODUCTOS
   },
 
   productCart: (req, res) => {
-
-    let promiseProducts = db.Products.findAll({
-      where: {
-        inCart: true
-      },
-      include:[{association: 'sections'}]
-    });
-    let promiseSales = db.Products.findAll({
-      where: {
-        discount: {[Op.gt]: 0}
-      },
-      limit: 3
-    });
-
-    Promise.all([promiseProducts, promiseSales])
-      .then(([products, sales]) => {
-        res.render("./products/productCart", {
-          products,
-          similarProducts: sales
-        })
-      })
-      .catch(e => {
-        res.send(e)
-      })
+    const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
+    let productToView = products.filter((product) => product.state == "cart"); // FILTRO LOS PRODUCTOS CON ESTADO 'CART'
+    let productInOfert = products.filter((product) => product.state == "ofert" && product.deleted == false)
+    res.render("./products/productCart", {
+      products: productToView,
+      similarProducts: productInOfert,
+    }); // MANDO LOS PRODUCTOS CON ESTADO 'CART' A LA VISTA
   },
 
   create: (req, res) => {

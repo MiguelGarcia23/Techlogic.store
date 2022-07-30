@@ -30,7 +30,7 @@ module.exports = (sequelize, dataTypes) =>{
         collectionId:{
             type: dataTypes.INTEGER
         },
-        'in-cart':{
+        inCart:{
             type: dataTypes.BOOLEAN
         },
         deleted:{
