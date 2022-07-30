@@ -10,18 +10,19 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.STRING
         }
     };
-    let config ={
+    let config = {
         tableName: "brands",
         timestamps: false
     }
 
     const Brands = sequelize.define(alias,cols, config);
 
-Brands.associate = function(models){
-     Brands.hasMany(models.Products,{
-        as: "products",
-        foreignKey: "brandId"
-    })
-}
+    Brands.associate = function(models){
+        Brands.hasMany(models.Products,{
+            as: "products",
+            foreignKey: "brandId"
+        })
+    }
+    
     return Brands;
 }

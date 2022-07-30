@@ -16,7 +16,7 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.INTEGER
         } ,
         discount:{
-            type: dataTypes.INTEGER
+            type: dataTypes.TINYINT
         },
         image:{
             type: dataTypes.STRING
@@ -27,11 +27,14 @@ module.exports = (sequelize, dataTypes) =>{
         brandId:{
             type: dataTypes.INTEGER
         },
-        stateId:{
-            type: dataTypes.INTEGER
-        },
         collectionId:{
             type: dataTypes.INTEGER
+        },
+        'in-cart':{
+            type: dataTypes.BOOLEAN
+        },
+        deleted:{
+            type: dataTypes.BOOLEAN
         }
     };
     let config ={
@@ -39,7 +42,7 @@ module.exports = (sequelize, dataTypes) =>{
         timestamps: false
     }
 
-    const Products = sequelize.define(alias,cols, config);
+    const Products = sequelize.define(alias,cols,config);
 
     Products.associate= function(models){
         Products.belongsTo(models.Brands,{
@@ -57,12 +60,6 @@ module.exports = (sequelize, dataTypes) =>{
         Products.belongsTo(models.Sections,{
             as: "sections",
             foreignKey: "sectionId",
-        })
-    }
-    Products.associate= function(models){
-        Products.belongsTo(models.States,{
-            as: "states",
-            foreignKey: "stateId",
         })
     }
 

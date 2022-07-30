@@ -25,18 +25,19 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.INTEGER
         }
     };
-    let config ={
+    let config = {
         tableName: "users",
         timestamps: false
     }
 
     const Users = sequelize.define(alias,cols, config);
 
-Users.associate= function(models){
-    Users.belongsTo(models.Rols,{
-        as: "rols",
-        foreignKey: "rolId",
-    })
-}
+    Users.associate= function(models){
+        Users.belongsTo(models.Rols,{
+            as: "rols",
+            foreignKey: "rolId",
+        })
+    }
+
     return Users;
 }

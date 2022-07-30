@@ -10,18 +10,19 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.STRING
         }
     };
-    let config ={
+    let config = {
         tableName: "collections",
         timestamps: false
     }
 
     const Collections = sequelize.define(alias,cols, config);
 
-Collections.associate = function(models){
-     Collections.hasMany(models.Products,{
-        as: "products",
-        foreignKey: "collectionId"
-    })
-}
+    Collections.associate = function(models){
+        Collections.hasMany(models.Products,{
+            as: "products",
+            foreignKey: "collectionId"
+        })
+    }
+    
     return Collections;
 }

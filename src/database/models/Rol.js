@@ -10,18 +10,19 @@ module.exports = (sequelize, dataTypes) =>{
             type: dataTypes.STRING
         }
     };
-    let config ={
+    let config = {
         tableName: "rols",
         timestamps: false
     }
 
     const Rols = sequelize.define(alias,cols, config);
 
-Rols.associate = function(models){
-     Rols.hasMany(models.Users,{
-        as: "users",
-        foreignKey: "rolId"
-    })
-}
+    Rols.associate = function(models){
+        Rols.hasMany(models.Users,{
+            as: "users",
+            foreignKey: "rolId"
+        })
+    }
+    
     return Rols;
 }
