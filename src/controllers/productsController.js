@@ -23,7 +23,14 @@ const productsController = {
   },
 
   section: (req, res) => {
-    res.render("./products/sectionProducts");
+
+    db.Sections.findAll()
+      .then(sections => {
+        res.render("./products/sections", {sections});
+      })
+      .catch(e => {
+        res.send(e)
+      })
   },
 
   productDetail: (req, res) => {
@@ -56,7 +63,14 @@ const productsController = {
   },
 
   collections: (req, res) => {
-    res.render("./products/collections");
+
+    db.Collections.findAll()
+      .then(collections => {
+        res.render("./products/collections", {collections});
+      })
+      .catch(e => {
+        res.send(e)
+      })
   },
 
   bestSellers: (req, res) => {

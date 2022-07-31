@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEAD -->
+    <%- include('../partials/head', {title: 'Sección Producto', stylesheet: 'products/sections.css'}) %>
+    
+    <body>
+
+        <!-- HEADER -->
+        <%- include('../partials/header') %>
+
+        <!-- MAIN -->
+        <main class="main-sections">
+            <h2 class="main-title-sections">Secciones</h2>
+            <ul class="ul-sections">
+                <% for( let section of sections ) { %>
+                    <li class="li-sections"><%= section.sectionName %></li>
+                <% } %>
+            </ul>
+        </main>
+
+        <!-- FOOTER -->
+        <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

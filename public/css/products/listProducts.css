@@ -323,6 +323,16 @@
 /* MEDIA QUERIES */
 
 /* MEDIA QUERIES TELÉFONOS GRANDES Y TABLETS PEQUEÑAS */
+@media (min-width: 580PX) {
+    
+    /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
+    .product-article{
+        width: 46%;
+    }
+    
+}
+
+/* MEDIA QUERIES TABLETS */
 @media (min-width: 768px) {
 
     /* EL TÍTULO DE LA VISTA */
@@ -333,16 +343,6 @@
     /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
     .product-article{
         width: 30%;
-    }
-   
-}
-
-/* MEDIA QUERIES TABLETS */
-@media (min-width: 580PX) {
-
-    /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
-    .product-article{
-        width: 46%;
     }
    
 }

@@ -9,7 +9,14 @@
         <%- include('../partials/header') %>
 
         <!-- MAIN -->
-        <main></main>
+        <main class="main-collections">
+            <h2 class="main-title-collections">Colecciones</h2>
+            <ul class="ul-collections">
+                <% for( let collection of collections ) { %>
+                    <li class="li-collections"><%= collection.collectionName %></li>
+                <% } %>
+            </ul>
+        </main>
 
         <!-- FOOTER -->
         <%- include('../partials/footer') %>

@@ -2,16 +2,16 @@
 @import url(../partials/header.css);
 @import url(../partials/footer.css);
 
-/* MAIN VISTA COLECCIONES */
-.main-collections {
+/* MAIN VISTA SECCIONES */
+.main-sections {
     margin-top: 7.5rem;
     margin-bottom: 1.25rem;
     padding: 0 2rem;
     background: linear-gradient(to top,#000000, #434343, #000000);
 }
 
-/* TÍTULO DE VISTA COLECCIONES */
-.main-title-collections {
+/* TÍTULO DE VISTA SECCIONES */
+.main-title-sections {
     min-width: 24rem;
     width: 90%;
     padding-bottom: 1rem;
@@ -24,13 +24,13 @@
     border-bottom: solid 2px var(--blanco);
 }
 
-/* UL DE COLECCIONES */
-.ul-collections {
+/* UL DE SECCIONES */
+.ul-sections {
     margin-bottom: 2rem;
 }
 
-/* LI DE COLECCIONES */
-.li-collections {
+/* LI DE SECCIONES */
+.li-sections {
     color: var(--blanco);
     font-size: 1.125rem;
     margin-bottom: 0.5rem;
@@ -41,8 +41,8 @@
 /* MEDIA QUERIES TABLETS */
 @media (min-width: 768px) {
 
-    /* UL DE COLECCIONES */
-    .ul-collections {
+    /* UL DE SECCIONES */
+    .ul-sections {
         margin-left: 1rem;
     }
    
@@ -51,8 +51,8 @@
 /* MEDIA QUERIES DESKTOP */
 @media (min-width: 1050px) {
 
-    /* UL DE COLECCIONES */
-    .ul-collections {
+    /* UL DE SECCIONES */
+    .ul-sections {
         margin-left: 2rem;
     }
 }

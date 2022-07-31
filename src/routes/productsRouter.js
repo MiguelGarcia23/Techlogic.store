@@ -18,13 +18,13 @@ const adminMiddleware = require('../middlewares/adminMiddleware')
 router.get ('/', productsController.index);
 
 /* Configuramos el envío a una sección de productos */
-router.get ('/sectionProducts/:nameSection', productsController.section);
+router.get ('/sections', productsController.section);
 
 /* Configuramos el envío al detalle de un producto */
 router.get ('/productDetail/:id', productsController.productDetail);
 
 /* Configuramos el envío a las colecciones */
-router.get ('/collections/:nameCollection?', productsController.collections);
+router.get ('/collections', productsController.collections);
 
 /* Configuramos el envío a los best sellers */
 router.get ('/bestSellers', productsController.bestSellers);
