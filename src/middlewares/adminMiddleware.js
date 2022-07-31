@@ -2,10 +2,10 @@ function adminMiddleware(req, res, next) {
 
     let userLoggedAdmin = req.session.userLogged;
 
-	if(userLoggedAdmin.rol == 'admin') {
+	if(userLoggedAdmin.rolId == 1) {
 		next()	
 
-}	else {
+	} else {
 		res.redirect('/users/login')
 	}
 }

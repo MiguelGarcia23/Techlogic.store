@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEAD -->
+    <%- include('../partials/head', {title: 'Editar Usuario: ' + user.email, stylesheet: 'users/editUser.css'}) %>
+    
+    <body>
+
+        <!-- HEADER -->
+        <%- include('../partials/header') %>
+
+        <!-- MAIN -->
+        <main class="editUser-main">
+            <!-- ---------------------SECCION EDICIÓN DE USUARIO--------------------- -->
+            <section class="section-editUser">
+                <!-- ---------------------FORM EDICIÓN DE USUARIO--------------------- -->
+                <form action="/users/userProfile/edit?_method=PUT" method="POST" enctype="multipart/form-data" class="editUser-form">
+                    
+                    <h3 class="editUser-title">EDICIÓN DE USUARIO</h3>
+
+                    <!-- IMAGEN DE PERFIL -->
+                    <div class="upload-image-user">
+                        <div class="user-profile-icon">
+                            <img src="/img/users/<%= locals.oldImage ? oldImage : 'usuario-predeterminado.png' %>" class='profileImage' id="profileImage">
+                        </div>
+                        <label for="image"><i class="fas fa-camera upload-icon"></i></label>
+                        <input type="file" name="image" id="image" class="input-image"value="<%= locals.oldImage ? oldImage : null %>"accept="image/*"/>
+                    </div>
+
+                    <!-- NOMBRE -->
+                    <input type="text" name="name" id="name" placeholder="Nombre" class="editUser-form-item"/>
+                    
+                    <!-- APELLIDO -->
+                    <input type="text" name="lastName" id="lastName" placeholder="Apellido" class="editUser-form-item"/>
+                    
+                    <!-- EMAIL -->
+                    <input type="email" name="email" id="email" placeholder="E-mail" class="editUser-form-item"/>
+                    
+                    <!-- CONTRASEÑA -->
+                    <input type="password" name="password" id="password" placeholder="Contraseña" class="editUser-form-item"/>
+                    
+                    <!-- ROL DEL USUARIO -->
+                    <p class="editUser-rol">Rol: Admin</p>
+                    
+                    <!-- ---------------------BOTON PARA ENVIAR--------------------- -->
+                    <div class="button-cart-div button-editUser">
+                        <button type="submit" class="button-cart">Editar</button>
+                    </div>
+
+                </form>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <%- include('../partials/footer') %>
+
+    </body>
+
+</html>

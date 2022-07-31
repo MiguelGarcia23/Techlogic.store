@@ -24,7 +24,7 @@
         </div>
         <!-- Si existe un usuario en sesión y si es admin muestra el boton CREAR -->
         <% if (user) { %> 
-            <% if ((user.rol == "admin")) { %>
+            <% if ((user.rolId == 1)) { %>
         <div>
           <form action="/products/create" method="GET">
             <button class="button-cart button-create">

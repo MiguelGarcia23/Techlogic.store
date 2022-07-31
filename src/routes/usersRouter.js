@@ -26,8 +26,11 @@ router.post ('/register',uploadUserImage.single('image'), validationResultUser, 
 /* Configuramos el envío al perfil del usuario */
 router.get ('/userProfile', guestMiddleware, usersController.profile);
 
-/* Configuramos el envío al historial de compras del usuario */
-router.get ('/profile/purchases', usersController.purchases);
+/* Configuramos el envío a la edición del usuario */
+router.get ('/userProfile/edit/', usersController.editUser);
+
+/* Configuramos el procesamiento del formulario para editar un usuario */
+router.put ('/userProfile/edit/', usersController.processEditUser)
 
 /* Configuramos el logout del usuario */
 router.get ('/logout',guestMiddleware, usersController.logout);

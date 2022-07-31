@@ -16,22 +16,21 @@ const usersController = {
 
   processLogin: (req, res) => {
 
-    let userError = db.Users.findOne({
+    db.Users.findOne({
       where: {
         email: req.body.email
       },
-    });
-
-    Promise.all([userError])
-      .then(([user]) => {
+    })
+      .then(user => {
         if (user) {
           if (bcrypt.compareSync(req.body.password, user.password)) {
             delete user.password;
             req.session.userLogged = user;
-            res.redirect("/");
-          } else if (req.body.remember_user) {
-            res.cookie("email", req.body.email, { maxAge: (1000 * 60) * 60 });
-        } else {
+            if (req.body.remember_user) {
+              res.cookie("email", req.body.email, { maxAge: (1000 * 60) * 60 });
+            }
+            res.redirect("/users/userProfile");
+          } else {
             res.render("./users/login", {
               errors: {
                 email: {
@@ -49,55 +48,11 @@ const usersController = {
             },
           });
         }
-       })
+      })
     .catch((e) => {
         res.send(e);
       });
   },
-
-  /* Se quiere el parseo del archivo de usuarios directamente 
-    en el controller, dado que con el getByEmail de models 
-    modificaba la variable en cuestión y no se podía volver a iniciar
-    sesión una vez cerrada */
-
-  /* const usersFile =  JSON.parse(fs.readFileSync(fileUsers, "utf-8"))
-    let userToLogin = usersFile.find((user) => user.email == req.body.email); */
-
-  /* El resto del código sigue sin modificaciones */
-      
-    /* if (userToLogin) {
-      
-      let passwordIsOk = bcrypt.compareSync(req.body.password, userToLogin.password);
-      if (passwordIsOk) {
-
-        delete userToLogin.password;
-        req.session.userLogged = userToLogin;
-        console.log(req.session.userLogged);
-
-        if (req.body.remember_user) {
-            res.cookie("email", req.body.email, { maxAge: (1000 * 60) * 60 });
-        }
-
-        res.redirect("./userProfile");
-      } else {
-        res.render("./users/login", {
-          errors: {
-            email: {
-              msg: "El usuario o la contraseña son incorrectos",
-            },
-          },
-        });
-      }
-    } else {
-      res.render("./users/login", {
-        errors: {
-          email: {
-            msg: "El usuario no se encuentra registrado",
-          },
-        },
-      });
-    }
-  }, */
 
   register: (req, res) => {
     res.render("./users/register");
@@ -149,9 +104,37 @@ const usersController = {
     res.render("./users/userProfile", { user: req.session.userLogged });
   },
 
-  purchases: (req, res) => {
-    res.render("./users/userPurchases");
+  editUser: (req, res) => {
+    res.render("./users/editUser", {user: req.session.userLogged});
+    /* res.send(req.session.userLogged) */
   },
+
+  processEditUser: (req, res) => {
+
+    let user = req.session.userLogged;
+
+    db.Users.update({
+      id: user.id,
+      name: req.body.name,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      password: req.body.password,
+      image: req.file ? req.file.filename : user.image,
+      rolId: user.rolId,
+    },{
+      where: {
+        email: user.email
+      }
+    })
+      .then(() => {
+        res.redirect('/users/userProfile')
+        /* res.send(userEdited) */
+      })
+      .catch(e => {
+        res.send(e)
+      })
+  },
+
   logout: (req, res) => {
     req.session.destroy();
     res.clearCookie("email");

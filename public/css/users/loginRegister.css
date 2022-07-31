@@ -3,7 +3,7 @@
 @import url(../partials/footer.css);
 @import url(../products/productCart.css);
 
-/* ---------------------FONDO DE GIF PARA EL BODY--------------------- */
+/* ---------------------FONDO PARA EL BODY--------------------- */
 
 .body-register-login{
   background: linear-gradient(to top,#000000, #434343, #000000);

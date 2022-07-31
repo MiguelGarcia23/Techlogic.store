@@ -1,0 +1,136 @@
+@import url(../styles.css);
+@import url(../partials/header.css);
+@import url(../partials/footer.css);
+
+/* ---------------------FONDO PARA EL BODY--------------------- */
+
+.editUser-main {
+  background: linear-gradient(to top, #000000, #434343, #000000);
+}
+
+/* ---------------------SECTION DE EDICIÓN--------------------- */
+.section-editUser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
+  margin: auto;
+  margin-bottom: 25vw;
+  margin-top: 30vw;
+  background: linear-gradient(to top, var(--negro), var(--azul-marino));
+  border-radius: 10px;
+  flex-wrap: wrap;
+  z-index: 1;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+/* ---------------------TEXTO "REGISTRARSE"--------------------- */
+.editUser-title {
+  color: var(--blanco);
+  text-align: center;
+  margin: 30px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+/* ---------------------FORMULARIO DE REGISTRO--------------------- */
+.editUser-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------------------IMAGEN DE PERFIL--------------------- */
+.user-profile-picture {
+  margin-bottom: 15px;
+  width: 25vw;
+}
+
+.user-profile-icon {
+  font-size: 180px;
+  color: var(--blanco);
+}
+
+.profileImage {
+  width: 200px;
+}
+
+/* ---------------------CARGA DE IMAGEN DE PERFIL--------------------- */
+.upload-image-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  border: solid 1px var(--blanco);
+  border-radius: 10px;
+}
+.input-image {
+  display: none;
+}
+.upload-icon {
+  font-size: 30px;
+  color: var(--blanco);
+  margin-left: 200px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.upload-icon:hover {
+  color: var(--celeste);
+}
+
+/* ---------------------INPUTS DEL FORMULARIO--------------------- */
+.editUser-form-item {
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+/* ---------- ROL DEL USUARIO----------------------- */
+.editUser-rol {
+    color: var(--blanco);
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+/* ---------------------BOTON DE "EDITAR" --------------------- */
+
+.button-editUser {
+  margin-bottom: 30px;
+}
+
+.button-editUser button {
+    margin-top: 1rem;
+}
+
+/* ---------------------MEDIA QUERIES TABLET--------------------- */
+@media (min-width: 768px) {
+  .user-profile-picture {
+    width: 23vw;
+  }
+  .section-editUser {
+    width: 60vw;
+    margin-bottom: 20vw;
+  }
+  .section-editUser {
+    top: 15vw;
+    width: 45vw;
+  }
+}
+/* ---------------------MEDIA QUERIES DESKTOP--------------------- */
+@media (min-width: 1050px) {
+  .user-profile-picture {
+    width: 19vw;
+  }
+  .section-editUser {
+    top: 15vw;
+    width: 35vw;
+    margin-bottom: 10vw;
+    margin-top: 10vw;
+  }
+}
+/* ---------------------MEDIA QUERIES DESKTOP++--------------------- */
+@media (min-width: 1200px) {
+  .user-profile-picture {
+    width: 13vw;
+  }
+}

@@ -59,14 +59,24 @@
     margin-bottom: 1.75rem;
 }
 
-.form-edit-button-profile {
+.buttons-profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-button-profile {
     width: 100%;
     margin: 0 auto;
 }
 
-.edit-button-profile {
+.button-profile {
     margin-top: 0;
     margin-bottom: 2.5rem;
+}
+
+.edit-button-profile {
+    margin-bottom: 1rem;
 }
 
 .purchases-profile {
@@ -135,6 +145,11 @@
 
     .info-profile-div {
         width: 40%;
+    }
+
+    .form-button-profile {
+        width: 48%;
+        margin: 0 auto;
     }
 
     .purchases-profile {

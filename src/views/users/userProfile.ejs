@@ -17,16 +17,21 @@
                 <div class="info-profile-div">
 
                     <img src="/img/users/<%= user.image %> " alt="Foto de perfil del usuario" class="img-profile">
-                    <h3 class="username-profile"><%= user.name %> </h3>
-                    <p class="email-profile"><%= user.email %> </p>
+                    <h3 class="username-profile"><%= user.name %> <%= user.lastName %> </h3>
+                    <p class="email-profile"><%= user.email %></p>
                     <% if (user.rolId == '1') { %>
                     <p class="rol-profile">Administrador</p>
                     <% } else { %>
                     <p class="rol-profile">Comprador</p>
                     <% } %>
-                    <form action="/users/logout" method="GET" class="form-edit-button-profile">
-                        <button class="edit-button-profile button-cart">Cerrar Sesión</button>
-                    </form>
+                    <div class="buttons-profile">
+                        <form action="/users/userProfile/edit" method="GET" class="form-button-profile">
+                            <button class="button-profile button-cart edit-button-profile">Editar Usuario</button>
+                        </form>
+                        <form action="/users/logout" method="GET" class="form-button-profile">
+                            <button class="button-profile button-cart">Cerrar Sesión</button>
+                        </form>
+                    </div>
 
                 </div>
 
