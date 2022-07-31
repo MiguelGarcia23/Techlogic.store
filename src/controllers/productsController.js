@@ -9,9 +9,13 @@ const productsFilePath = path.join(__dirname, "../data/products.json");
 const productsController = {
   index: (req, res) => {
 
-    db.Products.findAll()
+    db.Products.findAll({
+      where: {
+        deleted: false
+      }
+    })
       .then(products => {
-        res.render("./products/listProducts", { products, user: req.session.userLogged})
+        res.render("./products/listProducts", {products, user: req.session.userLogged})
       })
       .catch(e => {
         res.send(e)
@@ -24,10 +28,16 @@ const productsController = {
 
   productDetail: (req, res) => {
 
-    let promiseProducts = db.Products.findByPk(req.params.id, {include:[{association: 'sections'}]});
+    let promiseProducts = db.Products.findByPk(req.params.id, {
+      where: {
+        deleted: false
+      },
+      include:[{association: 'sections'}]
+    });
     let promiseSales = db.Products.findAll({
       where: {
-        discount: {[Op.gt]: 0}
+        discount: {[Op.gt]: 0},
+        deleted: false
       },
       limit: 3
     });
@@ -93,13 +103,15 @@ const productsController = {
 
     let promiseProducts = db.Products.findAll({
       where: {
-        inCart: true
+        inCart: true,
+        deleted: false
       },
       include:[{association: 'sections'}]
     });
     let promiseSales = db.Products.findAll({
       where: {
-        discount: {[Op.gt]: 0}
+        discount: {[Op.gt]: 0},
+        deleted: false
       },
       limit: 3
     });
@@ -165,7 +177,11 @@ const productsController = {
 
   edit: (req, res) => {
 
-    let promiseProductToEdit = db.Products.findByPk(req.params.id);
+    let promiseProductToEdit = db.Products.findByPk(req.params.id, {
+      where: {
+        deleted: false
+      }
+    });
     let promiseSections = db.Sections.findAll();
     let promiseCollections = db.Collections.findAll();
     let promiseBrands = db.Brands.findAll();
@@ -187,51 +203,52 @@ const productsController = {
 
   update: (req, res) => {
 
+    db.Products.findOne({
+      where: {
+        id: req.params.id,
+        deleted: false
+      }
+    })
+      .then(product => {
+        db.Products.update({
+          id: req.params.id,
+          ...req.body,
+          image: req.file? req.file.filename : product.image,
+          sectionId: req.body.section,
+          collectionId: req.body.collection,
+          brandId: req.body.brand,
+          inCart: false,
+          deleted: false
+        },{
+          where: {
+            id: req.params.id
+          }
+        })
+      })
+        .then(() => {
+          res.redirect("/products");
+        })
+        .catch(e => {
+          res.send(e)
+        })
+  },
+
+  delete: (req, res) => {
+
     db.Products.update({
-      id: req.params.id,
-      ...req.body,
-      image: req.file.filename,
-      sectionId: req.body.section,
-      collectionId: req.body.collection,
-      brandId: req.body.brand,
-      inCart: false,
-      deleted: false
-    },{
+      deleted: true
+    },
+    {
       where: {
         id: req.params.id
       }
     })
       .then(() => {
-        res.redirect("/products");
+        res.redirect('/products')
       })
       .catch(e => {
         res.send(e)
       })
-  },
-
-  delete: (req, res) => {
-    /* Leyendo el JSON y convirtiéndolo en un array */
-    let products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-
-    /* Encontrando el producto seleccionado por el usuario */
-    let productToDelete = products.find((product) => product.id == req.params.id);
-
-    /* Eliminando el producto cambiando la propiedad deleted a true */
-    productToDelete.deleted = true;
-
-    /* Encontrando el index del producto eliminado para no tener que reescribir todo el JSON, sólo el producto eliminado */
-    let indexProductEdited = products.findIndex(
-      (product) => product.id == req.params.id
-    );
-
-    /* Cambiando el valor de la propiedad deleted */
-    products[indexProductEdited] = productToDelete;
-
-    /* Convirtiendo el array a un JSON y reescribiendo el JSON con el cambio en el producto eliminado */
-    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-
-    /* Redirigiendo a la lista de productos luego de enviar el formulario */
-    res.redirect("/products");
   }
 };
 

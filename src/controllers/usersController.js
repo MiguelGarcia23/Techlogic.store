@@ -18,10 +18,9 @@ const usersController = {
 
     let userError = db.Users.findOne({
       where: {
-        email: req.body.email,
+        email: req.body.email
       },
     });
-
 
     Promise.all([userError])
       .then(([user]) => {
@@ -65,8 +64,8 @@ const usersController = {
     let userToLogin = usersFile.find((user) => user.email == req.body.email); */
 
   /* El resto del código sigue sin modificaciones */
-  /*     
-    if (userToLogin) {
+      
+    /* if (userToLogin) {
       
       let passwordIsOk = bcrypt.compareSync(req.body.password, userToLogin.password);
       if (passwordIsOk) {
