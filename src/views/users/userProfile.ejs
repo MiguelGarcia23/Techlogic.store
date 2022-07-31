@@ -19,10 +19,10 @@
                     <img src="/img/users/<%= user.image %> " alt="Foto de perfil del usuario" class="img-profile">
                     <h3 class="username-profile"><%= user.name %> </h3>
                     <p class="email-profile"><%= user.email %> </p>
-                    <% if (user.rol == 'admin') { %>
+                    <% if (user.rolId == '1') { %>
                     <p class="rol-profile">Administrador</p>
                     <% } else { %>
-                    <p class="rol-profile">Usuario Estandar</p>
+                    <p class="rol-profile">Comprador</p>
                     <% } %>
                     <form action="/users/logout" method="GET" class="form-edit-button-profile">
                         <button class="edit-button-profile button-cart">Cerrar Sesión</button>
