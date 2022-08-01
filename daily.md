@@ -57,3 +57,36 @@
   - Se completó el procesamiento del login
   - Agregamos usuarios administradores
   - Tambien se agregó una funcionalidad para que cuando no se es usuario administrador, no se puede ni editar ni agregar productos, esto quedó habilitado solo para admins.
+
+## Reunión del 07/17
+
+- Hoy nos reunimos para establecer los diagramas que usaremos para la base de datos.
+
+  - Se crearon los diagramas con las tablas: products, sections, collections, brands, users, rols.
+
+## Reunión del 07/23
+
+- Hoy nos reunimos para configurar los archivos .sql de la base de datos.
+
+  - Se creó el archivo structure.sql que permite crear la DB.
+  - Se configuró el archivo structure.sql para que creara las tablas y foreign keys.
+  - Se creó el archivo data.sql que permite poblar la DB.
+
+## Reunión del 07/30
+
+- Hoy nos reunimos para crear los CRUD de la página
+
+  - Se terminaron de configurar los modelos y la implementación de SQL.
+  - Se comenzó a crear el CRUD de productos que funcione con la DB.
+  - Se comenzó a crear el CRUD de usuarios que funcione con la DB.
+
+## Reunión del 07/31
+
+- Hoy nos reunimos para cerrar los detalles finales del Sprint 6.
+
+  - Se terminó de configurar el CRUD de productos.
+  - Se terminó de configurar el CRUD de usuarios.
+  - Se creó el CRUD para las tablas secundarias: Sections y Collections.
+  - Se implementó la funcionalidad de búsqueda en el CRUD.
+  - Se creó la vista de edición de usuarios.
+  - Se hicieron los cambios correspondientes a las correcciones del Sprint 5.
