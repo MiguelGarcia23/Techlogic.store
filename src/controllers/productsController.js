@@ -1,9 +1,5 @@
-const fs = require("fs");
-const path = require("path");
 const db = require('../database/models');
 const Op = db.Sequelize.Op
-
-const productsFilePath = path.join(__dirname, "../data/products.json");
 
 /* Configuramos el controlador */
 const productsController = {
@@ -74,11 +70,13 @@ const productsController = {
   },
 
   bestSellers: (req, res) => {
-    res.render("./products/bestSellers");
+    /* res.render("./products/bestSellers"); */
+    res.render('./404-page')
   },
 
   sales: (req, res) => {
-    res.render("./products/sales");
+    /* res.render("./products/sales"); */
+    res.render('./404-page')
   },
 
   /* ELIMINAMOS EL PRODUCTO DE LA LISTA DEL CARRITO Y LO DEVUELVE A LA LISTA DE PRUCTOS */

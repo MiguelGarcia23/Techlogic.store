@@ -20,23 +20,25 @@
                     <!-- IMAGEN DE PERFIL -->
                     <div class="upload-image-user">
                         <div class="user-profile-icon">
-                            <img src="/img/users/<%= locals.oldImage ? oldImage : 'usuario-predeterminado.png' %>" class='profileImage' id="profileImage">
+                            <img src="/img/users/<%= user.image%>" class='profileImage' id="profileImage">
                         </div>
                         <label for="image"><i class="fas fa-camera upload-icon"></i></label>
-                        <input type="file" name="image" id="image" class="input-image"value="<%= locals.oldImage ? oldImage : null %>"accept="image/*"/>
+                        <input type="file" name="image" id="image" class="input-image" value="<%= user.image ? user.image : null %>"accept="image/*"/>
                     </div>
 
                     <!-- NOMBRE -->
-                    <input type="text" name="name" id="name" placeholder="Nombre" class="editUser-form-item"/>
+                    <input type="text" name="name" id="name" placeholder="Nombre" class="editUser-form-item" value="<%= user.name%>"/>
                     
                     <!-- APELLIDO -->
-                    <input type="text" name="lastName" id="lastName" placeholder="Apellido" class="editUser-form-item"/>
+                    <input type="text" name="lastName" id="lastName" placeholder="Apellido" class="editUser-form-item" value="<%= user.lastName%>"/>
                     
                     <!-- EMAIL -->
-                    <input type="email" name="email" id="email" placeholder="E-mail" class="editUser-form-item"/>
                     
                     <!-- CONTRASEÑA -->
                     <input type="password" name="password" id="password" placeholder="Contraseña" class="editUser-form-item"/>
+
+                     <!-- EMAIL DEL USUARIO -->
+                     <p class="editUser-rol">Email: <%= user.email%></p>
                     
                     <!-- ROL DEL USUARIO -->
                     <p class="editUser-rol">Rol: Admin</p>

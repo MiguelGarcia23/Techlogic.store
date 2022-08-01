@@ -254,7 +254,7 @@
 .image-profile-menu img {
     width: auto;
     height: 100%;
-    margin-left: -35%;
+    /* margin-left: -35%; */
 }
 
 /* INFORMACIÓN DEL MENÚ DESPLEGABLE DEL ÍCONO DE USUARIO */
@@ -328,7 +328,7 @@
     position: absolute;
     width: 100vw;
     background-color: var(--blanco);
-    opacity: 0.8;
+    opacity: 1;
     top: 100%;
     left: 0;
     border-top: 3px solid var(--celeste);

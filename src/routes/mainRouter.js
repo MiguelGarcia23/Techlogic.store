@@ -10,5 +10,8 @@ const mainController = require ('../controllers/mainController');
 /* Configuramos el envío a la home */
 router.get ('/', mainController.index);
 
+/* Configuramos la búsqueda */
+router.post ('/search', mainController.search)
+
 /* Exportamos la variable router */
 module.exports = router;

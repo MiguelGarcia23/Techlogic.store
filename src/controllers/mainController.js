@@ -1,18 +1,37 @@
-const fs = require("fs");
-const path = require("path");
-
-const productsFilePath = path.join(__dirname, "../data/products.json");
-const collectionsFilePath = path.join(__dirname, "../data/collections.json")
+const db = require("../database/models");
+const Op = db.Sequelize.Op;
 
 /* Configuramos el controlador */
 const mainController = {
 
     index: (req, res) => {
-      const products = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-      const collections = JSON.parse(fs.readFileSync(collectionsFilePath, "utf-8"))
 
-      let productInOfert = products.filter((product) => product.state == "bestSeller" && product.deleted == false)
-      res.render('./main/index', {bestSellers: productInOfert, collections: collections})
+      let promiseProducts = db.Products.findAll({
+        limit: 5
+      })
+      let promiseCollections = db.Collections.findAll();
+
+      Promise.all([promiseProducts, promiseCollections])
+        .then(([products, collections]) => {
+          res.render('./main/index', {bestSellers: products, collections})
+        })
+        .catch(e => {
+          res.send(e)
+        })
+    },
+    search: (req,res)=>{
+      let productoABuscar = req.body.search
+      db.Products.findAll({
+        where: {
+          name: {[Op.like]: '%' + productoABuscar + '%'}
+        }
+      })
+        .then(products => {
+          res.render('./main/search', {products, palabraBuscada: productoABuscar })
+        })
+        .catch(e => {
+          res.send(e)
+        })
     }
 }
 

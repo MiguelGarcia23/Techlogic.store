@@ -206,6 +206,7 @@
     align-items: center;
     overflow: hidden;
     margin-bottom: 2.5rem;
+    
 }
 
 /* CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
@@ -264,42 +265,42 @@
 }
 
 /* COLECCIÓN MODERN DE LA SECCIÓN COLECCIONES */
-.modern-collection {
+.Modern-collection {
     background: linear-gradient(to bottom right, #BEBEBE, rgb(101, 100, 100));
     color: #223544;
 }
 
-.modern-collection a {
+.Modern-collection a {
     color: rgb(244, 244, 6);
 }
 
 /* COLECCIÓN CLASSIC DE LA SECCIÓN COLECCIONES */
-.classic-collection {
+.Classic-collection {
     background: linear-gradient(to bottom right, #322214, #4C443C);
     color: #F5F1ED;
 }
 
-.classic-collection a {
+.Classic-collection a {
     color: #93A3B1;
 }
 
 /* COLECCIÓN COLORFUL DE LA SECCIÓN COLECCIONES */
-.colorful-collection {
+.Colorful-collection {
     background: linear-gradient(to bottom right, var(--celeste), #ea37a3);
     color: var(--blanco);
 }
 
-.colorful-collection a {
+.Colorful-collection a {
     color: #ADFF2F;
 }
 
 /* COLECCIÓN BLACK & WHITE DE LA SECCIÓN COLECCIONES */
-.black-white-collection {
+.blackAndWhite-collection {
     background: linear-gradient(to bottom right, var(--blanco), var(--negro));
     color: var(--negro);
 }
 
-.black-white-collection a {
+.blackAndWhite-collection a {
     color: var(--negro);
 }
 

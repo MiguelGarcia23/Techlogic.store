@@ -83,27 +83,12 @@
 
           />
           
-          <!-- ---------------------PERFIL DE USUARIO--------------------- -->
-          <h2 class="register-login-text user-profile-text">
-            Perfil de usuario
-          </h2>
-          <% if (locals.errors && errors.rol) { %>
-            <span class="text-danger"><%= errors.rol.msg %></span> 
-          <% } %>
-          <div class="terms-conditions" id="profile-user">
-            <div>
-              <input type="radio" name="rol" id="admin" value="1"  <%= locals.oldData && oldData.rol == 'admin' ? 'checked' : null %> />
-              <label for="admin"> Vendedor</label>
-            </div>
-            <div>
-              <input type="radio" name="rol" id="buyer" value="2" <%= locals.oldData && oldData.rol == 'comprador' ? 'checked' : null %> />
-              <label for="buyer"> Comprador</label>
-            </div>
-          </div>
-          
           <!-- ---------------------TERMINOS Y CONDICIONES--------------------- -->
-          <div class="terms-conditions">
-            <input type="checkbox" name="terms-conditions" id="terms-conditions" />
+          <% if (locals.errors && errors.termsConditions) { %>
+            <span class="text-danger"><%= errors.termsConditions.msg %></span> 
+          <% } %>
+          <div class="terms-conditions" >
+            <input type="checkbox" name="termsConditions" id="terms-conditions" />
             <label for="terms-conditions"
               >Aceptar <a href="#">Terminos y condiciones</a></label
             >

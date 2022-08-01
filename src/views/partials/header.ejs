@@ -101,7 +101,7 @@
 
         <ul>
             <!-- ÍCONO DE LUPA -->
-            <li class="icono-right-navbar">
+            <li class="icono-right-navbar icono-search-right-navbar">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </li>
 
@@ -146,12 +146,12 @@
 
     <!-- BARRA DE BÚSQUEDA -->
     <div class="search-bar">
-        <form action="/" method="POST">
-            <input type="search" name="search-header" id="search-header" class="input-search-bar-header">
+        <form action="/search" method="POST">
+            <input type="search" name="search" id="search-header" class="input-search-bar-header">
             <div class="inside-search-bar-header">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <label for="search-header" class="label-search-bar"> Buscar... </label>
-                <button class="button-X-search-bar"><i class="fa-solid fa-x"></i></button>
+                <i class="fa-solid fa-x button-X-search-bar"></i>
             </div>
         </form>
     </div>

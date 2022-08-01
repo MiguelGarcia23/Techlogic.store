@@ -8,6 +8,7 @@ let validations = [ // Validación de registro
 		.notEmpty().withMessage('Tienes que escribir un correo electrónico').bail() // Validación de email (no vacío) y si hay error, no seguir con las validaciones de la siguiente función
 		.isEmail().withMessage('Debes escribir un formato de correo válido'), // Validación de email válido (isEmail)
 	body('password').notEmpty().withMessage('Tienes que escribir una contraseña'), // Validación de contraseña 
+	body('termsConditions').notEmpty().withMessage('Tienes que aceptar los términos y condiciones'), // Validación de términos y condiciones
 	body('rol').notEmpty().withMessage('Tienes que elegir un perfil'),
 	body('image').custom((value, { req }) => { // Validación de imagen 
 		let file = req.file; // obtener el archivo de la imagen

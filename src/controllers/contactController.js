@@ -6,15 +6,18 @@ const contactController = {
     },
 
     payment: (req, res) => {
-        res.render('./contact/payment')
+        /* res.render('./contact/payment') */
+        res.render('./404-page')
     },
 
     questions: (req, res) => {
-        res.render('./contact/questions')
+        /* res.render('./contact/questions') */
+        res.render('./404-page')
     },
 
     info: (req, res) => {
-        res.render('./contact/infoContact')
+        /* res.render('./contact/infoContact') */
+        res.render('./404-page')
     }
 }
 

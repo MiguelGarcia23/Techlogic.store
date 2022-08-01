@@ -1,0 +1,384 @@
+@import url(../styles.css);
+@import url(../partials/header.css);
+@import url(../partials/footer.css);
+
+/* EL MAIN DE LA VISTA DEL LISTADO DE PRODUCTOS */
+.main-products{
+    margin-top: 7.5rem;
+    margin-bottom: 1.25rem;
+    padding: 0 2rem;
+}
+
+/* EL TÍTULO DE LA VISTA */
+.title-main-products{
+    min-width: 24rem;
+    width: 90%;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--blanco);
+    margin: 0 auto;
+    padding-top: 1rem;
+    margin-bottom: 3.5rem;
+    border-bottom: solid 2px var(--blanco);
+}
+
+/* DIV QUE CONTIENE A LOS BOTONES DE FILTRAR Y ORDENAR POR */
+.filter-order-products {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+/* DIV DEL BOTÓN DE FILTRAR */
+.filter-button {
+    padding: 0.75rem;
+    border: 1px solid var(--blanco);
+    cursor: pointer;
+}
+
+/* ENLACE DEL BOTÓN DE FILTRAR */
+.link-filter-button {
+    width: 100%;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--blanco);
+    transition: color 450ms;
+}
+
+/* CAMBIO EN EL BOTÓN CUANDO SE PASA EL MOUSE POR ENCIMA */
+.link-filter-button:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ÍCONO DEL BOTÓN DE FILTRAR */
+.icon-filter-button {
+    font-size: 1rem;
+    color: var(--blanco);
+    margin-right: 0.25rem
+}
+/* BOTON DE CREAR PRODUCTO */
+.button-create{
+    margin: 0;
+}
+
+/* BOTÓN DE ORDENAR POR */
+.inactive-order-button {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0.75rem 0.25rem;
+    border-bottom: 1px solid var(--blanco);
+    cursor: pointer;
+    position: relative;
+}
+
+/* P DENTRO DEL BOTÓN DE ORDENAR POR */
+.p-inactive-order-button {
+    color: var(--blanco);
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    margin-right: 0.5rem;
+}
+
+/* ÍCONO DEL BOTÓN DE ORDENAR POR */
+.icon-inactive-order-button {
+    color: var(--blanco);
+    font-size: 1rem;
+    padding: 0.25rem;
+}
+
+/* MENÚ QUE SE DESPLIEGA CUANDO SE ACTIVA EL BOTÓN DE ORDENAR POR */
+.active-order-button {
+    display: none;
+    background-color: var(--blanco);
+    opacity: 0.95;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    padding: 1rem 0.5rem;
+}
+
+/* UL DEL MENÚ DESPLEGABLE DEL BOTÓN DE ORDENAR POR */
+.ul-active-order-button {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* LOS LI DEL MENÚ DESPLEGABLE DEL BOTÓN DE ORDENAR POR */
+.li-active-order-button {
+    color: var(--negro);
+    font-size: 0.9375rem;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid var(--negro);
+    cursor: pointer;
+    transition: color 450ms;
+}
+
+/* CAMBIOS EN LOS LI DEL MENÚ DESPLEGABLE DEL BOTÓN DE ORDENAR POR CUANDO SE PASA EL MOUSE POR ENCIMA */
+.li-active-order-button:hover {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* ACTIVAR EL MENÚ DESPLEGABLE CUANDO SE PASA EL MOUSE POR ENCIMA DEL BOTÓN DE ORDENAR POR */
+.inactive-order-button:hover .active-order-button {
+    display: block;
+}
+
+/*---------- SLIDE MENU PARA FILTRAR PRODUCTOS ----------*/
+.slide-filter-menu {
+    display: none;
+    position: absolute;
+    top: 14%;
+    left: 0;
+    background-color: var(--negro);
+    border: 3px solid var(--blanco);
+    width: 70vw;
+    max-width: 21.875rem;
+    padding: 1.25rem;
+    min-height: 88vh;
+    z-index: 10;
+}
+
+/* ÍCONO DE LA X DEL SLIDE MENU PARA FILTRAR */
+.icono-x-filter-menu {
+    display: block;
+    color: var(--blanco);
+    opacity: 0.8;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+/* DIV QUE CONTIENE A TODO EL TÍTULO DEL SLIDE MENU PARA FILTRAR */
+.div-title-filter {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+/* ÍCONO DE FILTRAR DEL TÍTULO DEL SLIDE MENU PARA FILTRAR */
+.icon-filter-button-slide-menu {
+    font-size: 1.5rem;
+    color: var(--blanco);
+    margin-right: 1rem;
+}
+
+/* H3 DEL TÍTULO DEL SLIDE MENU PARA FILTRAR */
+.h3-title-filter {
+    font-size: 1.5rem;
+    color: var(--blanco);
+}
+
+/* TODOS LOS UL DE LA NAVBAR DEL SLIDE MENU PARA FILTRAR */
+.navbar-slide-filter-menu form ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* TODOS LOS LI DE LA NAVBAR DEL SLIDE MENU PARA FILTRAR */
+.option-filter-slide-menu {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* TODAS LAS PRIMERAS OPCIONES PARA FILTRAR EN EL SLIDE MENU PARA FILTRAR */
+.first-option-filter-slide-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+/* TODOS LOS P DENTRO DE LAS PRIMERAS OPCIONES PARA FILTRAR EN EL SLIDE MENU PARA FILTRAR */
+.p-first-option-filter-slide-menu {
+    font-size: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+/* TODOS LOS ÍCONOS (+ Y -) DENTRO DE LAS PRIMERAS OPCIONES PARA FILTRAR EN EL SLIDE MENU PARA FILTRAR */
+.first-option-filter-slide-menu i {
+    font-size: 1rem;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+/* ÍCONO DE - DENTRO DE LAS PRIMERAS OPCIONES PARA FILTRAR EN EL SLIDE MENU PARA FILTRAR */
+.icono-menos-slide-filter-menu {
+    display: none;
+}
+
+/* TODAS LAS SEGUNDAS OPCIONES PARA FILTRAR EN EL SLIDE MENU PARA FILTRAR */
+.second-option-filter-slide-menu {
+    margin: 1.5rem 0 0 1rem;
+    display: none;
+}
+
+/* TODOS LOS DIVS QUE CONTIENEN CHECKBOX EN EL SLIDE MENU PARA FILTRAR */
+.div-checkbox-filter-slide-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* TODOS LOS CHECKBOX EN EL SLIDE MENU PARA FILTRAR */
+.checkbox-filter-slide-menu {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+}
+
+/* TODOS LOS LABELS DE LOS CHECKBOX EN EL SLIDE MENU PARA FILTRAR */
+.div-checkbox-filter-slide-menu label{
+    font-size: 1rem;
+    color: var(--blanco);
+}
+
+/* LABEL DEL INPUT RANGE EN EL SLIDE MENU PARA FILTRAR */
+.label-input-range-slide-filter-menu {
+    font-size: 1rem;
+    color: var(--blanco);
+    margin-right: 0.75rem;
+}
+
+/* IMAGEN DEL FOOTER DEL SLIDE MENU PARA FILTRAR */
+.footer-slide-filter-menu img {
+    display: block;
+    margin: 0 auto;
+    width: 6.25rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+/* P DE RESULTADOS NO ENCONTRADOS */
+.not-found-p {
+    color: var(--blanco);
+    font-size: 1.5rem;
+    margin-top: 8rem;
+    margin-bottom: 11rem;
+}
+
+/* DIV QUE CONTIENE EL LISTADO DE PRODUCTOS */
+.list-products{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* EL ENLACE QUE RODEA CADA PRODUCTO DEL LISTADO DE PRODUCTOS */
+.list-products a {
+    text-decoration: none;
+}
+
+/* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
+.product-article{
+    width: 100%;
+    margin-bottom: 3.5rem;
+}
+
+/* IMAGEN DE CADA PRODUCTO DEL LISTADO DE PRODUCTOS */
+.imageProduct{
+    display: block;
+    width: 100%;
+    max-width: 12.5rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+}
+
+/* EL NOMBRE Y EL PRECIO DE CADA PRODUCTO DEL LISTADO DE PRODUCTOS */
+.productName, .productPrice{
+    color: var(--blanco);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* NOMBRE DE CADA PRODUCTO DEL LISTADO DE PRODUCTOS */
+.productName {
+    font-weight: 600;
+}
+
+/* BÓTON PARA GUARDAR EL PRODUCTO EN EL CARRITO DE COMPRAS */
+.button-icon-cart{
+    width: 50%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    
+}
+.add-to-cart{
+    display: none;
+    padding-top: 12px;
+}
+
+/* MEDIA QUERIES */
+
+/* MEDIA QUERIES TELÉFONOS GRANDES Y TABLETS PEQUEÑAS */
+@media (min-width: 580PX) {
+    
+    /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
+    .product-article{
+        width: 46%;
+    }
+    
+}
+
+/* MEDIA QUERIES TABLETS */
+@media (min-width: 768px) {
+
+    /* EL TÍTULO DE LA VISTA */
+    .title-main-products {
+        width: 80%;
+    }
+
+    /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
+    .product-article{
+        width: 30%;
+    }
+   
+}
+
+/* MEDIA QUERIES DESKTOP */
+@media (min-width: 1050px) {
+
+    /* EL TÍTULO DE LA VISTA */
+    .title-main-products {
+        width: 60%;
+    }
+
+    /* DIV QUE CONTIENE A LOS BOTONES DE FILTRAR Y ORDENAR POR */
+    .filter-order-products {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
+    .product-article{
+        width: 22%;
+    }
+
+    .button-icon-cart{
+        width: 100%;
+    }
+    /* Mostrar texto de añadir  */
+    .add-to-cart{
+        display: block;
+    }
+}

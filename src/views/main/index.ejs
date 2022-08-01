@@ -116,10 +116,10 @@
                     <!-- RECORRO EL ARRAY DE COLECCIONES PARA OBTENER CADA COLECCIÓN -->
                     <% for (let collection of collections) { %>
                         
-                        <article class="<%= collection.classCollection %> collection">
-                            <h4 class="title-collection-collections-section"> <%= collection.name %> </h4>
-                            <p class="subtitle-collection-collections-section"> Descubre todos los productos de la colección <%= collection.name %> </p>
-                            <a href="/products/collections/<%= collection.name %>" class="link-collection-collections-section"> Ver colección > </a>
+                        <article class="<%= collection.collectionName %>-collection collection">
+                            <h4 class="title-collection-collections-section"> <%= collection.collectionName %> </h4>
+                            <p class="subtitle-collection-collections-section"> Descubre todos los productos de la colección <%= collection.collectionName %> </p>
+                            <a href="/products/collections/<%= collection.collectionName %>" class="link-collection-collections-section"> Ver colección > </a>
                         </article>
 
                     <% } %>

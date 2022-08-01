@@ -1,12 +1,9 @@
-const User = require("../model/User");
 const { validationResult } = require("express-validator");
 const bcrypt = require("bcryptjs");
 const path = require("path");
 const fs = require("fs");
 const db = require("../database/models");
 const Op = db.Sequelize.Op;
-
-const fileUsers = path.join(__dirname, "../data/users.json"); // ruta del archivo JSON de usuarios
 
 /* Configuramos el controlador */
 const usersController = {
@@ -69,6 +66,38 @@ const usersController = {
       });
     }
 
+    /* db.Users.findOne({
+      where: {
+        email: req.body.email,
+      },
+    })
+      .then(userInDB => {
+        if(userInDB) {
+          res.render("users/register", {
+            errors: {
+              email: {
+                msg: "Este email ya está registrado",
+              },
+            },
+              oldData: req.body,
+          });
+        } else {
+          db.Users.create({
+            ...req.body,
+            password: bcrypt.hashSync(req.body.password, 10),
+            image: req.file.filename,
+            rolId: 2,
+          })
+        }
+      })
+        .then(newUser => {
+          res.send(newUser)
+        })
+        .catch(e => {
+          res.send(e)
+        })
+  }, */
+
     let promiseUserInDB = db.Users.findOne({
       where: {
         email: req.body.email,
@@ -79,7 +108,7 @@ const usersController = {
       ...req.body,
       password: bcrypt.hashSync(req.body.password, 10),
       image: req.file.filename,
-      rolId: req.body.rol,
+      rolId: 2,
     });
 
     Promise.all([promiseUserInDB, promiseNewUser]).then(
@@ -112,23 +141,23 @@ const usersController = {
   processEditUser: (req, res) => {
 
     let user = req.session.userLogged;
-
+    
     db.Users.update({
       id: user.id,
       name: req.body.name,
       lastName: req.body.lastName,
-      email: req.body.email,
+      email: user.email,
       password: req.body.password,
       image: req.file ? req.file.filename : user.image,
-      rolId: user.rolId,
+      rolId: user.rolId
     },{
       where: {
         email: user.email
       }
     })
-      .then(() => {
-        res.redirect('/users/userProfile')
-        /* res.send(userEdited) */
+      .then(userEdited => {
+        /* res.redirect('/users/userProfile') */
+        res.send(userEdited)
       })
       .catch(e => {
         res.send(e)
