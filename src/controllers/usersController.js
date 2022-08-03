@@ -12,19 +12,30 @@ const usersController = {
   },
 
   processLogin: (req, res) => {
-
     db.Users.findOne({
       where: {
-        email: req.body.email
+        email: req.body.email,
       },
     })
-      .then(user => {
+      /* .then(() => {
+        if (!req.body.email) {
+          res.render("./users/login", {
+            errors: {
+              email: {
+                msg: "Tienes que introducir un email",
+              },
+            },
+          });
+        }
+      }) */
+
+      .then((user) => {
         if (user) {
           if (bcrypt.compareSync(req.body.password, user.password)) {
             delete user.password;
             req.session.userLogged = user;
             if (req.body.remember_user) {
-              res.cookie("email", req.body.email, { maxAge: (1000 * 60) * 60 });
+              res.cookie("email", req.body.email, { maxAge: 1000 * 60 * 60 });
             }
             res.redirect("/users/userProfile");
           } else {
@@ -46,7 +57,7 @@ const usersController = {
           });
         }
       })
-    .catch((e) => {
+      .catch((e) => {
         res.send(e);
       });
   },
@@ -56,7 +67,7 @@ const usersController = {
   },
 
   processRegister: (req, res) => {
-    let errors = validationResult(req);
+    /* let errors = validationResult(req);
 
     if (!errors.isEmpty()) {
       res.render("users/register", {
@@ -64,7 +75,7 @@ const usersController = {
         oldData: req.body,
         oldImage: req.file ? req.file.filename : false,
       });
-    }
+    } */
 
     /* db.Users.findOne({
       where: {
@@ -98,7 +109,7 @@ const usersController = {
         })
   }, */
 
-    let promiseUserInDB = db.Users.findOne({
+    /* let promiseUserInDB = db.Users.findOne({
       where: {
         email: req.body.email,
       },
@@ -126,7 +137,17 @@ const usersController = {
           res.redirect("/users/login");
         }
       }
-    );
+    ); */
+
+    db.Users.create({
+      ...req.body,
+      password: bcrypt.hashSync(req.body.password, 10),
+      image: req.file.filename,
+      rolId: 2,
+    })
+      .then(() => {
+        res.redirect('/users/login')
+      })
   },
 
   profile: (req, res) => {
@@ -134,34 +155,72 @@ const usersController = {
   },
 
   editUser: (req, res) => {
-    res.render("./users/editUser", {user: req.session.userLogged});
+    res.render("./users/editUser", { user: req.session.userLogged });
     /* res.send(req.session.userLogged) */
   },
 
   processEditUser: (req, res) => {
-
+    /* console.log("comienzo de editUser");
+    console.log(req.body)
     let user = req.session.userLogged;
-    
-    db.Users.update({
-      id: user.id,
-      name: req.body.name,
-      lastName: req.body.lastName,
-      email: user.email,
-      password: req.body.password,
-      image: req.file ? req.file.filename : user.image,
-      rolId: user.rolId
-    },{
+
+    db.Users.findOne({
       where: {
-        email: user.email
-      }
+        id: user.id,
+      },
     })
-      .then(userEdited => {
-        /* res.redirect('/users/userProfile') */
-        res.send(userEdited)
+      .then((userToEdit) => {
+        console.log(req.body);
+        db.Users.update(
+          {
+            id: userToEdit.id,
+            name: req.body.name,
+            lastName: req.body.lastName,
+            email: userToEdit.email,
+            password: req.body.password,
+            image: req.file ? req.file.filename : userToEdit.image,
+            rolId: userToEdit.rolId,
+          },
+          {
+            where: {
+              id: userToEdit.id,
+            },
+          }
+        );
       })
-      .catch(e => {
-        res.send(e)
+      .then((userEdited) => {
+        console.log("enviando la vista");
+        res.redirect('/users/userProfile')
       })
+      .catch((e) => {
+        res.send(e);
+      }); */
+
+      let user = req.session.userLogged;
+
+      db.Users.update(
+        {
+          id: user.id,
+          name: req.body.name,
+          lastName: req.body.lastName,
+          email: user.email,
+          password: bcrypt.hashSync(req.body.password, 10),
+          image: req.file ? req.file.filename : user.image,
+          rolId: user.rolId,
+        },
+        {
+          where: {
+            id: user.id,
+          },
+        }
+      )
+    .then(() => {
+      /* console.log("enviando la vista"); */
+      res.redirect('/users/userProfile')
+    })
+    .catch((e) => {
+      res.send(e);
+    });
   },
 
   logout: (req, res) => {

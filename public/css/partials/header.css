@@ -333,14 +333,21 @@
     left: 0;
     border-top: 3px solid var(--celeste);
     padding: 0 1.5rem;
+   
 }
-
+.glass-search{
+    margin-right: 15px;
+}
 /* INPUT SEARCH DE LA BARRA DE BÚSQUEDA */
 .search-bar input {
     width: 90%;
     padding: 1.5rem 1rem;
-    margin: 0 3rem;
+    margin: 0 4rem;
     border: none;
+}
+
+.search-bar input:focus {
+    border-color: green;
 }
 
 /* DIV QUE CONTIENE A LOS ELEMENTOS QUE SE ENCUENTREN SOBRE LA BARRA DE BÚSQUEDA */

@@ -13,14 +13,14 @@
             <!-- ---------------------SECCION EDICIÓN DE USUARIO--------------------- -->
             <section class="section-editUser">
                 <!-- ---------------------FORM EDICIÓN DE USUARIO--------------------- -->
-                <form action="/users/userProfile/edit?_method=PUT" method="POST" enctype="multipart/form-data" class="editUser-form">
+                <form action="/users/userProfile/edit?_method=PUT" method="POST" class="editUser-form">
                     
                     <h3 class="editUser-title">EDICIÓN DE USUARIO</h3>
 
                     <!-- IMAGEN DE PERFIL -->
                     <div class="upload-image-user">
                         <div class="user-profile-icon">
-                            <img src="/img/users/<%= user.image%>" class='profileImage' id="profileImage">
+                            <img src="/img/users/<%= user.image %>" class='profileImage' id="profileImage">
                         </div>
                         <label for="image"><i class="fas fa-camera upload-icon"></i></label>
                         <input type="file" name="image" id="image" class="input-image" value="<%= user.image ? user.image : null %>"accept="image/*"/>
