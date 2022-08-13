@@ -15,7 +15,7 @@
             <h2 class="title-edit-create-form">Editando el producto: <%= product.name %>  </h2>
 
             <!-- FORMULARIO DE EDICIÓN -->
-            <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <form action="/products/edit/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="editProduct-form">
 
                 <!-- INPUT DEL NOMBRE DEL PRODUCTO -->
                 <div class="div-edit-create-form">
@@ -26,7 +26,7 @@
                 <!-- INPUT DEL LA SECCIÓN DEL PRODUCTO -->
                 <div class="div-edit-create-form">
                     <h3 class="title-select-edit-create-form">Sección del Producto:</h3>
-                    <select name="section" class="select-edit-create-form">
+                    <select name="section" class="select-edit-create-form" id="section">
                     <% for( let section of sections ) { %>
                         <option value="<%= section.id %>" <%= product.sectionId == section.id ? 'selected' : null %>><%= section.sectionName %></option> 
                     <% } %>
@@ -36,7 +36,7 @@
                 <!-- SELECT DE LA COLECCIÓN DEL PRODUCTO -->
                 <div class="div-edit-create-form">
                     <h3 class="title-select-edit-create-form">Colección del Producto:</h3>
-                    <select name="collection" class="select-edit-create-form">
+                    <select name="collection" class="select-edit-create-form" id="collection">
                     <% for( let collection of collections ) { %>
                         <option value="<%= collection.id %>" <%= product.collectionId == collection.id ? 'selected' : null %>><%= collection.collectionName %></option> 
                     <% } %>
@@ -46,7 +46,7 @@
                 <!-- INPUT DE LA MARCA DEL PRODUCTO -->        
                 <div class="div-edit-create-form">
                     <h3 class="title-select-edit-create-form">Marca del Producto:</h3>
-                    <select name="brand" class="select-edit-create-form">
+                    <select name="brand" class="select-edit-create-form" id="brand">
                         <% for( let brand of brands ) { %>
                             <option value="<%= brand.id %>" <%= product.brandId == brand.id ? 'selected' : null %>><%= brand.brandName %></option> 
                         <% } %>
@@ -84,6 +84,9 @@
                     <input type="file" id="image" name="image" class="normal-input image-input">
                 </div>
 
+                <!-- ERRORES DE VALIDACIÓN FRONT-END  -->
+                <ul class="errors-frontEnd"></ul>
+
                 <!-- BOTONES PARA BORRAR O EDITAR EL PRODUCTO -->
                 <div class="buttons-edit-create-form">
                     <button type="submit" class="button-cart button-edit-create-form">Editar</button>
@@ -98,6 +101,7 @@
         <!-- FOOTER -->
         <%- include('../partials/footer') %>
 
+        <script src="/js/validationEditProduct.js" crossorigin="anonymous"></script>
     </body>
 
 </html>

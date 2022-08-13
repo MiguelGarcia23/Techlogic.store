@@ -120,6 +120,23 @@
     width: 100%
 }
 
+/* ESTILOS DE LOS ERRORES DEL FEEDBACK DE LA VALIDACIÓN FRONT-END */
+.errors-frontEnd {
+    width: 90vw;
+    margin: 1.5rem auto;
+    list-style-type: circle;
+}
+
+.alert-warning {
+    color: red;
+    font-size: 1rem;
+}
+
+.is-invalid {
+  border: 2px solid red;
+  box-shadow: 0 0 7px red;
+}
+
 /* MEDIA QUERIES */
 
 /* MEDIA QUERIES TABLETS */
@@ -146,6 +163,13 @@
         width: 8rem;
     }
 
+    /* ESTILOS DE LOS ERRORES DEL FEEDBACK DE LA VALIDACIÓN FRONT-END */
+    .errors-frontEnd {
+        width: 80vw;
+        margin: 1.5rem auto;
+        list-style-type: circle;
+    }
+
 }
 
 /* MEDIA QUERIES DESKTOP */
@@ -159,6 +183,13 @@
     /* DIV QUE CONTIENE CADA INPUT Y ELEMENTO DEL FORM */
     .div-edit-create-form {
         width: 60%;
+    }
+
+    /* ESTILOS DE LOS ERRORES DEL FEEDBACK DE LA VALIDACIÓN FRONT-END */
+    .errors-frontEnd {
+        width: 60vw;
+        margin: 1.5rem auto;
+        list-style-type: circle;
     }
 
 }

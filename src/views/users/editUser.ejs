@@ -13,7 +13,7 @@
             <!-- ---------------------SECCION EDICIÓN DE USUARIO--------------------- -->
             <section class="section-editUser">
                 <!-- ---------------------FORM EDICIÓN DE USUARIO--------------------- -->
-                <form action="/users/userProfile/edit?_method=PUT" method="POST" class="editUser-form">
+                <form action="/users/userProfile/edit?_method=PUT" method="POST" class="editUser-form" id="editUser-form">
                     
                     <h3 class="editUser-title">EDICIÓN DE USUARIO</h3>
 
@@ -23,7 +23,7 @@
                             <img src="/img/users/<%= user.image %>" class='profileImage' id="profileImage">
                         </div>
                         <label for="image"><i class="fas fa-camera upload-icon"></i></label>
-                        <input type="file" name="image" id="image" class="input-image" value="<%= user.image ? user.image : null %>"accept="image/*"/>
+                        <input type="file" name="image" id="image" class="input-image" accept="image/*"/>
                     </div>
 
                     <!-- NOMBRE -->
@@ -32,16 +32,17 @@
                     <!-- APELLIDO -->
                     <input type="text" name="lastName" id="lastName" placeholder="Apellido" class="editUser-form-item" value="<%= user.lastName%>"/>
                     
-                    <!-- EMAIL -->
-                    
                     <!-- CONTRASEÑA -->
                     <input type="password" name="password" id="password" placeholder="Contraseña" class="editUser-form-item"/>
 
-                     <!-- EMAIL DEL USUARIO -->
-                     <p class="editUser-rol">Email: <%= user.email%></p>
+                    <!-- EMAIL DEL USUARIO -->
+                    <p class="editUser-rol">Email: <%= user.email%></p>
                     
                     <!-- ROL DEL USUARIO -->
                     <p class="editUser-rol">Rol: Admin</p>
+
+                    <!-- -----------------ERRORES DE VALIDACIÓN FRONT-END----------------- -->
+                    <ul class="errors-frontEnd"></ul>
                     
                     <!-- ---------------------BOTON PARA ENVIAR--------------------- -->
                     <div class="button-cart-div button-editUser">
@@ -55,6 +56,8 @@
         <!-- FOOTER -->
         <%- include('../partials/footer') %>
 
+        <script src="/js/previsualizarImageEditUser.js" crossorigin="anonymous"></script>
+        <script src="/js/validationEditUser.js" crossorigin="anonymous"></script>
     </body>
 
 </html>

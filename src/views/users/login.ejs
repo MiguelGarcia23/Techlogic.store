@@ -23,7 +23,7 @@
             alt="imagen de perfil"
             /> -->
             <!-- ---------------------FORM LOGIN--------------------- -->
-            <form action="/users/login" method="POST" class="register-login-form">
+            <form action="/users/login" method="POST" class="register-login-form" id="login-form">
             <% if (locals.errors && errors.email) { %>
                 <span class="text-danger"><%= errors.email.msg %></span> 
             <% } %>
@@ -53,6 +53,10 @@
                 <p><a href="/users/register">No tengo cuenta</a></p>
                 <p><a href="#">Olvidé mi contraseña</a></p>
             </div>
+
+            <!-- -----------------ERRORES DE VALIDACIÓN FRONT-END----------------- -->
+            <ul class="errors-frontEnd"></ul>
+
             <!-- ---------------------BOTON PARA INICIAR SESION--------------------- -->
             <div class="button-cart-div button-login-register">
                 <form action="/" method="POST">
@@ -67,6 +71,7 @@
 
         <!-- FOOTER -->
         <%- include('../partials/footer') %>
+        <script src="/js/validationLogin.js" crossorigin="anonymous"></script>
 
   </body>
 </html>

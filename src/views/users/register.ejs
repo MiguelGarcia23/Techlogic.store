@@ -13,7 +13,7 @@
       <!-- ---------------------SECCION REGISTRO--------------------- -->
       <section class="register-login-box">
         <!-- ---------------------FORM REGISTRO--------------------- -->
-        <form action="/users/register" method="POST" enctype="multipart/form-data" class="register-login-form">
+        <form action="/users/register" method="POST" enctype="multipart/form-data" class="register-login-form" id="register-form">
           <h3 class="register-login-text">REGISTRATE</h3>
 
           <% if (locals.errors && errors.image) { %>
@@ -63,7 +63,7 @@
             <span class="text-danger"><%= errors.email.msg %></span> 
           <% } %>
           <input
-            type="email"
+            type="text"
             name="email"
             id="email"
             placeholder="E-mail"
@@ -93,9 +93,13 @@
               >Aceptar <a href="#">Terminos y condiciones</a></label
             >
           </div>
+
+          <!-- -----------------ERRORES DE VALIDACIÓN FRONT-END----------------- -->
+          <ul class="errors-frontEnd"></ul>
+
           <!-- ---------------------BOTON PARA ENVIAR--------------------- -->
           <div class="button-cart-div button-login-register">
-            <button type="submit" class="button-cart">Registrarse</button>
+            <button type="submit" class="button-cart" id="register-button">Registrarse</button>
           </div>
         </form>
       </section>
@@ -104,6 +108,7 @@
     <!-- FOOTER -->
     <%- include('../partials/footer') %>
     <script src="/js/previsualizarImage.js" crossorigin="anonymous"></script>
+    <script src="/js/validationRegister.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>

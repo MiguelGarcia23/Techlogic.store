@@ -12,7 +12,7 @@ let validations = [ // Validación de registro
 	body('rol').notEmpty().withMessage('Tienes que elegir un perfil'),
 	body('image').custom((value, { req }) => { // Validación de imagen 
 		let file = req.file; // obtener el archivo de la imagen
-		let acceptedExtensions = ['.jpg', '.png', '.gif']; 
+		let acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif']; 
 
 		if (!file) {	// si no se subió ninguna imagen  
 			throw new Error('Tienes que subir una imagen'); // lanzar un error

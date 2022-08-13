@@ -15,7 +15,7 @@
       <h2 class="title-edit-create-form">Formulario de Creación</h2>
 
       <!-- FORMULARIO DE CREACIÓN -->
-      <form action="/products/create" method="POST" enctype="multipart/form-data">
+      <form action="/products/create" method="POST" enctype="multipart/form-data" id="createProduct-form">
 
         <!-- INPUT DEL NOMBRE DEL PRODUCTO -->
         <div class="div-edit-create-form">
@@ -26,10 +26,10 @@
         <!-- INPUT DEL LA SECCIÓN DEL PRODUCTO -->
         <div class="div-edit-create-form">
           <h3 class="title-select-edit-create-form">Sección del Producto:</h3>
-          <select name="section" class="select-edit-create-form">
+          <select name="section" class="select-edit-create-form" id="section">
             <option value="" disable selected>Elegí una sección:</option>
             <% for( let section of sections ) { %>
-              <option value="<%= section.id %> "><%= section.sectionName %> </option> 
+              <option value="<%= section.id %>"><%= section.sectionName %> </option> 
             <% } %>
           </select>
         </div>
@@ -37,7 +37,7 @@
         <!-- SELECT DE LA COLECCIÓN DEL PRODUCTO -->
         <div class="div-edit-create-form">
           <h3 class="title-select-edit-create-form">Colección del Producto:</h3>
-          <select name="collection" class="select-edit-create-form">
+          <select name="collection" class="select-edit-create-form" id="collection">
             <option value="" disable selected>Elegí una colección:</option>
             <% for( let collection of collections ) { %>
               <option value="<%= collection.id %> "><%= collection.collectionName %> </option> 
@@ -49,7 +49,7 @@
         <!-- INPUT DE LA MARCA DEL PRODUCTO -->  
         <div class="div-edit-create-form">
           <h3 class="title-select-edit-create-form">Marca del Producto:</h3>
-          <select name="brand" class="select-edit-create-form">
+          <select name="brand" class="select-edit-create-form" id="brand">
             <option value="" disable selected>Elegí una marca:</option>
             <% for( let brand of brands ) { %>
               <option value="<%= brand.id %> "><%= brand.brandName %> </option> 
@@ -60,13 +60,13 @@
         <!-- INPUT DEL PRECIO DEL PRODUCTO -->
         <div class="div-edit-create-form">
           <label for="price" class="label-normal-input">Precio del Producto:</label>
-          <input type="text" id="price" name="price" class="normal-input" placeholder="Ej: 12500">
+          <input type="number" id="price" name="price" class="normal-input" placeholder="Ej: 12500">
         </div>
 
         <!-- INPUT DEL DESCUENTO DEL PRODUCTO -->
         <div class="div-edit-create-form">
           <label for="discount" class="label-normal-input">Descuento del Producto:</label>
-          <input type="text" id="discount" name="discount" class="normal-input" placeholder="Ej: 10">
+          <input type="number" id="discount" name="discount" class="normal-input" placeholder="Ej: 10">
         </div>
 
         <!-- TEXTAREA DE LA DESCRIPCIÓN DEL PRODUCTO -->
@@ -81,6 +81,9 @@
           <input type="file" id="image" name="image" class="normal-input image-input">
         </div>
 
+        <!-- ERRORES DE VALIDACIÓN FRONT-END  -->
+        <ul class="errors-frontEnd"></ul>
+
         <!-- BOTONES PARA CREAR UN PRODUCTO -->
         <div class="buttons-edit-create-form">
           <button type="submit" class="button-cart button-edit-create-form">Crear</button>
@@ -92,5 +95,7 @@
 
     <!-- FOOTER -->
     <%- include('../partials/footer') %>
+
+    <script src="/js/validationCreateProduct.js" crossorigin="anonymous"></script>
   </body>
 </html>

@@ -102,6 +102,28 @@
     margin-top: 1rem;
 }
 
+/* ---------------------MARCO FEEDBACK DE LOS INPUT CON ERROR--------------------- */
+.is-invalid {
+  border: 2px solid red;
+  box-shadow: 0 0 7px red;
+}
+
+.is-valid {
+  border: 2px solid rgb(57, 255, 47);
+  box-shadow: 0 0 7px rgb(57, 255, 47);
+}
+
+/* ---------------------ESTILOS DE LOS ERRORES DEL FEEDBACK DE LA VALIDACIÓN FRONT-END--------------------- */
+.errors-frontEnd {
+  margin: 1.5rem 0;
+  list-style-type: circle;
+}
+
+.alert-warning {
+  color: red;
+  font-size: 1rem;
+}
+
 /* ---------------------MEDIA QUERIES TABLET--------------------- */
 @media (min-width: 768px) {
   .user-profile-picture {

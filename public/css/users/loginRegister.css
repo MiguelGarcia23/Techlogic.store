@@ -165,6 +165,17 @@
   box-shadow: 0 0 7px rgb(57, 255, 47);
 }
 
+/* ---------------------ESTILOS DE LOS ERRORES DEL FEEDBACK DE LA VALIDACIÓN FRONT-END--------------------- */
+.errors-frontEnd {
+  margin: 1.5rem 0;
+  list-style-type: circle;
+}
+
+.alert-warning {
+  color: red;
+  font-size: 1rem;
+}
+
 /* ---------------------MEDIA QUERIES TABLET--------------------- */
 @media (min-width: 768px) {
   .user-profile-picture {

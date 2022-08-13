@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+window.onload = function() {
     let iconoLupaBusqueda = document.querySelector('.icono-search-right-navbar');
     let barraBusqueda = document.querySelector('.search-bar');
     let iconoXBarraBusqueda = document.querySelector('.button-X-search-bar')
@@ -9,4 +9,4 @@ window.addEventListener('load', () => {
     iconoXBarraBusqueda.addEventListener('click', () => {
         barraBusqueda.style.display = 'none'
     })
-})
+}
