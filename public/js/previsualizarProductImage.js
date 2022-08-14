@@ -1,6 +1,6 @@
 const props = {
     inputFile: document.getElementById('image'),
-    profileImage: document.getElementById('profileImage'),
+    profileImage: document.getElementById('productImage'),
 }
 
 const methods = {

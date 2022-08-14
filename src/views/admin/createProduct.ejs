@@ -20,47 +20,62 @@
         <!-- INPUT DEL NOMBRE DEL PRODUCTO -->
         <div class="div-edit-create-form">
           <label for="name" class="label-normal-input">Nombre del Producto:</label>
-          <input type="text" id="name" name="name" class="normal-input" placeholder="Ej: Teléfono iPhone 13">
+          <% if (locals.errors && errors.name) { %>
+            <span class="text-danger error-feedback-product"><%= errors.name.msg %></span> 
+          <% } %>
+          <input type="text" id="name" name="name" class="normal-input <%= locals.errors && errors.name ? 'is-invalid' : null %>" placeholder="Ej: Teléfono iPhone 13" value="<%= locals.oldData && oldData.name ? oldData.name : null %>">
         </div>
 
         <!-- INPUT DEL LA SECCIÓN DEL PRODUCTO -->
         <div class="div-edit-create-form">
           <h3 class="title-select-edit-create-form">Sección del Producto:</h3>
-          <select name="section" class="select-edit-create-form" id="section">
+          <% if (locals.errors && errors.section) { %>
+            <span class="text-danger error-feedback-product"><%= errors.section.msg %></span> 
+          <% } %>
+          <select name="section" class="select-edit-create-form <%= locals.errors && errors.section ? 'is-invalid' : null %>" id="section" value="<%= locals.oldData && oldData.section ? oldData.section : null %>">
             <option value="" disable selected>Elegí una sección:</option>
             <% for( let section of sections ) { %>
               <option value="<%= section.id %>"><%= section.sectionName %> </option> 
-            <% } %>
-          </select>
-        </div>
+              <% } %>
+            </select>
+          </div>
 
         <!-- SELECT DE LA COLECCIÓN DEL PRODUCTO -->
         <div class="div-edit-create-form">
           <h3 class="title-select-edit-create-form">Colección del Producto:</h3>
-          <select name="collection" class="select-edit-create-form" id="collection">
+          <% if (locals.errors && errors.collection) { %>
+            <span class="text-danger error-feedback-product"><%= errors.collection.msg %></span> 
+          <% } %>
+          <select name="collection" class="select-edit-create-form <%= locals.errors && errors.collection ? 'is-invalid' : null %>" id="collection" value="<%= locals.oldData && oldData.collection ? oldData.collection : null %>">
             <option value="" disable selected>Elegí una colección:</option>
             <% for( let collection of collections ) { %>
               <option value="<%= collection.id %> "><%= collection.collectionName %> </option> 
+              <% } %>
+            </select>
+          </div>
+          
+          
+          <!-- INPUT DE LA MARCA DEL PRODUCTO -->  
+          <div class="div-edit-create-form">
+            <h3 class="title-select-edit-create-form">Marca del Producto:</h3>
+            <% if (locals.errors && errors.brand) { %>
+              <span class="text-danger error-feedback-product"><%= errors.brand.msg %></span> 
             <% } %>
-          </select>
-        </div>
-
-        
-        <!-- INPUT DE LA MARCA DEL PRODUCTO -->  
-        <div class="div-edit-create-form">
-          <h3 class="title-select-edit-create-form">Marca del Producto:</h3>
-          <select name="brand" class="select-edit-create-form" id="brand">
+          <select name="brand" class="select-edit-create-form <%= locals.errors && errors.brand ? 'is-invalid' : null %>" id="brand" value="<%= locals.oldData && oldData.brand ? oldData.brand : null %>">
             <option value="" disable selected>Elegí una marca:</option>
             <% for( let brand of brands ) { %>
               <option value="<%= brand.id %> "><%= brand.brandName %> </option> 
-            <% } %>
-          </select>
-        </div>
+              <% } %>
+            </select>
+          </div>
 
         <!-- INPUT DEL PRECIO DEL PRODUCTO -->
         <div class="div-edit-create-form">
           <label for="price" class="label-normal-input">Precio del Producto:</label>
-          <input type="number" id="price" name="price" class="normal-input" placeholder="Ej: 12500">
+          <% if (locals.errors && errors.price) { %>
+            <span class="text-danger error-feedback-product"><%= errors.price.msg %></span> 
+          <% } %>
+          <input type="number" id="price" name="price" class="normal-input <%= locals.errors && errors.price ? 'is-invalid' : null %>" placeholder="Ej: 12500" value="<%= locals.oldData && oldData.price ? oldData.price : null %>">
         </div>
 
         <!-- INPUT DEL DESCUENTO DEL PRODUCTO -->
@@ -72,13 +87,22 @@
         <!-- TEXTAREA DE LA DESCRIPCIÓN DEL PRODUCTO -->
         <div class="div-edit-create-form">
           <label for="description" class="label-normal-input">Descripción del Producto:</label>
-          <textarea name="description" id="description" class="textarea-edit-create-form"></textarea>
+          <% if (locals.errors && errors.description) { %>
+            <span class="text-danger error-feedback-product"><%= errors.description.msg %></span> 
+          <% } %>
+          <textarea name="description" id="description" class="textarea-edit-create-form <%= locals.errors && errors.description ? 'is-invalid' : null %>" value="<%= locals.oldData && oldData.description ? oldData.description : null %>"></textarea>
         </div>
 
         <!-- INPUT DE LA IMAGEN NUEVA DEL PRODUCTO -->
         <div class="div-edit-create-form">
           <label for="image" class="label-normal-input">Imagen del Producto:</label>
-          <input type="file" id="image" name="image" class="normal-input image-input">
+          <div class="div-product-image">
+            <img src="/img/products/<%= locals.oldImage ? oldImage : 'producto-predeterminado.png' %>" class='productImage' id="productImage">
+          </div>
+          <% if (locals.errors && errors.image) { %>
+            <span class="text-danger error-feedback-product"><%= errors.image.msg %></span> 
+          <% } %>
+          <input type="file" id="image" name="image" class="normal-input image-input <%= locals.errors && errors.image ? 'is-invalid' : null %>" value="<%= locals.oldImage ? oldImage : null %>">
         </div>
 
         <!-- ERRORES DE VALIDACIÓN FRONT-END  -->
@@ -96,6 +120,7 @@
     <!-- FOOTER -->
     <%- include('../partials/footer') %>
 
+    <script src="/js/previsualizarProductImage.js" crossorigin="anonymous"></script>
     <script src="/js/validationCreateProduct.js" crossorigin="anonymous"></script>
   </body>
 </html>

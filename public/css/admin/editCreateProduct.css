@@ -91,6 +91,23 @@
     margin-bottom: 1.5rem;
 }
 
+/* .user-profile-picture {
+  margin-bottom: 15px;
+  width: 25vw;
+} */
+
+.div-product-image{
+  display: block;
+  font-size: 180px;
+  color:var(--blanco) ;
+}
+
+.productImage {
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+}
+
 /* BOTONES DEL FORMULARIO */
 .buttons-edit-create-form {
     display: flex;
@@ -137,6 +154,13 @@
   box-shadow: 0 0 7px red;
 }
 
+.error-feedback-product {
+    display: block;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 0;
+}
+
 /* MEDIA QUERIES */
 
 /* MEDIA QUERIES TABLETS */
@@ -170,6 +194,11 @@
         list-style-type: circle;
     }
 
+    /* FEEDBACK ERRORES BACK-END */
+    .error-feedback-product {
+        width: 80vw;
+    }
+
 }
 
 /* MEDIA QUERIES DESKTOP */
@@ -190,6 +219,11 @@
         width: 60vw;
         margin: 1.5rem auto;
         list-style-type: circle;
+    }
+
+    /* FEEDBACK ERRORES BACK-END */
+    .error-feedback-product {
+        width: 60vw;
     }
 
 }

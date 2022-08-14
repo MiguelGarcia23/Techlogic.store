@@ -81,37 +81,39 @@ const usersController = {
         oldData: req.body,
         oldImage: req.file ? req.file.filename : false,
       });
+    } else {
+
+      db.Users.findOne({
+        where: {
+          email: req.body.email,
+        },
+      })
+        .then((userInDB) => {
+          if (userInDB) {
+            res.render("users/register", {
+              errors: {
+                email: {
+                  msg: "Este email ya está registrado",
+                },
+              },
+              oldData: req.body,
+              oldImage: req.file ? req.file.filename : false,
+            });
+          } else {
+            db.Users.create({
+              ...req.body,
+              password: bcrypt.hashSync(req.body.password, 10),
+              image: req.file.filename,
+              rolId: 2,
+            });
+            res.redirect("/users/login");
+          }
+        })
+        .catch((e) => {
+          res.send(e);
+        });
     }
 
-    db.Users.findOne({
-      where: {
-        email: req.body.email,
-      },
-    })
-      .then((userInDB) => {
-        if (userInDB) {
-          res.render("users/register", {
-            errors: {
-              email: {
-                msg: "Este email ya está registrado",
-              },
-            },
-            oldData: req.body,
-            oldImage: req.file ? req.file.filename : false,
-          });
-        } else {
-          db.Users.create({
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10),
-            image: req.file.filename,
-            rolId: 2,
-          });
-          res.redirect("/users/login");
-        }
-      })
-      .catch((e) => {
-        res.send(e);
-      });
   },
 
   profile: (req, res) => {

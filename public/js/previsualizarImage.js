@@ -15,11 +15,7 @@ const methods = {
 
         const filesInputFile = props.inputFile.files;
 
-        if (!filesInputFile || !filesInputFile.length) {
-
-            props.profileImage.src = '';
-            return;
-        }
+        props.profileImage.src = '';
 
         const firstFile = filesInputFile[0];
 

@@ -1,3 +1,4 @@
+const { validationResult } = require("express-validator");
 const db = require('../database/models');
 const Op = db.Sequelize.Op
 
@@ -161,30 +162,48 @@ const productsController = {
   },
 
   store: (req, res, next) => {
-    
-    /* Preguntado si el usuario subió una imagen. Si no lo hizo, aparece un error  */
-    if (!req.file) {
-      const error = new Error("Por favor seleccione un archivo");
-      error.httpStatusCode = 400;
-      return next(error);
+
+    let errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      let promiseSections = db.Sections.findAll();
+      let promiseCollections = db.Collections.findAll();
+      let promiseBrands = db.Brands.findAll();
+
+      Promise.all([promiseSections, promiseCollections, promiseBrands])
+        .then(([sections, collections, brands]) => {
+          res.render("./admin/createProduct", {
+            errors: errors.mapped(),
+            oldData: req.body,
+            oldImage: req.file ? req.file.filename : false,
+            sections,
+            collections,
+            brands,
+            user: req.session.userLogged,
+          });
+        })
+        .catch(e => {
+          res.send(e)
+        })
+
+    } else {
+
+      db.Products.create({
+        ...req.body,
+        image: req.file.filename,
+        sectionId: req.body.section,
+        collectionId: req.body.collection,
+        brandId: req.body.brand,
+        inCart: false,
+        deleted: false
+      })
+        .then(() => {
+          res.redirect("/products");
+        })
+        .catch(e => {
+          res.send(e)
+        })
     }
-
-    db.Products.create({
-      ...req.body,
-      image: req.file.filename,
-      sectionId: req.body.section,
-      collectionId: req.body.collection,
-      brandId: req.body.brand,
-      inCart: false,
-      deleted: false
-    })
-      .then(() => {
-        res.redirect("/products");
-      })
-      .catch(e => {
-        res.send(e)
-      })
-
   },
 
   edit: (req, res) => {
@@ -215,34 +234,66 @@ const productsController = {
 
   update: (req, res) => {
 
-    db.Products.findOne({
-      where: {
-        id: req.params.id,
-        deleted: false
-      }
-    })
-      .then(product => {
-        db.Products.update({
-          id: req.params.id,
-          ...req.body,
-          image: req.file? req.file.filename : product.image,
-          sectionId: req.body.section,
-          collectionId: req.body.collection,
-          brandId: req.body.brand,
-          inCart: false,
+    let errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+      let promiseProductToEdit = db.Products.findByPk(req.params.id, {
+        where: {
           deleted: false
-        },{
-          where: {
-            id: req.params.id
-          }
-        })
-      })
-        .then(() => {
-          res.redirect("/products");
+        }
+      });
+      let promiseSections = db.Sections.findAll();
+      let promiseCollections = db.Collections.findAll();
+      let promiseBrands = db.Brands.findAll();
+  
+      Promise.all([promiseProductToEdit, promiseSections, promiseCollections, promiseBrands])
+        .then(([product, sections, collections, brands]) => {
+          res.render("./admin/editProduct", {
+            errors: errors.mapped(),
+            oldData: req.body,
+            product,
+            sections,
+            collections,
+            brands,
+            user: req.session.userLogged,
+          });
         })
         .catch(e => {
           res.send(e)
         })
+        
+    } else {
+
+      db.Products.findOne({
+        where: {
+          id: req.params.id,
+          deleted: false
+        }
+      })
+        .then(product => {
+          db.Products.update({
+            id: req.params.id,
+            ...req.body,
+            image: req.file? req.file.filename : product.image,
+            sectionId: req.body.section,
+            collectionId: req.body.collection,
+            brandId: req.body.brand,
+            inCart: false,
+            deleted: false
+          },{
+            where: {
+              id: req.params.id
+            }
+          })
+        })
+          .then(() => {
+            res.redirect("/products");
+          })
+          .catch(e => {
+            res.send(e)
+          })
+    }
+
   },
 
   delete: (req, res) => {

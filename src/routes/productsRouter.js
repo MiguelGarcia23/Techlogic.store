@@ -12,7 +12,9 @@ const multerMiddleware = require('../middlewares/uploadProductImage');
 
 /* Importamos los middleware */
 const guestMiddleware = require('../middlewares/guestMiddleware');
-const adminMiddleware = require('../middlewares/adminMiddleware')
+const adminMiddleware = require('../middlewares/adminMiddleware');
+const validationProduct = require('../middlewares/validationProduct');
+const validationEditProduct = require('../middlewares/validationEditProduct');
 
 /* Configuramos el envío a la página principal de productos */
 router.get ('/', productsController.index);
@@ -45,13 +47,13 @@ router.post ('/addProduct/:id', productsController.addToCart);
 router.get ('/create', guestMiddleware, adminMiddleware, productsController.create);
 
 /* Configuramos la ruta de envío del formulario de creación de un producto una vez completo */
-router.post ('/create', multerMiddleware.single('image') , productsController.store);
+router.post ('/create', multerMiddleware.single('image'), validationProduct, productsController.store);
 
 /* Configuramos el envío a la sección de edición de productos de admin */
 router.get ('/edit/:id', guestMiddleware, adminMiddleware, productsController.edit);
 
 /* Configuramos la ruta de envío del formulario de edición de un producto una vez completo */
-router.put ('/edit/:id', multerMiddleware.single('image') , productsController.update);
+router.put ('/edit/:id', multerMiddleware.single('image'), validationEditProduct, productsController.update);
 
 /* Configuramos la ruta para eliminar un producto */
 router.delete ('/delete/:id', productsController.delete);
