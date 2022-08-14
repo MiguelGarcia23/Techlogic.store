@@ -13,7 +13,7 @@ const multerMiddleware = require('../middlewares/uploadProductImage');
 /* Importamos los middleware */
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
-const validationProduct = require('../middlewares/validationProduct');
+const validationCreateProduct = require('../middlewares/validationCreateProduct');
 const validationEditProduct = require('../middlewares/validationEditProduct');
 
 /* Configuramos el envío a la página principal de productos */
@@ -47,7 +47,7 @@ router.post ('/addProduct/:id', productsController.addToCart);
 router.get ('/create', guestMiddleware, adminMiddleware, productsController.create);
 
 /* Configuramos la ruta de envío del formulario de creación de un producto una vez completo */
-router.post ('/create', multerMiddleware.single('image'), validationProduct, productsController.store);
+router.post ('/create', multerMiddleware.single('image'), validationCreateProduct, productsController.store);
 
 /* Configuramos el envío a la sección de edición de productos de admin */
 router.get ('/edit/:id', guestMiddleware, adminMiddleware, productsController.edit);

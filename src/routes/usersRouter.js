@@ -6,7 +6,7 @@ const router = express.Router();
 
 /* Importamos el controlador de usuarios */
 const usersController = require ('../controllers/usersController');
-const validationResultUser = require('../middlewares/validationResult');
+const validationRegister = require('../middlewares/validationRegister');
 const validationEditUser = require('../middlewares/validationEditUser');
 const uploadUserImage = require('../middlewares/uploadUserImage');
 const authMiddleware = require('../middlewares/authMiddleware');
@@ -22,7 +22,7 @@ router.post ('/login', usersController.processLogin);
 router.get ('/register', authMiddleware, usersController.register);
 
 /* Configuramos el procesamiento del formulario de registro */
-router.post ('/register', uploadUserImage.single('image'), validationResultUser, usersController.processRegister);
+router.post ('/register', uploadUserImage.single('image'), validationRegister, usersController.processRegister);
 
 /* Configuramos el envío al perfil del usuario */
 router.get ('/userProfile', guestMiddleware, usersController.profile);
