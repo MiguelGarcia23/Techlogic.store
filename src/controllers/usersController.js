@@ -12,23 +12,29 @@ const usersController = {
   },
 
   processLogin: (req, res) => {
+    if (!req.body.email) {
+      res.render("./users/login", {
+        errors: {
+          email: {
+            msg: "Tienes que introducir un email",
+          },
+        },
+      });
+    } else if (!req.body.password) {
+      res.render("./users/login", {
+        errors: {
+          email: {
+            msg: "Tienes que introducir una contraseña",
+          },
+        },
+      });
+    }
+
     db.Users.findOne({
       where: {
         email: req.body.email,
       },
     })
-      /* .then(() => {
-        if (!req.body.email) {
-          res.render("./users/login", {
-            errors: {
-              email: {
-                msg: "Tienes que introducir un email",
-              },
-            },
-          });
-        }
-      }) */
-
       .then((user) => {
         if (user) {
           if (bcrypt.compareSync(req.body.password, user.password)) {
@@ -67,7 +73,7 @@ const usersController = {
   },
 
   processRegister: (req, res) => {
-    /* let errors = validationResult(req);
+    let errors = validationResult(req);
 
     if (!errors.isEmpty()) {
       res.render("users/register", {
@@ -75,55 +81,14 @@ const usersController = {
         oldData: req.body,
         oldImage: req.file ? req.file.filename : false,
       });
-    } */
+    }
 
-    /* db.Users.findOne({
+    db.Users.findOne({
       where: {
         email: req.body.email,
       },
     })
-      .then(userInDB => {
-        if(userInDB) {
-          res.render("users/register", {
-            errors: {
-              email: {
-                msg: "Este email ya está registrado",
-              },
-            },
-              oldData: req.body,
-          });
-        } else {
-          db.Users.create({
-            ...req.body,
-            password: bcrypt.hashSync(req.body.password, 10),
-            image: req.file.filename,
-            rolId: 2,
-          })
-        }
-      })
-        .then(newUser => {
-          res.send(newUser)
-        })
-        .catch(e => {
-          res.send(e)
-        })
-  }, */
-
-    /* let promiseUserInDB = db.Users.findOne({
-      where: {
-        email: req.body.email,
-      },
-    });
-
-    let promiseNewUser = db.Users.create({
-      ...req.body,
-      password: bcrypt.hashSync(req.body.password, 10),
-      image: req.file.filename,
-      rolId: 2,
-    });
-
-    Promise.all([promiseUserInDB, promiseNewUser]).then(
-      ([userInDB, newUser]) => {
+      .then((userInDB) => {
         if (userInDB) {
           res.render("users/register", {
             errors: {
@@ -132,22 +97,21 @@ const usersController = {
               },
             },
             oldData: req.body,
+            oldImage: req.file ? req.file.filename : false,
           });
         } else {
+          db.Users.create({
+            ...req.body,
+            password: bcrypt.hashSync(req.body.password, 10),
+            image: req.file.filename,
+            rolId: 2,
+          });
           res.redirect("/users/login");
         }
-      }
-    ); */
-
-    db.Users.create({
-      ...req.body,
-      password: bcrypt.hashSync(req.body.password, 10),
-      image: req.file.filename,
-      rolId: 2,
-    })
-      .then(() => {
-        res.redirect('/users/login')
       })
+      .catch((e) => {
+        res.send(e);
+      });
   },
 
   profile: (req, res) => {
@@ -156,46 +120,18 @@ const usersController = {
 
   editUser: (req, res) => {
     res.render("./users/editUser", { user: req.session.userLogged });
-    /* res.send(req.session.userLogged) */
   },
 
   processEditUser: (req, res) => {
-    /* console.log("comienzo de editUser");
-    console.log(req.body)
-    let user = req.session.userLogged;
+    let errors = validationResult(req);
 
-    db.Users.findOne({
-      where: {
-        id: user.id,
-      },
-    })
-      .then((userToEdit) => {
-        console.log(req.body);
-        db.Users.update(
-          {
-            id: userToEdit.id,
-            name: req.body.name,
-            lastName: req.body.lastName,
-            email: userToEdit.email,
-            password: req.body.password,
-            image: req.file ? req.file.filename : userToEdit.image,
-            rolId: userToEdit.rolId,
-          },
-          {
-            where: {
-              id: userToEdit.id,
-            },
-          }
-        );
-      })
-      .then((userEdited) => {
-        console.log("enviando la vista");
-        res.redirect('/users/userProfile')
-      })
-      .catch((e) => {
-        res.send(e);
-      }); */
-
+    if (!errors.isEmpty()) {
+      res.render("users/editUser", {
+        errors: errors.mapped(),
+        oldData: req.body,
+        user: req.session.userLogged,
+      });
+    } else {
       let user = req.session.userLogged;
 
       db.Users.update(
@@ -214,13 +150,36 @@ const usersController = {
           },
         }
       )
-    .then(() => {
-      /* console.log("enviando la vista"); */
-      res.redirect('/users/userProfile')
-    })
-    .catch((e) => {
-      res.send(e);
-    });
+        .then(() => {
+          res.redirect("/users/userProfile");
+        })
+        .catch((e) => {
+          res.send(e);
+        });
+    }
+
+    /* db.Users.update(
+      {
+        id: user.id,
+        name: req.body.name,
+        lastName: req.body.lastName,
+        email: user.email,
+        password: bcrypt.hashSync(req.body.password, 10),
+        image: req.file ? req.file.filename : user.image,
+        rolId: user.rolId,
+      },
+      {
+        where: {
+          id: user.id,
+        },
+      }
+    )
+      .then(() => {
+        res.redirect("/users/userProfile");
+      })
+      .catch((e) => {
+        res.send(e);
+      }); */
   },
 
   logout: (req, res) => {

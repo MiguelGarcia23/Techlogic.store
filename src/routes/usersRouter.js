@@ -7,6 +7,7 @@ const router = express.Router();
 /* Importamos el controlador de usuarios */
 const usersController = require ('../controllers/usersController');
 const validationResultUser = require('../middlewares/validationResult');
+const validationEditUser = require('../middlewares/validationEditUser');
 const uploadUserImage = require('../middlewares/uploadUserImage');
 const authMiddleware = require('../middlewares/authMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
@@ -30,10 +31,10 @@ router.get ('/userProfile', guestMiddleware, usersController.profile);
 router.get ('/userProfile/edit/', usersController.editUser);
 
 /* Configuramos el procesamiento del formulario para editar un usuario */
-router.put ('/userProfile/edit/', uploadUserImage.single('image'), usersController.processEditUser)
+router.put ('/userProfile/edit/', uploadUserImage.single('image'), validationEditUser, usersController.processEditUser)
 
 /* Configuramos el logout del usuario */
-router.get ('/logout',guestMiddleware, usersController.logout);
+router.get ('/logout', guestMiddleware, usersController.logout);
 
 /* Exportamos la variable router */
 module.exports = router;
