@@ -90,3 +90,26 @@
   - Se implementó la funcionalidad de búsqueda en el CRUD.
   - Se creó la vista de edición de usuarios.
   - Se hicieron los cambios correspondientes a las correcciones del Sprint 5.
+
+## Reunión del 08/05
+
+- Hoy nos reunimos para hacer un Sprint Planning del Sprint 7
+
+  - Establecimos las cosas por hacer y los stories.
+  - Definimos las fechas en las que nos reuniríamos a trabajar.
+  - Aclaramos algunos aspectos necesarios antes de comenzar a trabajar en el Sprint.
+
+## Reunión del 08/13
+
+- Hoy nos reunimos para culminar las distintas funcionalidades por hacer para el Sprint 7
+
+  - Creamos la validación del lado del front-end de los formularios del sitio web.
+  - Hicimos las correcciones necesarias en las vistas y css para visualizar los feedbacks de las validaciones.
+  - Dejamos todo claro para culminar el día siguiente las validaciones back-end faltantes y corregir las que tenían problemas.
+
+## Reunión del 08/16
+
+- Hoy nos reunimos para hacer el Sprint Review del Sprint 7.
+
+  - Nos juntamos a revisar, con la ayuda de Trello, las funcionalides que debíamos implementar para la entrega de hoy.
+  - Coordinamos qué aspectos debemos cambiar o mejorar para el siguiente Sprint.
