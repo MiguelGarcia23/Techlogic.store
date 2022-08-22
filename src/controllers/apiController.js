@@ -30,6 +30,39 @@ const apiController = {
       });
     });
   },
+  allCollections: (req, res) => {
+    db.Collections.findAll()
+    .then((collections) => {
+      res.status(200).json({
+        total: collections.length,
+        collections: collections,
+        status: 200
+      })
+
+    })
+  },
+  allBrands: (req, res) => {
+    db.Brands.findAll()
+    .then((brands) => {
+      res.status(200).json({
+        total: brands.length,
+        collections: brands,
+        status: 200
+      })
+
+    })
+  },
+  allSections: (req, res) => {
+    db.Sections.findAll()
+    .then((sections) => {
+      res.status(200).json({
+        total: sections.length,
+        collections: sections,
+        status: 200
+      })
+
+    })
+  },
   allUsers: (req, res) => {
     db.Users.findAll().then((users) => {
       res.status(200).json({
