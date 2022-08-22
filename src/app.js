@@ -60,6 +60,9 @@ const usersRouter = require('./routes/usersRouter');
 /* Importamos la ruta de contacto */
 const contactRouter = require('./routes/contactRouter');
 
+/* Importamos la ruta de APIs*/
+const apiRouter = require('./routes/apiRouter');
+
 /* Envío a la ruta princiapal */
 app.use ('/', mainRouter);
 
@@ -71,6 +74,9 @@ app.use ('/users', usersRouter);
 
 /* Envío a la ruta de contacto */
 app.use ('/contact', contactRouter);
+
+/* Envío a la ruta de APIs */
+app.use ('/api', apiRouter);
 
 /* Error 404 */
 app.use((req, res, next) => {
