@@ -131,7 +131,17 @@ const productsController = {
 
     Promise.all([promiseProducts, promiseSales])
       .then(([products, sales]) => {
+
+        let subtotalPurchase = products.reduce((acum, product) => {
+          return acum + product.price;
+        }, 0);
+
+        let taxes = subtotalPurchase * 0.21;
+        let totalPurchase = subtotalPurchase + taxes;
         res.render("./products/productCart", {
+          subtotalPurchase,
+          taxes,
+          totalPurchase,
           products,
           similarProducts: sales
         })
