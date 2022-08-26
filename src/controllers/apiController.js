@@ -19,7 +19,10 @@ const apiController = {
     }).then((products) => {
       res.status(200).json({
         products: products,
-      });
+      })
+      .catch((e) => {
+        res.send(e)
+      })
     });
   },
   searchProductsId: (req, res) => {
@@ -27,7 +30,10 @@ const apiController = {
       res.status(200).json({
         product: product,
         status: 200,
-      });
+      })
+      .catch((e) => {
+        res.send(e)
+      })
     });
   },
   allCollections: (req, res) => {
@@ -90,6 +96,9 @@ const apiController = {
       res.status(200).json({
         user: user
       })
+    })
+    .catch((e) => {
+      res.send(e)
     })
   }
 };
