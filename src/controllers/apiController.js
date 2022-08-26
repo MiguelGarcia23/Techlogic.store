@@ -64,14 +64,34 @@ const apiController = {
     })
   },
   allUsers: (req, res) => {
-    db.Users.findAll().then((users) => {
+
+    db.Users.findAll({raw: true}).then((users) => {
+
+
+      for (let i = 0; i < users.length; i++) {
+
+        delete users[i]['password'];
+
+      }
       res.status(200).json({
         total: users.length,
         users: users,
         status: 200,
       });
+      
     });
   },
+
+  userId: (req, res) => {
+    db.Users.findByPk(req.params.id, {raw: true})
+    .then((user) => {
+      
+      delete user.password
+      res.status(200).json({
+        user: user
+      })
+    })
+  }
 };
 
 /* Exportamos el controlador */

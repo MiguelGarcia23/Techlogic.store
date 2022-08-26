@@ -23,5 +23,6 @@ router.get ('/sections', apiController.allSections);
 
 /* Rutas GET para busqueda de usuarios */
 router.get ('/users', apiController.allUsers);
+router.get ('/users/:id', apiController.userId);
 
 module.exports = router;
