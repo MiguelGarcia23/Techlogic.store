@@ -4,7 +4,7 @@ module.exports = {
     "password": '',
     "database": "techlogic_store",
     "host": "127.0.0.1",
-    /* "port": "3308", */
+    "port": "3308",
     "dialect": "mysql"
   },
   "test": {
