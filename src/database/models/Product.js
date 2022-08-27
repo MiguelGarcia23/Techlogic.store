@@ -45,21 +45,20 @@ module.exports = (sequelize, dataTypes) =>{
     const Products = sequelize.define(alias,cols,config);
 
     Products.associate= function(models){
-        Products.belongsTo(models.Brands,{
-            as: "brands",
-            foreignKey: "brandId",
-        })
-    }
-    Products.associate= function(models){
-        Products.belongsTo(models.Collections,{
-            as: "collections",
-            foreignKey: "collectionId",
-        })
-    }
-    Products.associate= function(models){
+        
         Products.belongsTo(models.Sections,{
             as: "sections",
             foreignKey: "sectionId",
+        }),
+
+        Products.belongsTo(models.Collections,{
+            as: "collections",
+            foreignKey: "collectionId",
+        }),
+
+        Products.belongsTo(models.Brands,{
+            as: "brands",
+            foreignKey: "brandId",
         })
     }
 
