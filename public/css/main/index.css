@@ -395,10 +395,12 @@
     }
 
     .carousel {
+        width: 98.9vw;
         height: 100vh;
     }
     
     .carousel-inner .carousel-item img {
+        width: 98.9vw;
         height: 100vh;
     }
 
