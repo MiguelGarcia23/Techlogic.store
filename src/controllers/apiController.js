@@ -1,5 +1,8 @@
 const db = require("../database/models");
 const Op = db.Sequelize.Op;
+const path = require("path");
+
+const imageFilePath = path.join(__dirname, "../../public/img/products/");
 
 const apiController = {
   allProducts: (req, res) => {
@@ -32,7 +35,7 @@ const apiController = {
           section: [product.sections.sectionName],
           collection: [product.collections.collectionName],
           brand: [product.brands.brandName],
-          image: '/public/img/products/' + product.image,
+          image: imageFilePath + product.image,
           detail: 'http://localhost:3000/api/products/' + product.id
         }
 
@@ -256,7 +259,7 @@ const apiController = {
           lastName: user.lastName,
           email: user.email,
           rol: user.rols.rolName,
-          image: '/public/img/users' + user.image,
+          image: "C:/Users/Facu/Desktop/grupo_1_techlogic.store/public/img/users/" + user.image,
           detail: 'http://localhost:3000/api/users/' + user.id
         }
 
