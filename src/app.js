@@ -86,5 +86,9 @@ app.use((req, res, next) => {
 
 /* Levantando el servidor */
 app.listen(process.env.PORT || 3030, () => {
+<<<<<<< HEAD
   console.log("Servidor corriendo en http://localhost:3000/");
+=======
+  console.log("Servidor corriendo en http://localhost:3030/");
+>>>>>>> f999988eea1edd084f5333bf8d00dd064ee579d6
 });
