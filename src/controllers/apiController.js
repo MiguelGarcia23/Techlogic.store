@@ -35,7 +35,7 @@ const apiController = {
           section: [product.sections.sectionName],
           collection: [product.collections.collectionName],
           brand: [product.brands.brandName],
-          image: imageFilePath + product.image,
+          image: product.image,
           detail: 'http://localhost:3000/api/products/' + product.id
         }
 
