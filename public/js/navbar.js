@@ -1,4 +1,4 @@
-window.onload = () => {
+
     const productOption = document.getElementById('products-option-left-navbar');
     const discoverOption = document.getElementById('discover-option-left-navbar');
     const contactOption = document.getElementById('contact-option-left-navbar');
@@ -48,4 +48,3 @@ window.onload = () => {
     contactMenu.addEventListener('mouseout', () => {
         contactMenu.style.display = 'none'
     })
-}

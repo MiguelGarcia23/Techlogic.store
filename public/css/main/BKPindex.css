@@ -1,0 +1,429 @@
+@import url(../styles.css);
+@import url(../partials/header.css);
+@import url(../partials/footer.css);
+
+/* ----------------------  BANNER PRINCIPAL  ---------------------- */
+.main-banner {
+    background-color: #ea37a3;
+    margin-top: 6.3125rem;
+    height: 40vh;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+/* CARRUSEL DEL BANNER PRINCIPAL */
+.carousel {
+    width: 100vw;
+    height: 40vh;
+}
+
+/* IMÁGENES DEL CARRUSEL DEL BANNER PRINCIPAL */
+.carousel-inner .carousel-item img {
+    width: 100vw; 
+    height: 40vh;
+}
+
+/* ----------------------  MAIN  ---------------------- */
+
+/* SECCIÓN BEST SELLERS */
+.best-sellers-section {
+    /* background-color: var(--gris); */
+    padding: 3rem 0;
+}
+#card-bestSeller{
+    margin: 30px;
+}
+
+/* SUBTÍTULO SECCIÓN BEST SELLERS */
+.subtitle-best-sellers-section {
+    font-size: 1.125rem;
+    color: var(--blanco);
+    opacity: 0.7;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+/* TÍTULO SECCIÓN BEST SELLERS */
+.title-best-sellers-section {
+    color: var(--blanco);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 2.5rem;
+}
+
+/* PRODUCTOS DE LA SECCIÓN BEST SELLERS */
+.products-best-sellers {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+}
+
+/* ENLACE QUE RECUBRE CADA BEST SELLER */
+.products-best-sellers a {
+    text-decoration: none;
+}
+
+/* CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+.product-best-seller {
+    width: 80%;
+    margin-left: 2rem;
+}
+
+.product-best-seller:first-child {
+    margin-left: 30%;
+}
+
+/* IMAGEN DE CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+.product-best-seller img {
+    width: 40vw;
+    max-width: 12.5rem;
+    margin-bottom: 0.875rem;
+}
+
+/* NOMBRE DE CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+.name-product-best-sellers-section {
+    font-size: 1.25rem;
+    color: var(--blanco);
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* PRECIO DE CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+.price-product-best-sellers-section {
+    font-size: 1rem;
+    color: var(--celeste);
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ENLACE DE LA SECCIÓN BEST SELLERS */
+.button-seccion-best-sellers {
+    display: block;
+    width: 30%;
+    max-width: 8rem;
+    padding: 1rem;
+    background-color: var(--azul-marino);
+    margin: 0 auto;
+    border: none;
+    font-size: 1rem;
+    color: var(--blanco);
+    text-align: center;
+    cursor: pointer;
+    transition-property: background-color, color;
+    transition-duration: 2s;
+}
+
+.button-seccion-best-sellers:hover {
+    background-color: var(--celeste);
+    color: var(--azul-marino);
+}
+
+/* SECCIÓN CONÓCENOS */
+.know-us-section {
+    background-image: url(/img/bg-knowus-index.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 4rem 0;
+}
+
+/* CUADRO DE INFORMACIÓN DENTRO DE LA SECCIÓN CONÓCENOS */
+.info-know-us-section {
+    background-color: var(--negro);
+    box-shadow: 10px 5px 5px var(--negro);
+    width: 70%;
+    max-width: 17rem;
+    margin: auto;
+    padding: 1.5rem 1rem;
+}
+
+/* TÍTULO SECCIÓN CONÓCENOS */
+.title-know-us-section {
+    font-size: 1rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* DESCRIPCIÓN SECCIÓN CONÓCENOS */
+.description-know-us-section {
+    font-size: 1rem;
+    color: var(--blanco);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* ENLACE SECCIÓN CONÓCENOS */
+.button-know-us-section {
+    display: block;
+    width: 50%;
+    padding: 0.5rem 0;
+    background-color: var(--azul-marino);
+    margin: 0 auto;
+    border: none;
+    font-size: 1rem;
+    color: var(--blanco);
+    text-align: center;
+    cursor: pointer;
+    transition-property: background-color, color;
+    transition-duration: 2s;
+}
+
+.button-know-us-section:hover {
+    background-color: var(--celeste);
+    color: var(--azul-marino);
+}
+
+/* SECCIÓN COLECCIONES */
+.collections-section {
+    background-color: var(--gris);
+    padding: 3rem 0;
+}
+
+/* SUBTÍTULO SECCIÓN COLECCIONES */
+.subtitle-collections-section {
+    font-size: 1.125rem;
+    color: var(--blanco);
+    opacity: 0.7;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+/* TÍTULO SECCIÓN COLECCIONES */
+.title-collections-section {
+    color: var(--blanco);
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 2.5rem;
+}
+
+/* COLECCIONES DE LA SECCIÓN COLECCIONES */
+.collections {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    
+}
+
+/* CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
+.collection {
+    margin-left: 2rem;
+    padding: 1.5rem 1rem;
+    box-shadow: 10px 5px 5px var(--negro);
+    margin-bottom: 0.5rem;
+}
+
+.collection:first-child {
+    margin-left: 11%;
+}
+
+/* TÍTULO DE CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
+.title-collection-collections-section {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+/* SUBTÍTULO DE CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
+.subtitle-collection-collections-section {
+    font-size: 0.75rem;
+    opacity: 0.7;
+    text-overflow: clip;
+    white-space: nowrap;
+    margin-bottom: 2rem;
+}
+/* ENLACE DE CADA COLECCIÓN DE LA SECCIÓN COLECCIONES */
+.link-collection-collections-section {
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* ENLACE DE LA SECCIÓN COLECCIONES */
+.button-seccion-collections {
+    display: block;
+    width: 30%;
+    max-width: 8rem;
+    padding: 1rem;
+    background-color: var(--azul-marino);
+    margin: 0 auto;
+    border: none;
+    font-size: 1rem;
+    color: var(--blanco);
+    text-align: center;
+    cursor: pointer;
+    transition-property: background-color, color;
+    transition-duration: 2s;
+}
+
+.button-seccion-collections:hover {
+    background-color: var(--celeste);
+    color: var(--azul-marino);
+}
+
+/* COLECCIÓN MODERN DE LA SECCIÓN COLECCIONES */
+.Modern-collection {
+    background: linear-gradient(to bottom right, #BEBEBE, rgb(101, 100, 100));
+    color: #223544;
+}
+
+.Modern-collection a {
+    color: rgb(244, 244, 6);
+}
+
+/* COLECCIÓN CLASSIC DE LA SECCIÓN COLECCIONES */
+.Classic-collection {
+    background: linear-gradient(to bottom right, #322214, #4C443C);
+    color: #F5F1ED;
+}
+
+.Classic-collection a {
+    color: #93A3B1;
+}
+
+/* COLECCIÓN COLORFUL DE LA SECCIÓN COLECCIONES */
+.Colorful-collection {
+    background: linear-gradient(to bottom right, var(--celeste), #ea37a3);
+    color: var(--blanco);
+}
+
+.Colorful-collection a {
+    color: #ADFF2F;
+}
+
+/* COLECCIÓN BLACK & WHITE DE LA SECCIÓN COLECCIONES */
+.blackAndWhite-collection {
+    background: linear-gradient(to bottom right, var(--blanco), var(--negro));
+    color: var(--negro);
+}
+
+.blackAndWhite-collection a {
+    color: var(--negro);
+}
+
+/* SECCIÓN INFO TECHLOGIC.STORE */
+.info-company-section {
+    background-image: url(/img/bg-info-section-index.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+/* CUADROS DE INFO DE LA SECCIÓN INFO COMPANY */
+.info-squart-info-section {
+    width: 10.875rem;
+    background-color: var(--azul-marino);
+    box-shadow: 10px 5px 5px var(--negro);
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+}
+
+.info-squart-info-section:last-child {
+    margin-bottom: 0;
+}
+
+/* TÍTULO CUADROS DE INFO DE LA SECCIÓN INFO COMPANY */
+.title-info-company-section {
+    color: var(--blanco);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+/* P DE LOS CUADROS DE INFO DE LA SECCIÓN INFO COMPANY */
+.p-info-company-section {
+    color: var(--blanco);
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+/* MEDIA QUERIES */
+
+/* MEDIA QUERIES TABLETS */
+@media (min-width: 768px) {
+
+    /* ----------------------  BANNER PRINCIPAL  ---------------------- */
+    .main-banner {
+        height: 75vh;
+    }
+
+    .carousel {
+        height: 75vh;
+    }
+    
+    .carousel-inner .carousel-item img {
+        height: 75vh;
+    }
+
+    /* ----------------------  MAIN  ---------------------- */
+    /* PRIMER PRODUCTO DE LA SECCIÓN BEST SELLERS */
+    .product-best-seller:first-child {
+        margin-left: 8%;
+    }
+
+    /* PRIMER COLECCIÓN DE LA SECCIÓN COLECCIONES */
+    .collection:first-child {
+        margin-left: 8%;
+    }
+
+    /* SECCIÓN INFO TECHLOGIC.STORE */
+    .info-company-section {
+        padding-right: 4rem;
+    }
+
+}
+
+/* MEDIA QUERIES DESKTOPS */
+@media (min-width: 1050px) {
+
+    /* ----------------------  BANNER PRINCIPAL  ---------------------- */
+    .main-banner {
+        height: 100vh;
+        margin-top: 0;
+    }
+
+    .carousel {
+        width: 98.9vw;
+        height: 100vh;
+    }
+    
+    .carousel-inner .carousel-item img {
+        width: 98.9vw;
+        height: 100vh;
+    }
+
+    /* ----------------------  MAIN  ---------------------- */
+    /* PRIMER PRODUCTO DE LA SECCIÓN BEST SELLERS */
+    .product-best-seller:first-child {
+        margin-left: 8%;
+    }
+
+    /* CADA PRODUCTO DE LA SECCIÓN BEST SELLERS */
+    .product-best-seller {
+        margin-left: 2.5rem;
+    }
+
+    /* PRIMER COLECCIÓN DE LA SECCIÓN COLECCIONES */
+    .collection:first-child {
+        margin-left: 2%;
+    }
+
+}
