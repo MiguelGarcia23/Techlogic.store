@@ -1,3 +1,50 @@
 @import url(../styles.css);
 @import url(../partials/header.css);
 @import url(../partials/footer.css);
+
+.main-info{
+    margin-bottom: 100px;
+}
+
+.info-container{
+    position: relative;
+    top: 100px;
+    z-index: 1;
+}
+ .main-footer{
+    position: relative;
+    top: 200px;
+    width: 100%;
+ }
+
+ .info-title{
+    min-width: 24rem;
+    width: 90%;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--blanco);
+    margin: 0 auto;
+    padding-top: 1rem;
+    margin-bottom: 3.5rem;
+    border-bottom: solid 2px var(--blanco);
+}
+
+.form-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-label{
+    color: var(--blanco);
+}
+
+.info-input{
+    width: 50%;
+}
+
+.info-textarea{
+    height: 250px;
+}
+

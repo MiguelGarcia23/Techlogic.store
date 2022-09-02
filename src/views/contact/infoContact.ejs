@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- HEAD -->
-    <%- include('../partials/head', {title: 'Soporte al Cliente', stylesheet: 'contact/infoContact.css'}) %>
-    
+<!-- HEAD -->
+<%- include('../partials/head', {title: 'Soporte al Cliente' , stylesheet: 'contact/infoContact.css' }) %>
+
     <body>
 
         <!-- HEADER -->
         <%- include('../partials/header') %>
 
-        <!-- MAIN -->
-        <main></main>
+            <!-- MAIN -->
+            <main class="main-info">
+                <div class="info-container">
+                    <h2 class="info-title">Soporte al cliente</h2>
+                    <p class="info-text">
+                        
+                    </p>
+                    <form class="form-info">
+                        <label for="email-input" class="info-label">Ingrese tu Email</label>
+                        <input type="email" name="email-input" class="info-input">
+                        <label for="text-area" class="info-label">Ingrese tu consulta</label>
+                        <textarea name="text-area" class="info-input info-textarea"></textarea>
+                        <button>Enviar</button>
+                    </form>
+                    
+                </div>
+            </main>
 
-        <!-- FOOTER -->
-        <%- include('../partials/footer') %>
+            <!-- FOOTER -->
+            <%- include('../partials/footer') %>
 
     </body>
 

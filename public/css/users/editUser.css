@@ -5,7 +5,8 @@
 /* ---------------------FONDO PARA EL BODY--------------------- */
 
 .editUser-main {
-  background: linear-gradient(to top, #000000, #434343, #000000);
+  /* background: linear-gradient(to top, #000000, #434343, #000000); */
+  background-color: black;
 }
 
 /* ---------------------SECTION DE EDICIÓN--------------------- */

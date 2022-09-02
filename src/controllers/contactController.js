@@ -17,7 +17,7 @@ const contactController = {
 
     info: (req, res) => {
         /* res.render('./contact/infoContact') */
-        res.render('./404-page')
+        res.render('./contact/infoContact')
     }
 }
 
