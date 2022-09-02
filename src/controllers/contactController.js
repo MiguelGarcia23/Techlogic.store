@@ -12,7 +12,7 @@ const contactController = {
 
     questions: (req, res) => {
         /* res.render('./contact/questions') */
-        res.render('./404-page')
+        res.render('./contact/questions')
     },
 
     info: (req, res) => {
