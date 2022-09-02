@@ -9,10 +9,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* position: fixed; */
-    /* top: 0; */
-    /* z-index: 99; */
-    transition: background-color 450ms;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    /* transition: background-color 450ms; */
 }
 
 /* BARRA DE NAVEGACIÓN IZQUIERDA */
@@ -581,9 +581,9 @@
 @media (min-width: 768px) {
 
     /* ----------------------  HEADER  ---------------------- */
-    .main-header {
+    /* .main-header {
         background-color: transparent;
-    }
+    } */
 
     /* ----------------------  BANNER PRINCIPAL  ---------------------- */
     .main-banner {
