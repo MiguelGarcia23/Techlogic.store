@@ -7,6 +7,9 @@ window.onload = function (){
     const productMenu = document.getElementById('products-second-left-navbar');
     const discoverMenu = document.getElementById('discover-second-left-navbar');
     const contactMenu = document.getElementById('contact-second-left-navbar');
+    const burgerMobile = document.querySelector('.burger-menu')
+    const slideMobile = document.querySelector('.slide-menu')
+    const iconXMobile = document.querySelector('.icono-x')
     
     /* Menu desplegable PRODUCTOS */
     productOption.addEventListener('mouseover', () => {
@@ -55,4 +58,14 @@ window.onload = function (){
     contactMenu.addEventListener('mouseout', () => {
         contactMenu.style.display = 'none'
     })
+
+
+    /* Menu version MOVILE */
+    burgerMobile.addEventListener('click', () => {
+        slideMobile.style.display = 'block'
+    })
+    iconXMobile.addEventListener('click', () => {
+        slideMobile.style.display = 'none'
+    })
+
 }
