@@ -86,7 +86,13 @@
 .p-image{
     display: flex;
     margin-bottom: 100px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
+
 
 .icono{
     width: 400px;
@@ -99,6 +105,11 @@
 
 .p-image-2{
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .p-text-2{
