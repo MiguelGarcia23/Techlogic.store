@@ -12,6 +12,10 @@ router.get ('/products', apiController.allProducts);
 router.get ('/products/:id', apiController.searchProductsId);
 router.get ('/products/search', apiController.searchProductsKey);
 
+/* Rutas POST para creación y edición de productos */
+/* router.post ('/products/create', apiController.createProduct);
+router.post ('/products/edit/:id', apiController.editProduct); */
+
 /* Rutas GET para busqueda de sections */
 router.get ('/sections', apiController.allSections);
 
@@ -24,5 +28,8 @@ router.get ('/brands', apiController.allBrands);
 /* Rutas GET para busqueda de usuarios */
 router.get ('/users', apiController.allUsers);
 router.get ('/users/:id', apiController.userId);
+
+/* Ruta POST para loguearse  */
+/* router.post ('/login', apiController.processLogin); */
 
 module.exports = router;
