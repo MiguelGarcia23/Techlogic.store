@@ -111,10 +111,10 @@ const apiController = {
         discount: product.discount,
         inCart: product.inCart,
         deleted: product.deleted,
-        section: [product.sections.sectionName],
-        collection: [product.collections.collectionName],
-        brand: [product.brands.brandName],
-        image: '/public/img/products/' + product.image
+        section: product.sections.sectionName,
+        collection: product.collections.collectionName,
+        brand: product.brands.brandName,
+        image: product.image
       }
 
       res.status(200).json({
@@ -259,7 +259,7 @@ const apiController = {
           lastName: user.lastName,
           email: user.email,
           rol: user.rols.rolName,
-          image: "/public/img/users/" + user.image,
+          image: user.image,
           detail: 'http://localhost:3000/api/users/' + user.id
         }
 
@@ -300,7 +300,7 @@ const apiController = {
           name: user.name,
           lastName: user.lastName,
           email: user.email,
-          image: '/public/img/users' + user.image
+          image: user.image
         }
         
         res.status(200).json({
@@ -310,6 +310,55 @@ const apiController = {
       .catch((e) => {
         res.send(e)
       })
+  },
+  createProduct: (req, res) => {
+
+    db.Products.create({
+      ...req.body,
+      image: req.body.image,
+      sectionId: req.body.section,
+      collectionId: req.body.collection,
+      brandId: req.body.brand,
+      inCart: false,
+      deleted: false
+    })
+      .then(() => {
+        res.redirect("/products");
+      })
+      .catch(e => {
+        res.send(e)
+      })
+  },
+  editProduct: (req, res) => {
+
+    db.Products.findOne({
+      where: {
+        id: req.params.id,
+        deleted: false
+      }
+    })
+      .then(product => {
+        db.Products.update({
+          id: req.params.id,
+          ...req.body,
+          image: req.file? req.file.filename : product.image,
+          sectionId: req.body.section,
+          collectionId: req.body.collection,
+          brandId: req.body.brand,
+          inCart: false,
+          deleted: false
+        },{
+          where: {
+            id: req.params.id
+          }
+        })
+      })
+        .then(() => {
+          res.redirect("/products");
+        })
+        .catch(e => {
+          res.send(e)
+        })
   }
 };
 
