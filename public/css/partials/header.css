@@ -49,9 +49,10 @@
     display: none;
     position: absolute;
     top: 100%;
-    background-color:rgb(49, 49, 49);
+    background-color:rgb(199, 199, 199);
+    box-shadow: 10px 10px 10px black;
     border-radius: 2%;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     /* border-top: 3px solid var(--celeste); */
     padding: 17px;
     margin-bottom: 0;
@@ -82,7 +83,7 @@
 .second-options-left-navbar a{
     text-decoration: none;
     text-transform: none;
-    color: var(--blanco);
+    color: var(--negro);
     font-size: 1rem;
     transition: opacity 450ms;
 }
@@ -96,6 +97,7 @@
 .option-left-navbar-with-icon {
     margin-right: 0;
     padding-right: 10px;
+    color: var(--negro);
     
 
     /* display: flex;
@@ -108,7 +110,7 @@
 /* TODOS LOS ENLACES DENTRO DE LAS OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
 .option-left-navbar-with-icon a {
     text-decoration: none;
-    color: var(--blanco);
+    color: var(--negro);
 }
 
 /* TODOS LOS ÍCONOS DENTRO DE LAS OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
@@ -128,9 +130,10 @@
     position: absolute;
     top: 0;
     left: 108%;
-    background-color:rgb(49, 49, 49);
+    background-color:rgb(199, 199, 199);
+    box-shadow: 10px 10px 10px black;
     border-radius: 2%;
-    border: 1px solid white;
+   /*  border: 1px solid white; */
     /* border-top: 3px solid var(--celeste); */
     padding-left: 15px;
     padding-right: 20px;
@@ -157,7 +160,7 @@
 .third-options-left-navbar a{
     text-decoration: none;
     text-transform: none;
-    color: var(--blanco);
+    color: var(--negro);
     font-size: 1rem;
     transition: opacity 450ms;
 }
@@ -338,31 +341,37 @@
 
 /* BARRA DE BÚSQUEDA */
 .search-bar {
+    margin: 0;
     display: none;
     position: absolute;
-    width: 100vw;
-    background-color: var(--blanco);
+    width: 100%;
+    /* background-color: rgb(214, 2, 2); */
     opacity: 1;
-    top: 100%;
-    left: 0;
-    border-top: 3px solid var(--celeste);
-    padding: 0 1.5rem;
+    top: 110%;
+    left: 1%;
+    /* box-shadow: 10px 5px 5px black; */
+    /* border-color: 1px solid var(--celeste); */
    
 }
-.glass-search{
+/* .glass-search{
     margin-right: 15px;
-}
+    color: white;
+} */
 /* INPUT SEARCH DE LA BARRA DE BÚSQUEDA */
 .search-bar input {
-    width: 90%;
-    padding: 1.5rem 1rem;
+    margin: auto;
+    box-shadow: 10px 10px 10px black;
+    background-color: rgb(218, 218, 218);
+    width: 100%;
+    padding: 10px;
     margin: 0 4rem;
     border: none;
+    border-radius: 5px;
 }
 
-.search-bar input:focus {
+/* .search-bar input:focus {
     border-color: green;
-}
+} */
 
 /* DIV QUE CONTIENE A LOS ELEMENTOS QUE SE ENCUENTREN SOBRE LA BARRA DE BÚSQUEDA */
 .inside-search-bar-header {
@@ -378,18 +387,19 @@
 
 /* ÍCONOS EN LA BARRA DE BÚSQUEDA */
 .inside-search-bar-header i {
-    color: var(--gris);
+    color: rgb(77, 77, 77);
     font-size: 1.25rem;
+    text-shadow: 10px 10px 10px black;
 }
 
 /* LABEL EN LA BARRA DE BÚSQUEDA */
-.label-search-bar {
+/* .label-search-bar {
     color: var(--gris);
     font: 1.25rem;
     text-transform: uppercase;
     flex: 1 0 0;
     margin-left: 1.5rem;
-}
+} */
 
 /* ELIMINAR EL LABEL EN LA BARRA DE BÚSQUEDA CUANDO TENGA EL FOCO */
 .search-bar:focus-within .label-search-bar {
@@ -402,7 +412,7 @@
     background-color: transparent;
     border: none;
     margin: 0;
-    padding: 0;
+   /*  padding: 0; */
 }
 
 /* SLIDE MENÚ DE LA VERSIÓN MOBILE */
@@ -662,6 +672,12 @@
     /* PRIMER COLECCIÓN DE LA SECCIÓN COLECCIONES */
     .collection:first-child {
         margin-left: 2%;
+    }
+    .search-bar {
+       
+        width: 30%;
+        left: 69%;
+        
     }
 
    

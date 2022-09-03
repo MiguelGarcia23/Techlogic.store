@@ -23,6 +23,9 @@ body{
     font-family: 'Roboto', sans-serif;
     background-color: black;
 }
+main{
+    margin-top: 50px;
+}
 
 .button-cart {
     display: block;
