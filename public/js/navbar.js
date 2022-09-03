@@ -7,9 +7,6 @@ window.onload = function (){
     const productMenu = document.getElementById('products-second-left-navbar');
     const discoverMenu = document.getElementById('discover-second-left-navbar');
     const contactMenu = document.getElementById('contact-second-left-navbar');
-
-    
-    console.log(productOption);
     
     /* Menu desplegable PRODUCTOS */
     productOption.addEventListener('mouseover', () => {

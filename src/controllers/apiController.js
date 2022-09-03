@@ -292,24 +292,24 @@ const apiController = {
     })
   } */
 
-  db.Users.findByPk(req.params.id, {raw: true})
-    .then((user) => {
-      
-      const finalUser = {
-        id: user.id,
-        name: user.name,
-        lastName: user.lastName,
-        email: user.email,
-        image: '/public/img/users' + user.image
-      }
-      
-      res.status(200).json({
-        user: finalUser
+    db.Users.findByPk(req.params.id, {raw: true})
+      .then((user) => {
+        
+        const finalUser = {
+          id: user.id,
+          name: user.name,
+          lastName: user.lastName,
+          email: user.email,
+          image: '/public/img/users' + user.image
+        }
+        
+        res.status(200).json({
+          user: finalUser
+        })
       })
-    })
-    .catch((e) => {
-      res.send(e)
-    })
+      .catch((e) => {
+        res.send(e)
+      })
   }
 };
 
