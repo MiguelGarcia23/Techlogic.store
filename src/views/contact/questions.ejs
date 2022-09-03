@@ -1,19 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- HEAD -->
-    <%- include('../partials/head', {title: 'Preguntas frecuentes', stylesheet: 'contact/questions.css'}) %>
-    
-    <body>
+<!-- HEAD -->
+<%- include('../partials/head', {title: 'Preguntas frecuentes' , stylesheet: 'contact/infoContact.css' }) %>
 
-        <!-- HEADER -->
-        <%- include('../partials/header') %>
+  <body>
 
-        <!-- MAIN -->
-        <main></main>
+    <!-- HEADER -->
+    <%- include('../partials/header') %>
 
-        <!-- FOOTER -->
-        <%- include('../partials/footer') %>
+      <!-- MAIN -->
+      <main class="main-info">
+        <div class="info-container">
+          <h2 class="info-title">Preguntas frecuentes</h2>
+          <div class="accordion col-md-7 container" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  ¿El precio que figura en la web es el precio final?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Todos los precios en la web incluyen el IVA, y se encuentran expresados en pesos argentinos.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  ¿Cuáles son las formas de pago?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Contamos con dos formas de pago: a través de depósito/transferencia bancaria, con la cual obtenés el
+                  precio especial, o bien, a través de los métodos de pago (Visa o MasterCard) o MercadoPago (Tarjetas
+                  online, PagoFácil y RapiPago) con los cuales podes abonar en cuotas, al precio de lista.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  ¿Cómo abono a través de depósito/transferencia?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Una vez se realiza el pedido, te facilitamos los datos del CBU. Debes abonar e informar el pago desde
+                  nuestra web, antes de la fecha de vencimiento de la reserva.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  ¿Cómo puedo abonar a través de MercadoPago?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Podés hacerlo de tres formas: Con tarjetas online en cuotas (no se puede acceder a cuotas sin
+                  interés); A través de RapiPago/ PagoFácil (se abona al precio de lista, pero no se pueden hacer
+                  cuotas, sólo se puede abonar en un pago); y realizando una transferencia desde tu cuenta de
+                  MercadoPago.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  ¿Cómo gestiono el envío de mi pedido?
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Una vez realizada la compra, deberás facilitarnos tus datos de envió (código postal, dirección, piso,
+                  departamento y localidad) para nosotros encargarnos de buscar las distintas opciones.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  ¿Cómo tramito la factura de mi compra?
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  En todas las compras efectuadas en la web, brindamos sin excepción alguna, la factura de compra. Una
+                  vez que realiza y abona el pedido, enviamos a tu dirección de correo electrónico la factura
+                  correspondiente. Por supuesto, también podés descargarla desde la sección Mi cuenta , Mis facturas. En
+                    caso de que precises factura A, solo debes ingresar tu CUIT al cargar el pedido por la web. Tené en
+                    cuenta que la factura A puede tener percepciones. </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    ¿Cuál es el tiempo estimado de envío?
+                  </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Llega rápido de 24hs a 72hs.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    ¿Puede recibir otra persona mi compra?
+                  </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                  data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Sí, presentando DNI de quien recibe y una imagen o fotocopia del DNI del titular.
+                  </div>
+                </div>
+              </div>
+            </div>
+      </main>
 
-    </body>
+      <!-- FOOTER -->
+      <%- include('../partials/footer') %>
+
+  </body>
 
 </html>

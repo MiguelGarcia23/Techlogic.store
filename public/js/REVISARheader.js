@@ -6,6 +6,7 @@
         header: document.getElementById('main-header'),
         position: window.pageYOffset
     }
+    
 
     /* Objeto con los métodos */
     let methodHeader = {
@@ -24,9 +25,15 @@
 
                 propHeader.header.style.backgroundColor = 'black';
                 
+
+                
+                
             } else {
                 
                 propHeader.header.style.backgroundColor = 'transparent';
+                
+                
+                
 
             }
 

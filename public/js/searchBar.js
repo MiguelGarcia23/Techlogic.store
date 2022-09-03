@@ -1,9 +1,7 @@
-/* window.onload = () => { */
-
     let iconoLupaBusqueda = document.querySelector('.icono-search-right-navbar');
     let barraBusqueda = document.querySelector('.search-bar');
     let iconoXBarraBusqueda = document.querySelector('.button-X-search-bar')
-
+    
     iconoLupaBusqueda.addEventListener('click', () => {
         barraBusqueda.style.display = 'block'
     })
@@ -11,4 +9,3 @@
         barraBusqueda.style.display = 'none'
     })
 
-/* } */

@@ -1,3 +1,154 @@
 @import url(../styles.css);
 @import url(../partials/header.css);
 @import url(../partials/footer.css);
+
+
+
+.info-container{
+    position: relative;
+    top: 100px;
+    z-index: 1;
+}
+ .main-footer{
+    position: relative;
+    top: 200px;
+    width: 100%;
+ }
+
+ .info-title{
+    min-width: 24rem;
+    width: 90%;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--blanco);
+    margin: 0 auto;
+    padding-top: 1rem;
+    margin-bottom: 3.5rem;
+    border-bottom: solid 2px var(--blanco);
+}
+
+.form-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-label{
+    margin-top: 15px;
+    color: var(--blanco);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.info-input{
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+    border-radius: 3px;
+    width: 50%;
+}
+
+.info-textarea{
+    height: 250px;
+}
+
+.info-text{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+    text-align:center
+}
+
+/* ABOUT US */
+
+    .info-subtitle{
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.info-text-container{
+    padding: 40px;
+}
+
+.p-text{
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+    text-align:justify;
+    line-height: 40px;
+    margin-left: 50px;
+}
+
+.p-image{
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.icono{
+    width: 400px;
+}
+
+.dual-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.p-image-2{
+    display: flex;
+}
+
+.p-text-2{
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+    text-align:justify;
+    line-height: 40px;
+    margin-right: 50px;
+}
+
+.icono-oculto{
+    display: none;
+}
+@media (max-width: 1091px) {
+    .icono-2{
+        display: none;
+    }
+    .icono-oculto{
+        display: block;
+        width: 250px;
+        margin-bottom: 35px;
+    }
+    .p-image-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .p-image{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .icono{
+        width: 250px;
+        margin-bottom: 35px;
+    }
+    .p-text{
+        margin-left: 0px;
+    }
+    .p-text-2{
+        margin-right: 0px;
+    }
+    .p-text{
+        font-size: 20px;
+    }
+    .p-text-2{
+        font-size: 20px;
+    }
+}
+
+
+

@@ -1,8 +1,10 @@
+
 /* Configuramos el controlador */
 const contactController = {
 
     aboutUs: (req, res) => {
-        res.render('./contact/aboutUs')
+        /* res.render('./contact/aboutUs') */
+        res.render('./contact/aboutUs2')
     },
 
     payment: (req, res) => {
@@ -11,13 +13,12 @@ const contactController = {
     },
 
     questions: (req, res) => {
-        /* res.render('./contact/questions') */
-        res.render('./404-page')
+        res.render('./contact/questions')
     },
 
     info: (req, res) => {
         /* res.render('./contact/infoContact') */
-        res.render('./404-page')
+        res.render('./contact/infoContact')
     }
 }
 

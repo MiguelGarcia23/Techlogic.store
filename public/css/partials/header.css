@@ -12,7 +12,7 @@
     position: fixed;
     top: 0;
     z-index: 99;
-    transition: background-color 450ms;
+    /* transition: background-color 450ms; */
 }
 
 /* BARRA DE NAVEGACIÓN IZQUIERDA */
@@ -33,7 +33,7 @@
 /* TODOS LOS ENLACES DENTRO DE LAS OPCIONES PRINCIPALES DE LA NAVBAR IZQUIERDA  */
 .options-left-navbar a{
     text-decoration: none;
-    color: var(--blanco);
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     font-weight: normal;
     transition: opacity 450ms;
@@ -581,9 +581,9 @@
 @media (min-width: 768px) {
 
     /* ----------------------  HEADER  ---------------------- */
-    .main-header {
+    /* .main-header {
         background-color: transparent;
-    }
+    } */
 
     /* ----------------------  BANNER PRINCIPAL  ---------------------- */
     .main-banner {
@@ -629,11 +629,6 @@
         display: none;
     }
 
-    /* ----------------------  BANNER PRINCIPAL  ---------------------- */
-    .main-banner {
-        height: 100vh;
-        margin-top: 0;
-    }
 
     /* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
     .circles-main-banner {
@@ -656,30 +651,7 @@
         margin-left: 2%;
     }
 
-    /* ----------------------  FOOTER  ---------------------- */
-
-    /* SECCIONES DEL FOOTER */
-    .sections-footer {
-        width: 24%
-    }
-
-    /* SECCIÓN DEL LOGO E INFO DEL FOOTER */
-    .logo-info-footer {
-        flex-direction: column;
-    }
-
-    /* LOGO DEL FOOTER */
-    .logo-footer {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
-
-    /* INFO DE LA EMPRESA DEL FOOTER */
-    .info-company-footer {
-        width: 100%;
-        margin-left: 0;
-    }
+   
 
 }/* MEDIA QUERIES */
 
