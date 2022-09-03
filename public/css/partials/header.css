@@ -49,11 +49,15 @@
     display: none;
     position: absolute;
     top: 100%;
-    background-color: var(--negro);
-    border-top: 3px solid var(--celeste);
-    padding: 2rem 1rem 0.5rem 1rem;
+    background-color:rgb(49, 49, 49);
+    border-radius: 2%;
+    border: 1px solid white;
+    /* border-top: 3px solid var(--celeste); */
+    padding: 17px;
+    margin-bottom: 0;
     width: 18%;
     max-width: 15rem;
+   
 }
 
 /* .prueba-left-navbar {
@@ -85,15 +89,20 @@
 
 .second-options-left-navbar a:hover {
     opacity: 0.6;
+    background-size: 100% 2px;
 }
 
 /* OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
 .option-left-navbar-with-icon {
-    display: flex;
+    margin-right: 0;
+    padding-right: 10px;
+    
+
+    /* display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
 }
 
 /* TODOS LOS ENLACES DENTRO DE LAS OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
@@ -119,9 +128,13 @@
     position: absolute;
     top: 0;
     left: 108%;
-    background-color: var(--negro);
-    border-top: 3px solid var(--celeste);
-    padding: 2rem 1rem 0.5rem 1rem;
+    background-color:rgb(49, 49, 49);
+    border-radius: 2%;
+    border: 1px solid white;
+    /* border-top: 3px solid var(--celeste); */
+    padding-left: 15px;
+    padding-right: 20px;
+    padding-top: 10px;
     width: 100%;
     max-width: 12.5rem;
 }

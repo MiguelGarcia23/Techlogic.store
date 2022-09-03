@@ -1,5 +1,7 @@
 window.onload = function (){
     const productOption = document.getElementById('products-option-left-navbar');
+    const optioLeftAccesories = document.querySelector('.option-left-navbar-with-icon')
+    const accesoriesOption = document.querySelector('.third-left-navbar')
     const discoverOption = document.getElementById('discover-option-left-navbar');
     const contactOption = document.getElementById('contact-option-left-navbar');
     const productMenu = document.getElementById('products-second-left-navbar');
@@ -18,6 +20,12 @@ window.onload = function (){
     })
     productMenu.addEventListener('mouseout', () => {
         productMenu.style.display = 'none'
+    })
+    optioLeftAccesories.addEventListener('mouseover', () => {
+        accesoriesOption.style.display = 'block'
+    })
+    productOption.addEventListener('mouseout', () => {
+        accesoriesOption.style.display = 'none'
     })
     
     /* Menu desplegable DESCUBRE */
