@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- HEAD -->
-    <%- include('../partials/head', {title: 'Medios de Pago', stylesheet: 'contact/payment.css'}) %>
-    
-    <body>
+<!-- HEAD -->
+<%- /* include('../partials/head', {title: 'Medios de Pago' , stylesheet: 'contact/payment.css' }) */ %>
+    <%- include('../partials/head', {title: 'Medios de Pago' , stylesheet: 'contact/infoContact.css' }) %>
 
-        <!-- HEADER -->
-        <%- include('../partials/header') %>
+        <body>
 
-        <!-- MAIN -->
-        <main></main>
+            <!-- HEADER -->
+            <%- include('../partials/header') %>
 
-        <!-- FOOTER -->
-        <%- include('../partials/footer') %>
+                <!-- MAIN -->
+                <main class="main-info">
+                    <div class="info-container">
+                        <h2 class="info-title">Metodos de pago</h2>
+                        <div class="card-container">
+                            <div class="card" style="width: 20rem;">
+                                <img src="/img/iconos/transferencia.png" class="card-img-top" alt="transferencia">
+                                <div class="card-body">
+                                    <h3 class="card-text">Transferencia bancaria</h3>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="/img/iconos/cartera.png" class="card-img-top" alt="targetas">
+                                <div class="card-body">
+                                    <h3 class="card-text">Tarjetas de débito o crédito</h3>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 18rem;">
+                                <img src="/img/iconos/mercado-pago.png" class="card-img-top " alt="mercado pago">
+                                <div class="card-body">
+                                    <h3 class="card-text">MercadoPago</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
 
-    </body>
+                <!-- FOOTER -->
+                <%- include('../partials/footer') %>
+
+        </body>
 
 </html>

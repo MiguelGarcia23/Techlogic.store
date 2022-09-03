@@ -8,8 +8,7 @@ const contactController = {
     },
 
     payment: (req, res) => {
-        /* res.render('./contact/payment') */
-        res.render('./404-page')
+        res.render('./contact/payment')
     },
 
     questions: (req, res) => {
