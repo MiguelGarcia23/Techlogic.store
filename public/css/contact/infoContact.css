@@ -162,4 +162,25 @@
 }
 
 
+/* Payment */
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card-text{
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 10px;
+}
+
+.card{
+    background-color: black;
+}
+
+.card-img-top{
+    width: 300px;
+}
 
