@@ -1,15 +1,10 @@
-const fs = require('fs')
-const path = require('path')
-
-
-const filepath =  path.join(__dirname, '../data/faq.json')
-const faq = JSON.parse(fs.readFileSync(filepath, 'utf-8'))
 
 /* Configuramos el controlador */
 const contactController = {
 
     aboutUs: (req, res) => {
-        res.render('./contact/aboutUs')
+        /* res.render('./contact/aboutUs') */
+        res.render('./contact/aboutUs2')
     },
 
     payment: (req, res) => {
@@ -18,7 +13,7 @@ const contactController = {
     },
 
     questions: (req, res) => {
-        res.render('./contact/questions', {faq: faq})
+        res.render('./contact/questions')
     },
 
     info: (req, res) => {
