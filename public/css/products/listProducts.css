@@ -279,6 +279,15 @@
 .product-article{
     width: 100%;
     margin-bottom: 3.5rem;
+    background-color: rgb(241, 239, 239);
+}
+.title-prod{
+    text-align: center;
+}
+.list-prod{
+    background-color: rgb(241, 239, 239);
+    text-align: center;
+    border-radius: 10px;
 }
 
 /* IMAGEN DE CADA PRODUCTO DEL LISTADO DE PRODUCTOS */
