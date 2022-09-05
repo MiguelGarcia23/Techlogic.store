@@ -351,7 +351,12 @@
             <div class="list-prod">
               <ul class="list-group list-group-flush list-prod">
                 <li class="list-group-item">$ <%= product.price %></li>
-                <li class="list-group-item"><%= product.discount %> % OFF!</li>
+                <% if ((product.discount == 0)) { %>
+                  <li class="list-group-item"><a href="/users/register" class="card-link">Ver descuentos exlusivos</a></li>
+                  
+                <% } else { %>
+                  <li class="list-group-item discount"><%= product.discount %> % OFF!</li>
+                  <% } %>
               </ul>
             </div>
             <div class="card-body">

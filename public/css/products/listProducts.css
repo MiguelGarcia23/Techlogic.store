@@ -277,7 +277,7 @@
 
 /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
 .product-article{
-    width: 100%;
+    width: 95%;
     margin-bottom: 3.5rem;
     background-color:transparent;
     border: solid 1px white;
@@ -292,6 +292,12 @@
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 0 5px var(--blanco);
+}
+.product-article:hover .discount{
+    transition: 200ms;
+    color: green;
+    font-weight:bold;
+    box-shadow: 0 0 15px var(--blanco);
 }
 .btn-secondary{
     display: block;
