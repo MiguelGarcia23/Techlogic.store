@@ -15,7 +15,7 @@ router.get ('/products/search', apiController.searchProductsKey);
 /* Rutas POST para crear, editar y eliminar productos */
 router.post ('/products/create', apiController.createProduct);
 router.post ('/products/edit/:id', apiController.editProduct);
-router.post ('/products/delete/:id', apiController.deleteProduct);
+router.delete ('/products/delete/:id', apiController.deleteProduct);
 
 /* Rutas GET para busqueda de sections */
 router.get ('/sections', apiController.allSections);

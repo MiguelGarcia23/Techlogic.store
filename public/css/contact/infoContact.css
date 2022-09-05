@@ -143,8 +143,39 @@
     display: none;
     width: 200px;
 }
+
+/* Payment */
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card-text{
+    text-align: center;
+    font-size: 20px;
+    color: var(--blanco);
+    margin-top: 10px;
+}
+
+.card{
+    background-color: black;
+}
+
+.card-img-top{
+    margin: auto;
+    width: 30%;
+}
+
+/* Questions */
+.accordion-body {
+    background-color: rgb(228, 228, 228);
+}
+
 @media (max-width: 1091px) {
-    .main-info{
+    .main-info-contact{
         flex-direction: column;
         
     }
@@ -182,35 +213,4 @@
     .p-text-2{
         font-size: 20px;
     } */
-}
-
-
-/* Payment */
-
-.card-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.card-text{
-    text-align: center;
-    font-size: 20px;
-    color: var(--blanco);
-    margin-top: 10px;
-}
-
-.card{
-    background-color: black;
-}
-
-.card-img-top{
-    margin: auto;
-    width: 30%;
-}
-
-/* Questions */
-.accordion-body {
-    background-color: rgb(228, 228, 228);
 }
