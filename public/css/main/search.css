@@ -2,13 +2,39 @@
 @import url(../partials/header.css);
 @import url(../partials/footer.css);
 
+
 /* EL MAIN DE LA VISTA DEL LISTADO DE PRODUCTOS */
 .main-products{
     margin-top: 7.5rem;
     margin-bottom: 1.25rem;
     padding: 0 2rem;
 }
-
+.product-article{
+    width: 100%;
+    margin-bottom: 3.5rem;
+    background-color:transparent;
+    border: solid 1px white;
+    box-shadow: 0 0 10px var(--blanco);
+}
+.title-prod{
+    text-align: center;
+    color: var(--blanco);
+}
+.list-prod{
+    background-color: rgb(241, 239, 239);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--blanco);
+}
+.btn-secondary{
+    display: block;
+    margin: auto;
+}
+.card-link{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
 /* EL TÍTULO DE LA VISTA */
 .title-main-products{
     min-width: 24rem;

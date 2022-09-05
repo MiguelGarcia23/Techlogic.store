@@ -27,7 +27,7 @@ const mainController = {
         }
       })
         .then(products => {
-          res.render('./main/search', {products, palabraBuscada: productoABuscar })
+          res.render('./main/search', {products, palabraBuscada: productoABuscar, user: req.session.userLogged})
         })
         .catch(e => {
           res.send(e)

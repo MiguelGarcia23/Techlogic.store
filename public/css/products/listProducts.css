@@ -293,7 +293,15 @@
     border-radius: 5px;
     box-shadow: 0 0 5px var(--blanco);
 }
-
+.btn-secondary{
+    display: block;
+    margin: auto;
+}
+.card-link{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
 /* IMAGEN DE CADA PRODUCTO DEL LISTADO DE PRODUCTOS */
 .imageProduct{
     display: block;
