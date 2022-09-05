@@ -279,22 +279,45 @@
 .product-article{
     width: 95%;
     margin-bottom: 3.5rem;
-    background-color:transparent;
+    /* background-color:transparent; */
+    background-color: rgb(32, 32, 32);
     border: solid 1px white;
     box-shadow: 0 0 10px var(--blanco);
 }
+
 .title-prod{
     text-align: center;
     color: var(--blanco);
+    font-weight: 900;
 }
 .list-prod{
-    background-color: rgb(241, 239, 239);
     text-align: center;
-    border-radius: 5px;
-    box-shadow: 0 0 5px var(--blanco);
 }
+
+.price-list-group-item {
+    background-color: transparent;
+    color: var(--blanco);
+    border: none;
+}
+
+.discount {
+    border-radius: 5px;
+    background-color: transparent;
+    color: lightgreen;
+    transition: color 200ms, font-weight 200ms, box-shadow 200ms;
+}
+
+.link-discount {
+    text-decoration: none;
+    color: lightgreen;
+}
+
+.link-discount:hover {
+    color: green;
+    font-weight: bold;
+}
+
 .product-article:hover .discount{
-    transition: 200ms;
     color: green;
     font-weight:bold;
     box-shadow: 0 0 15px var(--blanco);

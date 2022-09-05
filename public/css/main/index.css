@@ -37,19 +37,13 @@
 
 /* SECCIÓN INFO TECHLOGIC.STORE */
 .info-company-section {
-    background-image: url(/img/bg-info-section-index.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     padding: 30px;
     height: 400px;
     position: relative;
 }
 
-/* CAPA SUPERIOR DE LA IMAGEN DE LA SECCIÓN INFO TECHLOGIC.STORE */
-.capa-superior-img-info-company-section {
-    background-color: var(--negro);
-    opacity: 0.2;
+/* MAPA DE LA SECCIÓN INFO TECHLOGIC.STORE */
+.map-info-company-section {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -57,6 +51,7 @@
     left: 0;
     z-index: 2;
     transition: opacity 450ms;
+    border: none;
 }
 
 .capa-superior-img-info-company-section:hover {

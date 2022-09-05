@@ -16,7 +16,7 @@
       <!-- BOTONES DE FILTRAR Y ORDENAR POR -->
       <div class="filter-order-products">
         <!-- BOTÓN DE FILTRAR -->
-        <div class="filter-button">
+        <div class="filter-button" id="filter-button">
           <a href="#" class="link-filter-button">
             <i class="fa-solid fa-sliders icon-filter-button"></i>
             Filtrar
@@ -55,11 +55,11 @@
       </div>
 
       <!-- SLIDER MENU PARA FILTRAR -->
-      <div class="slide-filter-menu">
+      <div class="slide-filter-menu" id="slide-filter-menu">
         <!-- HEADER DEL SLIDE MENU PARA FILTRAR -->
         <header class="header-slide-filter-menu">
           <!-- ÍCONO DE LA X DEL SLIDER MENU -->
-          <div class="icono-x-filter-menu">
+          <div class="icono-x-filter-menu" id="icono-x-filter-menu">
             <i class="fa-solid fa-x"></i>
           </div>
 
@@ -347,15 +347,15 @@
             </a>
             <div class="card-body">
               <h5 class="card-title title-prod"><%= product.name %></h5>
-            </div>
+            
             <div class="list-prod">
               <ul class="list-group list-group-flush list-prod">
-                <li class="list-group-item">$ <%= product.price %></li>
+                <li class="list-group-item price-list-group-item">$<%= product.price %></li>
                 <% if ((product.discount == 0)) { %>
-                  <li class="list-group-item"><a href="/users/register" class="card-link">Ver descuentos exclusivos</a></li>
+                  <li class="list-group-item discount"><a href="/users/register" class="card-link link-discount">Ver descuentos exclusivos</a></li>
                   
                 <% } else { %>
-                  <li class="list-group-item discount"><%= product.discount %> % OFF!</li>
+                  <li class="list-group-item discount"><%= product.discount %>% OFF!</li>
                   <% } %>
               </ul>
             </div>
@@ -373,6 +373,7 @@
             </div>
             <% } %> <% } %>
               
+            </div>
             </div>
           </div>
         <% } %>
