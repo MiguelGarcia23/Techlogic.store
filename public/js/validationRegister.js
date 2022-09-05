@@ -65,8 +65,8 @@ window.onload = function() {
         if(inputPassword.value == '') {
             errors.push('El campo contraseña está vacío')
             inputPassword.classList.add('is-invalid')
-        } else if (inputPassword.value.length <= 8) {
-            errors.push('La contraseña debe tener al menos 8 caracteres')
+        } else if (inputPassword.value.length <= 6) {
+            errors.push('La contraseña debe tener al menos 6 caracteres')
             inputPassword.classList.add('is-invalid')
         } else {
             inputPassword.classList.remove('is-invalid')
