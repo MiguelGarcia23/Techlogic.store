@@ -87,23 +87,63 @@
         </div>
 
         <div>
-          <div class="prd-features">
-            <p>Especificaciones / Descripción</p>
-            <button class="button-props">
-              <i class="fa-solid fa-plus"></i>
+          <div class="collapse-product-details">
+            <button class="prd-features" id="description-collapse-title-products-details">
+              <p>Especificaciones / Descripción</p>
+              <div class="div-props">
+                <i class="fa-solid fa-plus"></i>
+              </div>
             </button>
+
+            <div class="collapse-body-product-details description-collapse-body-product-details" id="description-collapse-body-products-details">
+              <p><%= product.description %></p>
+            </div>
           </div>
-          <div class="prd-features">
-            <p>Medios de Pago y Envío</p>
-            <button class="button-props">
-              <i class="fa-solid fa-plus"></i>
+
+          <div class="collapse-product-details">
+            <button class="prd-features" id="payment-collapse-title-products-details">
+              <p>Medios de Pago y Envío</p>
+              <div class="div-props">
+                <i class="fa-solid fa-plus"></i>
+              </div>
             </button>
+            <div class="collapse-body-product-details payment-collapse-body-product-details" id="payment-collapse-body-products-details">
+              <div class="card-container">
+                <div class="card" style="width: 18rem;">
+                    <img src="/img/iconos/transferencia.png" class="card-img-top" alt="transferencia">
+                    <div class="card-body">
+                        <h3 class="card-text">Transferencia bancaria</h3>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="/img/iconos/cartera.png" class="card-img-top" alt="tarjetas">
+                    <div class="card-body">
+                        <h3 class="card-text">Tarjetas de débito o crédito</h3>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="/img/iconos/mercado-pago.png" class="card-img-top " alt="mercado pago">
+                    <div class="card-body">
+                        <h3 class="card-text">MercadoPago</h3>
+                    </div>
+                </div>
+            </div>
+            </div>
           </div>
-          <div class="prd-features">
-            <p>Reseñas</p>
-            <button class="button-props">
-              <i class="fa-solid fa-plus"></i>
+
+          <div class="collapse-product-details">
+            <button class="prd-features prd-features-reviews" id="reviews-collapse-title-products-details">
+              <p>Reseñas</p>
+              <div class="div-props">
+                <i class="fa-solid fa-plus"></i>
+              </div>
             </button>
+            <div class="collapse-body-product-details reviews-collapse-body-product-details" id="reviews-collapse-body-products-details">
+              <form action="#" method="POST" class="form-reviews-collapse-body-product-details">
+                <textarea name="review" id="review-product-details" placeholder="Escribe tu reseña..." class="textarea-reviews-collapse-body-product-details"></textarea>
+                <button type="submit" class="button-cart button-reviews-collapse-body-product-details">Enviar</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
