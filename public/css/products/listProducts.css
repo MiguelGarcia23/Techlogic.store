@@ -299,10 +299,7 @@
     font-weight:bold;
     box-shadow: 0 0 15px var(--blanco);
 }
-.btn-secondary{
-    display: block;
-    margin: auto;
-}
+
 .card-link{
     display: block;
     margin: auto;

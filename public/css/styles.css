@@ -58,3 +58,14 @@ main{
     justify-content: center;
     margin: auto;
 }
+.btn-secondary{
+    display: block;
+    margin: auto;
+    background-color: var(--azul-marino);
+    color: var(--blanco);
+}
+.btn-secondary:hover {
+    background-color: var(--celeste);
+    color: var(--azul-marino);
+    /* transform: rotate(360deg); */
+}
