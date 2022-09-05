@@ -337,15 +337,20 @@
               
               <div class=" container card product-article" >
                 <a href="/products/productDetail/<%= product.id %>">
-                  <img src="/img/products/<%= product.image %>" class="card-img-top" alt="<%= product.name %>">
+                  <img src="/img/products/<%= product.image %>" class="card-img-top" id="img-prd" alt="<%= product.name %>">
                 </a>
                 <div class="card-body">
                   <h5 class="card-title title-prod"><%= product.name %></h5>
                 </div>
                 <div class="list-prod">
                   <ul class="list-group list-group-flush list-prod">
-                    <li class="list-group-item">$ <%= product.price %></li>
-                    <li class="list-group-item"><%= product.discount %> % OFF!</li>
+                    <li class="list-group-item price-list-group-item">$ <%= product.price %></li>
+                    <% if ((product.discount == 0)) { %>
+                      <li class="list-group-item discount"><a href="/users/login" class="card-link link-discount">Ver descuentos exclusivos</a></li>
+                      
+                    <% } else { %>
+                      <li class="list-group-item discount"><%= product.discount %>% OFF!</li>
+                      <% } %>
                   </ul>
                 </div>
                 <div class="card-body">

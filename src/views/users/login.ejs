@@ -23,7 +23,7 @@
             alt="imagen de perfil"
             /> -->
             <!-- ---------------------FORM LOGIN--------------------- -->
-            <form action="/users/login" method="POST" class="register-login-form" id="login-form">
+            <form action="/users/login" method="POST" class="container col-md-8 register-login-form" id="login-form">
             <% if (locals.errors && errors.email) { %>
                 <span class="text-danger"><%= errors.email.msg %></span> 
             <% } %>

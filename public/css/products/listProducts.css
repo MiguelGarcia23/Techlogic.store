@@ -284,7 +284,11 @@
     border: solid 1px white;
     box-shadow: 0 0 10px var(--blanco);
 }
-
+#img-prd{
+    display: block;
+    margin: auto;
+    width: 75%;
+}
 .title-prod{
     text-align: center;
     color: var(--blanco);
@@ -301,7 +305,6 @@
 }
 
 .discount {
-    border-radius: 5px;
     background-color: transparent;
     color: lightgreen;
     transition: color 200ms, font-weight 200ms, box-shadow 200ms;
@@ -320,7 +323,7 @@
 .product-article:hover .discount{
     color: green;
     font-weight:bold;
-    box-shadow: 0 0 15px var(--blanco);
+    box-shadow: 0 0 10px var(--blanco);
 }
 
 .card-link{
