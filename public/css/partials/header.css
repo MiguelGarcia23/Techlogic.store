@@ -49,11 +49,12 @@
     display: none;
     position: absolute;
     top: 100%;
-    background-color:rgb(199, 199, 199);
-    box-shadow: 10px 10px 10px black;
+    /* background-color:rgb(199, 199, 199); */
+    background-color:var(--negro);
+    box-shadow: 10px 10px 10px var(--negro);
     border-radius: 2%;
-    /* border: 1px solid white; */
-    /* border-top: 3px solid var(--celeste); */
+    border: 1px solid white;
+    border-top: 3px solid var(--celeste);
     padding: 17px;
     margin-bottom: 0;
     width: 18%;
@@ -83,7 +84,7 @@
 .second-options-left-navbar a{
     text-decoration: none;
     text-transform: none;
-    color: var(--negro);
+    color: var(--blanco);
     font-size: 1rem;
     transition: opacity 450ms;
 }
@@ -97,7 +98,8 @@
 .option-left-navbar-with-icon {
     margin-right: 0;
     padding-right: 10px;
-    color: var(--negro);
+    margin-bottom: 0;
+    color: var(--blanco);
     
 
     /* display: flex;
@@ -110,7 +112,8 @@
 /* TODOS LOS ENLACES DENTRO DE LAS OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
 .option-left-navbar-with-icon a {
     text-decoration: none;
-    color: var(--negro);
+    color: var(--blanco);
+    margin-right: 1rem;
 }
 
 /* TODOS LOS ÍCONOS DENTRO DE LAS OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
@@ -130,11 +133,12 @@
     position: absolute;
     top: 0;
     left: 108%;
-    background-color:rgb(199, 199, 199);
-    box-shadow: 10px 10px 10px black;
+    /* background-color:rgb(199, 199, 199); */
+    background-color:var(--negro);
+    box-shadow: 10px 10px 10px var(--negro);
     border-radius: 2%;
-   /*  border: 1px solid white; */
-    /* border-top: 3px solid var(--celeste); */
+    border: 1px solid var(--blanco);
+    border-top: 3px solid var(--celeste);
     padding-left: 15px;
     padding-right: 20px;
     padding-top: 10px;
@@ -160,7 +164,7 @@
 .third-options-left-navbar a{
     text-decoration: none;
     text-transform: none;
-    color: var(--negro);
+    color: var(--blanco);
     font-size: 1rem;
     transition: opacity 450ms;
 }
@@ -253,9 +257,12 @@
 }
 
 /* MOSTRAR EL MENU CUANDO SE PASA EL MOUSE POR ENCIMA DEL ÍCONO DE USUARIO */
-.li-user-icon:hover .profile-menu-header{
-    display: block;
+#li-user-icon {
+    padding-bottom: 36px;
 }
+/* .li-user-icon:hover .profile-menu-header{
+    display: block;
+} */
 
 /* IMAGEN DEL MENÚ DESPLEGABLE DEL ÍCONO DE USUARIO */
 .image-profile-menu {
@@ -317,7 +324,7 @@
 .profile-menu-empty {
     display: none;
     position: absolute;
-    background-color: var(--blanco);
+    background-color: var(--negro);
     top: 100%;
     right: 0;
     width: 40%;
@@ -330,13 +337,14 @@
 .profile-menu-empty a {
     text-decoration: none;
     font-size: 1rem;
-    color: var(--celeste);
-    font-weight: bold;
-    transition: color 450ms;
+    color: var(--blanco);
+    font-weight: 600;
+    transition: color 450ms, opacity 450ms;
 }
 
 .profile-menu-empty a:hover {
-    color: var(--azul-marino);
+    color: var(--blanco);
+    opacity: 0.8;
 }
 
 /* BARRA DE BÚSQUEDA */
@@ -448,10 +456,14 @@
 }
 
 /* BARRA DE NAVEGACIÓN DEL SLIDE MENÚ DE LA VERSIÓN MOBILE */
-
+.navbar-slide-menu ul {
+    margin: 0;
+    padding: 0;
+}
 
 /* LI DE LA NAVBAR DEL SLIDE MENÚ */
 .options-navbar-slide-menu {
+    list-style: none;
     padding: 1.25rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -489,6 +501,7 @@
 
 /* TODOS LOS LI DE LA SEGUNDA NAVBAR DEL SLIDE-MENU */
 .second-navbar-slide-menu ul li {
+    list-style: none;
     margin-bottom: 1rem;
 }
 
@@ -500,6 +513,7 @@
 
 /* MENÚS DESPLEGABLES DE LAS OPCIONES SECUNDARIAS DE LA NAVBAR DEL SLIDE-MENU */
 .third-navbar-slide-menu {
+    display: none;
     margin: 1.5rem 0 0 1rem;
 }
 
@@ -516,10 +530,9 @@
 
 /* FOOTER DEL SLIDE-MENU */
 .footer-slide-menu {
-    position: absolute;
-    bottom: 2%;
     color: white;
     width: 100%;
+    margin-top: 4rem;
 }
 
 /* DIV DEL PERFIL DEL USUARIO */
@@ -544,7 +557,7 @@
 
 /* DIV DEL PERFIL DEL USUARIO DEL SLIDE-MENU SI YA INICIÓ SESIÓN */
 .profile-slide-menu-full {
-    display: none;
+    display: flex;
     flex-wrap: nowrap;
     align-items: center;
     margin-bottom: 1rem;
@@ -570,6 +583,7 @@
 
 /* NOMBRE DE USUARIO DEL PERFIL DEL USUARIO DEL SLIDE-MENU SI YA INICIÓ SESIÓN */
 .profile-slide-menu-full p {
+    padding-top: 1rem;
     font-size: 1rem;
     color: var(--blanco);
     opacity: 0.8;
@@ -596,6 +610,11 @@
 
 .social-media-slide-menu i:hover {
     opacity: 0.7;
+}
+
+/* COLOCAR UNA CLASE QUE TENGA DISPLAY BLOCK */
+.active-slide-menu {
+    display: block;
 }
 
 /* MEDIA QUERIES */

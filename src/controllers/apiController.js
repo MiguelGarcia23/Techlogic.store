@@ -359,6 +359,22 @@ const apiController = {
         .catch(e => {
           res.send(e)
         })
+  },
+  deleteProduct: (req, res) => {
+    db.Products.update({
+      deleted: true
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(() => {
+        res.redirect('/products')
+      })
+      .catch(e => {
+        res.send(e)
+      })
   }
 };
 

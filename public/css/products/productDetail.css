@@ -201,8 +201,15 @@
 
 }
 
+.collapse-product-details {
+  border-bottom: 1px solid var(--blanco);
+}
+
 .prd-features{
+  width: 100%;
+  border: none;
   border-top: 1px solid var(--blanco);
+  border-bottom: 1px solid var(--blanco);
   display: flex;
   background-color: var(--negro);
   color: var(--blanco);
@@ -214,14 +221,24 @@
   padding-top: 15px;
   padding-bottom: 15px;
   align-items: center;
+  cursor: pointer;
+  transition: font-size 450ms;
 
+}
+
+.prd-features:hover p {
+  font-size: 18px;
+}
+
+.prd-features:hover .div-props i {
+  font-size: 25px;
 }
 
 .prd-features p {
   margin: auto 0;
 }
 
-.prd-features:last-child {
+.prd-features-reviews {
   border-bottom: 1px solid var(--blanco);
 }
 
@@ -230,20 +247,82 @@
   margin-right: 3px;
 }
 
-.button-props i:hover{
-  font-size: 25px;
-}
-
-.button-props i {
-  cursor: pointer;
+.div-props i {
   color: var(--blanco);
   font-size: 20px;
 
 }
 
-.button-props{
+.div-props{
   background-color: transparent;
   border: none;
+}
+
+.collapse-body-product-details {
+  display: none;
+  transition: all 450ms;
+}
+
+.description-collapse-body-product-details p {
+  color: var(--blanco);
+  padding: 2rem;
+  margin-bottom: 0;
+}
+
+.payment-collapse-body-product-details {
+  margin: 4rem 0;
+}
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-text{
+  text-align: center;
+  color: var(--blanco);
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.card{
+  background-color: black;
+}
+
+.card-img-top{
+  display: block;
+  margin: auto;
+  width: 150px;
+}
+
+.reviews-collapse-body-product-details {
+  margin: 2rem;
+}
+
+.form-reviews-collapse-body-product-details {
+  width: 100%;
+}
+
+.textarea-reviews-collapse-body-product-details {
+  width: 100%;
+  height: 100px;
+  max-height: 100px;
+  border-radius: 3px;
+}
+
+.button-reviews-collapse-body-product-details {
+  margin-top: 1rem;
+}
+
+.action-collapse-title-products-details {
+  font-size: 18px;
+}
+
+.action-collapse-body-products-details {
+  display: block;
 }
 
 .icon-numbers{

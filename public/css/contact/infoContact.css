@@ -28,6 +28,16 @@
     border-bottom: solid 2px var(--blanco);
 }
 
+.link-questions-info-contact {
+    color: var(--celeste);
+    transition: color 450ms, opacity 450ms;
+}
+
+.link-questions-info-contact:hover {
+    color: var(--celeste);
+    opacity: 0.8;
+}
+
 .form-info{
     display: flex;
     flex-direction: column;
@@ -167,6 +177,7 @@
 .card-container{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -184,3 +195,7 @@
     width: 300px;
 }
 
+/* Questions */
+.accordion-body {
+    background-color: rgb(228, 228, 228);
+}

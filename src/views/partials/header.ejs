@@ -20,7 +20,7 @@
                         <li class="second-options-left-navbar second-options-left-navbar-with-third-navbar">
                             <div class="option-left-navbar-with-icon second-options-left-navbar">
                                 <a href="/products/sectionProducts/:nameSection">Accesorios</a>
-                                <!-- <i class="fa-solid fa-angle-right"></i> -->
+                                <i class="fa-solid fa-angle-right"></i>
                             </div>
                             
                             <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN ACCESORIOS DE PRODUCTOS -->
@@ -46,13 +46,13 @@
                 <div class="second-left-navbar" id="discover-second-left-navbar">
                     <ul>
                         <li class="second-options-left-navbar second-options-left-navbar-with-third-navbar">
-                            <div class="option-left-navbar-with-icon">
+                            <div class="option-left-navbar-with-icon collection-option-left-navbar-with-icon">
                                 <a href="/products/collections">Colecciones</a>
-                               <!--  <i class="fa-solid fa-angle-right"></i> -->
+                                <i class="fa-solid fa-angle-right"></i>
                             </div>
 
                             <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN COLECCIONES DE DESCUBRE -->
-                            <div class="third-left-navbar">
+                            <div class="third-left-navbar collection-third-left-navbar">
                                 <ul>
                                     <li class="third-options-left-navbar"><a href="/products/collections/:nameCollection?">Modern</a></li>
                                     <li class="third-options-left-navbar"><a href="/products/collections/:nameCollection?">Classic</a></li>
@@ -106,8 +106,8 @@
             </li>
 
             <!-- ÍCONO DE USUARIO -->
-            <li class="icono-right-navbar li-user-icon">
-                <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+            <li class="icono-right-navbar">
+                <a href="/users/login" id="li-user-icon"><i class="fa-solid fa-user"></i></a>
 
                 <% if (locals.isLogged) { %> 
 
@@ -177,14 +177,14 @@
 
                 <!-- OPCIÓN PRODUCTOS -->
                 <li class="options-navbar-slide-menu">
-                    <div class="option-navbar-with-icon">
+                    <div class="option-navbar-with-icon" id="products-option-slide-menu">
                         <a href="/products">Productos</a>
                         <i class="fa-solid fa-plus"></i>
                         <i class="fa-solid fa-minus icono-menos-slide-menu"></i>
                     </div>
 
                     <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN PRODUCTOS -->
-                    <div class="second-navbar-slide-menu">
+                    <div class="second-navbar-slide-menu" id="second-navbar-products-option-slide-menu">
                         <ul>
                             <li><a href="/products/sectionProducts/:nameSection">Smartphones</a></li>
                             <li><a href="/products/sectionProducts/:nameSection">Tablets</a></li>
@@ -192,14 +192,14 @@
                             <li><a href="/products/sectionProducts/:nameSection">Consolas y Gaming</a></li>
                             <li><a href="/products/sectionProducts/:nameSection">Redes</a></li>
                             <li>
-                                <div class="option-navbar-with-icon">
+                                <div class="option-navbar-with-icon" id="accesories-products-option-slide-menu">
                                     <a href="/products/sectionProducts/:nameSection">Accesorios</a>
                                     <i class="fa-solid fa-plus"></i>
                                     <i class="fa-solid fa-minus icono-menos-slide-menu"></i>
                                 </div>
                                 
                                 <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN ACCESORIOS DE PRODUCTOS -->
-                                <div class="third-navbar-slide-menu">
+                                <div class="third-navbar-slide-menu" id="third-navbar-accesories-products-option-slide-menu">
                                     <ul>
                                         <li><a href="/products/sectionProducts/:nameSection">Fundas</a></li>
                                         <li><a href="/products/sectionProducts/:nameSection">Teclados</a></li>
@@ -215,24 +215,24 @@
 
                 <!-- OPCIÓN DESCUBRE -->
                 <li class="options-navbar-slide-menu">
-                    <div class="option-navbar-with-icon">
+                    <div class="option-navbar-with-icon" id="discover-option-slide-menu">
                         <a href="#">Descubre</a>
                         <i class="fa-solid fa-plus"></i>
                         <i class="fa-solid fa-minus icono-menos-slide-menu"></i>
                     </div>
 
                     <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN DESCUBRE -->
-                    <div class="second-navbar-slide-menu">
+                    <div class="second-navbar-slide-menu" id="second-navbar-discover-option-slide-menu">
                         <ul>
                             <li>
-                                <div class="option-navbar-with-icon">
+                                <div class="option-navbar-with-icon" id="collections-products-option-slide-menu">
                                     <a href="/products/collections">Colecciones</a>
                                     <i class="fa-solid fa-plus"></i>
                                     <i class="fa-solid fa-minus icono-menos-slide-menu"></i>
                                 </div>
 
                                 <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN COLECCIONES DE DESCUBRE -->
-                                <div class="third-navbar-slide-menu">
+                                <div class="third-navbar-slide-menu" id="third-navbar-collections-products-option-slide-menu">
                                     <ul>
                                         <li><a href="/products/collections/:nameCollection?">Modern</a></li>
                                         <li><a href="/products/collections/:nameCollection?">Classic</a></li>
@@ -249,14 +249,14 @@
 
                 <!-- OPCIÓN CONTACTO -->
                 <li class="options-navbar-slide-menu">
-                    <div class="option-navbar-with-icon">
+                    <div class="option-navbar-with-icon" id="contact-option-slide-menu">
                         <a href="#">Contacto</a>
                         <i class="fa-solid fa-plus"></i>
                         <i class="fa-solid fa-minus icono-menos-slide-menu"></i>
                     </div>
 
                     <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN CONTACTO -->
-                    <div class="second-navbar-slide-menu">
+                    <div class="second-navbar-slide-menu" id="second-navbar-contact-option-slide-menu">
                         <ul>
                             <li><a href="/contact/aboutUs">Acerca de Techlogic.store</a></li>
                             <li><a href="/contact/payment">Métodos de Pago</a></li>
@@ -276,19 +276,25 @@
             <!-- PERFIL DEL USUARIO EN EL SLIDE-MENU DE LA VERSIÓN MOBILE -->
             <div class="profile-slide-menu">
 
-                <!-- PERFIL DEL USUARIO SI NO HA INICIADO SESIÓN -->
-                <div class="profile-slide-menu-empty">
-                    <a href="/users/login">Iniciar Sesión</a>
-                    <a href="/users/register">Regístrate</a>
-                </div>
+                <% if (!locals.isLogged) { %>
 
-                <!-- PERFIL DEL USUARIO SI YA INICIÓ SESIÓN -->
-                <div class="profile-slide-menu-full">
-                    <div class="img-slider-menu">
-                        <img src="/img/foto-de-perfil.jpg" alt="Foto de perfil del usuario">
+                    <!-- PERFIL DEL USUARIO SI NO HA INICIADO SESIÓN -->
+                    <div class="profile-slide-menu-empty">
+                        <a href="/users/login">Iniciar Sesión</a>
+                        <a href="/users/register">Regístrate</a>
                     </div>
-                    <p>Nombre de Usuario</p>
-                </div>
+
+                <% } else { %>
+
+                    <!-- PERFIL DEL USUARIO SI YA INICIÓ SESIÓN -->
+                    <div class="profile-slide-menu-full">
+                        <div class="img-slider-menu">
+                            <img src="/img/users/<%= locals.userLogged.image %>" alt="Foto de perfil del usuario">
+                        </div>
+                        <p><%= locals.userLogged.name %> <%= locals.userLogged.lastName %></p>
+                    </div>
+                
+                <% } %>
 
             </div>
 
