@@ -11,11 +11,27 @@
         <!-- MAIN -->
         <main class="main-collections">
             <h2 class="main-title-collections">Colecciones</h2>
-            <ul class="ul-collections">
+            <div class="container list-products">
+                <!-- RECORRER EL ARRAY DE PRODUCTOS -->
                 <% for( let collection of collections ) { %>
-                    <li class="li-collections"><%= collection.collectionName %></li>
+                    <div class=" container col-md-6 card product-article" >
+                        <br>
+        
+                        <img
+                        src="/img/collections/<%= collection.collectionName %>.png"
+                        class="card-img-top"
+                        id="img-prd"
+                        alt="<%= collection.name %>"
+                        />
+                      
+                      <div class="card-body">
+                        <h5 class="card-title title-prod"><%= collection.collectionName %></h5>
+                        
+                      </div>
+                  </div>
                 <% } %>
-            </ul>
+            </div>
+            
         </main>
 
         <!-- FOOTER -->

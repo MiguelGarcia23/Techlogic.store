@@ -23,11 +23,12 @@
           </a>
         </div>
         <!-- Si existe un usuario en sesión y si es admin muestra el boton CREAR -->
-        <% if (user) { %> 
-            <% if ((user.rolId == 1)) { %>
+        <% if (user) { %> <% if ((user.rolId == 1)) { %>
         <div>
           <form action="/products/create" method="GET">
-            <button  class="btn btn-secondary">Crear <i class="fas fa-plus"></i></button>
+            <button class="btn btn-secondary">
+              Crear <i class="fas fa-plus"></i>
+            </button>
           </form>
         </div>
         <% } %> <% } %>
@@ -340,40 +341,61 @@
         <!-- RECORRER EL ARRAY DE PRODUCTOS -->
         <% for(let product of products){ %>
 
-          <div class=" container card product-article" >
-            <a href="/products/productDetail/<%= product.id %>">
-              <img src="/img/products/<%= product.image %>" class="card-img-top" id="img-prd" alt="<%= product.name %>">
-            </a>
-            <div class="card-body">
-              <h5 class="card-title title-prod"><%= product.name %></h5>
+        <div class="container card product-article">
+          <a href="/products/productDetail/<%= product.id %>">
+            <img
+              src="/img/products/<%= product.image %>"
+              class="card-img-top"
+              id="img-prd"
+              alt="<%= product.name %>"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title title-prod"><%= product.name %></h5>
             <div class="list-prod">
               <ul class="list-group list-group-flush list-prod">
-                <li class="list-group-item price-list-group-item">$<%= product.price %></li>
+                <li class="list-group-item price-list-group-item">
+                  $<%= product.price %>
+                </li>
+                
+                <!-- SI EL PRODUCTO NO TIENE DESCUENTO, LLEVA A LA VISTA DE LOGIN-REGISTER -->
                 <% if ((product.discount == 0)) { %>
-                  <li class="list-group-item discount"><a href="/users/login" class="card-link link-discount">Ver descuentos exclusivos</a></li>
-                  
+                <li class="list-group-item discount">
+                  <a href="/users/login" class="card-link link-discount"
+                    >Ver descuentos exclusivos</a
+                  >
+                </li>
+
+                <!-- SI EL PRODUCTO TIENE DESCUENTO,LO MUESTRA -->
                 <% } else { %>
-                  <li class="list-group-item discount"><%= product.discount %>% OFF!</li>
-                  <% } %>
+                <li class="list-group-item discount">
+                  <%= product.discount %>% OFF!
+                </li>
+                <% } %>
               </ul>
             </div>
             <div class="card-body">
-              <form action="/products/addProduct/<%= product.id %>" method="POST">
-                <button class="btn btn-secondary">Carrito <i class="fas fa-cart-plus"></i></button>
-                
+              <form
+                action="/products/addProduct/<%= product.id %>"
+                method="POST"
+              >
+                <button class="btn btn-secondary">
+                  Carrito <i class="fas fa-cart-plus"></i>
+                </button>
               </form>
-              
-              <% if (user) { %> 
-                <% if ((user.rolId == 1)) { %>
-                  <br>
-            <div>
-                <a href="/products/edit/<%= product.id %> " class="card-link">Editar Producto</a>
-            </div>
-            <% } %> <% } %>
-              
-            </div>
+
+              <!-- SI EL USER ES ADMIN, MUESTRA EL LINK DE EDITAR -->
+              <% if (user) { %> <% if ((user.rolId == 1)) { %>
+              <br />
+              <div>
+                <a href="/products/edit/<%= product.id %> " class="card-link"
+                  >Editar Producto</a
+                >
+              </div>
+              <% } %> <% } %>
             </div>
           </div>
+        </div>
         <% } %>
       </div>
     </main>

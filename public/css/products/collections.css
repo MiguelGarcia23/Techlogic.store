@@ -1,6 +1,7 @@
 @import url(../styles.css);
 @import url(../partials/header.css);
 @import url(../partials/footer.css);
+@import url(./listProducts.css);
 
 /* MAIN VISTA COLECCIONES */
 .main-collections {
