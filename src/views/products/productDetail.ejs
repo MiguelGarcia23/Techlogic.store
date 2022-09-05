@@ -69,12 +69,15 @@
               </div>
               <div class="prd-buy-cnt">
               </div>
+              <br>
               <form action="/products/addProduct/<%= product.id %>" method="POST">
                 <button class="btn btn-secondary">Agregar al carrito<i class="fa-solid fa-cart-arrow-down"></i></button>
               </form>
               <!-- Si existe usuario logueado y es admin muestra el boton de EDITAR PRODUCTO -->
               <% if (user) {%>
                 <% if (user.rolId == 1) {%>
+                  <br>
+                  
                   <div>
                     <form action="/products/edit/<%= product.id %> " method="GET">
                         <button class="btn btn-secondary">Editar producto</i></button>
