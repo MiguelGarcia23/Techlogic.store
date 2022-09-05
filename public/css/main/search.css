@@ -42,12 +42,12 @@
     transition: color 200ms, font-weight 200ms, box-shadow 200ms;
 }
 .link-discount:hover {
-    color: green;
+    color: rgb(156, 255, 156);;
     font-weight: bold;
 }
 
 .product-article:hover .discount{
-    color: green;
+    color: rgb(156, 255, 156);;
     font-weight:bold;
     box-shadow: 0 0 10px var(--blanco);
 }
