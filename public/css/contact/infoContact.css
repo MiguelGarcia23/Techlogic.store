@@ -3,7 +3,7 @@
 @import url(../partials/footer.css);
 
 
-.main-info{
+.main-info-contact{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -93,7 +93,7 @@
 }
 
 .p-text{
-    font-size: 25px;
+    font-size: 18px;
     color: white;
     margin-bottom: 20px;
     text-align:justify;
@@ -113,7 +113,7 @@
 
 
 .icono{
-    width: 400px;
+    width: 200px;
 }
 
 .dual-text{
@@ -131,7 +131,7 @@
 }
 
 .p-text-2{
-    font-size: 25px;
+    font-size: 18px;
     color: white;
     margin-bottom: 20px;
     text-align:justify;
@@ -141,6 +141,7 @@
 
 .icono-oculto{
     display: none;
+    width: 200px;
 }
 @media (max-width: 1091px) {
     .main-info{
@@ -152,7 +153,7 @@
     }
     .icono-oculto{
         display: block;
-        width: 250px;
+
         margin-bottom: 35px;
     }
     .p-image-2{
@@ -166,7 +167,7 @@
         align-items: center;
     }
     .icono{
-        width: 250px;
+       /*  width: 250px; */
         margin-bottom: 35px;
     }
     .p-text{
@@ -175,12 +176,12 @@
     .p-text-2{
         margin-right: 0px;
     }
-    .p-text{
+/*     .p-text{
         font-size: 20px;
     }
     .p-text-2{
         font-size: 20px;
-    }
+    } */
 }
 
 
@@ -195,6 +196,7 @@
 
 .card-text{
     text-align: center;
+    font-size: 20px;
     color: var(--blanco);
     margin-top: 10px;
 }
@@ -204,7 +206,8 @@
 }
 
 .card-img-top{
-    width: 300px;
+    margin: auto;
+    width: 30%;
 }
 
 /* Questions */
