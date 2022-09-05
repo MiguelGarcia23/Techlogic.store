@@ -31,6 +31,6 @@ router.get ('/users', apiController.allUsers);
 router.get ('/users/:id', apiController.userId);
 
 /* Ruta POST para loguearse  */
-/* router.post ('/login', apiController.processLogin); */
+router.post ('/login', apiController.processLogin);
 
 module.exports = router;

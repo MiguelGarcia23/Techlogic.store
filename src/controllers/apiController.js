@@ -375,6 +375,39 @@ const apiController = {
       .catch(e => {
         res.send(e)
       })
+  },
+  processLogin: (req, res) => {
+    db.Users.findOne({
+      where: {
+        email: req.body.email,
+      },
+    })
+      .then((user) => {
+        if (user) {
+          if (bcrypt.compareSync(req.body.password, user.password)) {
+            res.redirect("/users/userProfile");
+          } else {
+            res.render("./users/login", {
+              errors: {
+                email: {
+                  msg: "El usuario o la contraseña son incorrectos",
+                },
+              },
+            });
+          }
+        } else {
+          res.render("./users/login", {
+            errors: {
+              email: {
+                msg: "El usuario no se encuentra registrado",
+              },
+            },
+          });
+        }
+      })
+      .catch((e) => {
+        res.send(e);
+      });
   }
 };
 
