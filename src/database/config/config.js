@@ -1,10 +1,10 @@
 module.exports = {
   "development": {
     "username": "root",
-    "password": '',
+    "password": 'Leobar.23',
     "database": "techlogic_store",
     "host": "127.0.0.1",
-    "port": "3308",
+    "port": "3306",
     "dialect": "mysql"
   },
   "test": {

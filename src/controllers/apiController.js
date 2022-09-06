@@ -315,7 +315,7 @@ const apiController = {
 
     db.Products.create({
       ...req.body,
-      image: req.body.image,
+      image: 'producto-predeterminado-dashboard.png',
       sectionId: req.body.section,
       collectionId: req.body.collection,
       brandId: req.body.brand,

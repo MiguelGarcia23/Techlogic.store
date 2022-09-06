@@ -100,6 +100,7 @@
     top: 100%;
     left: 0;
     padding: 1rem 0.5rem;
+    z-index: 3;
 }
 
 /* UL DEL MENÚ DESPLEGABLE DEL BOTÓN DE ORDENAR POR */

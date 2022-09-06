@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- HEAD -->
+    <%- include('../partials/head', {title: 'Compra', stylesheet: '/products/purchase.css'}) %>
+    <body>
+        
+        <!-- MAIN -->
+        <main class="main-purchase-page">
+
+            <!-- DIV DE LA IMAGEN -->
+            <div class="div-img-purchase-page">
+                <img src="/img/error-compra.png" alt="Imagen de error de compra" class="img-purchase-page">
+            </div>
+
+            <!-- DIV DE LA INFO -->
+            <div class="div-info-purchase-page">
+
+                <!-- OOPS! -->
+                <p class="oops-purchase-page">Oops!</p>
+                <!-- TEXTO DE ERROR EN LA COMPRA  -->
+                <h2 class="title-purchase-page">En este momento no podemos procesar su compra</h2>
+                <!-- TEXTO DE SERVIDOR EN MANTENIMIENTO -->
+                <p class="info-error-purchase-page">Servidor en mantenimiento</p>
+                <!-- TEXTO INTRODUCTORIO A LOS LINKS -->
+                <p class="title-links-purchase-page">Aquí están algunos link que te pueden servir:</p>
+                <!-- LISTA DE LINKS -->
+                <ul class="list-links-purchase-page">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="/products">Listado de productos</a></li>
+                    <li><a href="/products/productCart">Mi carrito</a></li>
+                    <li><a href="/users/login">Login</a></li>
+                    <li><a href="/contact/aboutus">Sobre Nosotros</a></li>
+                </ul>
+
+            </div>
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer-purchase-page">
+
+            <!-- LOGO DEL FOOTER -->
+            <img src="/img/logo.svg" alt="Logo Techlogic.store" class="img-footer-purchase-page">
+            <!-- TEXTO DEL FOOTER -->
+            <p class="p-footer-purchase-page">© 2022 Techlogic.store. Todos los derechos reservados.</p>
+
+        </footer>
+
+    </body>
+</html>

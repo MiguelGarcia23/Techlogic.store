@@ -1,0 +1,158 @@
+@import url(../styles.css);
+
+body {
+    background-image: url(/img/1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* MAIN */
+.main-purchase-page {
+    width: 90vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* DIV DE LA IMAGEN */
+.div-img-purchase-page {
+    display: none;
+    margin-right: 2rem;
+}
+
+/* IMAGEN */
+.img-purchase-page {
+    width: 100%;
+    max-width: 600px;
+}
+
+/* DIV DE LA INFO */
+.div-info-purchase-page {
+    margin-left: 2rem;
+}
+
+/* OOPS! */
+.oops-purchase-page {
+    font-family: 'Segoe UI';
+    font-size: 5rem;
+    color: var(--blanco);
+    opacity: 0.9;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* TEXTO DE ERROR EN LA COMPRA */
+.title-purchase-page {
+    font-size: 1.25rem;
+    color: var(--blanco);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* TEXTO DEL SERVIDOR EN MANTENIMIENTO */
+.info-error-purchase-page {
+    font-size: 1rem;
+    color: var(--blanco);
+    opacity: 0.9;
+    font-size: bold;
+    margin-bottom: 1rem
+}
+
+/* TEXTO INTRODUCTORIO A LOS LINKS */
+.title-links-purchase-page {
+    font-size: 1rem;
+    color: var(--blanco);
+    opacity: 0.9;
+    margin-bottom: 0.5rem;
+}
+
+/* UL DE LA LISTA DE LINKS */
+.list-links-purchase-page {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* LI DE LA LISTA DE LINKS */
+.list-links-purchase-page li {
+    margin-bottom: 0.25rem
+}
+
+/* ENLACES DE LOS LI DE LA LISTA DE LINK */
+.list-links-purchase-page li a {
+    font-size: 1rem;
+    color: var(--celeste);
+    text-decoration: none;
+    transition: color 2s;
+}
+
+.list-links-purchase-page li a:hover {
+    color: var(--celeste);
+    opacity: 0.5;
+}
+
+/* FOOTER */
+.footer-purchase-page {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+}
+
+/* LOGO DEL FOOTER */
+.img-footer-purchase-page {
+    width: 60px;
+    margin-right: 0.5rem;
+}
+
+/* TEXTO DEL FOOTER */
+.p-footer-purchase-page {
+    font-size: 0.75rem;
+    color: var(--blanco);
+}
+
+/* MEDIA QUERIES */
+
+/* MEDIA QUERIES TABLETS */
+@media (min-width: 768px) {
+
+    /* DIV DE LA IMAGEN */
+    .div-img-purchase-page {
+        display: block;
+    }
+
+    /* OOPS! */
+    .oops-purchase-page {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+    }
+
+    /* TEXTO DE PÁGINA NO ENCONTRADA */
+    .title-purchase-page {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    /* TEXTO DEL CÓDIGO DEL ERROR */
+    .info-error-purchase-page {
+        font-size: 1.125rem;
+        margin-bottom: 1rem
+    }
+
+    /* LOGO DEL FOOTER */
+    .img-footer-purchase-page {
+        width: 80px;
+    }
+
+    /* TEXTO DEL FOOTER */
+    .p-footer-purchase-page {
+        font-size: 0.875rem;
+    }
+}

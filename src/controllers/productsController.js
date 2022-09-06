@@ -96,6 +96,11 @@ const productsController = {
       })
   },
 
+  /* MOSTRAMOS UNA ALERTA AL PULSAR EL BOTÓN DE COMPRAR EN EL CARRITO */
+  buyProductCart: (req, res) => {
+    res.render('./products/purchase')
+  },
+
   /* AÑADIMOS EL PRODUCTO A LA LISTA DEL CARRITO */
   addToCart: (req, res) => {
 
