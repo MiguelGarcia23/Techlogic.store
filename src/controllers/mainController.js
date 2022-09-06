@@ -23,7 +23,8 @@ const mainController = {
       let productoABuscar = req.body.search
       db.Products.findAll({
         where: {
-          name: {[Op.like]: '%' + productoABuscar + '%'}
+          name: {[Op.like]: '%' + productoABuscar + '%'},
+          deleted: false
         }
       })
         .then(products => {
