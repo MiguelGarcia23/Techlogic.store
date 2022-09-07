@@ -1,6 +1,7 @@
 @import url(../styles.css);
 @import url(../partials/header.css);
 @import url(../partials/footer.css);
+@import url(../products/listProducts.css);
 
 
 /* EL MAIN DE LA VISTA DEL LISTADO DE PRODUCTOS */
@@ -10,17 +11,20 @@
     padding: 0 2rem;
 }
 .product-article{
-    width: 95%;
+    display: flex;
+    width: 90%;
     margin-bottom: 3.5rem;
+    height: 430px;
     /* background-color:transparent; */
     background-color: rgb(32, 32, 32);
-    border: solid 1px white;
+    /* border: solid 1px rgb(32, 32, 32); */
     box-shadow: 0 0 10px var(--blanco);
 }
 #img-prd{
     display: block;
     margin: auto;
-    width: 75%;
+    margin-top: 10px;
+    width: 90%;
 }
 .title-prod{
     text-align: center;
@@ -321,12 +325,12 @@
 
 /* DIV QUE CONTIENE EL LISTADO DE PRODUCTOS */
 .list-products{
-    width: 100%;
+    width: 90%;
     display: flex;
+    margin: auto;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
 }
 
 /* EL ENLACE QUE RODEA CADA PRODUCTO DEL LISTADO DE PRODUCTOS */
@@ -335,12 +339,29 @@
 }
 
 /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
+#card-article{
+    display: block;
+    margin: auto;
+    width: 75%;
+}
 .product-article{
-    width: 100%;
+    display: flex;
+    width: 90%;
     margin-bottom: 3.5rem;
+    height: 430px;
+    /* background-color:transparent; */
+    background-color: rgb(32, 32, 32);
+    /* border: solid 1px rgb(32, 32, 32); */
+    box-shadow: 0 0 10px var(--blanco);
 }
 
 /* IMAGEN DE CADA PRODUCTO DEL LISTADO DE PRODUCTOS */
+#img-prd{
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 90%;
+}
 .imageProduct{
     display: block;
     width: 100%;
@@ -349,7 +370,6 @@
     margin-bottom: 1rem;
     border-radius: 2px;
 }
-
 /* EL NOMBRE Y EL PRECIO DE CADA PRODUCTO DEL LISTADO DE PRODUCTOS */
 .productName, .productPrice{
     color: var(--blanco);
