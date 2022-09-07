@@ -95,11 +95,14 @@ INSERT INTO products(id,name,description,price,discount,image,sectionId,brandId,
 INSERT INTO products(id,name,description,price,discount,image,sectionId,brandId,collectionId,inCart,deleted) VALUES (48,'Apple Watch','Apple Watch','76.629',0,'apple-watch.png',6,1,4,0,0);
 INSERT INTO products(id,name,description,price,discount,image,sectionId,brandId,collectionId,inCart,deleted) VALUES (49,'Asus Vivobook 15','Asus Vivobook 15','130.000',0,'asus-vivobook-15.png',3,25,1,0,0);
 INSERT INTO products(id,name,description,price,discount,image,sectionId,brandId,collectionId,inCart,deleted) VALUES (50,'Joystick Playstation 5','Joystick Playstation 5','17.199',0,'joystick-ps5.png',4,4,4,0,0);
+
+-- Rellenando la tabla rols
+INSERT INTO rols(id, rolName) VALUES (DEFAULT, 'Admin');
+INSERT INTO rols(id, rolName) VALUES (DEFAULT, 'Invitado');
+
+
 -- Rellenando tabla users
 -- Usuario: admin@techlogic.com.ar
 -- Password: admin
 INSERT INTO users(id,name,lastName,email,password,image,rolId) VALUES (DEFAULT,'Administrador','Techlogic.Store','admin@techlogic.com.ar','$2a$10$2IIXvPdmnQJFnFhBK2ngN.9jW6/rKLNncNqtJe710Fq8BtT7iXKYK','user-1659489294297.png',1);
 
--- Rellenando la tabla rols
-INSERT INTO rols(id, rolName) VALUES (DEFAULT, 'Admin');
-INSERT INTO rols(id, rolName) VALUES (DEFAULT, 'Invitado');
