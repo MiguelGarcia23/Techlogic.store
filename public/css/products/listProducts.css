@@ -263,8 +263,9 @@
 
 /* DIV QUE CONTIENE EL LISTADO DE PRODUCTOS */
 .list-products{
-    width: 100%;
+    width: 90%;
     display: flex;
+    margin: auto;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -277,18 +278,26 @@
 }
 
 /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
+#card-article{
+    display: block;
+    margin: auto;
+    width: 75%;
+}
 .product-article{
-    width: 95%;
+    display: flex;
+    width: 90%;
     margin-bottom: 3.5rem;
+    height: 430px;
     /* background-color:transparent; */
     background-color: rgb(32, 32, 32);
-    border: solid 1px white;
+    /* border: solid 1px rgb(32, 32, 32); */
     box-shadow: 0 0 10px var(--blanco);
 }
 #img-prd{
     display: block;
     margin: auto;
-    width: 75%;
+    margin-top: 10px;
+    width: 90%;
 }
 .title-prod{
     text-align: center;
@@ -393,7 +402,7 @@
 
     /* CADA ARTICLE DE CADA PRODUCTO DEL LISTADO DE PRODUCTO */
     .product-article{
-        width: 30%;
+        width: 45%;
     }
    
 }
