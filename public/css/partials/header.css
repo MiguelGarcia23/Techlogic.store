@@ -42,6 +42,7 @@
 
 .options-left-navbar a:hover {
     opacity: 0.6;
+    text-decoration: underline;
 }
 
 /* MENÚ DESPLEGABLE DE LAS OPCIONES PRINCIPALES DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
@@ -191,10 +192,11 @@
     width: 100%;
 }
 
+
 .logo a img {
     display: block;
     margin: auto;
-    width: 6.875rem;
+    max-width: 126px;
 }
 
 /* BARRA DE NAVEGACIÓN DERECHA */
