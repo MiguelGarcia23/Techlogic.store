@@ -13,7 +13,7 @@ const mainController = {
 
       Promise.all([promiseProducts, promiseCollections])
         .then(([products, collections]) => {
-          res.render('./main/index', {bestSellers: products, collections})
+          res.render('./main/index', {bestSellers: products, collections, user: req.session.userLogged})
         })
         .catch(e => {
           res.send(e)

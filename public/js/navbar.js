@@ -24,7 +24,11 @@
     const thirdNavbarAccesoriesOptionSlideMenu = document.getElementById('third-navbar-accesories-products-option-slide-menu')
     const collectionsOptionSlideMenu = document.getElementById('collections-products-option-slide-menu')
     const thirdNavbarCollectionsOptionSlideMenu = document.getElementById('third-navbar-collections-products-option-slide-menu')
-    
+    const adminNav = document.getElementById("admin")
+    const adminOption = document.querySelector(".admin-option")
+    const adminNavSlide = document.getElementById("admin-slide")
+    const adminOptionSlide = document.querySelector(".admin-option-slide")
+
     /* Menu desplegable PRODUCTOS */
     productOption.addEventListener('mouseover', () => {
         productMenu.style.display = 'block'
@@ -114,6 +118,23 @@
     })
     collectionsOptionSlideMenu.addEventListener('click', () => {
         thirdNavbarCollectionsOptionSlideMenu.classList.toggle('active-slide-menu')
+    })
+
+    /* Menu desplegable PRODUCTOS */
+    adminNav.addEventListener('mouseover', () => {
+        adminOption.style.display = 'block'
+    })
+    adminNav.addEventListener('mouseout', () => {
+        adminOption.style.display = 'none'
+    })
+    adminOption.addEventListener('mouseover', () => {
+        adminOption.style.display = 'block'
+    })
+    adminOption.addEventListener('mouseout', () => {
+        adminOption.style.display = 'none'
+    })
+    adminNavSlide.addEventListener('click', () => {
+        adminOptionSlide.classList.toggle('active-slide-menu')
     })
 
 /* } */

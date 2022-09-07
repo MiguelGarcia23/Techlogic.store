@@ -82,6 +82,23 @@
                 </div>
             </li>
 
+            <% if (locals.userLogged) { %> 
+                <% if ((locals.userLogged.rolId == 1)) { %>
+                    <li class="options-left-navbar">
+                        <a href="#" id="admin">Admin</a>
+                        
+                        <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN CONTACTO -->
+                        <div class="admin-option second-left-navbar" id="contact-second-left-navbar">
+                            <ul>
+                                <li class="second-options-left-navbar"><a href="/products/create">Crear producto</a></li>
+                                <li class="second-options-left-navbar"><a href="http://localhost:3000/">Dashboard</a></li>
+                            </ul>
+                        </div>
+                    </li>
+            <% } %> 
+            <% } %>
+
+
         </ul>
 
     </nav>
@@ -265,6 +282,25 @@
                         </ul>
                     </div>
                 </li>
+                <% if (locals.userLogged) { %> 
+                    <% if ((locals.userLogged.rolId == 1)) { %>
+                        <li class="options-navbar-slide-menu">
+                            <div class="option-navbar-with-icon" id="contact-option-slide-menu">
+                                <a href="#" id="admin-slide">Admin</a>
+                                <i class="fa-solid fa-plus"></i>
+                                <i class="fa-solid fa-minus icono-menos-slide-menu"></i>
+                            </div>
+                            
+                            <!-- MENÚ QUE SE DESPLIEGA DE LA OPCIÓN CONTACTO -->
+                            <div class="admin-option-slide second-navbar-slide-menu" id="second-navbar-contact-option-slide-menu">
+                                <ul>
+                                    <li><a href="/products/create">Crear producto</a></li>
+                                    <li><a href="http://localhost:3000/">Dashboard</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                <% } %> 
+                <% } %>
 
             </ul>
 
