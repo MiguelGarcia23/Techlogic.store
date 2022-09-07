@@ -334,62 +334,67 @@
         <% } else { %>
             <!-- RECORRER EL ARRAY DE PRODUCTOS -->
             <% for(let product of products){ %>
-              
-              <div class=" container card product-article" >
+
+              <div class="container card product-article" >
+                <div id="card-article">
                 <a href="/products/productDetail/<%= product.id %>">
-                  <img src="/img/products/<%= product.image %>" class="card-img-top" id="img-prd" alt="<%= product.name %>">
+                  <img
+                    src="/img/products/<%= product.image %>"
+                    class="card-img-top"
+                    id="img-prd"
+                    alt="<%= product.name %>"
+                  />
                 </a>
-                <div class="card-body">
+              </div>
+                <div class="card-body-main">
+                  <div>
                   <h5 class="card-title title-prod"><%= product.name %></h5>
                 </div>
-                <div class="list-prod">
-                  <ul class="list-group list-group-flush list-prod">
-                    <li class="list-group-item price-list-group-item">$ <%= product.price %></li>
-                    <% if ((product.discount == 0)) { %>
-                      <li class="list-group-item discount"><a href="/users/login" class="card-link link-discount">Ver descuentos exclusivos</a></li>
+                  <div class="list-prod">
+                    <ul class="list-group list-group-flush list-prod">
+                      <li class="list-group-item price-list-group-item">
+                        $<%= product.price %>
+                      </li>
                       
-                    <% } else { %>
-                      <li class="list-group-item discount"><%= product.discount %>% OFF!</li>
+                      <!-- SI EL PRODUCTO NO TIENE DESCUENTO, LLEVA A LA VISTA DE LOGIN-REGISTER -->
+                      <% if ((product.discount == 0)) { %>
+                      <li class="list-group-item discount">
+                        <a href="/users/login" class="card-link link-discount"
+                          >Ver descuentos exclusivos</a
+                        >
+                      </li>
+      
+                      <!-- SI EL PRODUCTO TIENE DESCUENTO,LO MUESTRA -->
+                      <% } else { %>
+                      <li class="list-group-item discount">
+                        <%= product.discount %>% OFF!
+                      </li>
                       <% } %>
-                  </ul>
-                </div>
-                <div class="card-body">
-                  <form action="/products/addProduct/<%= product.id %>" method="POST">
-                    <button class="btn btn-secondary">Carrito <i class="fas fa-cart-plus"></i></button>
-                    
-                  </form>
-                  
-                  <% if (user) { %> 
-                    <% if ((user.rolId == 1)) { %>
-                      <br>
-                <div>
-                    <a href="/products/edit/<%= product.id %> " class="card-link">Editar Producto</a>
-                </div>
-                <% } %> <% } %>
-                  
+                    </ul>
+                  </div>
+                  <div class="card-body">
+                    <form
+                      action="/products/addProduct/<%= product.id %>"
+                      method="POST"
+                    >
+                      <button class="btn btn-secondary">
+                        Carrito <i class="fas fa-cart-plus"></i>
+                      </button>
+                    </form>
+      
+                    <!-- SI EL USER ES ADMIN, MUESTRA EL LINK DE EDITAR -->
+                    <% if (user) { %> <% if ((user.rolId == 1)) { %>
+                    <br />
+                    <div>
+                      <a href="/products/edit/<%= product.id %> " class="card-link"
+                        >Editar Producto</a
+                      >
+                    </div>
+                    <% } %> <% } %>
+                  </div>
                 </div>
               </div>
-                <!-- CADA PRODUCTO DEL LISTADO -->
-                <!-- <article class="product-article"> -->
-                <!-- LINK PARA LLEVAR AL DETALLE DEL PRODUCTO -->
-                <!-- <a href="/products/productDetail/<%= product.id %>">
-                    <img
-                    src="/img/products/<%= product.image %>"
-                    class="imageProduct"
-                    alt="<%= product.name %>"
-                    />
-                    <p class="productName"><%= product.name %></p>
-                    <p class="productPrice">$<%= product.price %></p>
-                    <form action="/products/addProduct/<%= product.id %>" method="POST">
-                    <button class="button-cart button-icon-cart">
-                        <p class="add-to-cart">Añadir al carrito</p>
-                        <i class="fas fa-cart-plus"></i>
-                    </button>
-                    </form>
-                </a>
-                </article> -->
-    
-            <% } %>
+              <% } %>
         <% } %> 
       </div>
     </main>
