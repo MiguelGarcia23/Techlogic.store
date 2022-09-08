@@ -19,6 +19,7 @@ window.onload = function() {
             errors.push(`Debes subir una imagen con alguna de las extensiones permitidas: ${acceptedExtensions.join(', ')}`);
             inputImage.classList.add('is-invalid');
         } else {
+            errors.pop()
             inputImage.classList.remove('is-invalid');
             inputName.focus();
         }
@@ -31,6 +32,7 @@ window.onload = function() {
             errors.push('El nombre debe tener al menos 2 caracteres')
             inputName.classList.add('is-invalid')
         } else {
+            errors.pop()
             inputName.classList.remove('is-invalid')
             inputLastName.focus();
         }
@@ -43,6 +45,7 @@ window.onload = function() {
             errors.push('El apellido debe tener al menos 2 caracteres')
             inputLastName.classList.add('is-invalid')
         } else {
+            errors.pop()
             inputLastName.classList.remove('is-invalid')
             inputEmail.focus();
         }
@@ -57,6 +60,7 @@ window.onload = function() {
             errors.push("Debe ingresar un email válido");
             email.classList.add("is-invalid");
         } else {
+            errors.pop()
             inputEmail.classList.remove('is-invalid')
             inputPassword.focus();
         }
@@ -69,6 +73,7 @@ window.onload = function() {
             errors.push('La contraseña debe tener al menos 6 caracteres')
             inputPassword.classList.add('is-invalid')
         } else {
+            errors.pop()
             inputPassword.classList.remove('is-invalid')
             checkboxTermsConditions.focus();
         }
@@ -83,8 +88,7 @@ window.onload = function() {
             e.preventDefault();
             let ulErrors = document.querySelector('.errors-frontEnd');
             ulErrors.classList.add('alert-warning');
-            ulErrors.innerHTML = '';
-
+            ulErrors.innerHTML = ""
             for (let i = 0; i < errors.length; i++) {
                 ulErrors.innerHTML += '<li>' + errors[i] + '</li>'   
             }
@@ -93,3 +97,4 @@ window.onload = function() {
         }
     })
 }
+

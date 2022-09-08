@@ -113,3 +113,42 @@
 
   - Nos juntamos a revisar, con la ayuda de Trello, las funcionalides que debíamos implementar para la entrega de hoy.
   - Coordinamos qué aspectos debemos cambiar o mejorar para el siguiente Sprint.
+
+## Reunión del 08/25
+
+- Hoy nos reunimos para hacer un Sprint Planning del Sprint 7
+
+  - Establecimos las cosas por hacer y los stories.
+  - Definimos las fechas en las que nos reuniríamos a trabajar.
+  - Aclaramos algunos aspectos necesarios antes de comenzar a trabajar en el Sprint.
+
+## Reunión del 08/27
+
+- Hoy nos reunimos para avanzar en el desarrollo de algunos detalles que nos gustaría implementar en el sitio web para la presentación final.
+
+  - Ajustamos algunos detalles de la vista de la página principal.
+  - Configuramos las distintas APIs que usaremos en el dashboard.
+
+## Reunión del 09/03
+
+- Hoy nos reunimos para cambiar algunos estilos de la página web.
+
+  - Hicimos cambios en varias vistas de la página.
+  - Configuramos algunos eventos de JavaScript nuevos.
+  - Terminamos de perfeccionar las APIs del dashboard.
+
+## Reunión del 09/05
+- Hoy nos reunimos para ver el trabajo que habíamos hecho por separado el día anterior y preparar la presentación del proyecto.
+
+  - Revisamos los nuevos estilos de la página principal y las nuevas funcionalidades.
+  - Visualizamos como estaba quedando el Dashboard y qué aspectos le faltaba o le podíamos agregar extra.
+  - Charlamos con el objetivo de preparar los diversos aspectos de la presentación final del proyecto.
+
+## Reunión del 09/07
+
+- Hoy nos reunimos para hacer el Sprint Review del Sprint 8, cerrar todo el diseño y desarrollo de la página y hacer una práctica de la presentación de mañana.
+
+  - Nos juntamos a revisar, con la ayuda de Trello, las funcionalides que debíamos implementar para la entrega de hoy.
+  - Implementamos las funcionalidades y estilos finales de la página antes de la presentación.
+  - Coordinamos qué aspectos de la página debemos cambiar o mejorar en el futuro.
+  - Practicamos la presentación del proyecto que tendremos mañana.

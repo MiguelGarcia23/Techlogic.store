@@ -37,6 +37,15 @@
     margin-bottom: 0.5rem;
 }
 
+#collection{
+    width: 300px;
+    height: 350px;
+}
+#collection:hover{
+    transition: .5s;
+    box-shadow: 0 0 20px var(--blanco);
+}
+
 /* MEDIA QUERIES */
 
 /* MEDIA QUERIES TABLETS */

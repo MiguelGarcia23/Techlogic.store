@@ -1,69 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- HEAD -->
-    <%- include('../partials/head', {title: 'Sobre Techlogic.store', stylesheet: 'contact/aboutUs.css'}) %>
-    
+<!-- HEAD -->
+<%- include('../partials/head', {title: 'Sobre Nosotros' , stylesheet: 'contact/infoContact.css' }) %>
+
     <body>
 
         <!-- HEADER -->
         <%- include('../partials/header') %>
 
-        <!-- MAIN -->
-        <main class="main-about-us">
+            <!-- MAIN -->
+            <main class="main-info">
+                <div class="info-container">
+                    <h2 class="info-title">Acerca de nosotros</h2>
+                    <h3 class="info-subtitle">Techlogic.store</h3>
+                    <div class="info-text-container">
+                        <div class="p-image">
+                            <img class="icono" src="/img/iconos/sensible.png" alt="icono">
+                            <div dual-text>
+                                <p class="p-text">Somos una empresa dedicada a la distribución de productos electrónicos
+                                    de
+                                    alta
+                                    gama, comenzamos en 2016 con un pequeño negocio ubicado en Buenos Aires, hasta que
+                                    conseguimos
+                                    una enorme expansión física y digital en el 2020 con un e-commerce, aumentando no
+                                    solo
+                                    nuestro
+                                    stock, sino nuestro personal y las futuras metas y objetivos a cumplir.</p>
+                                <p class="p-text">En Techlogic.store nos gusta mantener nuestras raíces compartiendo los
+                                    mejores
+                                    momentos de trabajo y manteniendo una relación amistosa tanto con los clientes,
+                                    proveedores
+                                    y
+                                    nosotros mismos.</p>
+                            </div>
 
-            <div class="row">
+                        </div>
+                        <div class="p-image-2">
+                            <img class="icono-oculto" src="/img/iconos/tierra.png" alt="icono">
+                            <div class="triple-text">
+                                <p class="p-text-2">Metas y objetivos: La expansión siempre va a ser una variable fija en
+                                    nuestra
+                                    filosofía de empresa, pero sin perder nuestros orígenes, por eso pretendemos en un
+                                    lapso
+                                    de
+                                    5
+                                    años poder alcanzar a operar dentro de todo Latinoamérica empezando por los países
+                                    limítrofes a
+                                    argentina.</p>
+                                <p class="p-text-2">A corto y mediano plazo buscamos poder generar cuantos más puestos de
+                                    trabajo
+                                    posible para no solo aumentar el personal sino también poder formar a los jóvenes
+                                    que
+                                    busquen un
+                                    futuro en el mundo de la tecnología y el emprendimiento.</p>
+                                <p class="p-text-2">A largo plazo esperamos ser una de las marcas líder de distribución de
+                                    productos
+                                    electrónicos en Latinoamérica, e incluso poder alcanzar otros continentes para
+                                    seguir
+                                    facilitando nuestro servicio a través del mundo.</p>
+                            </div>
+                            <img class="icono-2 icono" src="/img/iconos/tierra.png" alt="icono">
+                        </div>
+                    </div>
 
-                <div class="col-12 col-sm-6 col-md-3 border contenedor">
-                    <p>12 sm-6 md-3</p>
-                </div>
-                <div class="col-12 col-sm-12 col-md-3 border contenedor">
-                    <video src="/img/video-prueba.mp4" controls loop></video>
-                </div>
-                <div class="col-12 col-sm-12 col-md-3 border contenedor">
-                    <img src="/img/foto-de-perfil.jpg" alt="Imagen">
-                </div>
-                <div class="col-12 col-sm-12 col-md-3 border contenedor">
-                    <p>12 sm-6 md-3</p>
-                </div>
+            </main>
 
-            </div>
-
-            <div class="row">
-
-                <div class="col-12 col-sm-12 col-md-3 border contenedor">
-                    <video src="/img/video-prueba.mp4" controls loop></video>
-                </div>
-                <div class="col-12 col-sm-6 border contenedor">
-                    <h2>SOBRE NOSOTROS</h2>
-                </div>
-                <div class="col-12 col-sm-12 col-md-3 border contenedor">
-                    <video src="/img/video-prueba.mp4" controls loop></video>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="col-12 col-sm-6 col-md-3 border contenedor">
-                    <p>12 sm-6 md-3</p>
-                </div>
-                <div class="col-12 col-sm-12 col-md-3 border contenedor">
-                    <img src="/img/foto-de-perfil.jpg" alt="Imagen">
-                </div>
-                <div class="col-12 col-sm-12 col-md-3 border contenedor">
-                    <video src="/img/video-prueba.mp4" controls loop></video>
-                </div>
-                <div class="col-12 col-sm-12 col-md-3 border contenedor">
-                    <p>12 sm-6 md-3</p>
-                </div>
-            </div>
-            
-        </main>
-
-        <!-- FOOTER -->
-        <%- include('../partials/footer') %>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+            <!-- FOOTER -->
+            <%- include('../partials/footer') %>
 
     </body>
 

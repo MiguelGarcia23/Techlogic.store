@@ -22,7 +22,6 @@
           <!-- ---------------------IMAGEN DE PERFIL--------------------- -->
           <div class="upload-image-user <%= locals.errors && errors.image? 'is-invalid' : null %>">
             <div class="user-profile-icon">
-              <!-- <i class="fas fa-user-circle"></i> -->
               <img src="/img/users/<%= locals.oldImage ? oldImage : 'usuario-predeterminado.png' %>" 
               class='profileImage' 
               id="profileImage">

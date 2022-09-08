@@ -173,8 +173,6 @@
   font-size: 25px;
   margin-top: 25px;
   margin-left: 10px;
-
-
 }
 
 .prd-buy-cnt{
@@ -185,21 +183,15 @@
 
 .cnt-number{
   border: 3px solid var(--blanco);
-  /* width: 50px;
-  height: 50px; */
   border-radius: 8px;
   margin-left: 18px;
-
 }
 
 .text-number{
   color: var(--blanco);
   font-size: 26px;
-  /* margin-top: 4px;
-  margin-left: 3px; */
   margin: auto;
   padding: 4px 14px;
-
 }
 
 .collapse-product-details {
@@ -224,7 +216,6 @@
   align-items: center;
   cursor: pointer;
   transition: font-size 450ms;
-
 }
 
 .prd-features:hover p {
@@ -340,8 +331,6 @@
   position: relative;
   color: rgb(26, 173, 193);
   bottom: 10px; left: 25px;
-  
-  
 }
 
 .icon-minus i{
@@ -368,11 +357,6 @@
 }
 
 /* MEDIA QUERIES */
-
-/* MEDIA QUERIES TABLETS */
-/* @media (min-width: 768px) {
-
-} */
 
 /* MEDIA QUERIES DESKTOPS */
 @media (min-width: 1050px) {

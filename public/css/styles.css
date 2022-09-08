@@ -1,9 +1,3 @@
-/* ----------------------IMPORTANDO HOJAS DE ESTILO---------------------- */
-/* @import url(index.css);
-@import url(productDetail.css);
-@import url(productCart.css);
-@import url(loginRegister.css); */
-
 /* ----------------------ROOT DE COLORES---------------------- */
 :root{
     --azul-marino: #03254E;
@@ -50,7 +44,6 @@ main{
 .button-cart:hover {
     background-color: var(--celeste);
     color: var(--azul-marino);
-    /* transform: rotate(360deg); */
 }
   
   .button-cart-div {
@@ -68,5 +61,4 @@ main{
 .btn-secondary:hover {
     background-color: var(--celeste);
     color: var(--azul-marino);
-    /* transform: rotate(360deg); */
 }

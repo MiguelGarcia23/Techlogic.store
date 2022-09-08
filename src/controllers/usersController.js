@@ -159,29 +159,6 @@ const usersController = {
           res.send(e);
         });
     }
-
-    /* db.Users.update(
-      {
-        id: user.id,
-        name: req.body.name,
-        lastName: req.body.lastName,
-        email: user.email,
-        password: bcrypt.hashSync(req.body.password, 10),
-        image: req.file ? req.file.filename : user.image,
-        rolId: user.rolId,
-      },
-      {
-        where: {
-          id: user.id,
-        },
-      }
-    )
-      .then(() => {
-        res.redirect("/users/userProfile");
-      })
-      .catch((e) => {
-        res.send(e);
-      }); */
   },
 
   logout: (req, res) => {

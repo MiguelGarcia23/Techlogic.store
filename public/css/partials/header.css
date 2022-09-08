@@ -12,7 +12,6 @@
     position: fixed;
     top: 0;
     z-index: 99;
-    /* transition: background-color 450ms; */
 }
 
 /* BARRA DE NAVEGACIÓN IZQUIERDA */
@@ -63,10 +62,6 @@
    
 }
 
-/* .prueba-left-navbar {
-    display: none;
-} */
-
 /* UL DENTRO DEL MENÚ SECUNDARIO DE LA BARRA DE NAVEGACIÓN IZQUIERDA */
 .second-left-navbar ul {
     display: flex;
@@ -101,13 +96,6 @@
     padding-right: 10px;
     margin-bottom: 0;
     color: var(--blanco);
-    
-
-    /* display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; */
 }
 
 /* TODOS LOS ENLACES DENTRO DE LAS OPCIONES DE LA NAVBAR IZQUIERDA QUE TENGAN UN ÍCONO AL LADO */
@@ -134,7 +122,6 @@
     position: absolute;
     top: 0;
     left: 108%;
-    /* background-color:rgb(199, 199, 199); */
     background-color:var(--negro);
     box-shadow: 10px 10px 10px var(--negro);
     border-radius: 2%;
@@ -262,9 +249,6 @@
 #li-user-icon {
     padding-bottom: 36px;
 }
-/* .li-user-icon:hover .profile-menu-header{
-    display: block;
-} */
 
 /* IMAGEN DEL MENÚ DESPLEGABLE DEL ÍCONO DE USUARIO */
 .image-profile-menu {
@@ -355,18 +339,11 @@
     display: none;
     position: absolute;
     width: 100%;
-    /* background-color: rgb(214, 2, 2); */
     opacity: 1;
     top: 110%;
-    left: 1%;
-    /* box-shadow: 10px 5px 5px black; */
-    /* border-color: 1px solid var(--celeste); */
-   
+    left: 1%; 
 }
-/* .glass-search{
-    margin-right: 15px;
-    color: white;
-} */
+
 /* INPUT SEARCH DE LA BARRA DE BÚSQUEDA */
 .search-bar input {
     margin: auto;
@@ -378,10 +355,6 @@
     border: none;
     border-radius: 5px;
 }
-
-/* .search-bar input:focus {
-    border-color: green;
-} */
 
 /* DIV QUE CONTIENE A LOS ELEMENTOS QUE SE ENCUENTREN SOBRE LA BARRA DE BÚSQUEDA */
 .inside-search-bar-header {
@@ -402,15 +375,6 @@
     text-shadow: 10px 10px 10px black;
 }
 
-/* LABEL EN LA BARRA DE BÚSQUEDA */
-/* .label-search-bar {
-    color: var(--gris);
-    font: 1.25rem;
-    text-transform: uppercase;
-    flex: 1 0 0;
-    margin-left: 1.5rem;
-} */
-
 /* ELIMINAR EL LABEL EN LA BARRA DE BÚSQUEDA CUANDO TENGA EL FOCO */
 .search-bar:focus-within .label-search-bar {
     display: none;
@@ -422,7 +386,6 @@
     background-color: transparent;
     border: none;
     margin: 0;
-   /*  padding: 0; */
 }
 
 /* SLIDE MENÚ DE LA VERSIÓN MOBILE */
@@ -572,7 +535,6 @@
     height: 2.5rem;
     overflow: hidden;
     border-radius: 50%;
-    /* border: 1px solid red; */
     margin-right: 1rem;
 }
 
@@ -624,11 +586,6 @@
 /* MEDIA QUERIES TABLETS */
 @media (min-width: 768px) {
 
-    /* ----------------------  HEADER  ---------------------- */
-    /* .main-header {
-        background-color: transparent;
-    } */
-
     /* ----------------------  BANNER PRINCIPAL  ---------------------- */
     .main-banner {
         height: 75vh;
@@ -673,6 +630,10 @@
         display: none;
     }
 
+    /* SLIDE MENÚ DE LA VERSIÓN MOBILE */
+    .slide-menu {
+        display: none;
+    }
 
     /* CÍRCULOS DE CAMBIO DE LA IMAGEN DEL BANNER PRINCIPAL */
     .circles-main-banner {
@@ -702,37 +663,5 @@
     }
 
    
-
-}/* MEDIA QUERIES */
-
-/* MEDIA QUERIES TABLETS */
-@media (min-width: 768px) {
-
-    /* ----------------------  HEADER  ---------------------- */
-    /* .main-header {
-        background-color: transparent;
-    } */
-
-}
-
-/* MEDIA QUERIES DESKTOPS */
-@media (min-width: 1050px) {
-
-    /* ----------------------  HEADER  ---------------------- */
-
-    /* BARRA DE NAVEGACIÓN IZQUIERDA */
-    .left-navbar {
-        display: block;
-    }
-
-    /* ÍCONO DE BURGER MENU */
-    .burger-menu {
-        display: none;
-    }
-
-    /* SLIDE MENÚ DE LA VERSIÓN MOBILE */
-    .slide-menu {
-        display: none;
-    }
 
 }

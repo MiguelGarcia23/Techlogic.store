@@ -17,6 +17,7 @@ window.onload = function() {
             errors.push("Debe ingresar un email válido");
             email.classList.add("is-invalid");
         } else {
+            errors.pop()
             inputEmail.classList.remove('is-invalid')
             inputPassword.focus();
         }
@@ -26,6 +27,7 @@ window.onload = function() {
             errors.push('El campo contraseña está vacío')
             inputPassword.classList.add('is-invalid')
         } else {
+            errors.pop()
             inputPassword.classList.remove('is-invalid')
         }
 

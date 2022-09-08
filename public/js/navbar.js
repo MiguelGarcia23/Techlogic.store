@@ -1,4 +1,3 @@
-/* window.onload = function (){ */
     const productOption = document.getElementById('products-option-left-navbar');
     const optioLeftAccesories = document.querySelector('.option-left-navbar-with-icon')
     const accesoriesOption = document.querySelector('.third-left-navbar')
@@ -136,5 +135,3 @@
     adminNavSlide.addEventListener('click', () => {
         adminOptionSlide.classList.toggle('active-slide-menu')
     })
-
-/* } */

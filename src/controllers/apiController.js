@@ -6,15 +6,6 @@ const imageFilePath = path.join(__dirname, "../../public/img/products/");
 
 const apiController = {
   allProducts: (req, res) => {
-    /* db.Products.findAll({
-      include: [{association: 'sections'}]
-    }).then((products) => {
-      res.status(200).json({
-        total: products.length,
-        products: products,
-        status: 200,
-      });
-    }); */
 
     db.Products.findAll({
       include: [{association: 'sections'}, {association: 'collections'}, {association: 'brands'}]
@@ -89,16 +80,7 @@ const apiController = {
   },
 
   searchProductsId: (req, res) => {
-    /* db.Products.findByPk(req.params.id).then((product) => {
-      res.status(200).json({
-        product: product,
-        status: 200,
-      })
-    })
-    .catch((e) => {
-      res.send(e)
-    }) */
-
+    
     db.Products.findByPk(req.params.id, {
       include: [{association: 'sections'}, {association: 'collections'}, {association: 'brands'}]
     }).then((product) => {
@@ -129,19 +111,6 @@ const apiController = {
 
   searchProductsKey: (req, res) => {
 
-    /* db.Products.findAll({
-      where: {
-        name: { [Op.like]: "%" + req.query.keyword + "%" },
-      },
-    }).then((products) => {
-      res.status(200).json({
-        products: products,
-      })
-    })
-    .catch((e) => {
-      res.send(e)
-    }) */
-
     db.Products.findAll({
       where: {
         name: { [Op.like]: "%" + req.query.keyword + "%" },
@@ -165,7 +134,7 @@ const apiController = {
           section: [product.sections.sectionName],
           collection: [product.collections.collectionName],
           brand: [product.brands.brandName],
-          image: /* '/public/img/products/' + */ product.image,
+          image: product.image,
           detail: 'http://localhost:3000/api/products/' + product.id
         }
 
@@ -226,25 +195,6 @@ const apiController = {
 
   allUsers: (req, res) => {
 
-    /* db.Users.findAll({raw: true}).then((users) => {
-
-
-      for (let i = 0; i < users.length; i++) {
-
-        delete users[i]['password'];
-
-      }
-      res.status(200).json({
-        total: users.length,
-        users: users,
-        status: 200,
-      });
-      
-    })
-    .catch((e) => {
-      res.send(e)
-    }) */
-
     db.Users.findAll({
       include: [{association: 'rols'}]
     }, {raw: true}).then((users) => {
@@ -279,18 +229,6 @@ const apiController = {
   },
 
   userId: (req, res) => {
-    /* db.Users.findByPk(req.params.id, {raw: true})
-    .then((user) => {
-      
-      delete user.password
-      res.status(200).json({
-        user: user
-      })
-    })
-    .catch((e) => {
-      res.send(e)
-    })
-  } */
 
     db.Users.findByPk(req.params.id, {raw: true})
       .then((user) => {

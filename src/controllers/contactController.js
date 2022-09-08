@@ -3,8 +3,7 @@
 const contactController = {
 
     aboutUs: (req, res) => {
-        /* res.render('./contact/aboutUs') */
-        res.render('./contact/aboutUs2')
+        res.render('./contact/aboutUs')
     },
 
     payment: (req, res) => {
@@ -16,7 +15,6 @@ const contactController = {
     },
 
     info: (req, res) => {
-        /* res.render('./contact/infoContact') */
         res.render('./contact/infoContact')
     }
 }

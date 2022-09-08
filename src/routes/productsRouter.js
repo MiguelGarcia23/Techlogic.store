@@ -61,6 +61,5 @@ router.put ('/edit/:id', multerMiddleware.single('image'), validationEditProduct
 /* Configuramos la ruta para eliminar un producto */
 router.delete ('/delete/:id', productsController.delete);
 
-
 /* Exportamos la variable router */
 module.exports = router;

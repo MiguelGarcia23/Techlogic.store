@@ -198,7 +198,6 @@
         align-items: center;
     }
     .icono{
-       /*  width: 250px; */
         margin-bottom: 35px;
     }
     .p-text{
@@ -207,10 +206,4 @@
     .p-text-2{
         margin-right: 0px;
     }
-/*     .p-text{
-        font-size: 20px;
-    }
-    .p-text-2{
-        font-size: 20px;
-    } */
 }
